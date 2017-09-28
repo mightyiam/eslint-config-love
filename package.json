@@ -1,0 +1,60 @@
+{
+  "name": "eslint-config-standard-with-typescript",
+  "version": "0.0.0",
+  "description": "An ESLint Shareable Config for JavaScript Standard Style with TypeScript support",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint --ext .ts src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mightyiam/eslint-config-standard-with-typescript.git"
+  },
+  "author": "Shahar Or <mightyiampresence@gmail.com> (mightyiam)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mightyiam/eslint-config-standard-with-typescript/issues"
+  },
+  "homepage": "https://github.com/mightyiam/eslint-config-standard-with-typescript#readme",
+  "keywords": [
+    "JavaScript Standard Style",
+    "check",
+    "checker",
+    "code",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "eslint",
+    "eslintconfig",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "standard",
+    "standard style",
+    "style",
+    "style checker",
+    "style linter",
+    "verify",
+    "TypeScript"
+  ],
+  "dependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-typescript": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.31",
+    "eslint": "^4.7.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "typescript": "^2.5.3",
+    "typescript-eslint-parser": "^8.0.0"
+  }
+}

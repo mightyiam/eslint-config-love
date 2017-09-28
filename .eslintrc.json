@@ -1,0 +1,4 @@
+{
+  "extends": "./lib/index.js",
+  "parser": "typescript-eslint-parser"
+}
