@@ -15,7 +15,7 @@ Install the peer dependencies of [eslint-config-standard](https://github.com/sta
 
 Configure your ESLint configuration to [extend](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) from this one.
 
-Also, you probably should use [typescript-eslint-parser] as ESLint’s parser.
+Also, you probably should use [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser/) as ESLint’s parser.
 
 ### Warning about filename extensions
 
