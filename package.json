@@ -4,7 +4,7 @@
   "description": "An ESLint Shareable Config for JavaScript Standard Style with TypeScript support",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint --ext .ts src/**/*"
+    "test": "tsc && eslint --ext .ts src/**/*"
   },
   "repository": {
     "type": "git",
