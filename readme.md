@@ -1,9 +1,8 @@
 [![Build Status](https://travis-ci.org/mightyiam/eslint-config-standard-with-typescript.svg?branch=master)](https://travis-ci.org/mightyiam/eslint-config-standard-with-typescript)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/mightyiam/eslint-config-standard-with-typescript.svg)](https://greenkeeper.io/)
 
 # eslint-config-standard-with-typescript
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/mightyiam/eslint-config-standard-with-typescript.svg)](https://greenkeeper.io/)
 
 An [extension](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) of [eslint-config-standard](https://github.com/standard/eslint-config-standard), made for TypeScript.
 
