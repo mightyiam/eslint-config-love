@@ -8,6 +8,10 @@ export = {
     'no-useless-constructor': 'warn',
     'typescript/type-annotation-spacing': 'error',
     'typescript/explicit-member-accessibility': 'error',
+
+    'no-array-constructor': 'off', // in favor of TypeScript rule
+    'typescript/no-array-constructor': 'error',
+
     'typescript/no-triple-slash-reference': 'error',
     'typescript/no-angle-bracket-type-assertion': 'error',
     'typescript/no-namespace': 'error',
