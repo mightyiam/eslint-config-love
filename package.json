@@ -48,8 +48,8 @@
     "eslint-plugin-typescript": "^0.8.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.31",
-    "eslint": "^4.7.2",
+    "@types/node": "^8.0.33",
+    "eslint": "^4.8.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
