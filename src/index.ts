@@ -4,6 +4,9 @@ export = {
     'typescript'
   ],
   rules: {
+    // https://github.com/nzakas/eslint-plugin-typescript/issues/85
+    'space-infix-ops': 'warn',
+
     'no-undef': 'warn',
     'no-useless-constructor': 'warn',
     'typescript/type-annotation-spacing': 'error',
