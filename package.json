@@ -48,13 +48,13 @@
     "eslint-plugin-typescript": "^0.8.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.33",
-    "eslint": "^4.8.0",
-    "eslint-plugin-import": "^2.7.0",
+    "@types/node": "^8.0.46",
+    "eslint": "^4.9.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "typescript": "^2.5.3",
-    "typescript-eslint-parser": "^8.0.0"
+    "typescript-eslint-parser": "^8.0.1"
   }
 }
