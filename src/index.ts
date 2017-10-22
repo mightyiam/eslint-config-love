@@ -1,5 +1,11 @@
 export = {
   extends: 'eslint-config-standard',
+  parserOptions: {
+    ecmaFeatures: {
+      // https://github.com/standard/eslint-config-standard/issues/95
+      jsx: false
+    }
+  },
   plugins: [
     'typescript'
   ],
