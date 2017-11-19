@@ -1,21 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["es2017"],
-    "declaration": true,
-    "outDir": "./lib",
-    "rootDir": "./src",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceRoot": "./src",
-    "inlineSourceMap": true,
-    "inlineSources": true
-  },
-  "include": [
-    "src"
-  ]
+  "extends": "./node_modules/tsconfigs/universal"
 }
