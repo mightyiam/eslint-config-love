@@ -13,7 +13,10 @@ export = {
     // https://github.com/nzakas/eslint-plugin-typescript/issues/85
     'space-infix-ops': 'warn',
 
-    'no-undef': 'warn',
+    // https://github.com/eslint/typescript-eslint-parser/issues/77
+    'no-undef': 'off', // TypeScript has this functionality by default
+    'no-unused-vars': 'off', // TypeScript has `noUnusedLocals` and `noUnusedParameters`
+
     'no-useless-constructor': 'warn',
     'typescript/type-annotation-spacing': 'error',
     'typescript/explicit-member-accessibility': 'error',
