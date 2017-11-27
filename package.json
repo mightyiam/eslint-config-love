@@ -59,7 +59,7 @@
     "npm-run-all": "^4.1.1",
     "tsconfigs": "^2.0.0",
     "tslib": "^1.8.0",
-    "typescript": "2.6.1",
+    "typescript": "2.6.2",
     "typescript-eslint-parser": "^9.0.0"
   }
 }
