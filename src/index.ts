@@ -13,7 +13,10 @@ export = {
     // https://github.com/nzakas/eslint-plugin-typescript/issues/85
     'space-infix-ops': 'warn',
 
-    'no-undef': 'warn',
+    // https://github.com/eslint/typescript-eslint-parser/issues/77
+    'no-undef': 'off', // TypeScript has this functionality by default
+    'no-unused-vars': 'off', // TypeScript has `noUnusedLocals` and `noUnusedParameters`
+
     'no-useless-constructor': 'warn',
     'typescript/type-annotation-spacing': 'error',
     'typescript/explicit-member-accessibility': 'error',
@@ -25,10 +28,7 @@ export = {
     'typescript/no-angle-bracket-type-assertion': 'error',
     'typescript/no-namespace': 'error',
     'typescript/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
-
-    'no-unused-vars': 'warn', // https://github.com/nzakas/eslint-plugin-typescript/pull/84
-    'typescript/no-unused-vars': 'warn',
-
+    'typescript/no-unused-vars': 'error',
     'typescript/adjacent-overload-signatures': 'error',
     'typescript/member-delimiter-style': ['error', { delimiter: 'none' }],
     'typescript/no-empty-interface': 'error'
