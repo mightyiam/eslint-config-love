@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/mightyiam/eslint-config-standard-with-typescript.svg?branch=master)](https://travis-ci.org/mightyiam/eslint-config-standard-with-typescript)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/mightyiam/eslint-config-standard-with-typescript.svg)](https://greenkeeper.io/)
+[![Releases](https://coderelease.io/badge/mightyiam/eslint-config-standard-with-typescript)](https://coderelease.io/github/repository/mightyiam/eslint-config-standard-with-typescript)
 
 # eslint-config-standard-with-typescript
 
