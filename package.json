@@ -53,13 +53,13 @@
     "@types/node": "^9.3.0",
     "eslint": "^4.9.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "npm-run-all": "^4.1.1",
     "tsconfigs": "^2.0.0",
     "tslib": "^1.8.0",
     "typescript": "2.6.2",
-    "typescript-eslint-parser": "^12.0.0"
+    "typescript-eslint-parser": "^14.0.0"
   }
 }
