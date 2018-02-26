@@ -24,6 +24,7 @@ export = {
     'no-array-constructor': 'off', // in favor of TypeScript rule
     'typescript/no-array-constructor': 'error',
 
+    'typescript/explicit-function-return-type': 'error',
     'typescript/no-triple-slash-reference': 'error',
     'typescript/no-angle-bracket-type-assertion': 'error',
     'typescript/no-namespace': 'error',
