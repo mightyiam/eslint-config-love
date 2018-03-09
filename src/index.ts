@@ -28,6 +28,7 @@ export = {
     'typescript/no-triple-slash-reference': 'error',
     'typescript/no-angle-bracket-type-assertion': 'error',
     'typescript/no-namespace': 'error',
+    'typescript/no-non-null-assertion': 'error',
     'typescript/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
     'typescript/no-unused-vars': 'error',
     'typescript/adjacent-overload-signatures': 'error',
