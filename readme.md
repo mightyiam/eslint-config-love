@@ -5,20 +5,35 @@
 
 # eslint-config-standard-with-typescript
 
-An [extension](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) of [eslint-config-standard](https://github.com/standard/eslint-config-standard), made for TypeScript.
+An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for TypeScript that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has TypeScript specific rules from [eslint-plugin-typescript](https://github.com/nzakas/eslint-plugin-typescript).
 
 ## Usage
 
 ```
-npm i --save-dev eslint-config-standard-with-typescript
+npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node typescript-eslint-parser eslint-plugin-typescript eslint-config-standard-with-typescript 
 ```
 
-Install the peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard).
+Yes, I know it is a large number of packages. This is due to [a known design flaw in ESLint](https://github.com/eslint/eslint/issues/10125).
 
-Configure your ESLint configuration to [extend](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) from this one.
+This long list of dependencies includes:
 
-Also, you probably should use [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser/) as ESLint’s parser.
+1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+1. the necessary [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser/); lets ESLint parse TypeScript.
+1. [eslint-plugin-typescript](https://github.com/nzakas/eslint-plugin-typescript); ESLint rules for TypeScript.
 
-### Warning about filename extensions
+Here is an example `.eslintrc.json`:
 
-[By default, ESLint v4 reads `.js` files](https://eslint.org/docs/user-guide/command-line-interface#--ext). [The only way to specify other extensions](https://eslint.org/docs/user-guide/configuring#specifying-file-extensions-to-lint) is by using the [`--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#--ext). So make sure you do that so that your TypeScript files will be linted.
+```json
+{
+  "extends": "standard-with-typescript",
+  "parser": "typescript-eslint-parser"
+}
+```
+
+Make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#--ext). And here is [a feature request for specifying extensions in the config](https://github.com/eslint/eslint/issues/10828).
+
+Example command line usage:
+
+```
+npx eslint --ext .js,.ts .
+```

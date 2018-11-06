@@ -8,11 +8,11 @@ export = {
   },
   plugins: ['typescript'],
   rules: {
+    'camelcase': ['warn', { properties: 'never' }], // https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/3
     'no-array-constructor': 'off', // in favor of TypeScript rule
     'no-undef': 'off', // TypeScript has this functionality by default
     'no-unused-vars': 'off', // TypeScript has `noUnusedLocals` and `noUnusedParameters`
-    'no-useless-constructor': 'warn',
-    'space-infix-ops': 'warn', // https://github.com/nzakas/eslint-plugin-typescript/issues/85
+    'no-useless-constructor': 'warn', // https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/2
     'typescript/adjacent-overload-signatures': 'error',
     'typescript/explicit-function-return-type': 'error',
     'typescript/explicit-member-accessibility': 'error',
