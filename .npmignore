@@ -1,2 +1,4 @@
 *
 !lib/**/*
+lib/**/fixture.js
+lib/**/fixture.d.ts
