@@ -19,3 +19,8 @@ export default class Zoo {
  * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/3
  */
 export interface Boo { b_oo: null }
+
+/**
+ * ESLint should ignore this `no-undef` violation because that rule is turned off for TypeScript.
+ */
+// console.log(undef)
