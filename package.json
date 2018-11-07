@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "compile": "tsc",
-    "lint": "eslint --ext .ts src/**/*",
+    "lint": "eslint --ext .js,.ts .",
     "test": "run-s compile lint"
   },
   "repository": {
