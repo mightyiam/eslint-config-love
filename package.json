@@ -68,6 +68,6 @@
     "tsconfigs": "^3.0.0",
     "tslib": "^1.9.3",
     "typescript": "^3.1.6",
-    "typescript-eslint-parser": "^20.1.1"
+    "typescript-eslint-parser": "^21.0.0"
   }
 }
