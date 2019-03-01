@@ -5,12 +5,12 @@
 
 # eslint-config-standard-with-typescript
 
-An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for TypeScript that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has TypeScript specific rules from [eslint-plugin-typescript](https://github.com/nzakas/eslint-plugin-typescript).
+An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for TypeScript that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has TypeScript specific rules from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
 
 ## Usage
 
 ```
-npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node typescript-eslint-parser eslint-plugin-typescript eslint-config-standard-with-typescript 
+npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript 
 ```
 
 Yes, I know it is a large number of packages. This is due to [a known design flaw in ESLint](https://github.com/eslint/eslint/issues/10125).
@@ -18,17 +18,22 @@ Yes, I know it is a large number of packages. This is due to [a known design fla
 This long list of dependencies includes:
 
 1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-1. the necessary [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser/); lets ESLint parse TypeScript.
-1. [eslint-plugin-typescript](https://github.com/nzakas/eslint-plugin-typescript); ESLint rules for TypeScript.
+1. the necessary [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser); lets ESLint parse TypeScript.
+1. [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
 Here is an example `.eslintrc.json`:
 
 ```json
 {
   "extends": "standard-with-typescript",
-  "parser": "typescript-eslint-parser"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "project": "./tsconfig.json"
+  },
 }
 ```
+
+There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you might care about.
 
 Make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#--ext). And here is [a feature request for specifying extensions in the config](https://github.com/eslint/eslint/issues/10828).
 
