@@ -3,7 +3,7 @@ export = {
   plugins: ['@typescript-eslint'],
   overrides: [
     {
-      files: ['*.ts'],
+      files: ['*.ts', '*.tsx'],
       rules: {
         'camelcase': 'off', // in favor of TypeScript rule
         'indent': 'off',
