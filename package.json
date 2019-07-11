@@ -52,7 +52,7 @@
     "TypeScript"
   ],
   "dependencies": {
-    "eslint-config-standard": "^12.0.0"
+    "eslint-config-standard": "^13.0.1"
   },
   "peerDependencies": {
     "eslint": "^5.8.0",
