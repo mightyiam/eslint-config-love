@@ -1,11 +1,11 @@
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/10
+ * https://github.com/standard/eslint-config-standard-with-typescript/issues/10
  */
 export type Bar = null
 export type Foo<Bar> = (a: Bar) => Bar
 
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/2
+ * https://github.com/standard/eslint-config-standard-with-typescript/issues/2
  */
 export default class Zoo {
   public constructor (private name: string) {}
@@ -16,7 +16,7 @@ export default class Zoo {
 }
 
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/3
+ * https://github.com/standard/eslint-config-standard-with-typescript/issues/3
  */
 export interface Boo { b_oo: null }
 
