@@ -10,15 +10,14 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 ## Usage
 
 ```
-npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript 
+npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/eslint-plugin
 ```
 
-Yes, I know it is a large number of packages. This is due to [a known design flaw in ESLint](https://github.com/eslint/eslint/issues/10125).
+Yes, I know it is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
 
 This long list of dependencies includes:
 
 1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-1. the necessary [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser); lets ESLint parse TypeScript.
 1. [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
 Here is an example `.eslintrc.json`:
@@ -26,7 +25,6 @@ Here is an example `.eslintrc.json`:
 ```json
 {
   "extends": "standard-with-typescript",
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
       "project": "./tsconfig.json"
   },
