@@ -14,6 +14,7 @@ export = {
         indent: 'off',
         'no-array-constructor': 'off',
         'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
 
         // @typescript-eslint versions of Standard.js rules:

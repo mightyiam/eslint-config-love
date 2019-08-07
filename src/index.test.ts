@@ -15,6 +15,7 @@ test('export', (t): void => {
           'no-array-constructor': 'off',
           'no-undef': 'off',
           'no-unused-vars': 'off',
+          'no-use-before-define': 'off',
           'no-useless-constructor': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', 'array-simple'],
