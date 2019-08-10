@@ -69,7 +69,7 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@commitlint/travis-cli": "^8.1.0",
-    "@types/node": "^12.6.9",
+    "@types/node": "^12.7.1",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "ava": "^2.2.0",
     "eslint": "^6.1.0",
