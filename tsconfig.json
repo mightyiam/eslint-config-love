@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/tsconfigs/universal",
   "compilerOptions": {
+    "esModuleInterop": true,
     "importHelpers": false
   }
 }
