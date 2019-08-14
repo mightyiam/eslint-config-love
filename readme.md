@@ -17,6 +17,7 @@ Yes, I know it is a large number of packages. This is due to [a known limitation
 
 This long list of dependencies includes:
 
+1. [ESLint](https://github.com/eslint/eslint)
 1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 1. [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
