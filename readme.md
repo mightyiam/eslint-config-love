@@ -10,13 +10,14 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 ## Usage
 
 ```
-npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript
+npm install --save-dev eslint eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript
 ```
 
 Yes, I know it is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
 
 This long list of dependencies includes:
 
+1. [ESLint](https://github.com/eslint/eslint)
 1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 1. [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
