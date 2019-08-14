@@ -10,7 +10,7 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 ## Usage
 
 ```
-npm install --save-dev eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript
+npm install --save-dev eslint eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/eslint-plugin eslint-config-standard-with-typescript
 ```
 
 Yes, I know it is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
