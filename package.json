@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "tsc",
     "lint": "eslint --ext .js,.ts .",
-    "test": "run-s compile lint"
+    "unit": "ava",
+    "test": "run-s compile lint unit"
   },
   "repository": {
     "type": "git",
@@ -70,6 +71,7 @@
     "@commitlint/travis-cli": "^8.1.0",
     "@types/node": "^12.7.1",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "ava": "^2.2.0",
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",

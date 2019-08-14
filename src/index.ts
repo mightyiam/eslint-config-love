@@ -6,19 +6,18 @@ export = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        camelcase: 'off', // in favor of TypeScript rule
+        // TypeScript has this functionality by default:
+        'no-undef': 'off',
+
+        // Rules replaced by @typescript-eslint versions:
+        camelcase: 'off',
         indent: 'off',
         'no-array-constructor': 'off',
-        'no-undef': 'off', // TypeScript has this functionality by default
-        'no-unused-vars': 'off', // in favor of TypeScript rule
+        'no-unused-vars': 'off',
         'no-useless-constructor': 'off',
-        '@typescript-eslint/adjacent-overload-signatures': 'error',
-        '@typescript-eslint/array-type': ['error', 'array-simple'],
+
+        // @typescript-eslint versions of Standard.js rules:
         '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
-        '@typescript-eslint/explicit-function-return-type': ['error', {
-          allowHigherOrderFunctions: true
-        }],
-        '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/indent': ['error', 2, {
           SwitchCase: 1,
           VariableDeclarator: 1,
@@ -33,6 +32,18 @@ export = {
           flatTernaryExpressions: false,
           ignoreComments: false
         }],
+        '@typescript-eslint/no-array-constructor': 'error',
+        '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
+        '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
+        '@typescript-eslint/no-useless-constructor': 'error',
+
+        // New Typescript-only rules:
+        '@typescript-eslint/adjacent-overload-signatures': 'error',
+        '@typescript-eslint/array-type': ['error', 'array-simple'],
+        '@typescript-eslint/explicit-function-return-type': ['error', {
+          allowHigherOrderFunctions: true
+        }],
+        '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/member-delimiter-style': [
           'error',
           {
@@ -41,7 +52,6 @@ export = {
           }
         ],
         '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
-        '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
@@ -52,15 +62,12 @@ export = {
         '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
         '@typescript-eslint/no-triple-slash-reference': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-        '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
-        '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
-        '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
         '@typescript-eslint/prefer-interface': 'error',
         '@typescript-eslint/promise-function-async': 'error',
-        '@typescript-eslint/restrict-plus-operands': 'error',
         '@typescript-eslint/require-array-sort-compare': 'error',
+        '@typescript-eslint/restrict-plus-operands': 'error',
         '@typescript-eslint/type-annotation-spacing': 'error'
       }
     }
