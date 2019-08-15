@@ -23,7 +23,6 @@ test('export', (t): void => {
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowHigherOrderFunctions: true
           }],
-          '@typescript-eslint/explicit-member-accessibility': 'error',
           '@typescript-eslint/indent': ['error', 2, {
             SwitchCase: 1,
             VariableDeclarator: 1,
