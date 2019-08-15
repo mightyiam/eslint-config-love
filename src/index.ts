@@ -44,7 +44,6 @@ export = {
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowHigherOrderFunctions: true
         }],
-        '@typescript-eslint/explicit-member-accessibility': 'error',
         '@typescript-eslint/member-delimiter-style': [
           'error',
           {
