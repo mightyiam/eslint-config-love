@@ -20,9 +20,6 @@ test('export', (t): void => {
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', 'array-simple'],
           '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
-          '@typescript-eslint/explicit-function-return-type': ['error', {
-            allowHigherOrderFunctions: true
-          }],
           '@typescript-eslint/indent': ['error', 2, {
             SwitchCase: 1,
             VariableDeclarator: 1,

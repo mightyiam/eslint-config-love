@@ -41,9 +41,6 @@ export = {
         // New Typescript-only rules:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', 'array-simple'],
-        '@typescript-eslint/explicit-function-return-type': ['error', {
-          allowHigherOrderFunctions: true
-        }],
         '@typescript-eslint/member-delimiter-style': [
           'error',
           {
