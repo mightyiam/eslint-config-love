@@ -42,7 +42,9 @@ export = {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', 'array-simple'],
         '@typescript-eslint/explicit-function-return-type': ['error', {
-          allowHigherOrderFunctions: true
+          allowExpressions: true,
+          allowHigherOrderFunctions: true,
+          allowTypedFunctionExpressions: true
         }],
         '@typescript-eslint/member-delimiter-style': [
           'error',
