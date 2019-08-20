@@ -13,6 +13,7 @@ export = {
         camelcase: 'off',
         indent: 'off',
         'no-array-constructor': 'off',
+        'no-empty-function': 'off',
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
@@ -41,6 +42,7 @@ export = {
         // New Typescript-only rules:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', 'array-simple'],
+        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,
@@ -54,8 +56,10 @@ export = {
           }
         ],
         '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
+        '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
+        '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-namespace': 'error',
@@ -66,7 +70,6 @@ export = {
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
-        '@typescript-eslint/prefer-interface': 'error',
         '@typescript-eslint/promise-function-async': 'error',
         '@typescript-eslint/require-array-sort-compare': 'error',
         '@typescript-eslint/restrict-plus-operands': 'error',
