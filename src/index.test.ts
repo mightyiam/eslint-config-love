@@ -60,16 +60,18 @@ test('export', (t): void => {
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-object-literal-type-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
-          '@typescript-eslint/no-triple-slash-reference': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
           '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-useless-constructor': 'error',
           '@typescript-eslint/no-var-requires': 'error',
           '@typescript-eslint/prefer-function-type': 'error',
+          '@typescript-eslint/prefer-readonly': 'error',
           '@typescript-eslint/promise-function-async': 'error',
           '@typescript-eslint/restrict-plus-operands': 'error',
           '@typescript-eslint/require-array-sort-compare': 'error',
+          '@typescript-eslint/strict-boolean-expressions': 'error',
+          '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
           '@typescript-eslint/type-annotation-spacing': 'error'
         }
       }
