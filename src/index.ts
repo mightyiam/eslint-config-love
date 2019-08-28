@@ -44,7 +44,14 @@ export = {
 
         // New Typescript-only rules:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
-        '@typescript-eslint/array-type': ['error', 'array-simple'],
+        '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/consistent-type-assertions': [
+          'error',
+          {
+            assertionStyle: 'as',
+            objectLiteralTypeAssertions: 'never'
+          }
+        ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
@@ -58,7 +65,6 @@ export = {
             singleline: { delimiter: 'comma', requireLast: false }
           }
         ],
-        '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-floating-promises': 'error',
@@ -67,7 +73,6 @@ export = {
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        '@typescript-eslint/no-object-literal-type-assertion': 'error',
         '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-var-requires': 'error',

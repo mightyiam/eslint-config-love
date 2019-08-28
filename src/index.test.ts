@@ -20,8 +20,15 @@ test('export', (t): void => {
           'no-useless-constructor': 'off',
           'require-await': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
-          '@typescript-eslint/array-type': ['error', 'array-simple'],
+          '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+          '@typescript-eslint/consistent-type-assertions': [
+            'error',
+            {
+              assertionStyle: 'as',
+              objectLiteralTypeAssertions: 'never'
+            }
+          ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
@@ -49,7 +56,6 @@ test('export', (t): void => {
               singleline: { delimiter: 'comma', requireLast: false }
             }
           ],
-          '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
           '@typescript-eslint/no-array-constructor': 'error',
           '@typescript-eslint/no-empty-function': 'error',
           '@typescript-eslint/no-empty-interface': 'error',
@@ -60,7 +66,6 @@ test('export', (t): void => {
           '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
           '@typescript-eslint/no-non-null-assertion': 'error',
-          '@typescript-eslint/no-object-literal-type-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
           '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
