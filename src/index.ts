@@ -35,6 +35,7 @@ export = {
           ignoreComments: false
         }],
         '@typescript-eslint/no-array-constructor': 'error',
+        '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
         '@typescript-eslint/no-useless-constructor': 'error',
@@ -56,7 +57,6 @@ export = {
           }
         ],
         '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
-        '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-floating-promises': 'error',
