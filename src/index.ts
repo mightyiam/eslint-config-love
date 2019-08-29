@@ -17,6 +17,7 @@ export = {
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
+        'require-await': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
         '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
@@ -39,6 +40,7 @@ export = {
         '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
         '@typescript-eslint/no-useless-constructor': 'error',
+        '@typescript-eslint/require-await': 'error',
 
         // New Typescript-only rules:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -62,6 +64,7 @@ export = {
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-misused-new': 'error',
+        '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-object-literal-type-assertion': 'error',
