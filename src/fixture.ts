@@ -8,7 +8,7 @@ export type Foo<Bar> = (a: Bar) => Bar
  * https://github.com/standard/eslint-config-standard-with-typescript/issues/2
  */
 export default class Zoo {
-  public constructor (private name: string) {}
+  public constructor (private readonly name: string) {}
 
   public get greeting (): string {
     return `Hello ${this.name}`
