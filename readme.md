@@ -10,7 +10,7 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 ## Usage
 
 ```
-npm install --save-dev eslint@6 eslint-plugin-standard@4 eslint-plugin-promise@4 eslint-plugin-import@2 eslint-plugin-node@9 @typescript-eslint/eslint-plugin@1 eslint-config-standard-with-typescript
+npm install --save-dev eslint@6 eslint-plugin-standard@4 eslint-plugin-promise@4 eslint-plugin-import@2 eslint-plugin-node@9 @typescript-eslint/eslint-plugin@2 eslint-config-standard-with-typescript
 ```
 
 Yes, I know it is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
@@ -31,6 +31,8 @@ Here is an example `.eslintrc.json`:
   }
 }
 ```
+
+Note: Please read some important instructions regarding the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you might care about.
 
