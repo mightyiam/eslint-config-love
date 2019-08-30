@@ -18,6 +18,7 @@ test('export', (t): void => {
           'no-unused-vars': 'off',
           'no-use-before-define': 'off',
           'no-useless-constructor': 'off',
+          'require-await': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', 'array-simple'],
           '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
@@ -56,6 +57,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-floating-promises': 'error',
           '@typescript-eslint/no-for-in-array': 'error',
           '@typescript-eslint/no-misused-new': 'error',
+          '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-object-literal-type-assertion': 'error',
@@ -70,6 +72,7 @@ test('export', (t): void => {
           '@typescript-eslint/promise-function-async': 'error',
           '@typescript-eslint/restrict-plus-operands': 'error',
           '@typescript-eslint/require-array-sort-compare': 'error',
+          '@typescript-eslint/require-await': 'error',
           '@typescript-eslint/strict-boolean-expressions': 'error',
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
           '@typescript-eslint/type-annotation-spacing': 'error'
