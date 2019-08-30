@@ -5,8 +5,6 @@
     "checkJs": true
   },
   "include": [
-    "src/**/*",
-    "*.ts",
-    "*.js"
+    "**/*"
   ]
 }
