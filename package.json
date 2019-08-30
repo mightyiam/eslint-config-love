@@ -6,8 +6,9 @@
   "scripts": {
     "compile": "tsc",
     "lint": "eslint --ext .js,.ts .",
+    "editorconfig": "editorconfig-checker",
     "unit": "ava",
-    "test": "run-s compile lint unit"
+    "test": "run-s editorconfig compile lint unit"
   },
   "repository": {
     "type": "git",
@@ -71,6 +72,7 @@
     "@types/node": "^12.7.1",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "ava": "^2.2.0",
+    "editorconfig-checker": "^3.0.2",
     "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",
