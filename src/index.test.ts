@@ -5,7 +5,7 @@ test('export', (t): void => {
   const expected = {
     parser: '@typescript-eslint/parser',
     extends: 'eslint-config-standard',
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'no-null'],
     overrides: [
       {
         files: ['*.ts', '*.tsx'],
@@ -80,7 +80,8 @@ test('export', (t): void => {
           '@typescript-eslint/require-await': 'error',
           '@typescript-eslint/strict-boolean-expressions': 'error',
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
-          '@typescript-eslint/type-annotation-spacing': 'error'
+          '@typescript-eslint/type-annotation-spacing': 'error',
+          'no-null/no-null': 'error'
         }
       }
     ]

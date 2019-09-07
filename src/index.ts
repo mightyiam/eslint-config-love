@@ -1,7 +1,7 @@
 export = {
   parser: '@typescript-eslint/parser',
   extends: 'eslint-config-standard',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'no-null'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -83,7 +83,10 @@ export = {
         '@typescript-eslint/restrict-plus-operands': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
-        '@typescript-eslint/type-annotation-spacing': 'error'
+        '@typescript-eslint/type-annotation-spacing': 'error',
+
+        // New Typescript-only rules from plugins
+        'no-null/no-null': 'error'
       }
     }
   ]
