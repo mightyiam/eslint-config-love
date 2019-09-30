@@ -1,6 +1,6 @@
 {
   "extends": "./lib/index.js",
   "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+    "project": "./tsconfig.json"
   }
 }

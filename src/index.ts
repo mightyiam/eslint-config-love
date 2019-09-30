@@ -1,10 +1,10 @@
 export = {
-  parser: '@typescript-eslint/parser',
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
       rules: {
         // TypeScript has this functionality by default:
         'no-undef': 'off',
