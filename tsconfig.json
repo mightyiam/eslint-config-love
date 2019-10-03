@@ -1,7 +1,9 @@
 {
-  "extends": "./node_modules/tsconfigs/universal",
+  "extends": "tsconfigs/nodejs-module",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "importHelpers": false
-  }
+    "outDir": "lib"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }
