@@ -3,12 +3,12 @@ import exported from '.'
 
 test('export', (t): void => {
   const expected = {
-    parser: '@typescript-eslint/parser',
     extends: 'eslint-config-standard',
     plugins: ['@typescript-eslint'],
     overrides: [
       {
         files: ['*.ts', '*.tsx'],
+        parser: '@typescript-eslint/parser',
         rules: {
           camelcase: 'off',
           indent: 'off',
