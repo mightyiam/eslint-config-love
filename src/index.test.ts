@@ -18,6 +18,7 @@ test('export', (t): void => {
           'no-unused-vars': 'off',
           'no-use-before-define': 'off',
           'no-useless-constructor': 'off',
+          quotes: 'off',
           'require-await': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
@@ -33,7 +34,8 @@ test('export', (t): void => {
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
             allowHigherOrderFunctions: true,
-            allowTypedFunctionExpressions: true
+            allowTypedFunctionExpressions: true,
+            allowDirectConstAssertionInArrowFunctions: true
           }],
           '@typescript-eslint/indent': ['error', 2, {
             SwitchCase: 1,
@@ -75,6 +77,7 @@ test('export', (t): void => {
           '@typescript-eslint/prefer-function-type': 'error',
           '@typescript-eslint/prefer-readonly': 'error',
           '@typescript-eslint/promise-function-async': 'error',
+          '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
           '@typescript-eslint/restrict-plus-operands': 'error',
           '@typescript-eslint/require-array-sort-compare': 'error',
           '@typescript-eslint/require-await': 'error',
