@@ -13,12 +13,10 @@ export = {
         camelcase: 'off',
         indent: 'off',
         'no-array-constructor': 'off',
-        'no-empty-function': 'off',
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
         quotes: 'off',
-        'require-await': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
         '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
