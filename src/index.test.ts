@@ -10,6 +10,7 @@ test('export', (t): void => {
         files: ['*.ts', '*.tsx'],
         parser: '@typescript-eslint/parser',
         rules: {
+          'brace-style': 'off',
           camelcase: 'off',
           indent: 'off',
           'no-array-constructor': 'off',
@@ -20,6 +21,7 @@ test('export', (t): void => {
           quotes: 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+          '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
