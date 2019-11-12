@@ -47,7 +47,8 @@ test('export', (t): void => {
             ObjectExpression: 1,
             ImportDeclaration: 1,
             flatTernaryExpressions: false,
-            ignoreComments: false
+            ignoreComments: false,
+            ignoredNodes: ['TemplateLiteral *']
           }],
           '@typescript-eslint/member-delimiter-style': [
             'error',
@@ -68,7 +69,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-          '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
+          '@typescript-eslint/no-unused-vars': ['error', { args: 'none', ignoreRestSiblings: true }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-useless-constructor': 'error',
           '@typescript-eslint/no-var-requires': 'error',
