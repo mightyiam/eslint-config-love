@@ -17,6 +17,7 @@ export = {
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
+        quotes: 'off',
         'require-await': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
@@ -40,6 +41,7 @@ export = {
         '@typescript-eslint/no-unused-vars': ['error', { args: 'none' }],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
         '@typescript-eslint/no-useless-constructor': 'error',
+        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
         '@typescript-eslint/require-await': 'error',
 
         // New Typescript-only rules:
@@ -56,7 +58,8 @@ export = {
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,
-          allowTypedFunctionExpressions: true
+          allowTypedFunctionExpressions: true,
+          allowDirectConstAssertionInArrowFunctions: true
         }],
         '@typescript-eslint/member-delimiter-style': [
           'error',
