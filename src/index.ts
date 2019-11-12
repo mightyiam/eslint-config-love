@@ -37,7 +37,7 @@ export = {
         }],
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-empty-function': 'error',
-        '@typescript-eslint/no-unused-vars': ['error', { args: 'none', ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: false, typedefs: false }],
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
