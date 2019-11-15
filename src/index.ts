@@ -10,6 +10,7 @@ export = {
         'no-undef': 'off',
 
         // Rules replaced by @typescript-eslint versions:
+        'brace-style': 'off',
         camelcase: 'off',
         indent: 'off',
         'no-array-constructor': 'off',
@@ -19,6 +20,7 @@ export = {
         quotes: 'off',
 
         // @typescript-eslint versions of Standard.js rules:
+        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
         '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
         '@typescript-eslint/indent': ['error', 2, {
           SwitchCase: 1,
