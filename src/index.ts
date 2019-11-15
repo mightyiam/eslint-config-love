@@ -10,6 +10,13 @@ const equivalents = [
   'quotes'
 ] as const
 
+function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
+  return [...iterable].reduce<{ [key: string]: T }>((obj, [key, val]) => {
+    obj[key] = val
+    return obj
+  }, {})
+}
+
 export = {
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
@@ -22,13 +29,11 @@ export = {
         'no-undef': 'off',
 
         // Rules replaced by @typescript-eslint versions:
-        ...Object.fromEntries(equivalents.map((name) => [name, 'off'])),
+        ...fromEntries(equivalents.map((name) => [name, 'off'])),
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
-        ...Object.fromEntries(
-          equivalents.map((name) => [`@typescript-eslint/${name}`, standardRules[name]])
-        ),
+        ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, standardRules[name]])),
         '@typescript-eslint/no-use-before-define': ['error', {
           functions: false,
           classes: false,
