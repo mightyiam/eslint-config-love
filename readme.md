@@ -43,3 +43,7 @@ Example command line usage:
 ```
 npx eslint --ext .js,.ts .
 ```
+
+## Visual Studio Code
+
+As with linting JavaScript, use the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and then follow the [instructions here](https://github.com/Microsoft/vscode-eslint#enable-typescript-file-validation).
