@@ -1,5 +1,23 @@
 import test from 'ava'
 import exported from '.'
+import standardPkg from 'eslint-config-standard/package.json'
+import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
+
+interface OurDeps {
+  ourPeerDeps: NonNullable<NormalizedPackageJson['peerDependencies']>
+  ourDevDeps: NonNullable<NormalizedPackageJson['devDependencies']>
+}
+
+const getOurDeps = async (): Promise<OurDeps> => {
+  const readResult = await readPkgUp()
+  if (readResult === undefined) { throw new Error() }
+  const ourPkg = readResult.packageJson
+  if (ourPkg.peerDependencies === undefined) { throw new Error() }
+  const ourPeerDeps = ourPkg.peerDependencies
+  if (ourPkg.devDependencies === undefined) { throw new Error() }
+  const ourDevDeps = ourPkg.devDependencies
+  return { ourPeerDeps, ourDevDeps }
+}
 
 test('export', (t): void => {
   const expected = {
@@ -91,4 +109,28 @@ test('export', (t): void => {
   }
 
   t.deepEqual(exported, expected)
+})
+
+test('Own peerDependencies include those of eslint-config-standard', async (t) => {
+  const { ourPeerDeps } = await getOurDeps()
+  Object
+    .entries(standardPkg.peerDependencies)
+    .forEach(([_name, standardRange]) => {
+      // https://github.com/microsoft/TypeScript/pull/12253
+      const name = _name as keyof typeof standardPkg.peerDependencies
+      const ourRange = ourPeerDeps[name]
+      t.is(ourRange, standardRange)
+    })
+})
+
+test('Dependency @typescript-eslint/eslint-plugin', async (t) => {
+  const { ourPeerDeps, ourDevDeps } = await getOurDeps()
+  const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
+  const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
+  t.true(peerDepPluginRange.startsWith('>='))
+  t.true(devDepPluginRange.startsWith('^'))
+  t.is(
+    peerDepPluginRange.split('>=')[1],
+    devDepPluginRange.split('^')[1]
+  )
 })
