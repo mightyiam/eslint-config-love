@@ -6,6 +6,7 @@ const equivalents = [
   'indent',
   'no-array-constructor',
   'no-unused-vars',
+  'no-unused-expressions',
   'no-useless-constructor',
   'quotes'
 ] as const
