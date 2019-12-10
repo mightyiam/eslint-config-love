@@ -29,7 +29,7 @@ export interface Boo { b_oo: null }
  * https://github.com/standard/eslint-config-standard-with-typescript/issues/110
  */
 // Inline callbacks don't need return types:
-setTimeout(() => {}, 1)
+setTimeout(() => { console.log() }, 1)
 
 // The return type is clear from the left side of the assignment:
 const double: ((n: number) => number) = n => n * 2

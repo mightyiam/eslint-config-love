@@ -8,7 +8,8 @@ const equivalents = [
   'no-unused-vars',
   'no-unused-expressions',
   'no-useless-constructor',
-  'quotes'
+  'quotes',
+  'space-before-function-paren'
 ] as const
 
 function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
@@ -66,6 +67,7 @@ export = {
             singleline: { delimiter: 'comma', requireLast: false }
           }
         ],
+        '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extraneous-class': 'error',
@@ -84,6 +86,7 @@ export = {
         '@typescript-eslint/require-array-sort-compare': 'error',
         '@typescript-eslint/require-await': 'error',
         '@typescript-eslint/restrict-plus-operands': 'error',
+        '@typescript-eslint/restrict-template-expressions': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
         '@typescript-eslint/type-annotation-spacing': 'error'
