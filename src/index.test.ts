@@ -4,6 +4,7 @@ import standardPkg from 'eslint-config-standard/package.json'
 import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
 
 interface OurDeps {
+  ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
   ourPeerDeps: NonNullable<NormalizedPackageJson['peerDependencies']>
   ourDevDeps: NonNullable<NormalizedPackageJson['devDependencies']>
 }
@@ -12,11 +13,13 @@ const getOurDeps = async (): Promise<OurDeps> => {
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
+  if (ourPkg.dependencies === undefined) { throw new Error() }
+  const ourDeps = ourPkg.dependencies
   if (ourPkg.peerDependencies === undefined) { throw new Error() }
   const ourPeerDeps = ourPkg.peerDependencies
   if (ourPkg.devDependencies === undefined) { throw new Error() }
   const ourDevDeps = ourPkg.devDependencies
-  return { ourPeerDeps, ourDevDeps }
+  return { ourDeps, ourPeerDeps, ourDevDeps }
 }
 
 test('export', (t): void => {
@@ -117,6 +120,26 @@ test('export', (t): void => {
   t.deepEqual(exported, expected)
 })
 
+test('Dependencies range types', async (t) => {
+  const { ourDeps, ourPeerDeps, ourDevDeps } = await getOurDeps()
+  for (const [name, range] of Object.entries(ourDeps)) {
+    const specifier = '^'
+    t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
+  }
+  for (const [name, range] of Object.entries(ourPeerDeps)) {
+    const specifier = '>='
+    t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
+  }
+  for (const [name, range] of Object.entries(ourDevDeps)) {
+    if (name === 'typescript') {
+      t.is(range.search(/\d/), 0, 'Dev dependency typescript is exact.')
+    } else {
+      const specifier = '^'
+      t.true(range.startsWith(specifier), `Dev dependency ${name} starts with \`${specifier}\`.`)
+    }
+  }
+})
+
 test('Own peerDependencies include those of eslint-config-standard', async (t) => {
   const { ourPeerDeps } = await getOurDeps()
   Object
@@ -129,14 +152,19 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
     })
 })
 
-test('Dependency @typescript-eslint/eslint-plugin', async (t) => {
+test('Peer and dev dep @typescript-eslint/eslint-plugin same base version', async (t) => {
   const { ourPeerDeps, ourDevDeps } = await getOurDeps()
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
-  t.true(peerDepPluginRange.startsWith('>='))
-  t.true(devDepPluginRange.startsWith('^'))
   t.is(
     peerDepPluginRange.split('>=')[1],
     devDepPluginRange.split('^')[1]
   )
+})
+
+test('Deps parser and plugin are same version', async (t) => {
+  const { ourDeps, ourPeerDeps } = await getOurDeps()
+  const parserRange = ourDeps['@typescript-eslint/parser']
+  const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
+  t.is(parserRange.split('^')[1], pluginRange.split('>=')[1])
 })
