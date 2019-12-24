@@ -38,6 +38,7 @@ test('export', (t): void => {
           'no-unused-expressions': 'off',
           'no-useless-constructor': 'off',
           quotes: 'off',
+          'space-before-function-paren': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
@@ -79,6 +80,7 @@ test('export', (t): void => {
             }
           ],
           '@typescript-eslint/no-array-constructor': 'error',
+          '@typescript-eslint/no-dynamic-delete': 'error',
           '@typescript-eslint/no-empty-function': 'error',
           '@typescript-eslint/no-empty-interface': 'error',
           '@typescript-eslint/no-extraneous-class': 'error',
@@ -102,6 +104,8 @@ test('export', (t): void => {
           '@typescript-eslint/restrict-plus-operands': 'error',
           '@typescript-eslint/require-array-sort-compare': 'error',
           '@typescript-eslint/require-await': 'error',
+          '@typescript-eslint/restrict-template-expressions': 'error',
+          '@typescript-eslint/space-before-function-paren': ['error', 'always'],
           '@typescript-eslint/strict-boolean-expressions': 'error',
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
           '@typescript-eslint/type-annotation-spacing': 'error'
