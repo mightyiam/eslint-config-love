@@ -2,7 +2,6 @@ import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 
 const equivalents = [
   'brace-style',
-  'camelcase',
   'indent',
   'no-array-constructor',
   'no-unused-vars',
@@ -32,6 +31,7 @@ export = {
 
         // Rules replaced by @typescript-eslint versions:
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
+        camelcase: 'off',
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
@@ -46,6 +46,7 @@ export = {
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
           {
@@ -70,7 +71,8 @@ export = {
         '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
-        '@typescript-eslint/no-extraneous-class': 'error',
+        '@typescript-eslint/no-extra-non-null-assertion': 'error',
+        '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-misused-new': 'error',
@@ -81,11 +83,13 @@ export = {
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-function-type': 'error',
+        '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
+        '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-readonly': 'error',
         '@typescript-eslint/promise-function-async': 'error',
         '@typescript-eslint/require-array-sort-compare': 'error',
         '@typescript-eslint/require-await': 'error',
-        '@typescript-eslint/restrict-plus-operands': 'error',
+        '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
         '@typescript-eslint/restrict-template-expressions': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
