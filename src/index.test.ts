@@ -84,7 +84,12 @@ test('export', (t): void => {
           ],
           '@typescript-eslint/no-array-constructor': 'error',
           '@typescript-eslint/no-dynamic-delete': 'error',
-          '@typescript-eslint/no-empty-function': 'error',
+          '@typescript-eslint/no-empty-function': ['error', {
+            allow: [
+              'protected-constructors',
+              'private-constructors'
+            ]
+          }],
           '@typescript-eslint/no-empty-interface': 'error',
           '@typescript-eslint/no-extra-non-null-assertion': 'error',
           '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
