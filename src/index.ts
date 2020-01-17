@@ -60,6 +60,7 @@ export = {
           }
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/default-param-last': 'error',
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,
