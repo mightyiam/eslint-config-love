@@ -4,6 +4,7 @@ const equivalents = [
   'brace-style',
   'indent',
   'no-array-constructor',
+  'no-throw-literal',
   'no-unused-vars',
   'no-unused-expressions',
   'no-useless-constructor',
@@ -42,6 +43,7 @@ export = {
         '@typescript-eslint/no-use-before-define': ['error', {
           functions: false,
           classes: false,
+          enums: false,
           variables: false,
           typedefs: false // Only the TypeScript rule has this option.
         }],
