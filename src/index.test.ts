@@ -35,6 +35,7 @@ test('export', (t): void => {
           camelcase: 'off',
           indent: 'off',
           'no-array-constructor': 'off',
+          'no-duplicate-class-members': 'off',
           'no-undef': 'off',
           'no-unused-vars': 'off',
           'no-use-before-define': 'off',

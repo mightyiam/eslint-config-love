@@ -29,6 +29,9 @@ export = {
         // TypeScript has this functionality by default:
         'no-undef': 'off',
 
+        // Incompatible with TypeScript function overloads:
+        'no-duplicate-class-members': 'off',
+
         // Rules replaced by @typescript-eslint versions:
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
         camelcase: 'off',
