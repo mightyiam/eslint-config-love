@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v11.0.1...v12.0.0) (2020-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* camelcase applies to generic types:
+* restrict-plus-operands is applies to compound
+assignments:
+* Add rule no-extra-non-null-assertion:
+* Add rule prefer-nullish-coalescing:
+* Add rule prefer-optional-chain:
+* add rule @typescript-eslint/restrict-template-expressions
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.8.0/packages/eslint-plugin/docs/rules/restrict-template-expressions.md
+* add rule @typescript-eslint/space-before-function-paren
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.8.0/packages/eslint-plugin/docs/rules/space-before-function-paren.md
+* add rule @typescript-eslint/no-dynamic-delete
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.8.0/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
+
+### Features
+
+* upgrade plugin & parser to v2.10.0 ([#208](https://github.com/standard/eslint-config-standard-with-typescript/issues/208)) ([8a29629](https://github.com/standard/eslint-config-standard-with-typescript/commit/8a29629c2965ecf2f59f4e0ef339eaefde7a8dfd))
+* upgrade plugin & parser to v2.9.0 ([#200](https://github.com/standard/eslint-config-standard-with-typescript/issues/200)) ([2e770df](https://github.com/standard/eslint-config-standard-with-typescript/commit/2e770df8fe51df39b732c4371d51a9bb7f9f9448)), closes [aaadf9e#diff-aaadf9e37107194e3f6679b2c8e30ec3](https://github.com/standard/aaadf9e/issues/diff-aaadf9e37107194e3f6679b2c8e30ec3) [d634f46#diff-d634f469dd550492a918f33b100f0734](https://github.com/standard/d634f46/issues/diff-d634f469dd550492a918f33b100f0734) [ef83cd2#diff-ef83cd2743d5bd1f8c7b245fca0c1367](https://github.com/standard/ef83cd2/issues/diff-ef83cd2743d5bd1f8c7b245fca0c1367) [2bbcee3#diff-2bbcee3ab3b7eb9fcdeb1aabae22e177](https://github.com/standard/2bbcee3/issues/diff-2bbcee3ab3b7eb9fcdeb1aabae22e177) [35a55a2#diff-35a55a2cbf3c835b088167bc2e912ee8](https://github.com/standard/35a55a2/issues/diff-35a55a2cbf3c835b088167bc2e912ee8) [3696b44#diff-3696b44f524c94e3a48be3795feb09a6](https://github.com/standard/3696b44/issues/diff-3696b44f524c94e3a48be3795feb09a6) [#179](https://github.com/standard/eslint-config-standard-with-typescript/issues/179)
+* upgrade plugin to v2.3.3 ([cfbc821](https://github.com/standard/eslint-config-standard-with-typescript/commit/cfbc82177ec89c6a142c3bb739dc03fefab2a36a)), closes [#154](https://github.com/standard/eslint-config-standard-with-typescript/issues/154)
+* upgrade plugin to v2.7.0 ([6af3971](https://github.com/standard/eslint-config-standard-with-typescript/commit/6af3971143f0204473e42891b02498fda507684d)), closes [#157](https://github.com/standard/eslint-config-standard-with-typescript/issues/157) [#159](https://github.com/standard/eslint-config-standard-with-typescript/issues/159)
+* upgrade plugin to v2.8.0 ([4feb840](https://github.com/standard/eslint-config-standard-with-typescript/commit/4feb84057c35c2f252cdca95b383e2a4d01e65f0)), closes [#175](https://github.com/standard/eslint-config-standard-with-typescript/issues/175)
+
+
+### Bug Fixes
+
+* **deps:** bump parser dep to match plugin ([9b3d10d](https://github.com/standard/eslint-config-standard-with-typescript/commit/9b3d10db05bc12cd6fcf47ef60fce1f3e0958415)), closes [#197](https://github.com/standard/eslint-config-standard-with-typescript/issues/197)
+* absolute paths in ignore files ([3b4ddde](https://github.com/standard/eslint-config-standard-with-typescript/commit/3b4dddef6f95c66ee9f317dda5d943474a48b45c))
+* peer dependencies ([969e66b](https://github.com/standard/eslint-config-standard-with-typescript/commit/969e66b17234cdb4c28ae77b34475f959633686c)), closes [#182](https://github.com/standard/eslint-config-standard-with-typescript/issues/182) [#183](https://github.com/standard/eslint-config-standard-with-typescript/issues/183)
+
 ## [11.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v10.0.0...v11.0.0) (2019-11-15)
 
 
