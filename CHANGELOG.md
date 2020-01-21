@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v12.0.0...v12.0.1) (2020-01-21)
+
+
+### Bug Fixes
+
+* disable no-dupe-class-members ([#215](https://github.com/standard/eslint-config-standard-with-typescript/issues/215)) ([3858aff](https://github.com/standard/eslint-config-standard-with-typescript/commit/3858aff0ef81e9a25fde218412e1263c46729904)), closes [#213](https://github.com/standard/eslint-config-standard-with-typescript/issues/213)
+
 ## [12.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v11.0.1...v12.0.0) (2020-01-21)
 
 
