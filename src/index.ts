@@ -4,6 +4,7 @@ const equivalents = [
   'brace-style',
   'indent',
   'no-array-constructor',
+  'no-throw-literal',
   'no-unused-vars',
   'no-unused-expressions',
   'no-useless-constructor',
@@ -42,6 +43,7 @@ export = {
         '@typescript-eslint/no-use-before-define': ['error', {
           functions: false,
           classes: false,
+          enums: false,
           variables: false,
           typedefs: false // Only the TypeScript rule has this option.
         }],
@@ -58,6 +60,7 @@ export = {
           }
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/default-param-last': 'error',
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,
@@ -83,6 +86,7 @@ export = {
         '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
+        '@typescript-eslint/no-implied-eval': 'error',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
