@@ -72,7 +72,7 @@
     "@commitlint/travis-cli": "^8.2.0",
     "@types/node": "^13.1.0",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "ava": "^2.4.0",
+    "ava": "^3.1.0",
     "editorconfig-checker": "^3.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.19.1",
@@ -84,7 +84,7 @@
     "read-pkg-up": "^7.0.1",
     "standard-version": "^7.0.1",
     "tsconfigs": "^4.0.2",
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   },
   "files": [
     "lib/index.js",
