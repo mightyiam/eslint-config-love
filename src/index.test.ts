@@ -33,6 +33,7 @@ test('export', (t): void => {
         rules: {
           'brace-style': 'off',
           camelcase: 'off',
+          'comma-spacing': 'off',
           'default-param-last': 'off',
           indent: 'off',
           'no-array-constructor': 'off',
@@ -49,6 +50,7 @@ test('export', (t): void => {
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
+          '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
             {

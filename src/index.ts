@@ -1,6 +1,7 @@
 import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 
 const equivalents = [
+  'comma-spacing',
   'brace-style',
   'indent',
   'no-array-constructor',
