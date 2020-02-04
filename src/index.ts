@@ -36,6 +36,7 @@ export = {
         // Rules replaced by @typescript-eslint versions:
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
         camelcase: 'off',
+        'default-param-last': 'off',
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
@@ -90,6 +91,7 @@ export = {
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',

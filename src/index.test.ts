@@ -33,6 +33,7 @@ test('export', (t): void => {
         rules: {
           'brace-style': 'off',
           camelcase: 'off',
+          'default-param-last': 'off',
           indent: 'off',
           'no-array-constructor': 'off',
           'no-duplicate-class-members': 'off',
@@ -102,6 +103,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-misused-new': 'error',
           '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
+          '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
           '@typescript-eslint/no-throw-literal': 'error',
