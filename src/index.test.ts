@@ -112,6 +112,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-useless-constructor': 'error',
           '@typescript-eslint/no-var-requires': 'error',
           '@typescript-eslint/prefer-function-type': 'error',
+          '@typescript-eslint/prefer-includes': 'error',
           '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
           '@typescript-eslint/prefer-optional-chain': 'error',
           '@typescript-eslint/prefer-readonly': 'error',
