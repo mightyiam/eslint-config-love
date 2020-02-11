@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v12.0.1...v13.0.0) (2020-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade plugin peerDep
+* new rule @typescript-eslint/no-unnecessary-boolean-literal-compare
+https://github.com/typescript-eslint/typescript-eslint/pull/242
+* new rule @typescript-eslint/no-dupe-class-members
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.19.0/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
+* new rule @typescript-eslint/switch-exhaustiveness-check
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.19.0/packages/eslint-plugin/docs/rules/switch-exhaustiveness-check.md
+* new rule @typescript-eslint/prefer-as-const
+https://github.com/typescript-eslint/typescript-eslint/pull/1431
+* new rule @typescript-eslint/no-non-null-asserted-optional-chain
+https://github.com/typescript-eslint/typescript-eslint/pull/1469
+* [no-extra-non-null-assertion] flag optional chain after a non-null assertion
+https://github.com/typescript-eslint/typescript-eslint/pull/1460
+* **rules:** add rule prefer-includes:
+https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-includes.md
+* new rule @typescript-eslint/default-param-last
+* handle JSX attributes in
+@typescript-eslint/no-unnecessary-type-assertion
+* new rule @typescript-eslint/no-implied-eval
+* no-throw-literal uses type information.
+* More optional chain support in rules.
+
+no-use-before-define ignores enums.
+* member-ordering handles enum declarations
+
+### Features
+
+* upgrade parser & plugin to v2.17.0 ([11a16f4](https://github.com/standard/eslint-config-standard-with-typescript/commit/11a16f41e38ed54e151b6d209199547bd1b91ac3)), closes [#218](https://github.com/standard/eslint-config-standard-with-typescript/issues/218)
+* upgrade parser & plugin to v2.18.0 ([fe2242a](https://github.com/standard/eslint-config-standard-with-typescript/commit/fe2242a1e1257dd97854acd28fd03724afda3c23)), closes [#218](https://github.com/standard/eslint-config-standard-with-typescript/issues/218)
+* upgrade parser & plugin to v2.19.0 ([64fdf31](https://github.com/standard/eslint-config-standard-with-typescript/commit/64fdf3110f4f62c019da88f4970df27f9f2ddcc7)), closes [#223](https://github.com/standard/eslint-config-standard-with-typescript/issues/223)
+* **rules:** add rule prefer-includes ([#148](https://github.com/standard/eslint-config-standard-with-typescript/issues/148)) ([#225](https://github.com/standard/eslint-config-standard-with-typescript/issues/225)) ([a2bdac5](https://github.com/standard/eslint-config-standard-with-typescript/commit/a2bdac52c368b9574b2f5c7d452055d5e190e32c))
+* upgrade plugin & parser to v2.11.0 ([6a378ad](https://github.com/standard/eslint-config-standard-with-typescript/commit/6a378ad6118c47b58e2beffd1d086fcbe4629d7a)), closes [#191](https://github.com/standard/eslint-config-standard-with-typescript/issues/191)
+* upgrade plugin & parser to v2.12.0 ([e5cfecf](https://github.com/standard/eslint-config-standard-with-typescript/commit/e5cfecfeb09a5d6c4782f5600eb27bd3e05fd7bf)), closes [#194](https://github.com/standard/eslint-config-standard-with-typescript/issues/194)
+* upgrade plugin & parser to v2.13.0 ([a0ef9e7](https://github.com/standard/eslint-config-standard-with-typescript/commit/a0ef9e7ff8d813a2f3f9679aab0dd763459ff2b8)), closes [#196](https://github.com/standard/eslint-config-standard-with-typescript/issues/196)
+* upgrade plugin & parser to v2.14.0 ([af722c3](https://github.com/standard/eslint-config-standard-with-typescript/commit/af722c37ee477a44e1d109966fb5d00f56b636a9)), closes [#202](https://github.com/standard/eslint-config-standard-with-typescript/issues/202)
+* upgrade plugin & parser to v2.15.0 ([f6eab66](https://github.com/standard/eslint-config-standard-with-typescript/commit/f6eab669ca862e7f88fe20a851a588f437f111d2)), closes [#203](https://github.com/standard/eslint-config-standard-with-typescript/issues/203)
+* upgrade plugin & parser to v2.16.0 ([b83b82e](https://github.com/standard/eslint-config-standard-with-typescript/commit/b83b82e14be38ffd0f940953613d8d1edf8e5194)), closes [#207](https://github.com/standard/eslint-config-standard-with-typescript/issues/207)
+
+
+* upgrade parser & plugin to v2.19.2 ([443680f](https://github.com/standard/eslint-config-standard-with-typescript/commit/443680ff85f7b405ae502f7ffacef31bdd4b6afd))
+
 ### [12.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v12.0.0...v12.0.1) (2020-01-21)
 
 
