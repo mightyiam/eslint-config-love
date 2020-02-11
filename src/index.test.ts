@@ -48,6 +48,7 @@ test('export', (t): void => {
           'space-before-function-paren': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+          '@typescript-eslint/ban-ts-comment': 'error',
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
           '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],

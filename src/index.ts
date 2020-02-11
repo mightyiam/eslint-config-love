@@ -51,6 +51,7 @@ export = {
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/ban-ts-comment': 'error',
         '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
