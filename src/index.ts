@@ -1,9 +1,11 @@
 import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 
 const equivalents = [
+  'comma-spacing',
   'brace-style',
   'indent',
   'no-array-constructor',
+  'no-dupe-class-members',
   'no-throw-literal',
   'no-unused-vars',
   'no-unused-expressions',
@@ -30,12 +32,10 @@ export = {
         // TypeScript has this functionality by default:
         'no-undef': 'off',
 
-        // Incompatible with TypeScript function overloads:
-        'no-duplicate-class-members': 'off',
-
         // Rules replaced by @typescript-eslint versions:
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
         camelcase: 'off',
+        'default-param-last': 'off',
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
@@ -90,8 +90,10 @@ export = {
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
+        '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-function-type': 'error',

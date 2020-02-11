@@ -33,9 +33,11 @@ test('export', (t): void => {
         rules: {
           'brace-style': 'off',
           camelcase: 'off',
+          'comma-spacing': 'off',
+          'default-param-last': 'off',
           indent: 'off',
           'no-array-constructor': 'off',
-          'no-duplicate-class-members': 'off',
+          'no-dupe-class-members': 'off',
           'no-throw-literal': 'off',
           'no-undef': 'off',
           'no-unused-vars': 'off',
@@ -48,6 +50,7 @@ test('export', (t): void => {
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
+          '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
             {
@@ -86,6 +89,7 @@ test('export', (t): void => {
             }
           ],
           '@typescript-eslint/no-array-constructor': 'error',
+          '@typescript-eslint/no-dupe-class-members': 'error',
           '@typescript-eslint/no-dynamic-delete': 'error',
           '@typescript-eslint/no-empty-function': ['error', {
             allow: [
@@ -102,10 +106,12 @@ test('export', (t): void => {
           '@typescript-eslint/no-misused-new': 'error',
           '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
+          '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+          '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
           '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
