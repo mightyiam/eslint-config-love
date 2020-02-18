@@ -35,6 +35,7 @@ test('export', (t): void => {
           camelcase: 'off',
           'comma-spacing': 'off',
           'default-param-last': 'off',
+          'func-call-spacing': 'off',
           indent: 'off',
           'no-array-constructor': 'off',
           'no-dupe-class-members': 'off',
@@ -66,6 +67,7 @@ test('export', (t): void => {
             allowTypedFunctionExpressions: true,
             allowDirectConstAssertionInArrowFunctions: true
           }],
+          '@typescript-eslint/func-call-spacing': ['error', 'never'],
           '@typescript-eslint/indent': ['error', 2, {
             SwitchCase: 1,
             VariableDeclarator: 1,
