@@ -3,6 +3,7 @@ import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 const equivalents = [
   'comma-spacing',
   'brace-style',
+  'func-call-spacing',
   'indent',
   'no-array-constructor',
   'no-dupe-class-members',
