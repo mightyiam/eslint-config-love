@@ -129,7 +129,7 @@ test('export', (t): void => {
           '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
           '@typescript-eslint/require-array-sort-compare': 'error',
           '@typescript-eslint/require-await': 'error',
-          '@typescript-eslint/restrict-template-expressions': 'error',
+          '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
           '@typescript-eslint/strict-boolean-expressions': 'error',
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
