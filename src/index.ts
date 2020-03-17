@@ -102,6 +102,7 @@ export = {
         '@typescript-eslint/require-await': 'error',
         '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
         '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+        '@typescript-eslint/return-await': ['error', 'in-try-catch'],
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
         '@typescript-eslint/type-annotation-spacing': 'error'
