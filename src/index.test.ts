@@ -109,6 +109,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
           '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+          '@typescript-eslint/no-unsafe-call': 'error',
           '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
