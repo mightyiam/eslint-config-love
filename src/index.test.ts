@@ -125,6 +125,7 @@ test('export', (t): void => {
           '@typescript-eslint/require-array-sort-compare': 'error',
           '@typescript-eslint/require-await': 'error',
           '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+          '@typescript-eslint/return-await': ['error', 'always'],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
           '@typescript-eslint/strict-boolean-expressions': 'error',
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
