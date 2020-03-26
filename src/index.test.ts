@@ -123,7 +123,6 @@ test('export', (t): void => {
           '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
           '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
           '@typescript-eslint/require-array-sort-compare': 'error',
-          '@typescript-eslint/require-await': 'error',
           '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
           '@typescript-eslint/return-await': ['error', 'always'],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
