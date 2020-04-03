@@ -26,7 +26,7 @@ Here is an example `.eslintrc.json`:
 {
   "extends": "standard-with-typescript",
   "parserOptions": {
-      "project": "./tsconfig.json"
+    "project": "./tsconfig.json"
   }
 }
 ```
