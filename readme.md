@@ -35,7 +35,7 @@ Note: Please read some important instructions regarding the `project` option [he
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you might care about.
 
-Make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#--ext). And here is [a feature request for specifying extensions in the config](https://github.com/eslint/eslint/issues/10828).
+Make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#ext). And here is [a feature request for specifying extensions in the config](https://github.com/eslint/eslint/issues/10828).
 
 Example command line usage:
 
