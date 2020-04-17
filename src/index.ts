@@ -75,7 +75,7 @@ export = {
             singleline: { delimiter: 'comma', requireLast: false }
           }
         ],
-        '@typescript-eslint/no-base-to-string': 'error',
+        '@typescript-eslint/no-base-to-string': ['error', { ignoreTaggedTemplateExpressions: true }],
         '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-empty-interface': 'error',
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
