@@ -12,8 +12,8 @@ const equivalents = [
   'no-unused-expressions',
   'no-useless-constructor',
   'quotes',
-  'space-before-function-paren',
-  'semi'
+  'semi',
+  'space-before-function-paren'
 ] as const
 
 function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
