@@ -12,6 +12,7 @@ const equivalents = [
   'no-unused-expressions',
   'no-useless-constructor',
   'quotes',
+  'semi',
   'space-before-function-paren'
 ] as const
 
