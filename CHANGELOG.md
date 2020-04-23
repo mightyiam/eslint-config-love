@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v15.0.1...v16.0.0) (2020-04-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* plugin peerDep bump
+* bump plugin peerDep
+
+### Bug Fixes
+
+* ensure @typescript-eslint/semi rule is applied ([#275](https://github.com/standard/eslint-config-standard-with-typescript/issues/275)) ([92b21c7](https://github.com/standard/eslint-config-standard-with-typescript/commit/92b21c77ebcb386ae8d5b2b506956a452138da9c))
+* remove @typescript-eslint/require-await ([657ee28](https://github.com/standard/eslint-config-standard-with-typescript/commit/657ee2825c53e2bb7e6d5e7b63b6d526f602c51c)), closes [#217](https://github.com/standard/eslint-config-standard-with-typescript/issues/217)
+* upgrade parser & plugin to 2.25.0 ([99af05e](https://github.com/standard/eslint-config-standard-with-typescript/commit/99af05ecc4ebb0b4f46af6ab05f6697aac35374c)), closes [#263](https://github.com/standard/eslint-config-standard-with-typescript/issues/263)
+* upgrade parser & plugin to 2.26.0 ([08c2444](https://github.com/standard/eslint-config-standard-with-typescript/commit/08c2444918f3dc7655fb4dd6dc5e79d5c02c6276)), closes [#269](https://github.com/standard/eslint-config-standard-with-typescript/issues/269)
+
 ### [15.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v15.0.0...v15.0.1) (2020-03-21)
 
 
