@@ -91,6 +91,7 @@ test('export', (t): void => {
               singleline: { delimiter: 'comma', requireLast: false }
             }
           ],
+          '@typescript-eslint/method-signature-style': 'error',
           '@typescript-eslint/no-array-constructor': 'error',
           '@typescript-eslint/no-base-to-string': 'error',
           '@typescript-eslint/no-dupe-class-members': 'error',
