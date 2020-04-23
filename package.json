@@ -68,6 +68,7 @@
     "eslint-plugin-node": ">=9.1.0",
     "eslint-plugin-promise": ">=4.2.1",
     "eslint-plugin-standard": ">=4.0.0",
+    "typescript": ">=3.8",
     "@typescript-eslint/eslint-plugin": ">=2.29.0"
   },
   "devDependencies": {
