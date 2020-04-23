@@ -5,6 +5,7 @@ const equivalents = [
   'brace-style',
   'func-call-spacing',
   'indent',
+  'keyword-spacing',
   'no-array-constructor',
   'no-dupe-class-members',
   'no-throw-literal',

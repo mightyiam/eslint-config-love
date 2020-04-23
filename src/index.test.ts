@@ -37,6 +37,7 @@ test('export', (t): void => {
           'default-param-last': 'off',
           'func-call-spacing': 'off',
           indent: 'off',
+          'keyword-spacing': 'off',
           'no-array-constructor': 'off',
           'no-dupe-class-members': 'off',
           'no-throw-literal': 'off',
@@ -84,6 +85,7 @@ test('export', (t): void => {
             ignoreComments: false,
             ignoredNodes: ['TemplateLiteral *']
           }],
+          '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
           '@typescript-eslint/member-delimiter-style': [
             'error',
             {
