@@ -121,6 +121,7 @@ test('export', (t): void => {
           '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
           '@typescript-eslint/prefer-optional-chain': 'error',
           '@typescript-eslint/prefer-readonly': 'error',
+          '@typescript-eslint/prefer-reduce-type-parameter': 'error',
           '@typescript-eslint/promise-function-async': 'error',
           '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
           '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
