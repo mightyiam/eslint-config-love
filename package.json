@@ -8,8 +8,12 @@
     "lint": "eslint --ext .js,.ts .",
     "editorconfig": "editorconfig-checker",
     "unit": "ava",
-    "test": "run-s editorconfig compile lint unit",
-    "release": "standard-version --skip.tag"
+    "test": "run-s clean-artifacts editorconfig compile lint unit",
+    "clean-artifacts": "git clean lib -X --force",
+    "is-code-clean": "git diff-index HEAD --quiet",
+    "prepublishOnly": "run-s is-code-clean test",
+    "prepare-release": "run-s is-code-clean bump-and-commit",
+    "bump-and-commit": "standard-version --skip.tag"
   },
   "repository": {
     "type": "git",
