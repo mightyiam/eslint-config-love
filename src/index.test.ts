@@ -129,6 +129,7 @@ test('export', (t): void => {
           '@typescript-eslint/prefer-optional-chain': 'error',
           '@typescript-eslint/prefer-readonly': 'error',
           '@typescript-eslint/prefer-reduce-type-parameter': 'error',
+          '@typescript-eslint/prefer-ts-expect-error': 'error',
           '@typescript-eslint/promise-function-async': 'error',
           '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
           '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
