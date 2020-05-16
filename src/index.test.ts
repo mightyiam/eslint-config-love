@@ -102,7 +102,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-base-to-string': 'error',
           '@typescript-eslint/no-dupe-class-members': 'error',
           '@typescript-eslint/no-dynamic-delete': 'error',
-          '@typescript-eslint/no-empty-interface': 'error',
+          '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
           '@typescript-eslint/no-extra-non-null-assertion': 'error',
           '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
           '@typescript-eslint/no-floating-promises': 'error',
