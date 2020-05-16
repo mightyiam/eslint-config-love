@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v16.0.0...v17.0.0) (2020-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/prefer-ts-expect-error
+* bump typescript peerDep to `>=3.9`
+* peerDep bump
+* new rule @typescript-eslint/dot-notation
+https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
+* new rule @typescript-eslint/lines-between-class-members
+https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/lines-between-class-members.md
+* new rule @typescript-eslint/no-invalid-void-type
+https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md
+* add extending rule @typescript-eslint/keyword-spacing
+
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.29.0/packages/eslint-plugin/docs/rules/keyword-spacing.md
+* add rule @typescript-eslint/prefer-reduce-type-parameter
+
+https://github.com/typescript-eslint/typescript-eslint/blob/v2.29.0/packages/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md
+* add rule @typescript-eslint/method-signature-style
+* plugin peerDep bumped to 2.29.0
+
+### Features
+
+* allowSingleExtends in no-empty-interface ([821005e](https://github.com/standard/eslint-config-standard-with-typescript/commit/821005e50dbe7f6b9c9acc787be6222534bc6680)), closes [#293](https://github.com/standard/eslint-config-standard-with-typescript/issues/293)
+* rule @typescript-eslint/keyword-spacing ([728a592](https://github.com/standard/eslint-config-standard-with-typescript/commit/728a592775ccf0ab60c10c47bad3f8a492d77c90))
+* rule @typescript-eslint/method-signature-style ([aecc59e](https://github.com/standard/eslint-config-standard-with-typescript/commit/aecc59e5cfe5c4b9200c7011f25a41abf6faa6ba))
+* rule @typescript-eslint/prefer-reduce-type-parameter ([3015c46](https://github.com/standard/eslint-config-standard-with-typescript/commit/3015c460a60796095987fc087ded97ed7de49be8))
+* rule @typescript-eslint/prefer-ts-expect-error ([b10a230](https://github.com/standard/eslint-config-standard-with-typescript/commit/b10a23038f2e4d8eb2fceb6f8f0a5ced716dba86))
+* upgrade parser & plugin to 2.33.0 ([ce506b1](https://github.com/standard/eslint-config-standard-with-typescript/commit/ce506b17dfeb2d994043018bb1a7d4e4f00d3116)), closes [#290](https://github.com/standard/eslint-config-standard-with-typescript/issues/290) [#291](https://github.com/standard/eslint-config-standard-with-typescript/issues/291) [#295](https://github.com/standard/eslint-config-standard-with-typescript/issues/295) [#297](https://github.com/standard/eslint-config-standard-with-typescript/issues/297)
+
+
+### Bug Fixes
+
+* specify typescript as peerDep ([ce6e6ed](https://github.com/standard/eslint-config-standard-with-typescript/commit/ce6e6ed764d4c08f01cd5cf7bebcb9adead07627)), closes [#286](https://github.com/standard/eslint-config-standard-with-typescript/issues/286)
+* upgrade parser & plugin to 2.29.0 ([34e0dca](https://github.com/standard/eslint-config-standard-with-typescript/commit/34e0dca60b7bf2987bbc41eb35ef7f5edad73c8a)), closes [#272](https://github.com/standard/eslint-config-standard-with-typescript/issues/272) [#273](https://github.com/standard/eslint-config-standard-with-typescript/issues/273) [#277](https://github.com/standard/eslint-config-standard-with-typescript/issues/277)
+
 ## [16.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v15.0.1...v16.0.0) (2020-04-23)
 
 
