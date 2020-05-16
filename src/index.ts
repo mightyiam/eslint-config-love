@@ -2,10 +2,12 @@ import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 
 const equivalents = [
   'comma-spacing',
+  'dot-notation',
   'brace-style',
   'func-call-spacing',
   'indent',
   'keyword-spacing',
+  'lines-between-class-members',
   'no-array-constructor',
   'no-dupe-class-members',
   'no-throw-literal',
@@ -86,6 +88,7 @@ export = {
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-implied-eval': 'error',
+        '@typescript-eslint/no-invalid-void-type': 'error',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
         '@typescript-eslint/no-namespace': 'error',
