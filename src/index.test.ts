@@ -35,9 +35,11 @@ test('export', (t): void => {
           camelcase: 'off',
           'comma-spacing': 'off',
           'default-param-last': 'off',
+          'dot-notation': 'off',
           'func-call-spacing': 'off',
           indent: 'off',
           'keyword-spacing': 'off',
+          'lines-between-class-members': 'off',
           'no-array-constructor': 'off',
           'no-dupe-class-members': 'off',
           'no-throw-literal': 'off',
@@ -63,6 +65,7 @@ test('export', (t): void => {
           ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
           '@typescript-eslint/default-param-last': 'error',
+          '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
             allowHigherOrderFunctions: true,
@@ -86,6 +89,7 @@ test('export', (t): void => {
             ignoredNodes: ['TemplateLiteral *']
           }],
           '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
+          '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
           '@typescript-eslint/member-delimiter-style': [
             'error',
             {
@@ -104,6 +108,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-floating-promises': 'error',
           '@typescript-eslint/no-for-in-array': 'error',
           '@typescript-eslint/no-implied-eval': 'error',
+          '@typescript-eslint/no-invalid-void-type': 'error',
           '@typescript-eslint/no-misused-new': 'error',
           '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
