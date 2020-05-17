@@ -9,10 +9,10 @@ An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-c
 ## Usage
 
 ```
-npm install --save-dev eslint@6 eslint-plugin-standard@4 eslint-plugin-promise@4 eslint-plugin-import@2 eslint-plugin-node@11 @typescript-eslint/eslint-plugin@2 eslint-config-standard-with-typescript
+npm install --save-dev eslint@7 eslint-plugin-standard@4 eslint-plugin-promise@4 eslint-plugin-import@2 eslint-plugin-node@11 @typescript-eslint/eslint-plugin@2 eslint-config-standard-with-typescript
 ```
 
-Yes, I know it is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
+Yes, this is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
 
 This long list of dependencies includes:
 
@@ -20,25 +20,31 @@ This long list of dependencies includes:
 1. Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 1. [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
-Here is an example `.eslintrc.json`:
+Here is an example `.eslintrc.js`:
 
-```json
-{
-  "extends": "standard-with-typescript",
-  "parserOptions": {
-    "project": "./tsconfig.json"
+```js
+module.exports = {
+  extends: 'standard-with-typescript',
+  parserOptions: {
+    project: './tsconfig.json'
   }
 }
 ```
 
 Note: Please read some important instructions regarding the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
-There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you might care about.
+There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
-Make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#ext). And here is [a feature request for specifying extensions in the config](https://github.com/eslint/eslint/issues/10828).
+If you're using ESLint v6 make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#ext).
 
-Example command line usage:
+Example command line usage for ESLint v6:
 
 ```
-npx eslint --ext .js,.ts .
+$ npx eslint --ext .js,.ts .
+```
+
+Example command line usage for ESLint v7:
+
+```
+$ npx eslint .
 ```
