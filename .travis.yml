@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-  - node
-  - lts/*
+  - "10"
+  - "12"
+  - "13"
+  - "14"
 before_install:
   - npm --global install npm
 script:
