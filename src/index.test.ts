@@ -160,12 +160,7 @@ test('Dependencies range types', async (t) => {
     t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourDevDeps)) {
-    if (name === 'typescript') {
-      t.is(range.search(/\d/), 0, 'Dev dependency typescript is exact.')
-    } else {
-      const specifier = '^'
-      t.true(range.startsWith(specifier), `Dev dependency ${name} starts with \`${specifier}\`.`)
-    }
+    t.regex(range, /^\d/, `Dev dependency ${name} is exact`)
   }
 })
 
@@ -187,7 +182,7 @@ test('Peer and dev dep @typescript-eslint/eslint-plugin same base version', asyn
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
   t.is(
     peerDepPluginRange.split('>=')[1],
-    devDepPluginRange.split('^')[1]
+    devDepPluginRange
   )
 })
 
