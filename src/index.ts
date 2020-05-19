@@ -2,7 +2,6 @@ import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 
 const equivalents = [
   'comma-spacing',
-  'dot-notation',
   'brace-style',
   'func-call-spacing',
   'indent',
@@ -42,6 +41,7 @@ export = {
         camelcase: 'off',
         'default-param-last': 'off',
         'no-use-before-define': 'off',
+        'dot-notation': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
         ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, standardRules[name]])),
@@ -51,6 +51,11 @@ export = {
           enums: false,
           variables: false,
           typedefs: false // Only the TypeScript rule has this option.
+        }],
+        '@typescript-eslint/dot-notation': ['error', {
+          allowPattern: '',
+          allowKeywords: true,
+          allowPrivateClassPropertyAccess: false // Only the TypeScript rule has this option.
         }],
 
         // Rules exclusive to Standard TypeScript:

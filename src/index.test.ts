@@ -65,7 +65,11 @@ test('export', (t): void => {
           ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
           '@typescript-eslint/default-param-last': 'error',
-          '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
+          '@typescript-eslint/dot-notation': ['error', {
+            allowPattern: '',
+            allowKeywords: true,
+            allowPrivateClassPropertyAccess: false
+          }],
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
             allowHigherOrderFunctions: true,
