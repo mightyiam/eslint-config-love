@@ -74,7 +74,7 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/travis-cli": "8.3.5",
-    "@types/node": "14.0.1",
+    "@types/node": "14.0.2",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "ava": "3.8.2",
     "commitlint-config-awesome": "1.0.4",
