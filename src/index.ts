@@ -40,22 +40,22 @@ export = {
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
         camelcase: 'off',
         'default-param-last': 'off',
-        'no-use-before-define': 'off',
         'dot-notation': 'off',
+        'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
         ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, standardRules[name]])),
+        '@typescript-eslint/dot-notation': ['error', {
+          allowPattern: '',
+          allowKeywords: true,
+          allowPrivateClassPropertyAccess: false // Only the TypeScript rule has this option.
+        }],
         '@typescript-eslint/no-use-before-define': ['error', {
           functions: false,
           classes: false,
           enums: false,
           variables: false,
           typedefs: false // Only the TypeScript rule has this option.
-        }],
-        '@typescript-eslint/dot-notation': ['error', {
-          allowPattern: '',
-          allowKeywords: true,
-          allowPrivateClassPropertyAccess: false // Only the TypeScript rule has this option.
         }],
 
         // Rules exclusive to Standard TypeScript:
