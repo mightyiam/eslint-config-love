@@ -74,7 +74,7 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/travis-cli": "8.3.5",
-    "@types/node": "14.0.1",
+    "@types/node": "14.0.4",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "ava": "3.8.2",
     "commitlint-config-awesome": "1.0.4",
@@ -89,7 +89,7 @@
     "read-pkg-up": "7.0.1",
     "standard-version": "8.0.0",
     "tsconfigs": "4.0.2",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   },
   "files": [
     "lib/index.js",
