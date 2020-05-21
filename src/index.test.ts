@@ -1,5 +1,6 @@
-import test from 'ava'
+import test, { ExecutionContext } from 'ava'
 import exported from '.'
+import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 import standardPkg from 'eslint-config-standard/package.json'
 import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
 
@@ -191,4 +192,33 @@ test('Deps parser and plugin are same version', async (t) => {
   const parserRange = ourDeps['@typescript-eslint/parser']
   const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   t.is(parserRange.split('^')[1], pluginRange.split('>=')[1])
+})
+
+interface RulesConfig {
+  [name: string]: object | string | number | boolean | null
+}
+
+/**
+ * Test that objects' values do not hold same memory references
+ */
+function testNotHaveObjectReferences (t: ExecutionContext<unknown>, rules: RulesConfig, comparisonRules: RulesConfig, skipSameKey: boolean = false): void {
+  for (const ruleName in rules) {
+    const ruleConfig = rules[ruleName]
+    if (typeof ruleConfig !== 'object') continue // Non-objects use copy-by-value
+
+    for (const comparisonRuleName in comparisonRules) {
+      if (skipSameKey && ruleName === comparisonRuleName) continue
+      t.not(ruleConfig, comparisonRules[comparisonRuleName])
+    }
+  }
+}
+
+test('No references in rules config', (t) => {
+  for (const override of exported.overrides) {
+    const rules: RulesConfig = override.rules
+    // Rules must not have object references inside theirselves
+    testNotHaveObjectReferences(t, rules, rules, true)
+    // Rules must not have object references to standard rules
+    testNotHaveObjectReferences(t, rules, standardRules)
+  }
 })
