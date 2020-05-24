@@ -1,4 +1,4 @@
-import test, { ExecutionContext } from 'ava'
+import test from 'ava'
 import exported from '.'
 import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
 import standardPkg from 'eslint-config-standard/package.json'
@@ -198,27 +198,15 @@ interface RulesConfig {
   [name: string]: object | string | number | boolean | null
 }
 
-/**
- * Test that objects' values do not hold same memory references
- */
-function testNotHaveObjectReferences (t: ExecutionContext<unknown>, rules: RulesConfig, comparisonRules: RulesConfig, skipSameKey: boolean = false): void {
-  for (const ruleName in rules) {
-    const ruleConfig = rules[ruleName]
-    if (typeof ruleConfig !== 'object') continue // Non-objects use copy-by-value
-
-    for (const comparisonRuleName in comparisonRules) {
-      if (skipSameKey && ruleName === comparisonRuleName) continue
-      t.not(ruleConfig, comparisonRules[comparisonRuleName])
-    }
-  }
-}
-
-test('No references in rules config', (t) => {
+test('No references to standard rules config', (t) => {
   for (const override of exported.overrides) {
-    const rules: RulesConfig = override.rules
-    // Rules must not have object references inside theirselves
-    testNotHaveObjectReferences(t, rules, rules, true)
-    // Rules must not have object references to standard rules
-    testNotHaveObjectReferences(t, rules, standardRules)
+    const standardRulesConfig: RulesConfig = standardRules
+    const overrideRulesConfig: RulesConfig = override.rules
+
+    for (const ruleName in standardRulesConfig) {
+      if (typeof standardRulesConfig[ruleName] !== 'object') continue // Non-objects use copy-by-value
+
+      t.not(overrideRulesConfig[`@typescript-eslint/${ruleName}`], standardRulesConfig[ruleName])
+    }
   }
 })
