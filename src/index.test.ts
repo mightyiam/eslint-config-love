@@ -1,8 +1,9 @@
 import test from 'ava'
 import exported from '.'
-import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
+import configStandard from './eslint-config-standard'
 import standardPkg from 'eslint-config-standard/package.json'
 import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
+import { Linter } from 'eslint'
 
 interface OurDeps {
   ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
@@ -24,7 +25,7 @@ const getOurDeps = async (): Promise<OurDeps> => {
 }
 
 test('export', (t): void => {
-  const expected = {
+  const expected: Linter.Config = {
     extends: 'eslint-config-standard',
     plugins: ['@typescript-eslint'],
     overrides: [
@@ -194,19 +195,15 @@ test('Deps parser and plugin are same version', async (t) => {
   t.is(parserRange.split('^')[1], pluginRange.split('>=')[1])
 })
 
-interface RulesConfig {
-  [name: string]: object | string | number | boolean | null
-}
+test('Exported rule values do not reference eslint-config-standard ones', (t) => {
+  if (exported.overrides === undefined) throw new Error()
+  t.is(exported.overrides.length, 1)
+  const override = exported.overrides[0]
+  if (override.rules === undefined) throw new Error()
 
-test('No references to standard rules config', (t) => {
-  for (const override of exported.overrides) {
-    const standardRulesConfig: RulesConfig = standardRules
-    const overrideRulesConfig: RulesConfig = override.rules
+  for (const ruleName in configStandard.rules) {
+    if (typeof configStandard.rules[ruleName] !== 'object') continue // Non-objects use copy-by-value
 
-    for (const ruleName in standardRulesConfig) {
-      if (typeof standardRulesConfig[ruleName] !== 'object') continue // Non-objects use copy-by-value
-
-      t.not(overrideRulesConfig[`@typescript-eslint/${ruleName}`], standardRulesConfig[ruleName])
-    }
+    t.false(override.rules[`@typescript-eslint/${ruleName}`] === configStandard.rules[ruleName])
   }
 })

@@ -1,4 +1,5 @@
-import { rules as standardRules } from 'eslint-config-standard/eslintrc.json'
+import configStandard from './eslint-config-standard'
+import { Linter } from 'eslint'
 
 const equivalents = [
   'comma-spacing',
@@ -19,8 +20,12 @@ const equivalents = [
   'space-before-function-paren'
 ] as const
 
-function clone<T extends object | string | number | boolean | null> (value: T): T {
-  return JSON.parse(JSON.stringify(value))
+const ruleFromStandard = (name: string): Linter.RuleEntry => {
+  if (configStandard.rules === undefined) throw new Error()
+  const rule = configStandard.rules[name]
+  if (rule === undefined) throw new Error()
+  if (typeof rule !== 'object') return rule
+  return JSON.parse(JSON.stringify(rule))
 }
 
 function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
@@ -30,7 +35,7 @@ function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
   }, {})
 }
 
-export = {
+const config: Linter.Config = {
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
   overrides: [
@@ -48,7 +53,7 @@ export = {
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
-        ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, clone(standardRules[name])])),
+        ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, ruleFromStandard(name)])),
         '@typescript-eslint/no-use-before-define': ['error', {
           functions: false,
           classes: false,
@@ -121,3 +126,5 @@ export = {
     }
   ]
 }
+
+export = config
