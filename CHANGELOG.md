@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [18.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.0...v18.0.1) (2020-05-27)
+
+
+### Bug Fixes
+
+* include lib/eslint-config-standard in package ([07c0aba](https://github.com/standard/eslint-config-standard-with-typescript/commit/07c0aba6b8ce7f6179013b4dcce273d3008aa313)), closes [#329](https://github.com/standard/eslint-config-standard-with-typescript/issues/329)
+
 ## [18.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v17.0.0...v18.0.0) (2020-05-27)
 
 
