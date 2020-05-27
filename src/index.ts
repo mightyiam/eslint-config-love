@@ -92,7 +92,7 @@ const config: Linter.Config = {
           selector: 'variableLike',
           leadingUnderscore: 'allow',
           trailingUnderscore: 'allow',
-          format: ['camelCase', 'UPPER_CASE']
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE']
         }],
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-dynamic-delete': 'error',
