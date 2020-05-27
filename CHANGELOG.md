@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v17.0.0...v18.0.0) (2020-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** peer dep version bump
+
+### Features
+
+* export is of type ESLint.Config ([1d61c3d](https://github.com/standard/eslint-config-standard-with-typescript/commit/1d61c3d620aea9e8a8ca00c488ff8ce61d39f141))
+
+
+### Bug Fixes
+
+* deep copy standardRules config ([db3467d](https://github.com/standard/eslint-config-standard-with-typescript/commit/db3467d66ff4600aa5b8aeb74876af0994f61378)), closes [#303](https://github.com/standard/eslint-config-standard-with-typescript/issues/303)
+
+
+* **deps:** bump parser & plugin to v3.0.1 ([9621cde](https://github.com/standard/eslint-config-standard-with-typescript/commit/9621cde857141a3aa5b8538cc34ef70da5ae6174)), closes [#209](https://github.com/standard/eslint-config-standard-with-typescript/issues/209)
+
 ## [17.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v16.0.0...v17.0.0) (2020-05-16)
 
 
