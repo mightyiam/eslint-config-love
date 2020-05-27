@@ -56,7 +56,6 @@ test('export', (t): void => {
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-          '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
           '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
@@ -100,6 +99,12 @@ test('export', (t): void => {
             }
           ],
           '@typescript-eslint/method-signature-style': 'error',
+          '@typescript-eslint/naming-convention': ['error', {
+            selector: 'variableLike',
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'allow',
+            format: ['camelCase', 'UPPER_CASE']
+          }],
           '@typescript-eslint/no-array-constructor': 'error',
           '@typescript-eslint/no-base-to-string': 'error',
           '@typescript-eslint/no-dupe-class-members': 'error',
@@ -140,7 +145,15 @@ test('export', (t): void => {
           '@typescript-eslint/return-await': ['error', 'always'],
           '@typescript-eslint/semi': ['error', 'never'],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
-          '@typescript-eslint/strict-boolean-expressions': 'error',
+          '@typescript-eslint/strict-boolean-expressions': ['error', {
+            allowString: false,
+            allowNumber: false,
+            allowNullableObject: false,
+            allowNullableBoolean: false,
+            allowNullableString: false,
+            allowNullableNumber: false,
+            allowAny: false
+          }],
           '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
           '@typescript-eslint/type-annotation-spacing': 'error'
         }
