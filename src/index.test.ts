@@ -103,7 +103,7 @@ test('export', (t): void => {
             selector: 'variableLike',
             leadingUnderscore: 'allow',
             trailingUnderscore: 'allow',
-            format: ['camelCase', 'UPPER_CASE']
+            format: ['camelCase', 'PascalCase', 'UPPER_CASE']
           }],
           '@typescript-eslint/no-array-constructor': 'error',
           '@typescript-eslint/no-base-to-string': 'error',
