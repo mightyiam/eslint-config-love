@@ -65,7 +65,6 @@ const config: Linter.Config = {
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
-        '@typescript-eslint/camelcase': ['error', { properties: 'never', genericType: 'always' }],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
           {
@@ -89,6 +88,12 @@ const config: Linter.Config = {
           }
         ],
         '@typescript-eslint/method-signature-style': 'error',
+        '@typescript-eslint/naming-convention': ['error', {
+          selector: 'variableLike',
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+          format: ['camelCase', 'UPPER_CASE']
+        }],
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
@@ -119,7 +124,15 @@ const config: Linter.Config = {
         '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
         '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
         '@typescript-eslint/return-await': ['error', 'always'],
-        '@typescript-eslint/strict-boolean-expressions': 'error',
+        '@typescript-eslint/strict-boolean-expressions': ['error', {
+          allowString: false,
+          allowNumber: false,
+          allowNullableObject: false,
+          allowNullableBoolean: false,
+          allowNullableString: false,
+          allowNullableNumber: false,
+          allowAny: false
+        }],
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
         '@typescript-eslint/type-annotation-spacing': 'error'
       }
