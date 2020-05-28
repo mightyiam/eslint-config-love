@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [18.0.2](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.1...v18.0.2) (2020-05-28)
+
+
+### Bug Fixes
+
+* allow PascalCase format on variables ([14bc44c](https://github.com/standard/eslint-config-standard-with-typescript/commit/14bc44c7791e111449eab29e933d3cabceac57c0))
+
 ### [18.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.0...v18.0.1) (2020-05-27)
 
 
