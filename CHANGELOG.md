@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [19.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.2...v19.0.0) (2020-09-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** minimum @typescript-eslint/eslint-plugin version bumped
+to 4.0.1
+
+### Bug Fixes
+
+* **docs:** install version of @typescript-eslint/eslint-plugin@3 ([26691c7](https://github.com/standard/eslint-config-standard-with-typescript/commit/26691c7225f82f97561c3603d67abb0f47dfa2ae)), closes [#353](https://github.com/standard/eslint-config-standard-with-typescript/issues/353) [#351](https://github.com/standard/eslint-config-standard-with-typescript/issues/351)
+* **test:** deps parser & plugin same major version ([0329cac](https://github.com/standard/eslint-config-standard-with-typescript/commit/0329cac050093150c8b1eb9f508b6828a3460fa0)), closes [#407](https://github.com/standard/eslint-config-standard-with-typescript/issues/407)
+
+
+* **deps:** update eslint packages to v4 ([7275f68](https://github.com/standard/eslint-config-standard-with-typescript/commit/7275f680d448a190a59c3d4ce00d501a69a9e4df))
+
 ### [18.0.2](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.1...v18.0.2) (2020-05-28)
 
 
