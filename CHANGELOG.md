@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [19.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v19.0.0...v19.0.1) (2020-09-02)
+
+
+### Bug Fixes
+
+* add @typescript-eslint/no-redeclare ([73e39a6](https://github.com/standard/eslint-config-standard-with-typescript/commit/73e39a6f96df99895af67ddb77885adff3bd7cff))
+
 ## [19.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v18.0.2...v19.0.0) (2020-09-02)
 
 
