@@ -11,6 +11,7 @@ const equivalents = [
   'lines-between-class-members',
   'no-array-constructor',
   'no-dupe-class-members',
+  'no-redeclare',
   'no-throw-literal',
   'no-unused-vars',
   'no-unused-expressions',
