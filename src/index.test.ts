@@ -201,11 +201,15 @@ test('Peer and dev dep @typescript-eslint/eslint-plugin same base version', asyn
   )
 })
 
-test('Deps parser and plugin are same version', async (t) => {
+test('Deps parser and plugin are same major version', async (t) => {
   const { ourDeps, ourPeerDeps } = await getOurDeps()
   const parserRange = ourDeps['@typescript-eslint/parser']
   const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
-  t.is(parserRange.split('^')[1], pluginRange.split('>=')[1])
+  const parserMinimum = parserRange.split('^')[1]
+  const pluginMinimum = pluginRange.split('>=')[1]
+  const parserMajor = parserMinimum.split('.')[0]
+  const pluginMajor = pluginMinimum.split('.')[0]
+  t.is(parserMajor, pluginMajor)
 })
 
 test('Exported rule values do not reference eslint-config-standard ones', (t) => {
