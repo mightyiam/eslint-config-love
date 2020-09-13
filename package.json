@@ -90,7 +90,7 @@
     "read-pkg-up": "7.0.1",
     "standard-version": "9.0.0",
     "tsconfigs": "5.0.0",
-    "typescript": "3.9.7"
+    "typescript": "4.0.2"
   },
   "files": [
     "lib/index.js",
