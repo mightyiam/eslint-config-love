@@ -80,7 +80,7 @@
     "ava": "3.13.0",
     "commitlint-config-awesome": "1.0.4",
     "editorconfig-checker": "3.3.0",
-    "eslint": "7.12.1",
+    "eslint": "7.13.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
