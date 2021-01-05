@@ -88,7 +88,8 @@ test('export', (t): void => {
             ImportDeclaration: 1,
             flatTernaryExpressions: false,
             ignoreComments: false,
-            ignoredNodes: ['TemplateLiteral *']
+            ignoredNodes: ['TemplateLiteral *', 'JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
+            offsetTernaryExpressions: true
           }],
           '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
           '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -127,7 +128,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
           '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-          '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }],
+          '@typescript-eslint/no-unused-vars': ['error', { args: 'none', caughtErrors: 'none', ignoreRestSiblings: true, vars: 'all' }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
           '@typescript-eslint/no-useless-constructor': 'error',
@@ -173,7 +174,7 @@ test('Dependencies range types', async (t) => {
     t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourPeerDeps)) {
-    const specifier = '>='
+    const specifier = '^'
     t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourDevDeps)) {
@@ -198,7 +199,7 @@ test('Peer and dev dep @typescript-eslint/eslint-plugin same base version', asyn
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
   t.is(
-    peerDepPluginRange.split('>=')[1],
+    peerDepPluginRange.split('^')[1],
     devDepPluginRange
   )
 })
@@ -208,7 +209,7 @@ test('Deps parser and plugin are same major version', async (t) => {
   const parserRange = ourDeps['@typescript-eslint/parser']
   const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const parserMinimum = parserRange.split('^')[1]
-  const pluginMinimum = pluginRange.split('>=')[1]
+  const pluginMinimum = pluginRange.split('^')[1]
   const parserMajor = parserMinimum.split('.')[0]
   const pluginMajor = pluginMinimum.split('.')[0]
   t.is(parserMajor, pluginMajor)
