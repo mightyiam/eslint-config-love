@@ -174,7 +174,7 @@ test('Dependencies range types', async (t) => {
     t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourPeerDeps)) {
-    const specifier = '^'
+    const specifier = '>='
     t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourDevDeps)) {
@@ -190,7 +190,9 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
       // https://github.com/microsoft/TypeScript/pull/12253
       const name = _name as keyof typeof standardPkg.peerDependencies
       const ourRange = ourPeerDeps[name]
-      t.is(ourRange, standardRange)
+      const ourMinimum = ourRange.split('>=')[1]
+      const standardMinimum = standardRange.split('^')[1]
+      t.is(ourMinimum, standardMinimum)
     })
 })
 
@@ -199,7 +201,7 @@ test('Peer and dev dep @typescript-eslint/eslint-plugin same base version', asyn
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
   t.is(
-    peerDepPluginRange.split('^')[1],
+    peerDepPluginRange.split('>=')[1],
     devDepPluginRange
   )
 })
@@ -209,7 +211,7 @@ test('Deps parser and plugin are same major version', async (t) => {
   const parserRange = ourDeps['@typescript-eslint/parser']
   const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const parserMinimum = parserRange.split('^')[1]
-  const pluginMinimum = pluginRange.split('^')[1]
+  const pluginMinimum = pluginRange.split('>=')[1]
   const parserMajor = parserMinimum.split('.')[0]
   const pluginMajor = pluginMinimum.split('.')[0]
   t.is(parserMajor, pluginMajor)
