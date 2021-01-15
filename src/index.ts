@@ -121,7 +121,7 @@ const config: Linter.Config = {
         '@typescript-eslint/prefer-reduce-type-parameter': 'error',
         '@typescript-eslint/prefer-ts-expect-error': 'error',
         '@typescript-eslint/promise-function-async': 'error',
-        '@typescript-eslint/require-array-sort-compare': 'error',
+        '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
         '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
         '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
         '@typescript-eslint/return-await': ['error', 'always'],
