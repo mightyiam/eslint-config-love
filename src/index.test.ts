@@ -186,13 +186,13 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
   const { ourPeerDeps } = await getOurDeps()
   Object
     .entries(standardPkg.peerDependencies)
-    .forEach(([_name, standardRange]) => {
+    .forEach(([_name, standardDep]) => {
       // https://github.com/microsoft/TypeScript/pull/12253
       const name = _name as keyof typeof standardPkg.peerDependencies
-      const ourRange = ourPeerDeps[name]
-      const ourMinimum = ourRange.split('>=')[1]
-      const standardMinimum = standardRange.split('^')[1]
-      t.is(ourMinimum, standardMinimum)
+      const ourDep = ourPeerDeps[name]
+      const ourRange = ourDep.split('>=')[1]
+      const standardRange = standardDep.split('^')[1]
+      t.is(ourRange, standardRange)
     })
 })
 
