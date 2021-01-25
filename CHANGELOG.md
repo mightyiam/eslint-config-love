@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [20.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v19.0.1...v20.0.0) (2021-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Now based on eslint-config-standard v16.
+Also bumped some peerDeps, including eslint.
+Notice removed eslint-plugin-standard peerDep.
+
+### Features
+
+* eslint-config-standard v16 ([020569b](https://github.com/standard/eslint-config-standard-with-typescript/commit/020569b27f5648532e8392c61aad7167151ebe81))
+* require-array-sort-compare ignoreStringArrays ([#359](https://github.com/standard/eslint-config-standard-with-typescript/issues/359)) ([95fcb7c](https://github.com/standard/eslint-config-standard-with-typescript/commit/95fcb7c494fc08e953a0a0f85b5f6b464796505b))
+
+
+### Bug Fixes
+
+* **docs:** install version of @typescript-eslint/eslint-plugin@4 ([#414](https://github.com/standard/eslint-config-standard-with-typescript/issues/414)) ([51c40be](https://github.com/standard/eslint-config-standard-with-typescript/commit/51c40be4f2be486266bf265d8112aec0f871676a))
+
 ### [19.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v19.0.0...v19.0.1) (2020-09-02)
 
 
