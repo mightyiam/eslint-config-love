@@ -88,7 +88,8 @@ test('export', (t): void => {
             ImportDeclaration: 1,
             flatTernaryExpressions: false,
             ignoreComments: false,
-            ignoredNodes: ['TemplateLiteral *']
+            ignoredNodes: ['TemplateLiteral *', 'JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
+            offsetTernaryExpressions: true
           }],
           '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
           '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -127,7 +128,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
           '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-          '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }],
+          '@typescript-eslint/no-unused-vars': ['error', { args: 'none', caughtErrors: 'none', ignoreRestSiblings: true, vars: 'all' }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
           '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
           '@typescript-eslint/no-useless-constructor': 'error',
@@ -185,10 +186,12 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
   const { ourPeerDeps } = await getOurDeps()
   Object
     .entries(standardPkg.peerDependencies)
-    .forEach(([_name, standardRange]) => {
+    .forEach(([_name, standardDep]) => {
       // https://github.com/microsoft/TypeScript/pull/12253
       const name = _name as keyof typeof standardPkg.peerDependencies
-      const ourRange = ourPeerDeps[name]
+      const ourDep = ourPeerDeps[name]
+      const ourRange = ourDep.split('>=')[1]
+      const standardRange = standardDep.split('^')[1]
       t.is(ourRange, standardRange)
     })
 })
