@@ -51,6 +51,7 @@ test('export', (t): void => {
           'no-use-before-define': 'off',
           'no-unused-expressions': 'off',
           'no-useless-constructor': 'off',
+          'no-void': ['error', { allowAsStatement: true }],
           quotes: 'off',
           semi: 'off',
           'space-before-function-paren': 'off',
