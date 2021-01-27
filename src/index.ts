@@ -135,7 +135,8 @@ const config: Linter.Config = {
           allowAny: false
         }],
         '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
-        '@typescript-eslint/type-annotation-spacing': 'error'
+        '@typescript-eslint/type-annotation-spacing': 'error',
+        'no-void': ['error', { allowAsStatement: true }]
       }
     }
   ]
