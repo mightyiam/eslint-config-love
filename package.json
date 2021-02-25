@@ -11,9 +11,11 @@
     "test": "run-s clean-artifacts editorconfig compile lint unit",
     "clean-artifacts": "git clean lib -X --force",
     "is-code-clean": "git diff-index HEAD --quiet",
-    "prepublishOnly": "run-s is-code-clean test",
     "prepare-release": "run-s is-code-clean bump-and-commit",
-    "bump-and-commit": "standard-version --skip.tag"
+    "bump-and-commit": "standard-version --skip.tag",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable && run-s is-code-clean test",
+    "postpublish": "pinst --enable"
   },
   "repository": {
     "type": "git",
@@ -23,12 +25,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/standard/eslint-config-standard-with-typescript/issues"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run test"
-    }
   },
   "homepage": "https://github.com/standard/eslint-config-standard-with-typescript#readme",
   "keywords": [
@@ -83,8 +79,9 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.3.1",
-    "husky": "4.3.8",
+    "husky": "5.1.1",
     "npm-run-all": "4.1.5",
+    "pinst": "2.1.6",
     "read-pkg-up": "7.0.1",
     "standard-version": "9.1.1",
     "tsconfigs": "5.0.0",
