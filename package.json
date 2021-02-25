@@ -59,8 +59,8 @@
     "TypeScript"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^4.0.0",
-    "eslint-config-standard": "^16.0.0"
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint-config-standard": "^16.0.2"
   },
   "peerDependencies": {
     "eslint": ">=7.12.1",
@@ -75,7 +75,7 @@
     "@commitlint/travis-cli": "11.0.0",
     "@types/eslint": "7.2.6",
     "@types/node": "14.14.31",
-    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/eslint-plugin": "4.15.2",
     "ava": "3.15.0",
     "commitlint-config-awesome": "1.0.4",
     "editorconfig-checker": "3.3.0",
