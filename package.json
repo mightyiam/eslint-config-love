@@ -68,12 +68,12 @@
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "@commitlint/travis-cli": "11.0.0",
     "@types/eslint": "7.2.8",
     "@types/node": "14.14.37",
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "ava": "3.15.0",
-    "commitlint-config-awesome": "1.0.4",
     "editorconfig-checker": "3.3.0",
     "eslint": "7.23.0",
     "eslint-plugin-import": "2.22.1",
