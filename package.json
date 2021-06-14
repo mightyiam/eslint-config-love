@@ -72,6 +72,7 @@
     "@commitlint/travis-cli": "12.1.4",
     "@types/eslint": "7.2.13",
     "@types/node": "14.17.3",
+    "@types/semver": "7.3.6",
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "ava": "3.15.0",
     "editorconfig-checker": "4.0.2",
@@ -83,6 +84,7 @@
     "npm-run-all": "4.1.5",
     "pinst": "2.1.6",
     "read-pkg-up": "7.0.1",
+    "semver": "7.3.5",
     "standard-version": "9.3.0",
     "tsconfigs": "5.0.0",
     "typescript": "4.3.2"

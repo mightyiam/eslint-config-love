@@ -4,6 +4,7 @@ import configStandard from './eslint-config-standard'
 import standardPkg from 'eslint-config-standard/package.json'
 import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
 import { Linter } from 'eslint'
+import semver from 'semver'
 
 interface OurDeps {
   ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
@@ -192,8 +193,7 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
       const name = _name as keyof typeof standardPkg.peerDependencies
       const ourDep = ourPeerDeps[name]
       const ourRange = ourDep.split('>=')[1]
-      const standardRange = standardDep.split('^')[1]
-      t.is(ourRange, standardRange)
+      t.true(semver.satisfies(ourRange, standardDep))
     })
 })
 
