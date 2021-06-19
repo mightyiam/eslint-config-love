@@ -30,7 +30,7 @@ test('export', (t): void => {
     plugins: ['@typescript-eslint'],
     overrides: [
       {
-        files: ['*.ts', '*.tsx'],
+        files: ['*.ts', '*.tsx', '*.vue'],
         parser: '@typescript-eslint/parser',
         rules: {
           'brace-style': 'off',

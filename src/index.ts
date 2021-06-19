@@ -41,7 +41,7 @@ const config: Linter.Config = {
   plugins: ['@typescript-eslint'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.vue'],
       parser: '@typescript-eslint/parser',
       rules: {
         // TypeScript has this functionality by default:
