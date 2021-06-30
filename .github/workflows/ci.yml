@@ -23,5 +23,6 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      - run: 'npm --global install npm'
       - run: 'npm install'
       - run: 'npm run test'
