@@ -50,7 +50,6 @@ const config: Linter.Config = {
         // Rules replaced by @typescript-eslint versions:
         ...fromEntries(equivalents.map((name) => [name, 'off'])),
         camelcase: 'off',
-        'default-param-last': 'off',
         'no-use-before-define': 'off',
 
         // @typescript-eslint versions of Standard.js rules:
@@ -74,7 +73,6 @@ const config: Linter.Config = {
           }
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-        '@typescript-eslint/default-param-last': 'error',
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,

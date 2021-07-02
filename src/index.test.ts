@@ -36,7 +36,6 @@ test('export', (t): void => {
           'brace-style': 'off',
           camelcase: 'off',
           'comma-spacing': 'off',
-          'default-param-last': 'off',
           'dot-notation': 'off',
           'func-call-spacing': 'off',
           indent: 'off',
@@ -67,7 +66,6 @@ test('export', (t): void => {
             }
           ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-          '@typescript-eslint/default-param-last': 'error',
           '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
