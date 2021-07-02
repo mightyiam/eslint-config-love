@@ -191,7 +191,7 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
       // https://github.com/microsoft/TypeScript/pull/12253
       const name = _name as keyof typeof standardPkg.peerDependencies
       const ourDep = ourPeerDeps[name]
-      t.is(ourDep, standardDep)
+      t.is(ourDep, standardDep, name)
     })
 })
 
