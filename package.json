@@ -67,7 +67,7 @@
     "typescript": "^3.9 || ^4.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "12.1.4",
+    "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "12.1.4",
     "@commitlint/travis-cli": "12.1.4",
     "@types/eslint": "7.28.0",
