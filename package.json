@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
-    "@commitlint/config-conventional": "12.1.4",
+    "@commitlint/config-conventional": "13.1.0",
     "@commitlint/travis-cli": "13.1.0",
     "@types/eslint": "7.28.0",
     "@types/node": "16.4.7",
