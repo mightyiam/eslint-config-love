@@ -1,17 +1,25 @@
+import 'fs.promises'
 import test from 'ava'
 import exported from '.'
 import configStandard from './eslint-config-standard'
 import standardPkg from 'eslint-config-standard/package.json'
 import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
 import { Linter } from 'eslint'
+import { readFile } from 'fs/promises'
+import { resolve } from 'path'
+import npmPkgArg from 'npm-package-arg'
+import semver from 'semver'
+import yaml from 'js-yaml'
+import { Record, Array, String } from 'runtypes'
 
-interface OurDeps {
+interface PkgDetails {
+  pkgPath: string
   ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
   ourPeerDeps: NonNullable<NormalizedPackageJson['peerDependencies']>
   ourDevDeps: NonNullable<NormalizedPackageJson['devDependencies']>
 }
 
-const getOurDeps = async (): Promise<OurDeps> => {
+const getPkgDetails = async (): Promise<PkgDetails> => {
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
@@ -21,7 +29,7 @@ const getOurDeps = async (): Promise<OurDeps> => {
   const ourPeerDeps = ourPkg.peerDependencies
   if (ourPkg.devDependencies === undefined) { throw new Error() }
   const ourDevDeps = ourPkg.devDependencies
-  return { ourDeps, ourPeerDeps, ourDevDeps }
+  return { pkgPath: readResult.path, ourDeps, ourPeerDeps, ourDevDeps }
 }
 
 test('export', (t): void => {
@@ -167,7 +175,7 @@ test('export', (t): void => {
 })
 
 test('Dependencies range types', async (t) => {
-  const { ourDeps, ourPeerDeps, ourDevDeps } = await getOurDeps()
+  const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
   for (const [name, range] of Object.entries(ourDeps)) {
     const specifier = '^'
     t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
@@ -182,7 +190,7 @@ test('Dependencies range types', async (t) => {
 })
 
 test('Own peerDependencies include those of eslint-config-standard', async (t) => {
-  const { ourPeerDeps } = await getOurDeps()
+  const { ourPeerDeps } = await getPkgDetails()
   Object
     .entries(standardPkg.peerDependencies)
     .forEach(([_name, standardDep]) => {
@@ -194,7 +202,7 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
 })
 
 test('Peer and dev dep @typescript-eslint/eslint-plugin same major version', async (t) => {
-  const { ourPeerDeps, ourDevDeps } = await getOurDeps()
+  const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
   t.is(
@@ -204,7 +212,7 @@ test('Peer and dev dep @typescript-eslint/eslint-plugin same major version', asy
 })
 
 test('Deps parser and plugin are same major version', async (t) => {
-  const { ourDeps, ourPeerDeps } = await getOurDeps()
+  const { ourDeps, ourPeerDeps } = await getPkgDetails()
   const parserRange = ourDeps['@typescript-eslint/parser']
   const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const parserMinimum = parserRange.split('^')[1]
@@ -225,4 +233,58 @@ test('Exported rule values do not reference eslint-config-standard ones', (t) =>
 
     t.false(override.rules[`@typescript-eslint/${ruleName}`] === configStandard.rules[ruleName])
   }
+})
+
+test('npm install args in readme satisfy peerDeps', async (t) => {
+  const pkgUp = await readPkgUp()
+  if (pkgUp === undefined) throw new Error()
+  const { packageJson, path: pkgPath } = pkgUp
+  const readme = await (await readFile(resolve(pkgPath, '..', 'readme.md'))).toString()
+  const match = readme.match(/```\n(npm install .*?)```/s)
+  if (match === null) throw new Error()
+  if (match.length === 0) throw new Error('failed to find code block')
+  if (match.length > 2) throw new Error('matched multiple code blocks')
+  const installArgRanges = Object.fromEntries(
+    match[1]
+      .split('\\')
+      .slice(1)
+      .map(arg => {
+        const { name, fetchSpec: range } = npmPkgArg(arg.trim())
+        if (name === null) throw new Error()
+        if (range === null) throw new Error()
+        return [name, range] as const
+      })
+      .filter(([name]) => name !== packageJson.name)
+  )
+  const { ourPeerDeps } = await getPkgDetails()
+  Object.entries(ourPeerDeps).forEach(([name, peerDepRange]) => {
+    t.true(Object.prototype.hasOwnProperty.call(installArgRanges, name), `missing peerDep ${name} in install args`)
+    const installArgRange = installArgRanges[name]
+    t.true(
+      semver.subset(installArgRange, peerDepRange),
+      `${name} install arg range ${installArgRange} is not a subset of peerDep range ${peerDepRange}`
+    )
+  })
+  const installArgsLength = Object.keys(installArgRanges).length
+  const ourPeerDepsLength = Object.keys(ourPeerDeps).length
+  t.false(installArgsLength > ourPeerDepsLength, 'more install args than peer deps')
+  t.false(ourPeerDepsLength > installArgsLength, 'more peer deps than install args')
+})
+
+test('not using `fs.promises` polyfill when no support for Node.js 12', async (t) => {
+  const { pkgPath, ourDevDeps } = await getPkgDetails()
+  const travisYamlPath = resolve(pkgPath, '..', '.travis.yml')
+  const travisYmlString = (await readFile(travisYamlPath)).toString()
+  if (travisYmlString === undefined) throw new Error()
+  const parsedTravisYaml = yaml.load(travisYmlString)
+  const TravisYaml = Record({
+    node_js: Array(String)
+  })
+  const travisYaml = TravisYaml.check(parsedTravisYaml)
+  const isSupportNodejs12 = travisYaml.node_js.includes('12')
+  const isDependingOnPolyfill = Object.keys(ourDevDeps).includes('fs.promises')
+  t.true(
+    isSupportNodejs12 && isDependingOnPolyfill,
+    'no longer supporting Node.js 12 — time to uninstall polyfill'
+  )
 })
