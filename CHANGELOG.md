@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [21.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v20.0.0...v21.0.0) (2021-08-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **package:** peer dependencies are specified with `^`.
+
+### Bug Fixes
+
+* **deps:** expand eslint-plugin-promise peerDep to equal upstream ([dcc5a33](https://github.com/standard/eslint-config-standard-with-typescript/commit/dcc5a3339cd1ba7ea5ab1bc68df0c5330ba9b859))
+* **deps:** sort peer deps ([a26b179](https://github.com/standard/eslint-config-standard-with-typescript/commit/a26b1794f477b954760493e678bb55f7c4418f6c))
+* **doc:** readme travis ci badge .com ([34953e6](https://github.com/standard/eslint-config-standard-with-typescript/commit/34953e648592da5855450b1571ef03d46d85a0f8))
+* **no-void:** allowAsStatement ([8ab083e](https://github.com/standard/eslint-config-standard-with-typescript/commit/8ab083e311702be22db4cc7c604e55dcccd95f32))
+* **package:** peerDeps use caret ranges ([b8b544d](https://github.com/standard/eslint-config-standard-with-typescript/commit/b8b544d23b1fd58d15e12fba4fe2a2ceab0705c7)), closes [#596](https://github.com/standard/eslint-config-standard-with-typescript/issues/596)
+* relax rule default-param-last ([#591](https://github.com/standard/eslint-config-standard-with-typescript/issues/591)) ([8c836dc](https://github.com/standard/eslint-config-standard-with-typescript/commit/8c836dc44c4e8a1b73263259509df490c8e9fddf))
+
 ## [20.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v19.0.1...v20.0.0) (2021-01-25)
 
 
