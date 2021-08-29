@@ -3,7 +3,7 @@ import test from 'ava'
 import exported from '.'
 import configStandard from './eslint-config-standard'
 import standardPkg from 'eslint-config-standard/package.json'
-import readPkgUp, { NormalizedPackageJson } from 'read-pkg-up'
+import { NormalizedPackageJson } from 'read-pkg-up'
 import { Linter } from 'eslint'
 import { readFile } from 'fs/promises'
 import { resolve } from 'path'
@@ -11,15 +11,18 @@ import npmPkgArg from 'npm-package-arg'
 import semver from 'semver'
 import yaml from 'js-yaml'
 import { Record, Array, String } from 'runtypes'
+import inclusion from 'inclusion'
 
 interface PkgDetails {
   pkgPath: string
+  pkgJson: NormalizedPackageJson
   ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
   ourPeerDeps: NonNullable<NormalizedPackageJson['peerDependencies']>
   ourDevDeps: NonNullable<NormalizedPackageJson['devDependencies']>
 }
 
 const getPkgDetails = async (): Promise<PkgDetails> => {
+  const readPkgUp: typeof import('read-pkg-up')['readPackageUpAsync'] = (await inclusion('read-pkg-up')).readPackageUpAsync
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
@@ -29,7 +32,7 @@ const getPkgDetails = async (): Promise<PkgDetails> => {
   const ourPeerDeps = ourPkg.peerDependencies
   if (ourPkg.devDependencies === undefined) { throw new Error() }
   const ourDevDeps = ourPkg.devDependencies
-  return { pkgPath: readResult.path, ourDeps, ourPeerDeps, ourDevDeps }
+  return { pkgJson: ourPkg, pkgPath: readResult.path, ourDeps, ourPeerDeps, ourDevDeps }
 }
 
 test('export', (t): void => {
@@ -236,9 +239,7 @@ test('Exported rule values do not reference eslint-config-standard ones', (t) =>
 })
 
 test('npm install args in readme satisfy peerDeps', async (t) => {
-  const pkgUp = await readPkgUp()
-  if (pkgUp === undefined) throw new Error()
-  const { packageJson, path: pkgPath } = pkgUp
+  const { pkgJson, pkgPath, ourPeerDeps } = await getPkgDetails()
   const readme = await (await readFile(resolve(pkgPath, '..', 'readme.md'))).toString()
   const match = readme.match(/```\n(npm install .*?)```/s)
   if (match === null) throw new Error()
@@ -254,9 +255,8 @@ test('npm install args in readme satisfy peerDeps', async (t) => {
         if (range === null) throw new Error()
         return [name, range] as const
       })
-      .filter(([name]) => name !== packageJson.name)
+      .filter(([name]) => name !== pkgJson.name)
   )
-  const { ourPeerDeps } = await getPkgDetails()
   Object.entries(ourPeerDeps).forEach(([name, peerDepRange]) => {
     t.true(Object.prototype.hasOwnProperty.call(installArgRanges, name), `missing peerDep ${name} in install args`)
     const installArgRange = installArgRanges[name]
@@ -287,4 +287,12 @@ test('not using `fs.promises` polyfill when no support for Node.js 12', async (t
     isSupportNodejs12 && isDependingOnPolyfill,
     'no longer supporting Node.js 12 — time to uninstall polyfill'
   )
+})
+
+test('not using the `inclusion` package when package is ES modules', async (t) => {
+  const { pkgJson, ourDevDeps } = await getPkgDetails()
+  const isUsingInclusion = Object.keys(ourDevDeps).includes('inclusion') // haha
+  const isModulesPackage = pkgJson.type === 'module'
+  t.true(isUsingInclusion, 'happy to see it gone')
+  t.false(isModulesPackage, 'time to drop usage of `inclusion` package')
 })
