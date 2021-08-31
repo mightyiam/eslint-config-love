@@ -15,7 +15,7 @@ because your decisions regarding version ranges and range specifiers may vary.
 
 ```
 npm install --save-dev \
-  typescript@^4 \
+  typescript@\* \
   eslint@^7.12.1 \
   eslint-plugin-promise@^5.0.0 \
   eslint-plugin-import@^2.22.1 \
