@@ -208,25 +208,18 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
     })
 })
 
-test('Peer and dev dep @typescript-eslint/eslint-plugin same major version', async (t) => {
+test('@typescript-eslint/eslint-plugin, dev dep subset of peer dep', async (t) => {
   const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
-  t.is(
-    peerDepPluginRange.split('^')[1],
-    devDepPluginRange
-  )
+  t.true(semver.subset(devDepPluginRange, peerDepPluginRange))
 })
 
-test('Deps parser and plugin are same major version', async (t) => {
-  const { ourDeps, ourPeerDeps } = await getPkgDetails()
-  const parserRange = ourDeps['@typescript-eslint/parser']
-  const pluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
-  const parserMinimum = parserRange.split('^')[1]
-  const pluginMinimum = pluginRange.split('^')[1]
-  const parserMajor = parserMinimum.split('.')[0]
-  const pluginMajor = pluginMinimum.split('.')[0]
-  t.is(parserMajor, pluginMajor)
+test('devDep plugin range subset of dep parser range', async (t) => {
+  const { ourDeps, ourDevDeps } = await getPkgDetails()
+  const depParserRange = ourDeps['@typescript-eslint/parser']
+  const devPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
+  t.true(semver.subset(devPluginRange, depParserRange))
 })
 
 test('Exported rule values do not reference eslint-config-standard ones', (t) => {

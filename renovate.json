@@ -1,5 +1,31 @@
 {
   "extends": [
-    "github>mightyiam/renovate-config:js-lib"
+    ":automergeMinor"
+  ],
+  "rangeStrategy": "auto",
+  "travis": {
+    "enabled": true
+  },
+  "node": {
+    "major": {
+      "enabled": true
+    },
+    "supportPolicy": [
+      "all"
+    ]
+  },
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "^typescript$"
+      ],
+      "automerge": false
+    },
+    {
+      "packagePatterns": [
+        "^@typescript-eslint\/"
+      ],
+      "groupName": "@typescript-eslint packages"
+    }
   ]
 }
