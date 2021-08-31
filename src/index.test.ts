@@ -184,8 +184,12 @@ test('Dependencies range types', async (t) => {
     t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
   }
   for (const [name, range] of Object.entries(ourPeerDeps)) {
-    const specifier = '^'
-    t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
+    if (name === 'typescript') {
+      t.is(range, '*', 'Peer dependency typescript is `*`')
+    } else {
+      const specifier = '^'
+      t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
+    }
   }
   for (const [name, range] of Object.entries(ourDevDeps)) {
     t.regex(range, /^\d/, `Dev dependency ${name} is exact`)
@@ -247,7 +251,9 @@ test('npm install args in readme satisfy peerDeps', async (t) => {
   if (match.length > 2) throw new Error('matched multiple code blocks')
   const installArgRanges = Object.fromEntries(
     match[1]
-      .split('\\')
+      .replace(/\\/g, '')
+      .trim()
+      .split('\n')
       .slice(1)
       .map(arg => {
         const { name, fetchSpec: range } = npmPkgArg(arg.trim())
