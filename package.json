@@ -67,7 +67,7 @@
   "devDependencies": {
     "@arkweid/lefthook": "0.7.6",
     "@commitlint/cli": "13.2.0",
-    "@commitlint/config-conventional": "13.1.0",
+    "@commitlint/config-conventional": "13.2.0",
     "@commitlint/travis-cli": "13.1.0",
     "@types/eslint": "7.28.0",
     "@types/js-yaml": "4.0.3",
