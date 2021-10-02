@@ -65,7 +65,7 @@
     "typescript": "*"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "0.7.6",
+    "@arkweid/lefthook": "0.7.7",
     "@commitlint/cli": "13.2.0",
     "@commitlint/config-conventional": "13.2.0",
     "@commitlint/travis-cli": "13.2.0",
