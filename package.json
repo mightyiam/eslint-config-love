@@ -69,7 +69,7 @@
     "@commitlint/cli": "13.2.0",
     "@commitlint/config-conventional": "13.2.0",
     "@commitlint/travis-cli": "13.2.0",
-    "@types/eslint": "7.28.0",
+    "@types/eslint": "7.28.1",
     "@types/js-yaml": "4.0.3",
     "@types/node": "16.10.3",
     "@types/npm-package-arg": "6.1.1",
