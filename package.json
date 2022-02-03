@@ -61,7 +61,7 @@
     "eslint": "^7.12.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
+    "eslint-plugin-promise": "^4.2.1 || ^5.0.0 || ^6.0.0",
     "typescript": "*"
   },
   "devDependencies": {
@@ -80,7 +80,7 @@
     "eslint": "7.32.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-promise": "6.0.0",
     "fs.promises": "0.1.2",
     "inclusion": "1.0.1",
     "js-yaml": "4.1.0",
