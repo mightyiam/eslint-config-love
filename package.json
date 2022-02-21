@@ -87,7 +87,7 @@
     "npm-package-arg": "9.0.0",
     "npm-run-all": "4.1.5",
     "read-pkg-up": "8.0.0",
-    "runtypes": "6.5.0",
+    "runtypes": "6.5.1",
     "semver": "7.3.5",
     "standard-version": "9.3.2",
     "tsconfigs": "5.0.0",
