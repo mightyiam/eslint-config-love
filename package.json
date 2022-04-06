@@ -78,7 +78,7 @@
     "ava": "4.1.0",
     "editorconfig-checker": "4.0.2",
     "eslint": "7.32.0",
-    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-import": "2.26.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.2.0",
     "fs.promises": "0.1.2",
