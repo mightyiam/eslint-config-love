@@ -16,11 +16,11 @@ because your decisions regarding version ranges and range specifiers may vary.
 ```
 npm install --save-dev \
   typescript@\* \
-  eslint@^7.12.1 \
-  eslint-plugin-promise@^5.0.0 \
-  eslint-plugin-import@^2.22.1 \
-  eslint-plugin-node@^11.1.0 \
-  @typescript-eslint/eslint-plugin@^4.0.1 \
+  eslint@^8.0.1 \
+  eslint-plugin-promise@^6.0.0 \
+  eslint-plugin-import@^2.25.2 \
+  eslint-plugin-n@^15.0.0 \
+  @typescript-eslint/eslint-plugin@^5.0.0 \
   eslint-config-standard-with-typescript@latest
 ```
 
@@ -49,15 +49,7 @@ Note: Please read some important instructions regarding the `project` option [he
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
-If you're using ESLint v6 make sure you read about [the `--ext` command line option](https://eslint.org/docs/user-guide/command-line-interface#ext).
-
-Example command line usage for ESLint v6:
-
-```
-$ npx eslint --ext .js,.ts .
-```
-
-Example command line usage for ESLint v7:
+Example command line usage:
 
 ```
 $ npx eslint .
