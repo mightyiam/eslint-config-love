@@ -18,7 +18,8 @@ const equivalents = [
   'no-useless-constructor',
   'quotes',
   'semi',
-  'space-before-function-paren'
+  'space-before-function-paren',
+  'space-infix-ops'
 ] as const
 
 const ruleFromStandard = (name: string): Linter.RuleEntry => {
