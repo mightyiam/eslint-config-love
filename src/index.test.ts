@@ -65,6 +65,7 @@ test('export', (t): void => {
           quotes: 'off',
           semi: 'off',
           'space-before-function-paren': 'off',
+          'space-infix-ops': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
@@ -158,6 +159,7 @@ test('export', (t): void => {
           '@typescript-eslint/return-await': ['error', 'always'],
           '@typescript-eslint/semi': ['error', 'never'],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
+          '@typescript-eslint/space-infix-ops': 'error',
           '@typescript-eslint/strict-boolean-expressions': ['error', {
             allowString: false,
             allowNumber: false,
