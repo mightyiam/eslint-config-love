@@ -79,7 +79,7 @@
     "editorconfig-checker": "4.0.2",
     "eslint": "8.14.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-n": "15.1.0",
+    "eslint-plugin-n": "15.2.0",
     "eslint-plugin-promise": "6.0.0",
     "fs.promises": "0.1.2",
     "inclusion": "1.0.1",
