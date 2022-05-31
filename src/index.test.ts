@@ -274,15 +274,24 @@ test('npm install args in readme satisfy peerDeps', async (t) => {
 
 test('not using `fs.promises` polyfill when no support for Node.js 12', async (t) => {
   const { pkgPath, ourDevDeps } = await getPkgDetails()
-  const travisYamlPath = resolve(pkgPath, '..', '.travis.yml')
-  const travisYmlString = (await readFile(travisYamlPath)).toString()
-  if (travisYmlString === undefined) throw new Error()
-  const parsedTravisYaml = yaml.load(travisYmlString)
-  const TravisYaml = Record({
-    node_js: Array(String)
+  const ciYamlPath = resolve(pkgPath, '..', '.github', 'workflows', 'ci.yaml')
+  const ciYmlString = (await readFile(ciYamlPath)).toString()
+  if (ciYmlString === undefined) throw new Error()
+  const parsedCiYaml = yaml.load(ciYmlString)
+  const CiYaml = Record({
+    jobs: Record({
+      'ci-matrix': Record({
+        strategy: Record({
+          matrix: Record({
+            'node-version': Array(String)
+          })
+        })
+      })
+    })
   })
-  const travisYaml = TravisYaml.check(parsedTravisYaml)
-  const isSupportNodejs12 = travisYaml.node_js.includes('12')
+  const ciYaml = CiYaml.check(parsedCiYaml)
+  const isSupportNodejs12 = ciYaml.jobs['ci-matrix'].strategy.matrix['node-version']
+    .some((v) => v === '12' || v.startsWith('12.'))
   const isDependingOnPolyfill = Object.keys(ourDevDeps).includes('fs.promises')
   t.true(
     isSupportNodejs12 && isDependingOnPolyfill,
