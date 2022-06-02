@@ -13,10 +13,11 @@ jobs:
     steps:
       - run: exit 0
   ci-matrix:
+    needs: get-supported-node-versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: ${{ fromJson(needs.get-supported-node-versions.outputs.versions) }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -28,3 +29,10 @@ jobs:
       - run: npm --global install npm@latest
       - run: npm install
       - run: npm test
+  get-supported-node-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - id: get
+        uses: msimerson/node-lts-versions@v1.2.2
+    outputs:
+      versions: ${{ steps.get.outputs.active }}
