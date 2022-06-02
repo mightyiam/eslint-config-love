@@ -81,7 +81,6 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.2.0",
     "eslint-plugin-promise": "6.0.0",
-    "fs.promises": "0.1.2",
     "inclusion": "1.0.1",
     "js-yaml": "4.1.0",
     "npm-package-arg": "9.0.2",
