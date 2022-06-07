@@ -1,12 +1,22 @@
 [![Build Status](https://github.com/standard/eslint-config-standard-with-typescript/workflows/ci/badge.svg)](https://github.com/standard/eslint-config-standard-with-typescript/actions/workflows/ci.yml)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Releases](https://coderelease.io/badge/standard/eslint-config-standard-with-typescript)](https://coderelease.io/github/repository/standard/eslint-config-standard-with-typescript)
-
-# eslint-config-standard-with-typescript
+[![npm](https://img.shields.io/npm/v/eslint-config-standard-with-typescript)](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
 
 An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for TypeScript that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has TypeScript specific rules from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
 
-## Usage
+# Peer dependencies 
+
+This package specifies the following `peerDependencies`:
+
+- TypeScript, which you may already have installed
+- [ESLint](https://github.com/eslint/eslint)
+- 3 Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
+
+Yes, this is a large number of `peerDependencies`.
+This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
+
+# npm@<7
 
 `npm@<7` does not automatically install `peerDependencies`,
 so if that's what you're using, install them manually.
@@ -24,15 +34,7 @@ npm install --save-dev \
   eslint-config-standard-with-typescript@latest
 ```
 
-Yes, this is a large number of packages. This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
-
-This list of dependencies is:
-
-- TypeScript, which you may already have installed
-- [ESLint](https://github.com/eslint/eslint)
-- 3 Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
-- This package
+# Example config
 
 Here is an example `.eslintrc.js`:
 
@@ -49,7 +51,7 @@ Note: Please read some important instructions regarding the `project` option [he
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
-Example command line usage:
+# Example command line usage:
 
 ```
 $ npx eslint .
