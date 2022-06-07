@@ -16,6 +16,19 @@ This package specifies the following `peerDependencies`:
 Yes, this is a large number of `peerDependencies`.
 This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
 
+# @typescript-eslint dependencies
+
+This package has `@typescript-eslint/parser` in `dependencies`.  
+And it has `@typescript-eslint/eslint-plugin` in `peerDependencies`.  
+Both are specified as ranges.
+It's probably safest for the installed versions of these packages to be the same.
+This can be achieved by:
+
+1. Pin (exact version) the `@typescript-eslint/eslint-plugin` in `package.json`.
+1. Have a `package-lock.json` which locks the version of the `@typescript-eslint/parser` sub-dependency.
+
+And both pin/lock to the same version.
+
 # npm@<7
 
 `npm@<7` does not automatically install `peerDependencies`,
