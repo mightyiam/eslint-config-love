@@ -71,7 +71,7 @@
     "@commitlint/travis-cli": "16.3.0",
     "@types/eslint": "8.4.3",
     "@types/js-yaml": "4.0.5",
-    "@types/node": "17.0.41",
+    "@types/node": "17.0.42",
     "@types/npm-package-arg": "6.1.1",
     "@types/semver": "7.3.9",
     "@typescript-eslint/eslint-plugin": "5.27.1",
