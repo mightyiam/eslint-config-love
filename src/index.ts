@@ -74,12 +74,6 @@ const config: Linter.Config = {
           }
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-        '@typescript-eslint/explicit-function-return-type': ['error', {
-          allowExpressions: true,
-          allowHigherOrderFunctions: true,
-          allowTypedFunctionExpressions: true,
-          allowDirectConstAssertionInArrowFunctions: true
-        }],
         '@typescript-eslint/member-delimiter-style': [
           'error',
           {
