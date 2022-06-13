@@ -73,7 +73,7 @@
     "@types/node": "17.0.42",
     "@types/npm-package-arg": "6.1.1",
     "@types/semver": "7.3.9",
-    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/eslint-plugin": "5.28.0",
     "ava": "4.3.0",
     "editorconfig-checker": "4.0.2",
     "eslint": "8.17.0",
