@@ -1,30 +1,24 @@
 {
-  "extends": [
-    ":automergeMinor"
-  ],
-  "rangeStrategy": "auto",
-  "travis": {
-    "enabled": true
-  },
-  "node": {
-    "major": {
-      "enabled": true
-    },
-    "supportPolicy": [
-      "all"
-    ]
-  },
   "packageRules": [
     {
-      "packagePatterns": [
-        "^typescript$"
-      ],
-      "automerge": false
+      "matchDepTypes": ["devDependencies"],
+      "rangeStrategy": "pin",
+      "extends": [":automergeMinor"]
     },
     {
-      "packagePatterns": [
-        "^@typescript-eslint\/"
-      ],
+      "matchDepTypes": ["peerDependencies"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["eslint-config-standard"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPackagePrefixes": ["@commitlint/"],
+      "groupName": "@commitlint packages"
+    },
+    {
+      "matchPackagePrefixes": ["@typescript-eslint/"],
       "groupName": "@typescript-eslint packages"
     }
   ]
