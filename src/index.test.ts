@@ -76,12 +76,6 @@ test('export', (t): void => {
           ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
           '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
-          '@typescript-eslint/explicit-function-return-type': ['error', {
-            allowExpressions: true,
-            allowHigherOrderFunctions: true,
-            allowTypedFunctionExpressions: true,
-            allowDirectConstAssertionInArrowFunctions: true
-          }],
           '@typescript-eslint/func-call-spacing': ['error', 'never'],
           '@typescript-eslint/indent': ['error', 2, {
             SwitchCase: 1,
