@@ -192,12 +192,11 @@ const isPinnedRange = (rangeStr: string): boolean => {
 
 test('Dependencies range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
-  for (const [name, range] of Object.entries(ourDeps)) {
-    t.true(
-      isSingleCaretRange(range),
-      `Regular dependency \`${name}: ${range}\` is a single \`^\` range.`
-    )
-  }
+
+  t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser', 'eslint-config-standard'])
+  t.true(isPinnedRange(ourDeps['eslint-config-standard']), 'eslint-config-standard is pinned')
+  t.true(isSingleCaretRange(ourDeps['@typescript-eslint/parser']), '@typescript-eslint/parser is a single `^` range.')
+
   for (const [name, range] of Object.entries(ourPeerDeps)) {
     if (name === 'typescript') {
       t.is(range, '*', 'Peer dependency typescript is `*`')
