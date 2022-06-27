@@ -176,22 +176,40 @@ test('export', (t): void => {
   t.deepEqual(exported, expected)
 })
 
+const isSingleCaretRange = (rangeStr: string): boolean => {
+  const range = new semver.Range(rangeStr)
+  return range.set.length === 1 &&
+    range.set[0].length === 2 &&
+    range.set[0][0].operator === '>=' &&
+    range.set[0][1].operator === '<'
+}
+const isPinnedRange = (rangeStr: string): boolean => {
+  const range = new semver.Range(rangeStr)
+  return range.set.length === 1 &&
+    range.set[0].length === 1 &&
+    range.set[0][0].operator === ''
+}
+
 test('Dependencies range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
   for (const [name, range] of Object.entries(ourDeps)) {
-    const specifier = '^'
-    t.true(range.startsWith(specifier), `Regular dependency ${name} starts with \`${specifier}\`.`)
+    t.true(
+      isSingleCaretRange(range),
+      `Regular dependency \`${name}: ${range}\` is a single \`^\` range.`
+    )
   }
   for (const [name, range] of Object.entries(ourPeerDeps)) {
     if (name === 'typescript') {
       t.is(range, '*', 'Peer dependency typescript is `*`')
     } else {
-      const specifier = '^'
-      t.true(range.startsWith(specifier), `Peer dependency ${name} starts with \`${specifier}\`.`)
+      t.true(
+        isSingleCaretRange(range),
+        `Peer dependency \`${name}: ${range}\` is a single \`^\` range.`
+      )
     }
   }
   for (const [name, range] of Object.entries(ourDevDeps)) {
-    t.regex(range, /^\d/, `Dev dependency ${name} is exact`)
+    t.true(isPinnedRange(range), `Dev dependency \`${name}: ${range}\` is pinned`)
   }
 })
 
