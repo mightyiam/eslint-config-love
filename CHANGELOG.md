@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [22.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v21.0.1...v22.0.0) (2022-07-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* the dependency eslint-config-standard is now pinned.
+* several peerDep bumps including eslint@^8.0.1 (was
+
+### Features
+
+* pin eslint-config-standard dependency ([5bbd534](https://github.com/standard/eslint-config-standard-with-typescript/commit/5bbd5343e3b4a101909fa8e32c34183adb5d68b4)), closes [#849](https://github.com/standard/eslint-config-standard-with-typescript/issues/849)
+* support ESLint v8 ([dc25743](https://github.com/standard/eslint-config-standard-with-typescript/commit/dc25743534d992f6607bb2d391c7ab9d2c143d61))
+
+
+### Bug Fixes
+
+* log [#759](https://github.com/standard/eslint-config-standard-with-typescript/issues/759) as breaking change ([519a8bc](https://github.com/standard/eslint-config-standard-with-typescript/commit/519a8bc7477eb2267ffcc56a180ac6295ed7e8d8)), closes [#806](https://github.com/standard/eslint-config-standard-with-typescript/issues/806)
+* peer-depend on any version of typescript ([3446e30](https://github.com/standard/eslint-config-standard-with-typescript/commit/3446e30dacdf019ee08f16b430cee876797a3a0c)), closes [#604](https://github.com/standard/eslint-config-standard-with-typescript/issues/604)
+* use typescript-eslint version of space-infix-ops rule ([e57051c](https://github.com/standard/eslint-config-standard-with-typescript/commit/e57051c80616a70a49c00bc5f4d03341f0d7959a))
+
 ### [21.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v21.0.0...v21.0.1) (2021-08-31)
 
 ## [21.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v20.0.0...v21.0.0) (2021-08-29)
