@@ -1,7 +1,7 @@
 {
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "action"],
       "rangeStrategy": "pin",
       "extends": [":automergeMinor"]
     },
