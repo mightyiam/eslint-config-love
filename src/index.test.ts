@@ -19,7 +19,7 @@ interface PkgDetails {
 }
 
 const getPkgDetails = async (): Promise<PkgDetails> => {
-  const readPkgUp: typeof import('read-pkg-up')['readPackageUpAsync'] = (await inclusion('read-pkg-up')).readPackageUpAsync
+  const readPkgUp: typeof import('read-pkg-up')['readPackageUp'] = (await inclusion('read-pkg-up')).readPackageUp
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
@@ -197,7 +197,7 @@ test('Dependencies range types', async (t) => {
   t.true(isPinnedRange(ourDeps['eslint-config-standard']), 'eslint-config-standard is pinned')
   t.true(isSingleCaretRange(ourDeps['@typescript-eslint/parser']), '@typescript-eslint/parser is a single `^` range.')
 
-  for (const [name, range] of Object.entries(ourPeerDeps)) {
+  for (const [name, range] of Object.entries(ourPeerDeps as Record<string, string>)) {
     if (name === 'typescript') {
       t.is(range, '*', 'Peer dependency typescript is `*`')
     } else {
@@ -227,6 +227,10 @@ test('Own peerDependencies include those of eslint-config-standard', async (t) =
 test('@typescript-eslint/eslint-plugin, dev dep subset of peer dep', async (t) => {
   const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
   const peerDepPluginRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
+  if (peerDepPluginRange === undefined) {
+    t.fail()
+    return
+  }
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
   t.true(semver.subset(devDepPluginRange, peerDepPluginRange))
 })
@@ -272,7 +276,7 @@ test('npm install args in readme satisfy peerDeps', async (t) => {
       })
       .filter(([name]) => name !== pkgJson.name)
   )
-  Object.entries(ourPeerDeps).forEach(([name, peerDepRange]) => {
+  Object.entries(ourPeerDeps as Record<string, string>).forEach(([name, peerDepRange]) => {
     t.true(Object.prototype.hasOwnProperty.call(installArgRanges, name), `missing peerDep ${name} in install args`)
     const installArgRange = installArgRanges[name]
     t.true(
