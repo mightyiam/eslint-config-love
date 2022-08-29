@@ -116,21 +116,6 @@ const propagate = (rules: Partial<Linter.RulesRecord>): Linter.RulesRecord => {
   return result
 }
 
-// const ruleFromStandard = (name: string): Linter.RuleEntry => {
-//   if (configStandard.rules === undefined) throw new Error()
-//   const rule = configStandard.rules[name]
-//   if (rule === undefined) throw new Error()
-//   if (typeof rule !== 'object') return rule
-//   return JSON.parse(JSON.stringify(rule))
-// }
-
-// function fromEntries<T> (iterable: Array<[string, T]>): { [key: string]: T } {
-//   return [...iterable].reduce<{ [key: string]: T }>((obj, [key, val]) => {
-//     obj[key] = val
-//     return obj
-//   }, {})
-// }
-
 const config: Linter.Config = {
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
@@ -141,24 +126,6 @@ const config: Linter.Config = {
       rules: {
         // Propagate rules from Standard that have TypeScript equivalents
         ...propagate(configStandard.rules ?? { }),
-
-        // // TypeScript has this functionality by default:
-        // 'no-undef': 'off',
-
-        // // Rules replaced by @typescript-eslint versions:
-        // ...fromEntries(equivalents.map((name) => [name, 'off'])),
-        // camelcase: 'off',
-        // 'no-use-before-define': 'off',
-
-        // @typescript-eslint versions of Standard.js rules:
-        // ...fromEntries(equivalents.map((name) => [`@typescript-eslint/${name}`, ruleFromStandard(name)])),
-        // '@typescript-eslint/no-use-before-define': ['error', {
-        //   functions: false,
-        //   classes: false,
-        //   enums: false,
-        //   variables: false,
-        //   typedefs: false // Only the TypeScript rule has this option.
-        // }],
 
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
