@@ -1,6 +1,7 @@
 import test from 'ava'
 import exported from '.'
 import configStandard from './eslint-config-standard'
+import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
 import standardPkg from 'eslint-config-standard/package.json'
 import { NormalizedPackageJson } from 'read-pkg-up'
 import { Linter } from 'eslint'
@@ -9,6 +10,7 @@ import { resolve } from 'path'
 import npmPkgArg from 'npm-package-arg'
 import semver from 'semver'
 import inclusion from 'inclusion'
+import { diff as justDiff } from 'just-diff'
 
 interface PkgDetails {
   pkgPath: string
@@ -32,6 +34,17 @@ const getPkgDetails = async (): Promise<PkgDetails> => {
   return { pkgJson: ourPkg, pkgPath: readResult.path, ourDeps, ourPeerDeps, ourDevDeps }
 }
 
+const equivalents = [...(new Linter()).getRules().keys()]
+  .filter(name => Object.prototype.hasOwnProperty.call(typescriptEslintRules, name))
+
+if (exported.overrides === undefined) throw new Error('we seem to be exporting no overrides')
+if (exported.overrides[0] === undefined) throw new Error('we seem to be exporting empty overrides')
+const ourRules = exported.overrides[0].rules
+if (ourRules === undefined) throw new Error('we seem to be exporting no rules')
+
+const standardRules = configStandard.rules
+if (standardRules === undefined) throw new Error('`eslint-config-standard` does not seem to be exporting rules')
+
 test('export', (t): void => {
   const expected: Linter.Config = {
     extends: 'eslint-config-standard',
@@ -43,6 +56,7 @@ test('export', (t): void => {
         rules: {
           'brace-style': 'off',
           camelcase: 'off',
+          'comma-dangle': 'off',
           'comma-spacing': 'off',
           'dot-notation': 'off',
           'func-call-spacing': 'off',
@@ -51,6 +65,8 @@ test('export', (t): void => {
           'lines-between-class-members': 'off',
           'no-array-constructor': 'off',
           'no-dupe-class-members': 'off',
+          'no-extra-parens': 'off',
+          'no-loss-of-precision': 'off',
           'no-redeclare': 'off',
           'no-throw-literal': 'off',
           'no-undef': 'off',
@@ -59,13 +75,25 @@ test('export', (t): void => {
           'no-unused-expressions': 'off',
           'no-useless-constructor': 'off',
           'no-void': ['error', { allowAsStatement: true }],
+          'object-curly-spacing': 'off',
           quotes: 'off',
           semi: 'off',
+          'space-before-blocks': 'off',
           'space-before-function-paren': 'off',
           'space-infix-ops': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+          '@typescript-eslint/comma-dangle': ['error', {
+            arrays: 'never',
+            objects: 'never',
+            imports: 'never',
+            exports: 'never',
+            functions: 'never',
+            enums: 'ignore',
+            generics: 'ignore',
+            tuples: 'ignore'
+          }],
           '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
@@ -126,12 +154,14 @@ test('export', (t): void => {
           '@typescript-eslint/no-for-in-array': 'error',
           '@typescript-eslint/no-implied-eval': 'error',
           '@typescript-eslint/no-invalid-void-type': 'error',
+          '@typescript-eslint/no-loss-of-precision': 'error',
           '@typescript-eslint/no-misused-new': 'error',
           '@typescript-eslint/no-misused-promises': 'error',
           '@typescript-eslint/no-namespace': 'error',
           '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
           '@typescript-eslint/no-non-null-assertion': 'error',
           '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
+          '@typescript-eslint/no-extra-parens': ['error', 'functions'],
           '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
@@ -141,6 +171,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
           '@typescript-eslint/no-useless-constructor': 'error',
           '@typescript-eslint/no-var-requires': 'error',
+          '@typescript-eslint/object-curly-spacing': ['error', 'always'],
           '@typescript-eslint/prefer-function-type': 'error',
           '@typescript-eslint/prefer-includes': 'error',
           '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
@@ -155,6 +186,7 @@ test('export', (t): void => {
           '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
           '@typescript-eslint/return-await': ['error', 'always'],
           '@typescript-eslint/semi': ['error', 'never'],
+          '@typescript-eslint/space-before-blocks': ['error', 'always'],
           '@typescript-eslint/space-before-function-paren': ['error', 'always'],
           '@typescript-eslint/space-infix-ops': 'error',
           '@typescript-eslint/strict-boolean-expressions': ['error', {
@@ -296,4 +328,25 @@ test('not using the `inclusion` package when package is ES modules', async (t) =
   const isModulesPackage = pkgJson.type === 'module'
   t.true(isUsingInclusion, 'happy to see it gone')
   t.false(isModulesPackage, 'time to drop usage of `inclusion` package')
+})
+
+test('all direct equivalents are used', (t) => {
+  const unusedDirectEquivalents = equivalents
+    .filter((rule) => Object.prototype.hasOwnProperty.call(standardRules, rule) && !Object.prototype.hasOwnProperty.call(ourRules, `@typescript-eslint/${rule}`))
+  t.deepEqual(unusedDirectEquivalents, [])
+})
+
+test('configs of equivalents are supersets of upstream', (t) => {
+  equivalents.forEach((ruleName) => {
+    const standardRuleConfig = standardRules[ruleName]
+    const ourRuleConfig = ourRules[`@typescript-eslint/${ruleName}`]
+    const diff = justDiff({ _: standardRuleConfig }, { _: ourRuleConfig })
+    diff.forEach((diff) => {
+      if (diff.op !== 'add') {
+        t.fail()
+        t.log(ruleName, diff)
+      }
+      t.pass()
+    })
+  })
 })
