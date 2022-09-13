@@ -1,3 +1,26 @@
+## [23.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v22.0.0...v23.0.0) (2022-09-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rules from @typescript-eslint: no-extra-parens,
+no-loss-of-precision, object-curly-spacing, space-before-blocks,
+comma-dangle.
+
+### Features
+
+* use all typescript-eslint equivalents ([1e8764d](https://github.com/standard/eslint-config-standard-with-typescript/commit/1e8764d179444003c26ba8aeec17b1d4a83fd86a)), closes [#582](https://github.com/standard/eslint-config-standard-with-typescript/issues/582) [#583](https://github.com/standard/eslint-config-standard-with-typescript/issues/583)
+
+
+### CI
+
+* continuous delivery ([971c680](https://github.com/standard/eslint-config-standard-with-typescript/commit/971c680632a89a1252c17aef868283e8b7f35a4e)), closes [#840](https://github.com/standard/eslint-config-standard-with-typescript/issues/840)
+
+
+### Build system / dependencies
+
+* renovate automergeMinor github actions ([02dde9d](https://github.com/standard/eslint-config-standard-with-typescript/commit/02dde9d15a39312603bb98737d87d8f344ea3057)), closes [#910](https://github.com/standard/eslint-config-standard-with-typescript/issues/910)
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
