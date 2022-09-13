@@ -11,13 +11,17 @@ const equivalents = [
   'lines-between-class-members',
   'no-array-constructor',
   'no-dupe-class-members',
+  'no-extra-parens',
+  'no-loss-of-precision',
   'no-redeclare',
   'no-throw-literal',
   'no-unused-vars',
   'no-unused-expressions',
   'no-useless-constructor',
+  'object-curly-spacing',
   'quotes',
   'semi',
+  'space-before-blocks',
   'space-before-function-paren',
   'space-infix-ops'
 ] as const
@@ -45,6 +49,8 @@ const config: Linter.Config = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       rules: {
+        'comma-dangle': 'off',
+
         // TypeScript has this functionality by default:
         'no-undef': 'off',
 
@@ -66,6 +72,16 @@ const config: Linter.Config = {
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/comma-dangle': ['error', {
+          arrays: 'never',
+          objects: 'never',
+          imports: 'never',
+          exports: 'never',
+          functions: 'never',
+          enums: 'ignore',
+          generics: 'ignore',
+          tuples: 'ignore'
+        }],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
           {
