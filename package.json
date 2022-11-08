@@ -74,7 +74,7 @@
     "@types/js-yaml": "4.0.5",
     "@types/node": "18.8.2",
     "@types/npm-package-arg": "6.1.1",
-    "@types/semver": "7.3.12",
+    "@types/semver": "7.3.13",
     "@typescript-eslint/eslint-plugin": "5.39.0",
     "ava": "4.3.3",
     "editorconfig-checker": "4.0.2",
