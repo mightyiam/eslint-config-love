@@ -80,7 +80,7 @@
     "editorconfig-checker": "4.0.2",
     "eslint": "8.24.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-n": "15.5.0",
     "eslint-plugin-promise": "6.0.1",
     "inclusion": "1.0.1",
     "js-yaml": "4.1.0",
