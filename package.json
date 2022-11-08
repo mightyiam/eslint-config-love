@@ -76,7 +76,7 @@
     "@types/npm-package-arg": "6.1.1",
     "@types/semver": "7.3.13",
     "@typescript-eslint/eslint-plugin": "5.42.1",
-    "ava": "4.3.3",
+    "ava": "5.0.1",
     "editorconfig-checker": "4.0.2",
     "eslint": "8.27.0",
     "eslint-plugin-import": "2.26.0",
