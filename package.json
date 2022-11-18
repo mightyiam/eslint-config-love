@@ -78,7 +78,7 @@
     "@typescript-eslint/eslint-plugin": "5.43.0",
     "ava": "5.1.0",
     "editorconfig-checker": "4.0.2",
-    "eslint": "8.27.0",
+    "eslint": "8.28.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.5.1",
     "eslint-plugin-promise": "6.1.1",
