@@ -55,6 +55,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get
-        uses: msimerson/node-lts-versions@v1.4.2
+        uses: msimerson/node-lts-versions@v1.4.3
     outputs:
       versions: ${{ steps.get.outputs.active }}
