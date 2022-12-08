@@ -93,7 +93,7 @@
     "semver": "7.3.8",
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   },
   "files": [
     "lib/index.js",
