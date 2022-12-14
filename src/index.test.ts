@@ -95,6 +95,7 @@ test('export', (t): void => {
             tuples: 'ignore'
           }],
           '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
+          '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
             {
