@@ -1,3 +1,19 @@
+## [24.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v23.0.0...v24.0.0) (2022-12-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule consistent-indexed-object-style
+
+### Features
+
+* add rule consistent-indexed-object-style ([2edd0af](https://github.com/standard/eslint-config-standard-with-typescript/commit/2edd0af76e7b5b78c35b1427dea91de58d730e19))
+
+
+### Build system / dependencies
+
+* workaround some commitlint issue ([a202f4b](https://github.com/standard/eslint-config-standard-with-typescript/commit/a202f4b0ff71fab410fdffdd0f396cfbec218b9d))
+
 ## [23.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v22.0.0...v23.0.0) (2022-09-13)
 
 
