@@ -112,6 +112,7 @@ const config: Linter.Config = {
           format: ['camelCase', 'PascalCase', 'UPPER_CASE']
         }],
         '@typescript-eslint/no-base-to-string': 'error',
+        '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: false, ignoreVoidOperator: false }],
         '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
         '@typescript-eslint/no-extra-non-null-assertion': 'error',
