@@ -1,3 +1,16 @@
+## [26.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v25.0.0...v26.0.0) (2023-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* add @typescript-eslint/no-confusing-void-expression
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Features
+
+* add @typescript-eslint/no-confusing-void-expression ([15ce349](https://github.com/standard/eslint-config-standard-with-typescript/commit/15ce349ee4a1cc63c15caf2b9e289d75ce4aaab2))
+
 ## [25.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v24.0.0...v25.0.0) (2023-01-03)
 
 
