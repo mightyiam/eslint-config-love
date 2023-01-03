@@ -166,6 +166,7 @@ test('export', (t): void => {
           '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
           '@typescript-eslint/no-throw-literal': 'error',
           '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+          '@typescript-eslint/no-unnecessary-type-constraint': 'error',
           '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
           '@typescript-eslint/no-unused-vars': ['error', { args: 'none', caughtErrors: 'none', ignoreRestSiblings: true, vars: 'all' }],
           '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
