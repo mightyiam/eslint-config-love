@@ -1,3 +1,16 @@
+## [25.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v24.0.0...v25.0.0) (2023-01-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* add @typescript-eslint/no-unnecessary-type-constraint
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Features
+
+* add @typescript-eslint/no-unnecessary-type-constraint ([3451bac](https://github.com/standard/eslint-config-standard-with-typescript/commit/3451bace1de3dbd2b8396eef9703e916aa9b7985))
+
 ## [24.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v23.0.0...v24.0.0) (2022-12-14)
 
 
