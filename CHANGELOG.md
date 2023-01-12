@@ -1,3 +1,27 @@
+## [27.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v26.0.0...v27.0.0) (2023-01-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* add @typescript-eslint/await-thenable
+
+Co-authored-by: Shahar Dawn Or <mightyiampresence@gmail.com>
+
+### Features
+
+* add @typescript-eslint/await-thenable ([7dad1a9](https://github.com/standard/eslint-config-standard-with-typescript/commit/7dad1a9dab1e2810b736d733d846958824ef513f))
+
+
+### Testing
+
+* all plugin rules are considered ([f91887f](https://github.com/standard/eslint-config-standard-with-typescript/commit/f91887fef97627f9f5974a7182bc9ac45d05f3f6))
+* correct 'all plugin rules are considered' ([6863028](https://github.com/standard/eslint-config-standard-with-typescript/commit/68630282d1701aeef15020f9384905d5c18250d4))
+
+
+### Build system / dependencies
+
+* latest node.js in publish job ([0c8d8f8](https://github.com/standard/eslint-config-standard-with-typescript/commit/0c8d8f856027f114af60052ee71bb5f6807259cd))
+
 ## [26.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v25.0.0...v26.0.0) (2023-01-03)
 
 
