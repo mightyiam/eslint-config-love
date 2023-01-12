@@ -1,3 +1,10 @@
+## [27.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v27.0.0...v27.0.1) (2023-01-12)
+
+
+### Documentation
+
+* fix readme ci badge ([f05c5d1](https://github.com/standard/eslint-config-standard-with-typescript/commit/f05c5d1ce00e433ebfe29ab4e830a174b0afee07))
+
 ## [27.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v26.0.0...v27.0.0) (2023-01-12)
 
 
