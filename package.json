@@ -79,7 +79,7 @@
     "ava": "5.1.0",
     "editorconfig-checker": "4.0.2",
     "eslint": "8.31.0",
-    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-import": "2.27.2",
     "eslint-plugin-n": "15.6.1",
     "eslint-plugin-promise": "6.1.1",
     "inclusion": "1.0.1",
