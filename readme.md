@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/standard/eslint-config-standard-with-typescript/workflows/ci/badge.svg)](https://github.com/standard/eslint-config-standard-with-typescript/actions/workflows/ci.yml)
+[![Build Status](https://github.com/standard/eslint-config-standard-with-typescript/actions/workflows/ci.yaml/badge.svg)](https://github.com/standard/eslint-config-standard-with-typescript/actions/workflows/ci.yaml)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/v/eslint-config-standard-with-typescript)](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
 
