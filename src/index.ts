@@ -72,6 +72,7 @@ const config: Linter.Config = {
         // Rules exclusive to Standard TypeScript:
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+        '@typescript-eslint/await-thenable': 'error',
         '@typescript-eslint/comma-dangle': ['error', {
           arrays: 'never',
           objects: 'never',

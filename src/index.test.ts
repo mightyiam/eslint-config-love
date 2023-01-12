@@ -83,6 +83,7 @@ test('export', (t): void => {
           'space-infix-ops': 'off',
           '@typescript-eslint/adjacent-overload-signatures': 'error',
           '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+          '@typescript-eslint/await-thenable': 'error',
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/comma-dangle': ['error', {
             arrays: 'never',
@@ -362,7 +363,6 @@ test('all plugin rules are considered', (t) => {
   // This serves as a todo list and should ideally eventually end up empty
   // and then fail upon plugin upgrades where new rules are released.
   const notYetConsideredRules: string[] = [
-    'await-thenable',
     'ban-ts-comment',
     'ban-tslint-comment',
     'ban-types',
