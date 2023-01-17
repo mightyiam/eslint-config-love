@@ -73,6 +73,13 @@ const config: Linter.Config = {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
         '@typescript-eslint/await-thenable': 'error',
+        '@typescript-eslint/ban-ts-comment': ['error', {
+          'ts-expect-error': 'allow-with-description',
+          'ts-ignore': true,
+          'ts-nocheck': true,
+          'ts-check': false,
+          minimumDescriptionLength: 3
+        }],
         '@typescript-eslint/comma-dangle': ['error', {
           arrays: 'never',
           objects: 'never',
