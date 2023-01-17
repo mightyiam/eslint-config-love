@@ -80,6 +80,7 @@ const config: Linter.Config = {
           'ts-check': false,
           minimumDescriptionLength: 3
         }],
+        '@typescript-eslint/ban-tslint-comment': 'error',
         '@typescript-eslint/comma-dangle': ['error', {
           arrays: 'never',
           objects: 'never',

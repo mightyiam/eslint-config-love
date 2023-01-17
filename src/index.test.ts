@@ -91,6 +91,7 @@ test('export', (t): void => {
             'ts-check': false,
             minimumDescriptionLength: 3
           }],
+          '@typescript-eslint/ban-tslint-comment': 'error',
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
           '@typescript-eslint/comma-dangle': ['error', {
             arrays: 'never',
@@ -370,7 +371,6 @@ test('all plugin rules are considered', (t) => {
   // This serves as a todo list and should ideally eventually end up empty
   // and then fail upon plugin upgrades where new rules are released.
   const notYetConsideredRules: string[] = [
-    'ban-tslint-comment',
     'ban-types',
     'class-literal-property-style',
     'consistent-generic-constructors',
