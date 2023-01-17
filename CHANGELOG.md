@@ -1,3 +1,14 @@
+## [30.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v29.0.0...v30.0.0) (2023-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/ban-types
+
+### Features
+
+* @typescript-eslint/ban-types ([94fcc73](https://github.com/standard/eslint-config-standard-with-typescript/commit/94fcc736c0fac1b7aba743310cb5f1ee382d8d3f))
+
 ## [29.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v28.0.0...v29.0.0) (2023-01-17)
 
 
