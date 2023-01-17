@@ -1,3 +1,14 @@
+## [29.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v28.0.0...v29.0.0) (2023-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/ban-tslint-comment
+
+### Features
+
+* @typescript-eslint/ban-tslint-comment ([6aa6817](https://github.com/standard/eslint-config-standard-with-typescript/commit/6aa6817592b576a981cfa69b155d74b34617f736))
+
 ## [28.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v27.0.1...v28.0.0) (2023-01-17)
 
 
