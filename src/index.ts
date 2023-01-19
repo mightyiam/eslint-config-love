@@ -139,6 +139,7 @@ const config: Linter.Config = {
           generics: 'ignore',
           tuples: 'ignore'
         }],
+        '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
         '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
