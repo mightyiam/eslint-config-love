@@ -152,6 +152,7 @@ test('export', (t): void => {
             tuples: 'ignore'
           }],
           '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
+          '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
           '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
           '@typescript-eslint/consistent-type-assertions': [
             'error',
@@ -420,7 +421,6 @@ test('all plugin rules are considered', (t) => {
   // and then fail upon plugin upgrades where new rules are released.
   const notYetConsideredRules: string[] = [
     'class-literal-property-style',
-    'consistent-generic-constructors',
     'consistent-type-exports',
     'consistent-type-imports',
     'default-param-last',
