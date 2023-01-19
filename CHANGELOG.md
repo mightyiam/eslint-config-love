@@ -1,3 +1,14 @@
+## [31.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v30.0.0...v31.0.0) (2023-01-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/consistent-generic-constructors
+
+### Features
+
+* @typescript-eslint/consistent-generic-constructors ([0248ed7](https://github.com/standard/eslint-config-standard-with-typescript/commit/0248ed7edafe5440a915bca6ea14bbf59ef9d730))
+
 ## [30.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v29.0.0...v30.0.0) (2023-01-17)
 
 
