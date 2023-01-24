@@ -1,5 +1,5 @@
 import config from 'eslint-config-standard/.eslintrc.json'
-import { Linter } from 'eslint'
+import { type Linter } from 'eslint'
 
 const casted = config as unknown as Linter.Config
 
