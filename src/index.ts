@@ -1,5 +1,5 @@
 import configStandard from './eslint-config-standard'
-import { Linter } from 'eslint'
+import { type Linter } from 'eslint'
 
 const equivalents = [
   'comma-spacing',
@@ -149,6 +149,14 @@ const config: Linter.Config = {
           }
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/consistent-type-exports': ['error', {
+          fixMixedExportsWithInlineTypeSpecifier: true
+        }],
+        '@typescript-eslint/consistent-type-imports': ['error', {
+          prefer: 'type-imports',
+          disallowTypeAnnotations: true,
+          fixStyle: 'inline-type-imports'
+        }],
         '@typescript-eslint/explicit-function-return-type': ['error', {
           allowExpressions: true,
           allowHigherOrderFunctions: true,

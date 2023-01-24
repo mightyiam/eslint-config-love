@@ -3,7 +3,7 @@ import exported from '.'
 import configStandard from './eslint-config-standard'
 import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
 import standardPkg from 'eslint-config-standard/package.json'
-import { NormalizedPackageJson } from 'read-pkg-up'
+import type { NormalizedPackageJson, readPackageUp } from 'read-pkg-up'
 import { Linter } from 'eslint'
 import { readFile } from 'fs/promises'
 import { resolve } from 'path'
@@ -21,7 +21,7 @@ interface PkgDetails {
 }
 
 const getPkgDetails = async (): Promise<PkgDetails> => {
-  const readPkgUp: typeof import('read-pkg-up')['readPackageUp'] = (await inclusion('read-pkg-up')).readPackageUp
+  const readPkgUp: typeof readPackageUp = (await inclusion('read-pkg-up')).readPackageUp
   const readResult = await readPkgUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
@@ -162,6 +162,14 @@ test('export', (t): void => {
             }
           ],
           '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+          '@typescript-eslint/consistent-type-exports': ['error', {
+            fixMixedExportsWithInlineTypeSpecifier: true
+          }],
+          '@typescript-eslint/consistent-type-imports': ['error', {
+            prefer: 'type-imports',
+            disallowTypeAnnotations: true,
+            fixStyle: 'inline-type-imports'
+          }],
           '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
           '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
@@ -421,8 +429,6 @@ test('all plugin rules are considered', (t) => {
   // and then fail upon plugin upgrades where new rules are released.
   const notYetConsideredRules: string[] = [
     'class-literal-property-style',
-    'consistent-type-exports',
-    'consistent-type-imports',
     'default-param-last',
     'explicit-member-accessibility',
     'explicit-module-boundary-types',
