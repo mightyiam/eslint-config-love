@@ -1,3 +1,16 @@
+## [32.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v31.0.0...v32.0.0) (2023-01-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/consistent-type-{imports/exports}
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Features
+
+* @typescript-eslint/consistent-type-{imports/exports} ([bf0f96f](https://github.com/standard/eslint-config-standard-with-typescript/commit/bf0f96fb05492c89dc9f6865e94c9b44455a6bd9))
+
 ## [31.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v30.0.0...v31.0.0) (2023-01-19)
 
 
