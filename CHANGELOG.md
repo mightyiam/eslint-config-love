@@ -1,3 +1,16 @@
+## [33.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v32.0.0...v33.0.0) (2023-01-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/class-literal-property-style
+
+Co-authored-by: Shahar Dawn Or <mightyiampresence@gmail.com>
+
+### Features
+
+* @typescript-eslint/class-literal-property-style ([35093cb](https://github.com/standard/eslint-config-standard-with-typescript/commit/35093cb3acc58cfba1685b10098e80311c115b8c))
+
 ## [32.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v31.0.0...v32.0.0) (2023-01-24)
 
 
