@@ -141,6 +141,7 @@ test('export', (t): void => {
             }
           }],
           '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+          '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
           '@typescript-eslint/comma-dangle': ['error', {
             arrays: 'never',
             objects: 'never',
@@ -428,7 +429,6 @@ test('all plugin rules are considered', (t) => {
   // This serves as a todo list and should ideally eventually end up empty
   // and then fail upon plugin upgrades where new rules are released.
   const notYetConsideredRules: string[] = [
-    'class-literal-property-style',
     'default-param-last',
     'explicit-member-accessibility',
     'explicit-module-boundary-types',

@@ -129,6 +129,7 @@ const config: Linter.Config = {
             }
           }
         }],
+        '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
         '@typescript-eslint/comma-dangle': ['error', {
           arrays: 'never',
           objects: 'never',
