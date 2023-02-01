@@ -1,3 +1,14 @@
+## [34.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v33.0.0...v34.0.0) (2023-02-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/key-spacing
+
+### Features
+
+* @typescript-eslint/key-spacing ([f1d8be3](https://github.com/standard/eslint-config-standard-with-typescript/commit/f1d8be39dfeb4c59511690d91a311f15b8f425dc))
+
 ## [33.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v32.0.0...v33.0.0) (2023-01-27)
 
 
