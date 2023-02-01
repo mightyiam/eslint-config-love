@@ -61,6 +61,7 @@ test('export', (t): void => {
           'dot-notation': 'off',
           'func-call-spacing': 'off',
           indent: 'off',
+          'key-spacing': 'off',
           'keyword-spacing': 'off',
           'lines-between-class-members': 'off',
           'no-array-constructor': 'off',
@@ -195,6 +196,7 @@ test('export', (t): void => {
             ignoredNodes: ['TemplateLiteral *', 'JSXElement', 'JSXElement > *', 'JSXAttribute', 'JSXIdentifier', 'JSXNamespacedName', 'JSXMemberExpression', 'JSXSpreadAttribute', 'JSXExpressionContainer', 'JSXOpeningElement', 'JSXClosingElement', 'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment', 'JSXText', 'JSXEmptyExpression', 'JSXSpreadChild'],
             offsetTernaryExpressions: true
           }],
+          '@typescript-eslint/key-spacing': ['error', { beforeColon: false, afterColon: true }],
           '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
           '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
           '@typescript-eslint/member-delimiter-style': [

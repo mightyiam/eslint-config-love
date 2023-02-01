@@ -7,6 +7,7 @@ const equivalents = [
   'brace-style',
   'func-call-spacing',
   'indent',
+  'key-spacing',
   'keyword-spacing',
   'lines-between-class-members',
   'no-array-constructor',
