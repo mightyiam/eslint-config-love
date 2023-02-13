@@ -66,8 +66,8 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.7",
-    "@commitlint/cli": "17.4.2",
-    "@commitlint/config-conventional": "17.4.2",
+    "@commitlint/cli": "17.4.3",
+    "@commitlint/config-conventional": "17.4.3",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/git": "10.0.1",
     "@types/eslint": "8.21.0",
