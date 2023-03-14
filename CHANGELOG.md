@@ -1,3 +1,15 @@
+## [34.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v34.0.0...v34.0.1) (2023-03-14)
+
+
+### Testing
+
+* equivalents not used upstream not considered ([7354da5](https://github.com/standard/eslint-config-standard-with-typescript/commit/7354da5b2b0f336d13ed6958446fd47aeadd5401))
+
+
+### Bug fixes
+
+* bump plugin peerDep ([fb46a90](https://github.com/standard/eslint-config-standard-with-typescript/commit/fb46a90ee126dcbd852105c037f057b81ce468c9)), closes [#1064](https://github.com/standard/eslint-config-standard-with-typescript/issues/1064)
+
 ## [34.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v33.0.0...v34.0.0) (2023-02-01)
 
 
