@@ -77,7 +77,7 @@
     "@types/semver": "7.3.13",
     "@types/ungap__structured-clone": "0.3.0",
     "@typescript-eslint_bottom/eslint-plugin": "npm:@typescript-eslint/eslint-plugin@5.43.0",
-    "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@5.43.0",
+    "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@5.55.0",
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@ungap/structured-clone": "1.0.2",
     "ava": "5.2.0",
