@@ -4,13 +4,14 @@ import configStandard from './eslint-config-standard'
 import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
 import standardPkg from 'eslint-config-standard/package.json'
 import type { NormalizedPackageJson, readPackageUp } from 'read-pkg-up'
-import { Linter } from 'eslint'
+import { Linter, ESLint } from 'eslint'
 import { readFile } from 'fs/promises'
 import { resolve } from 'path'
 import npmPkgArg from 'npm-package-arg'
 import semver from 'semver'
 import inclusion from 'inclusion'
 import { diff as justDiff } from 'just-diff'
+import structuredClone from '@ungap/structured-clone'
 
 interface PkgDetails {
   pkgPath: string
@@ -33,6 +34,8 @@ const getPkgDetails = async (): Promise<PkgDetails> => {
   const ourDevDeps = ourPkg.devDependencies
   return { pkgJson: ourPkg, pkgPath: readResult.path, ourDeps, ourPeerDeps, ourDevDeps }
 }
+
+const extractVersionSpec = (range: string): string => range.split('@').slice(-1)[0]
 
 const equivalents = [...(new Linter()).getRules().keys()]
   .filter(name => Object.prototype.hasOwnProperty.call(typescriptEslintRules, name))
@@ -297,6 +300,10 @@ const isPinnedRange = (rangeStr: string): boolean => {
     range.set[0][0].operator === ''
 }
 
+const typescriptEslintBottom = '@typescript-eslint_bottom'
+const typescriptEslintBottomPlugin = `${typescriptEslintBottom}/eslint-plugin`
+const typescriptEslintBottomParser = `${typescriptEslintBottom}/parser`
+
 test('Dependencies range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
 
@@ -314,8 +321,9 @@ test('Dependencies range types', async (t) => {
       )
     }
   }
-  for (const [name, range] of Object.entries(ourDevDeps)) {
-    t.true(isPinnedRange(range), `Dev dependency \`${name}: ${range}\` is pinned`)
+  for (const [name, spec] of Object.entries(ourDevDeps)) {
+    const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
+    t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
   }
 })
 
@@ -494,4 +502,47 @@ test('all plugin rules are considered', (t) => {
         !notYetConsideredRules.includes(rule)
     })
   t.deepEqual(inexplicablyExcludedRules, [], 'rules inexplicably excluded')
+})
+
+test('our configuration is compatible with the plugin and parser at bottom of peer dep range', async (t) => {
+  const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
+
+  const peerDepRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
+  if (peerDepRange === undefined) throw new Error()
+
+  const bottomPluginVersion = extractVersionSpec(ourDevDeps[typescriptEslintBottomPlugin])
+  const bottomParserVersion = extractVersionSpec(ourDevDeps[typescriptEslintBottomParser])
+
+  const minPeerDepVersion = semver.minVersion(peerDepRange)
+  if (minPeerDepVersion === null) throw new Error()
+
+  t.deepEqual(bottomPluginVersion, minPeerDepVersion.version, 'bottom plugin version is bottom of peer dep')
+  t.deepEqual(bottomParserVersion, minPeerDepVersion.version, 'bottom parser version is bottom of peer dep')
+
+  const config = structuredClone(exported)
+
+  config.parser = typescriptEslintBottomParser
+  config.plugins = [typescriptEslintBottomPlugin]
+
+  if (config.overrides === undefined) throw new Error()
+  const overrides = config.overrides[0]
+  if (overrides === undefined) throw new Error()
+
+  if (overrides.rules === undefined) throw new Error()
+
+  overrides.rules = Object.fromEntries(
+    Object.entries(overrides.rules).map(([name, config]) => [
+      name.replace('@typescript-eslint/', `${typescriptEslintBottom}/`),
+      config
+    ])
+  )
+
+  const eslint = new ESLint({
+    useEslintrc: false,
+    overrideConfig: config
+  })
+
+  await t.notThrowsAsync(async () => {
+    await eslint.lintText('foo')
+  })
 })
