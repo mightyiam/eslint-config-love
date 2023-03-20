@@ -70,7 +70,7 @@
     "@commitlint/config-conventional": "17.4.4",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/git": "10.0.1",
-    "@types/eslint": "8.21.2",
+    "@types/eslint": "8.21.3",
     "@types/js-yaml": "4.0.5",
     "@types/node": "18.15.3",
     "@types/npm-package-arg": "6.1.1",
