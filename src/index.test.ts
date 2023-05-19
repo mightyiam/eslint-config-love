@@ -521,13 +521,13 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
 
   const config = structuredClone(exported)
 
-  config.parser = typescriptEslintBottomParser
   config.plugins = [typescriptEslintBottomPlugin]
 
   if (config.overrides === undefined) throw new Error()
   const overrides = config.overrides[0]
   if (overrides === undefined) throw new Error()
 
+  overrides.parser = typescriptEslintBottomParser
   if (overrides.rules === undefined) throw new Error()
 
   overrides.rules = Object.fromEntries(
