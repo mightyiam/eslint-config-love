@@ -1,3 +1,27 @@
+## [35.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v34.0.1...v35.0.0) (2023-06-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* minimum @typescript-eslint is corrected to be 5.50.0
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Build system / dependencies
+
+* **renovate:** do not bump [@typescript-eslint](https://github.com/typescript-eslint)_bottom/* ([73c439e](https://github.com/standard/eslint-config-standard-with-typescript/commit/73c439e0ff62b6dd6e155927c2186ba90aa4f65b)), closes [#1083](https://github.com/standard/eslint-config-standard-with-typescript/issues/1083)
+
+
+### Testing
+
+* assign to config.overrides.parser in compatibility config test ([2e62830](https://github.com/standard/eslint-config-standard-with-typescript/commit/2e628302fdf485c75345421aa78daec0eaf0e3ca))
+* bottom peerDep compatibility test actually works ([73da75f](https://github.com/standard/eslint-config-standard-with-typescript/commit/73da75f7e6387d1eb5be24b3cf931fc8eb28cb14))
+
+
+### Bug fixes
+
+* bump minimum [@typescript-eslint](https://github.com/typescript-eslint) to 5.50.0 ([0c83fdb](https://github.com/standard/eslint-config-standard-with-typescript/commit/0c83fdb36dddc7fdd8bf908c41436eac28f9271e))
+
 ## [34.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v34.0.0...v34.0.1) (2023-03-14)
 
 
