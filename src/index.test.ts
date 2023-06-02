@@ -537,12 +537,16 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
     ])
   )
 
+  overrides.parserOptions = {
+    project: './tsconfig.json'
+  }
+
   const eslint = new ESLint({
     useEslintrc: false,
     overrideConfig: config
   })
 
-  await t.notThrowsAsync(async () => {
-    await eslint.lintText('foo')
-  })
+  const results = await eslint.lintFiles('src/**/*')
+  t.true(results.length > 0)
+  results.forEach(result => t.deepEqual(result.messages, [], result.filePath))
 })
