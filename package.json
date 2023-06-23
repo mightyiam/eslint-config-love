@@ -94,7 +94,7 @@
     "read-pkg-up": "9.1.0",
     "runtypes": "6.7.0",
     "semantic-release": "21.0.5",
-    "semver": "7.5.2",
+    "semver": "7.5.3",
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
     "typescript": "5.1.3"
