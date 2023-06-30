@@ -1,3 +1,25 @@
+## [36.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v35.0.0...v36.0.0) (2023-06-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* the rules are provided at the top level,
+instead of under an `overrides` property.
+Providing the rules under the `overrides` property was never a good idea.
+It prevents specifying which files the rules apply to (e.g. `[*.js, *.ts]`).
+I apologize.
+To migrate, make sure that your `extends` property is under an [`overrides` item][overrides].
+An example is in the readme.
+To help verify your configuration,
+you could obtain a list of files that will be linted, this way:
+`DEBUG=eslint:cli-engine npx eslint <path>`.
+
+[overrides]: https://eslint.org/docs/latest/use/configure/configuration-files#how-do-overrides-work
+
+### Bug fixes
+
+* rules are at top level (not under overrides) ([25401c9](https://github.com/standard/eslint-config-standard-with-typescript/commit/25401c96a8cdb218cf7c26330d3968bf7acf544c)), closes [#1149](https://github.com/standard/eslint-config-standard-with-typescript/issues/1149) [#1088](https://github.com/standard/eslint-config-standard-with-typescript/issues/1088)
+
 ## [35.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v34.0.1...v35.0.0) (2023-06-02)
 
 
