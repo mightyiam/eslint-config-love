@@ -307,6 +307,8 @@ test('Dependencies range types', async (t) => {
   for (const [name, range] of Object.entries(ourPeerDeps as Record<string, string>)) {
     if (name === 'typescript') {
       t.is(range, '*', 'Peer dependency typescript is `*`')
+    } else if (name === 'eslint-plugin-n') {
+      t.is(range, '^15.0.0 || ^16.0.0 ', 'Peer dependency eslint-plugin-n is `^15.0.0 || ^16.0.0`')
     } else {
       t.true(
         isSingleCaretRange(range),

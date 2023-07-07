@@ -54,13 +54,13 @@
   ],
   "dependencies": {
     "@typescript-eslint/parser": "^5.50.0",
-    "eslint-config-standard": "17.0.0"
+    "eslint-config-standard": "17.1.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "eslint": "^8.0.1",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "typescript": "*"
   },
@@ -84,7 +84,7 @@
     "editorconfig-checker": "5.1.1",
     "eslint": "8.44.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-n": "15.7.0",
+    "eslint-plugin-n": "16.0.1",
     "eslint-plugin-promise": "6.1.1",
     "inclusion": "1.0.1",
     "js-yaml": "4.1.0",
