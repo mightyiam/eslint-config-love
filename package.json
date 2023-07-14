@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-with-typescript",
-  "version": "36.0.0",
+  "version": "36.0.1",
   "description": "An ESLint Shareable Config for JavaScript Standard Style with TypeScript support",
   "main": "lib/index.js",
   "scripts": {
@@ -70,7 +70,7 @@
     "@commitlint/config-conventional": "17.6.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/eslint": "8.40.2",
+    "@types/eslint": "8.44.0",
     "@types/js-yaml": "4.0.5",
     "@types/node": "18.16.19",
     "@types/npm-package-arg": "6.1.1",
@@ -91,10 +91,10 @@
     "just-diff": "6.0.2",
     "npm-package-arg": "10.1.0",
     "npm-run-all": "4.1.5",
-    "read-pkg-up": "9.1.0",
+    "read-pkg-up": "10.0.0",
     "runtypes": "6.7.0",
     "semantic-release": "21.0.7",
-    "semver": "7.5.3",
+    "semver": "7.5.4",
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
     "typescript": "5.1.6"

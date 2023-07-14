@@ -1,3 +1,10 @@
+## [36.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.0.0...v36.0.1) (2023-07-14)
+
+
+### Bug fixes
+
+* retrieval of active node versions in ci ([5ccd9a6](https://github.com/standard/eslint-config-standard-with-typescript/commit/5ccd9a66eb16363129c7f1f7ef70914aacef6cfa))
+
 ## [36.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v35.0.0...v36.0.0) (2023-06-30)
 
 
