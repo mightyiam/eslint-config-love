@@ -18,6 +18,10 @@
       "enabled": false
     },
     {
+      "matchPackagePrefixes": ["@types/"],
+      "automerge": true
+    },
+    {
       "matchPackagePrefixes": ["@commitlint/"],
       "groupName": "@commitlint packages"
     },
