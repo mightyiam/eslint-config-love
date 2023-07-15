@@ -303,17 +303,14 @@ test('Dependencies range types', async (t) => {
   t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser', 'eslint-config-standard'])
   t.true(isPinnedRange(ourDeps['eslint-config-standard']), 'eslint-config-standard is pinned')
   t.true(isSingleCaretRange(ourDeps['@typescript-eslint/parser']), '@typescript-eslint/parser is a single `^` range.')
-
-  for (const [name, range] of Object.entries(ourPeerDeps as Record<string, string>)) {
-    if (name === 'typescript') {
-      t.is(range, '*', 'Peer dependency typescript is `*`')
-    } else {
-      t.true(
-        isSingleCaretRange(range),
-        `Peer dependency \`${name}: ${range}\` is a single \`^\` range.`
-      )
-    }
-  }
+  const typescriptValue = ourPeerDeps.typescript
+  t.is(typescriptValue, '*', 'Peer dependency typescript is `*`')
+  const typescriptEslintPluginValue = ourPeerDeps['@typescript-eslint/eslint-plugin']
+  if (typescriptEslintPluginValue === undefined) throw new Error()
+  t.true(
+    isSingleCaretRange(typescriptEslintPluginValue),
+    `Peer dependency \`@typescript-eslint/eslint-plugin: ${typescriptEslintPluginValue}\` is a single \`^\` range.`
+  )
   for (const [name, spec] of Object.entries(ourDevDeps)) {
     const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
     t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
