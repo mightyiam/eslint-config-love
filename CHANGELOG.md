@@ -1,3 +1,15 @@
+## [36.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.0.1...v36.1.0) (2023-07-15)
+
+
+### Features
+
+* bump eslint-config-standard to v17.1.0 ([aacad54](https://github.com/standard/eslint-config-standard-with-typescript/commit/aacad549dc1ec364c6813bc0fa7faf2d9b23386c))
+
+
+### Build system / dependencies
+
+* rm redundant peerDep range test ([4e7ac4f](https://github.com/standard/eslint-config-standard-with-typescript/commit/4e7ac4f7a3083f44f5678fbe0dcc27270956d049))
+
 ## [36.0.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.0.0...v36.0.1) (2023-07-14)
 
 
