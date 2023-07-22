@@ -1,3 +1,15 @@
+## [36.1.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.1.0...v36.1.1) (2023-07-22)
+
+
+### Build system / dependencies
+
+* automerge @types/ bumps ([09b9445](https://github.com/standard/eslint-config-standard-with-typescript/commit/09b9445cfda3f05b7616a9fc06451b8843c408e1))
+
+
+### Documentation
+
+* remove obsolete release doc ([677d0a5](https://github.com/standard/eslint-config-standard-with-typescript/commit/677d0a5117e1a36439c2586e9e2d2e73985368f8)), closes [#1186](https://github.com/standard/eslint-config-standard-with-typescript/issues/1186)
+
 ## [36.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.0.1...v36.1.0) (2023-07-15)
 
 
