@@ -1,3 +1,17 @@
+## [37.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.1.1...v37.0.0) (2023-07-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/block-spacing and bump
+minimum @typescript-eslint to 5.52.0
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Features
+
+* @typescript-eslint/block-spacing ([0a0585f](https://github.com/standard/eslint-config-standard-with-typescript/commit/0a0585f3accd01ca9384bd99d2cc4bc8f016b7e5))
+
 ## [36.1.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.1.0...v36.1.1) (2023-07-22)
 
 
