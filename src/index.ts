@@ -2,6 +2,7 @@ import configStandard from './eslint-config-standard'
 import { type Linter } from 'eslint'
 
 const equivalents = [
+  'block-spacing',
   'comma-spacing',
   'dot-notation',
   'brace-style',
