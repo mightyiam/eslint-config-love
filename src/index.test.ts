@@ -55,6 +55,7 @@ test('export', (t): void => {
     plugins: ['@typescript-eslint'],
     parser: '@typescript-eslint/parser',
     rules: {
+      'block-spacing': 'off',
       'brace-style': 'off',
       camelcase: 'off',
       'comma-dangle': 'off',
@@ -142,6 +143,7 @@ test('export', (t): void => {
           }
         }
       }],
+      '@typescript-eslint/block-spacing': ['error', 'always'],
       '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
       '@typescript-eslint/comma-dangle': ['error', {
@@ -432,10 +434,13 @@ test('all plugin rules are considered', (t) => {
     'member-ordering',
     'no-confusing-non-null-assertion',
     'no-duplicate-enum-values',
+    'no-duplicate-type-constituents',
     'no-explicit-any',
     'no-implicit-any-catch',
+    'no-import-type-side-effects',
     'no-inferrable-types',
     'no-meaningless-void-operator',
+    'no-mixed-enums',
     'no-non-null-asserted-nullish-coalescing',
     'no-parameter-properties',
     'no-redundant-type-constituents',
@@ -448,6 +453,7 @@ test('all plugin rules are considered', (t) => {
     'no-unsafe-assignment',
     'no-unsafe-call',
     'no-unsafe-declaration-merging',
+    'no-unsafe-enum-comparison',
     'no-unsafe-member-access',
     'no-unsafe-return',
     'no-useless-empty-export',
