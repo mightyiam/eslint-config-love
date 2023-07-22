@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
-      - run: npm install
+      - run: npm ci
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
@@ -52,7 +52,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm --global install npm@latest
-      - run: npm install
+      - run: npm ci
       - run: npm test
   get-supported-node-versions:
     runs-on: ubuntu-latest
