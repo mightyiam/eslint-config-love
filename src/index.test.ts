@@ -69,6 +69,7 @@ test('export', (t): void => {
       'no-array-constructor': 'off',
       'no-dupe-class-members': 'off',
       'no-extra-parens': 'off',
+      'no-implied-eval': 'off',
       'no-loss-of-precision': 'off',
       'no-redeclare': 'off',
       'no-throw-literal': 'off',
