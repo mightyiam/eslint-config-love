@@ -81,6 +81,7 @@
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@ungap/structured-clone": "1.2.0",
     "ava": "5.3.1",
+    "commitlint-config-standard": "github:standard/commitlint-config-standard",
     "editorconfig-checker": "5.1.1",
     "eslint": "8.46.0",
     "eslint-plugin-import": "2.28.0",

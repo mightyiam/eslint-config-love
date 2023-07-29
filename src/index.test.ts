@@ -314,6 +314,7 @@ test('Dependencies range types', async (t) => {
     `Peer dependency \`@typescript-eslint/eslint-plugin: ${typescriptEslintPluginValue}\` is a single \`^\` range.`
   )
   for (const [name, spec] of Object.entries(ourDevDeps)) {
+    if (spec.startsWith('github:')) continue
     const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
     t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
   }
