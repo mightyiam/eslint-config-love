@@ -1,3 +1,25 @@
+## [38.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v37.0.0...v38.0.0) (2023-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* minimum @typescript-eslint packages bumped to v6.1.0
+* there will be some
+
+### Build system / dependencies
+
+* bump package-lock.json on release ([d42bf5b](https://github.com/standard/eslint-config-standard-with-typescript/commit/d42bf5b069da1cbb1ed1694576ea8e9bfba8022c))
+* moduleResolution: nodenext ([1f31e2b](https://github.com/standard/eslint-config-standard-with-typescript/commit/1f31e2b3076548796765978844e442057b2623c1))
+* package-lock.json ([b3a6535](https://github.com/standard/eslint-config-standard-with-typescript/commit/b3a6535fd4c079a2224fd9854d4cdeca9a2f359b)), closes [#1193](https://github.com/standard/eslint-config-standard-with-typescript/issues/1193)
+* shared commitlint config ([bdd6e2d](https://github.com/standard/eslint-config-standard-with-typescript/commit/bdd6e2d2c5de371fd6ef7f29b4fc3682bc9830d2))
+* use extracted releaserc ([877b004](https://github.com/standard/eslint-config-standard-with-typescript/commit/877b00459ac70ed996c21a26c933f6b17467d408))
+
+
+### Features
+
+* [@typescript-eslint](https://github.com/typescript-eslint) 6 ([166e189](https://github.com/standard/eslint-config-standard-with-typescript/commit/166e18976b6d02ec49cd1e7e4bffc53a566194bb))
+* bump minimum [@typescript-eslint](https://github.com/typescript-eslint) to v6.1.0 ([77202d1](https://github.com/standard/eslint-config-standard-with-typescript/commit/77202d1c758c16b71687f136897be65e24d640bd)), closes [#1222](https://github.com/standard/eslint-config-standard-with-typescript/issues/1222) [#1188](https://github.com/standard/eslint-config-standard-with-typescript/issues/1188)
+
 ## [37.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v36.1.1...v37.0.0) (2023-07-22)
 
 
