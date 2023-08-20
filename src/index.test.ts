@@ -1,29 +1,27 @@
 import test from 'ava'
+import { type PackageJson } from 'type-fest'
 import exported from '.'
 import configStandard from './eslint-config-standard'
 import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
 import standardPkg from 'eslint-config-standard/package.json'
-import type { NormalizedPackageJson, readPackageUp } from 'read-pkg-up'
 import { Linter, ESLint } from 'eslint'
 import { readFile } from 'fs/promises'
 import { resolve } from 'path'
 import npmPkgArg from 'npm-package-arg'
 import semver from 'semver'
-import inclusion from 'inclusion'
-import { diff as justDiff } from 'just-diff'
 import structuredClone from '@ungap/structured-clone'
 
 interface PkgDetails {
   pkgPath: string
-  pkgJson: NormalizedPackageJson
-  ourDeps: NonNullable<NormalizedPackageJson['dependencies']>
-  ourPeerDeps: NonNullable<NormalizedPackageJson['peerDependencies']>
-  ourDevDeps: NonNullable<NormalizedPackageJson['devDependencies']>
+  pkgJson: PackageJson
+  ourDeps: NonNullable<PackageJson['dependencies']>
+  ourPeerDeps: NonNullable<PackageJson['peerDependencies']>
+  ourDevDeps: NonNullable<PackageJson['devDependencies']>
 }
 
 const getPkgDetails = async (): Promise<PkgDetails> => {
-  const readPkgUp: typeof readPackageUp = (await inclusion('read-pkg-up')).readPackageUp
-  const readResult = await readPkgUp()
+  const { readPackageUp } = await import('read-pkg-up')
+  const readResult = await readPackageUp()
   if (readResult === undefined) { throw new Error() }
   const ourPkg = readResult.packageJson
   if (ourPkg.dependencies === undefined) { throw new Error() }
@@ -303,8 +301,12 @@ test('Dependencies range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
 
   t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser', 'eslint-config-standard'])
-  t.true(isPinnedRange(ourDeps['eslint-config-standard']), 'eslint-config-standard is pinned')
-  t.true(isSingleCaretRange(ourDeps['@typescript-eslint/parser']), '@typescript-eslint/parser is a single `^` range.')
+  const eslintConfigStandard = ourDeps['eslint-config-standard']
+  if (eslintConfigStandard === undefined) throw new Error()
+  t.true(isPinnedRange(eslintConfigStandard), 'eslint-config-standard is pinned')
+  const parser = ourDeps['@typescript-eslint/parser']
+  if (parser === undefined) throw new Error()
+  t.true(isSingleCaretRange(parser), '@typescript-eslint/parser is a single `^` range.')
   const typescriptValue = ourPeerDeps.typescript
   t.is(typescriptValue, '*', 'Peer dependency typescript is `*`')
   const typescriptEslintPluginValue = ourPeerDeps['@typescript-eslint/eslint-plugin']
@@ -314,6 +316,7 @@ test('Dependencies range types', async (t) => {
     `Peer dependency \`@typescript-eslint/eslint-plugin: ${typescriptEslintPluginValue}\` is a single \`^\` range.`
   )
   for (const [name, spec] of Object.entries(ourDevDeps)) {
+    if (spec === undefined) throw new Error()
     if (spec.startsWith('github:')) continue
     const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
     t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
@@ -340,6 +343,7 @@ test('@typescript-eslint/eslint-plugin, dev dep subset of peer dep', async (t) =
     return
   }
   const devDepPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
+  if (devDepPluginRange === undefined) throw new Error()
   t.true(semver.subset(devDepPluginRange, peerDepPluginRange))
 })
 
@@ -347,6 +351,8 @@ test('devDep plugin range subset of dep parser range', async (t) => {
   const { ourDeps, ourDevDeps } = await getPkgDetails()
   const depParserRange = ourDeps['@typescript-eslint/parser']
   const devPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
+  if (devPluginRange === undefined) throw new Error()
+  if (depParserRange === undefined) throw new Error()
   t.true(semver.subset(devPluginRange, depParserRange))
 })
 
@@ -393,21 +399,14 @@ test('npm install args in readme satisfy peerDeps', async (t) => {
   t.false(ourPeerDepsLength > installArgsLength, 'more peer deps than install args')
 })
 
-test('not using the `inclusion` package when package is ES modules', async (t) => {
-  const { pkgJson, ourDevDeps } = await getPkgDetails()
-  const isUsingInclusion = Object.keys(ourDevDeps).includes('inclusion') // haha
-  const isModulesPackage = pkgJson.type === 'module'
-  t.true(isUsingInclusion, 'happy to see it gone')
-  t.false(isModulesPackage, 'time to drop usage of `inclusion` package')
-})
-
 test('all direct equivalents are used', (t) => {
   const unusedDirectEquivalents = equivalents
     .filter((rule) => Object.prototype.hasOwnProperty.call(standardRules, rule) && !Object.prototype.hasOwnProperty.call(ourRules, `@typescript-eslint/${rule}`))
   t.deepEqual(unusedDirectEquivalents, [])
 })
 
-test('configs of equivalents are supersets of upstream', (t) => {
+test('configs of equivalents are supersets of upstream', async (t) => {
+  const { diff: justDiff } = await import('just-diff')
   equivalents.forEach((ruleName) => {
     const standardRuleConfig = standardRules[ruleName]
     const ourRuleConfig = ourRules[`@typescript-eslint/${ruleName}`]
@@ -502,8 +501,12 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
   const peerDepRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   if (peerDepRange === undefined) throw new Error()
 
-  const bottomPluginVersion = extractVersionSpec(ourDevDeps[typescriptEslintBottomPlugin])
-  const bottomParserVersion = extractVersionSpec(ourDevDeps[typescriptEslintBottomParser])
+  const bottomPluginRange = ourDevDeps[typescriptEslintBottomPlugin]
+  if (bottomPluginRange === undefined) throw new Error()
+  const bottomPluginVersion = extractVersionSpec(bottomPluginRange)
+  const bottomParserRange = ourDevDeps[typescriptEslintBottomParser]
+  if (bottomParserRange === undefined) throw new Error()
+  const bottomParserVersion = extractVersionSpec(bottomParserRange)
 
   const minPeerDepVersion = semver.minVersion(peerDepRange)
   if (minPeerDepVersion === null) throw new Error()
