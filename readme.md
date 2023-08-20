@@ -43,7 +43,7 @@ npm install --save-dev \
   eslint-plugin-promise@^6.0.0 \
   eslint-plugin-import@^2.25.2 \
   eslint-plugin-n@^15.0.0 \
-  @typescript-eslint/eslint-plugin@^5.52.0 \
+  @typescript-eslint/eslint-plugin@^6.1.0 \
   eslint-config-standard-with-typescript@latest
 ```
 
