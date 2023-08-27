@@ -52,6 +52,9 @@ test('export', (t): void => {
     extends: 'eslint-config-standard',
     plugins: ['@typescript-eslint'],
     parser: '@typescript-eslint/parser',
+    parserOptions: {
+      project: true
+    },
     rules: {
       'block-spacing': 'off',
       'brace-style': 'off',

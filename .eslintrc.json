@@ -2,10 +2,7 @@
   "overrides": [
     {
       "files": ["*.js", "*.ts"],
-      "extends": "./lib/index.js",
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      }
+      "extends": "./lib/index.js"
     }
   ]
 }
