@@ -47,6 +47,9 @@ const config: Linter.Config = {
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: true
+  },
   rules: {
     'comma-dangle': 'off',
 

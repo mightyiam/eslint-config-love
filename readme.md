@@ -57,16 +57,14 @@ module.exports = {
   overrides: [
     {
       files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-      extends: 'standard-with-typescript',
-      parserOptions: {
-        project: './tsconfig.json'
-      }
+      extends: 'standard-with-typescript'
     }
   ],
 }
 ```
 
-Note: Please read some important instructions regarding the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
+Note: the config exported by this package sets `parserOptions.project = true`.
+Read about the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
