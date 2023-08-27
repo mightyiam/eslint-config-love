@@ -1,3 +1,16 @@
+## [39.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v38.1.0...v39.0.0) (2023-08-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** minimum @typescript-eslint packages bumped to v6.4.0
+
+closes https://github.com/standard/eslint-config-standard-with-typescript/issues/1202
+
+### chore
+
+* **deps:** [@typescript-eslint](https://github.com/typescript-eslint) packages bumped to v6.4.0 ([1d1ba51](https://github.com/standard/eslint-config-standard-with-typescript/commit/1d1ba516f6e6eebf689e846eff89ea32bcfeeb62))
+
 ## [38.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v38.0.0...v38.1.0) (2023-08-27)
 
 
