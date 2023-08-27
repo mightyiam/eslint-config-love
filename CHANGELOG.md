@@ -1,3 +1,15 @@
+## [38.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v38.0.0...v38.1.0) (2023-08-27)
+
+
+### Features
+
+* parserOptions.project=true ([73efcf8](https://github.com/standard/eslint-config-standard-with-typescript/commit/73efcf866743a08d144b31965d92aa72e21aa656)), closes [#1230](https://github.com/standard/eslint-config-standard-with-typescript/issues/1230)
+
+
+### Refactoring
+
+* remove now unneeded types definition src/inclusion.d.ts ([f10cd95](https://github.com/standard/eslint-config-standard-with-typescript/commit/f10cd955e2df210376ac1b0271c1dff33187b4b0))
+
 ## [38.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v37.0.0...v38.0.0) (2023-08-20)
 
 
