@@ -1,9 +1,9 @@
 {
+  "extends": [":automergeMinor"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies", "action"],
-      "rangeStrategy": "pin",
-      "extends": [":automergeMinor"]
+      "rangeStrategy": "pin"
     },
     {
       "matchDepTypes": ["peerDependencies"],
@@ -11,7 +11,13 @@
     },
     {
       "matchPackageNames": ["eslint-config-standard"],
-      "rangeStrategy": "pin"
+      "rangeStrategy": "pin",
+      "minor": {
+        "semanticCommitType": "feat"
+      },
+      "patch": {
+        "semanticCommitType": "fix"
+      }
     },
     {
       "matchPackagePrefixes": ["@typescript-eslint_bottom/"],
