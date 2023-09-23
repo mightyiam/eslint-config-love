@@ -29,15 +29,15 @@ This can be achieved by:
 
 And both pin/lock to the same version.
 
-# npm@<7
+# Yarn
 
-`npm@<7` does not automatically install `peerDependencies`,
+Yarn does not automatically install `peerDependencies`,
 so if that's what you're using, install them manually.
 Here is an example, but use it only for reference,
 because your decisions regarding version ranges and range specifiers may vary.
 
 ```
-npm install --save-dev \
+yarn add --dev \
   typescript@\* \
   eslint@^8.0.1 \
   eslint-plugin-promise@^6.0.0 \
