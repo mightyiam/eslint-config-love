@@ -1,3 +1,17 @@
+## [39.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.0.0...v39.1.0) (2023-09-23)
+
+
+### Build system / dependencies
+
+* add-to-project workflow ([dd3ceae](https://github.com/standard/eslint-config-standard-with-typescript/commit/dd3ceaea89bc52ca4d90b765343a470627017e04))
+* automergeMinor eslint-config-standard ([f531394](https://github.com/standard/eslint-config-standard-with-typescript/commit/f531394576840344bda4c0c25f8c442999a509d9))
+* tsconfig.module = nodenext ([7590972](https://github.com/standard/eslint-config-standard-with-typescript/commit/75909722e5756435785689c3d3a440270c1d5f9e))
+
+
+### Features
+
+* **docs:** replace npm@<7 with yarn ([4dbc4b7](https://github.com/standard/eslint-config-standard-with-typescript/commit/4dbc4b7a84598f6b4fe4d006d75bb2e28b4f8f95)), closes [#1254](https://github.com/standard/eslint-config-standard-with-typescript/issues/1254)
+
 ## [39.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v38.1.0...v39.0.0) (2023-08-27)
 
 
