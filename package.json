@@ -71,7 +71,7 @@
     "@types/eslint": "8.44.3",
     "@types/js-yaml": "4.0.6",
     "@types/node": "20.6.4",
-    "@types/npm-package-arg": "6.1.1",
+    "@types/npm-package-arg": "6.1.2",
     "@types/semver": "7.5.2",
     "@types/ungap__structured-clone": "0.3.0",
     "@typescript-eslint_bottom/eslint-plugin": "npm:@typescript-eslint/eslint-plugin@6.4.0",
