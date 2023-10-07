@@ -70,6 +70,7 @@ test('export', (t): void => {
       'no-array-constructor': 'off',
       'no-dupe-class-members': 'off',
       'no-extra-parens': 'off',
+      'no-implied-eval': 'off',
       'no-loss-of-precision': 'off',
       'no-redeclare': 'off',
       'no-throw-literal': 'off',
@@ -421,6 +422,16 @@ test('configs of equivalents are supersets of upstream', async (t) => {
       }
       t.pass()
     })
+  })
+})
+
+test('JS equivalent rules are off', async (t) => {
+  Object.keys(ourRules).forEach((name) => {
+    const bareName = name.replace('@typescript-eslint/', '')
+    if (!Object.prototype.hasOwnProperty.call(typescriptEslintRules, bareName)) return
+    if (!equivalents.includes(bareName)) return
+    const config = ourRules[bareName]
+    t.is(config, 'off', bareName)
   })
 })
 
