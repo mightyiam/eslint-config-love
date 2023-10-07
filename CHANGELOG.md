@@ -1,3 +1,16 @@
+## [39.1.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.1.0...v39.1.1) (2023-10-07)
+
+
+### Build system / dependencies
+
+* renovate shared config ([e83cfd8](https://github.com/standard/eslint-config-standard-with-typescript/commit/e83cfd89bead41f5617375a4dd29f8b3388e3bbf))
+* unpin actions ([18c0988](https://github.com/standard/eslint-config-standard-with-typescript/commit/18c098887b965a9738ef6a6d61e2456055af1d19))
+
+
+### Bug fixes
+
+* turn off ESLint no-implied-eval ([ed8f1d4](https://github.com/standard/eslint-config-standard-with-typescript/commit/ed8f1d43d3b368c9079c74e97184b301ac4685dd))
+
 ## [39.1.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.0.0...v39.1.0) (2023-09-23)
 
 
