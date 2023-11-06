@@ -76,7 +76,7 @@
     "@types/ungap__structured-clone": "0.3.1",
     "@typescript-eslint_bottom/eslint-plugin": "npm:@typescript-eslint/eslint-plugin@6.4.0",
     "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@6.4.0",
-    "@typescript-eslint/eslint-plugin": "6.9.1",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
     "@ungap/structured-clone": "1.2.0",
     "ava": "5.3.1",
     "commitlint-config-standard": "github:standard/commitlint-config-standard",
