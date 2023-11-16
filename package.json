@@ -66,8 +66,8 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.7",
-    "@commitlint/cli": "18.4.1",
-    "@commitlint/config-conventional": "18.4.0",
+    "@commitlint/cli": "18.4.2",
+    "@commitlint/config-conventional": "18.4.2",
     "@types/eslint": "8.44.7",
     "@types/js-yaml": "4.0.9",
     "@types/node": "20.9.0",
