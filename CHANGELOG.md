@@ -1,3 +1,14 @@
+## [40.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.1.1...v40.0.0) (2023-11-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/unbound-method
+
+### Features
+
+* @typescript-eslint/unbound-method ([2ec6d24](https://github.com/standard/eslint-config-standard-with-typescript/commit/2ec6d24caae47a42b7b5be5eb1b0e541faca1ae1)), closes [#1327](https://github.com/standard/eslint-config-standard-with-typescript/issues/1327)
+
 ## [39.1.1](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.1.0...v39.1.1) (2023-10-07)
 
 
