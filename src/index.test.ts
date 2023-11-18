@@ -276,7 +276,8 @@ test('export', (t): void => {
         allowAny: false
       }],
       '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
-      '@typescript-eslint/type-annotation-spacing': 'error'
+      '@typescript-eslint/type-annotation-spacing': 'error',
+      '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }]
     }
   }
 
@@ -486,7 +487,6 @@ test('all plugin rules are considered', (t) => {
     'sort-type-union-intersection-members',
     'switch-exhaustiveness-check',
     'typedef',
-    'unbound-method',
     'unified-signatures'
   ]
   const assertNotInOurRules = (rule: string): void => {

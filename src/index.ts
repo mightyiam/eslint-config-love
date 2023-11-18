@@ -223,6 +223,7 @@ const config: Linter.Config = {
     }],
     '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
     '@typescript-eslint/type-annotation-spacing': 'error',
+    '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
     'no-void': ['error', { allowAsStatement: true }]
   }
 }
