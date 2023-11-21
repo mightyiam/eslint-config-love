@@ -70,7 +70,7 @@
     "@commitlint/config-conventional": "18.4.2",
     "@types/eslint": "8.44.7",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "20.9.2",
+    "@types/node": "20.9.3",
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.5.5",
     "@types/ungap__structured-clone": "0.3.2",
