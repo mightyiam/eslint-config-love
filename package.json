@@ -68,7 +68,7 @@
     "@arkweid/lefthook": "0.7.7",
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
-    "@types/eslint": "8.44.7",
+    "@types/eslint": "8.44.8",
     "@types/js-yaml": "4.0.9",
     "@types/node": "20.10.1",
     "@types/npm-package-arg": "6.1.4",
