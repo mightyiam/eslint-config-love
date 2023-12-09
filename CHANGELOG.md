@@ -1,3 +1,16 @@
+## [41.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v40.0.0...v41.0.0) (2023-12-9)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/non-nullable-type-assertion-style
+
+Co-authored-by: Rostislav Simonik <rostislav.simonik@technologystudio.sk>
+
+### Features
+
+* @typescript-eslint/non-nullable-type-assertion-style ([3f94c58](https://github.com/standard/eslint-config-standard-with-typescript/commit/3f94c58fd523e732c92266856f7c6a63ee72dc62))
+
 ## [40.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v39.1.1...v40.0.0) (2023-11-18)
 
 
