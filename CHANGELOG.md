@@ -1,3 +1,14 @@
+## [42.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v41.0.0...v42.0.0) (2023-12-9)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/no-unsafe-argument
+
+### Features
+
+* @typescript-eslint/no-unsafe-argument ([350bd29](https://github.com/standard/eslint-config-standard-with-typescript/commit/350bd296c12aca6eb24c557c879d0a07bb08d2d1))
+
 ## [41.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v40.0.0...v41.0.0) (2023-12-9)
 
 
