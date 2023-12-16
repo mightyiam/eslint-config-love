@@ -1,3 +1,14 @@
+## [43.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v42.0.0...v43.0.0) (2023-12-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* add rule @typescript-eslint/prefer-return-this-type
+
+### Features
+
+* @typescript-eslint/prefer-return-this-type ([d987ba3](https://github.com/standard/eslint-config-standard-with-typescript/commit/d987ba3f140a9af414e70fce89ae4309e232f722))
+
 ## [42.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v41.0.0...v42.0.0) (2023-12-9)
 
 
