@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/standard/eslint-config-standard-with-typescript.git"
+    "url": "git+https://github.com/mightyiam/eslint-config-standard-with-typescript.git"
   },
   "author": "Shahar Or <mightyiampresence@gmail.com> (mightyiam)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/standard/eslint-config-standard-with-typescript/issues"
+    "url": "https://github.com/mightyiam/eslint-config-standard-with-typescript/issues"
   },
-  "homepage": "https://github.com/standard/eslint-config-standard-with-typescript#readme",
+  "homepage": "https://github.com/mightyiam/eslint-config-standard-with-typescript#readme",
   "keywords": [
     "JavaScript Standard Style",
     "check",
