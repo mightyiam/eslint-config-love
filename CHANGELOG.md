@@ -1,3 +1,15 @@
+## [43.0.1](https://github.com/mightyiam/eslint-config-standard-with-typescript/compare/v43.0.0...v43.0.1) (2024-1-20)
+
+
+### Build system / dependencies
+
+* rm add-to-project workflow ([8d2f497](https://github.com/mightyiam/eslint-config-standard-with-typescript/commit/8d2f497a034c7085743b4da6b7f325166aa54699))
+
+
+### Documentation
+
+* update repository urls ([932ffce](https://github.com/mightyiam/eslint-config-standard-with-typescript/commit/932ffce3ee5053062e706ca2967f1690f66a8bef))
+
 ## [43.0.0](https://github.com/standard/eslint-config-standard-with-typescript/compare/v42.0.0...v43.0.0) (2023-12-16)
 
 

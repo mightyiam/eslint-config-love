@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standard-with-typescript",
-  "version": "43.0.0",
+  "version": "43.0.1",
   "description": "An ESLint Shareable Config for JavaScript Standard Style with TypeScript support",
   "main": "lib/index.js",
   "scripts": {
