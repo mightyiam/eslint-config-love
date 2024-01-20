@@ -1,6 +1,26 @@
 {
-  "extends": ["github>standard/renovate-config:renovate.json5"],
+  "extends": [":automergeMinor"],
   "packageRules": [
+    {
+      "matchDepTypes": ["action"],
+      "rangeStrategy": "replace"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPackagePrefixes": ["@types/"],
+      "automerge": true
+    },
+    {
+      "matchPackagePrefixes": ["@commitlint/"],
+      "groupName": "@commitlint packages"
+    },
+    {
+      "matchPackagePrefixes": ["@typescript-eslint/"],
+      "groupName": "@typescript-eslint packages"
+    },
     {
       "matchDepTypes": ["peerDependencies"],
       "enabled": false
