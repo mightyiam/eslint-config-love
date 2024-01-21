@@ -78,7 +78,7 @@
     "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@6.4.0",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@ungap/structured-clone": "1.2.0",
-    "ava": "6.0.1",
+    "ava": "6.1.0",
     "commitlint-config-standard": "github:standard/commitlint-config-standard",
     "editorconfig-checker": "5.1.2",
     "eslint": "8.56.0",
