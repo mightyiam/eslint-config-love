@@ -52,7 +52,7 @@ jobs:
   # If we were to use those checks as required checks, we would have to occasionally bump them.
   # This job allows us to have a single check that we don't have to bump.
   ci:
-    needs: [commitlint, test]
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
