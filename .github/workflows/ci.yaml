@@ -5,6 +5,27 @@ on:
       - master
 
 jobs:
+  commitlint:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - run: npm ci
+      # Hiding tsconfig.json to workaround
+      # https://github.com/conventional-changelog/commitlint/issues/3256
+      - run: mv tsconfig.json tsconfig.json.nope
+      - name: commitlint
+        run: |
+          npx commitlint \
+            --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} \
+            --to ${{ github.event.pull_request.head.sha }} \
+            --verbose
+      - run: mv tsconfig.json.nope tsconfig.json
   publish:
     needs: ci
     if: github.ref == 'refs/heads/master'
@@ -31,11 +52,11 @@ jobs:
   # If we were to use those checks as required checks, we would have to occasionally bump them.
   # This job allows us to have a single check that we don't have to bump.
   ci:
-    needs: ci-matrix
+    needs: [commitlint, test]
     runs-on: ubuntu-latest
     steps:
       - run: exit 0
-  ci-matrix:
+  test:
     needs: get-supported-node-versions
     runs-on: ubuntu-latest
     strategy:
@@ -43,18 +64,11 @@ jobs:
         node-version: ${{ fromJson(needs.get-supported-node-versions.outputs.versions) }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # for commit linting
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm --global install npm@latest
       - run: npm ci
-      # Hiding tsconfig.json to workaround
-      # https://github.com/conventional-changelog/commitlint/issues/3256
-      - run: mv tsconfig.json tsconfig.json.nope
-      - uses: wagoid/commitlint-github-action@v5
-      - run: mv tsconfig.json.nope tsconfig.json
       - run: npm test
   get-supported-node-versions:
     runs-on: ubuntu-latest
