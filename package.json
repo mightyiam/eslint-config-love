@@ -74,7 +74,7 @@
     "@types/js-yaml": "4.0.9",
     "@types/node": "20.11.20",
     "@types/npm-package-arg": "6.1.4",
-    "@types/semver": "7.5.7",
+    "@types/semver": "7.5.8",
     "@types/ungap__structured-clone": "1.2.0",
     "@typescript-eslint_bottom/eslint-plugin": "npm:@typescript-eslint/eslint-plugin@6.4.0",
     "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@6.4.0",
