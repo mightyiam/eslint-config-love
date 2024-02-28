@@ -80,7 +80,7 @@
     "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@6.4.0",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@ungap/structured-clone": "1.2.0",
-    "ava": "6.1.1",
+    "ava": "6.1.2",
     "editorconfig-checker": "5.1.4",
     "eslint": "8.57.0",
     "eslint-plugin-import": "2.29.1",
