@@ -81,7 +81,7 @@
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@ungap/structured-clone": "1.2.0",
     "ava": "6.1.2",
-    "editorconfig-checker": "5.1.4",
+    "editorconfig-checker": "5.1.5",
     "eslint": "8.57.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-n": "16.6.2",
