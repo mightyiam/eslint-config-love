@@ -38,7 +38,7 @@ const extractVersionSpec = (range: string): string => range.split('@').slice(-1)
 const equivalents = [...(new Linter()).getRules().keys()]
   .filter(name => Object.prototype.hasOwnProperty.call(typescriptEslintRules, name))
 
-const ourRules = exported.rules
+const ourRules: Linter.Config['rules'] = exported.rules
 if (ourRules === undefined) throw new Error('we seem to be exporting no rules')
 
 const standardRules = configStandard.rules
@@ -528,20 +528,19 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
   t.deepEqual(bottomPluginVersion, minPeerDepVersion.version, 'bottom plugin version is bottom of peer dep')
   t.deepEqual(bottomParserVersion, minPeerDepVersion.version, 'bottom parser version is bottom of peer dep')
 
-  const config = structuredClone(exported)
-
-  config.plugins = [typescriptEslintBottomPlugin]
-  config.parser = typescriptEslintBottomParser
-
-  config.rules = Object.fromEntries(
-    Object.entries(ourRules).map(([name, config]) => [
-      name.replace('@typescript-eslint/', `${typescriptEslintBottom}/`),
-      config
-    ])
-  )
-
-  config.parserOptions = {
-    project: './tsconfig.json'
+  const config = {
+    ...structuredClone(exported),
+    plugins: [typescriptEslintBottomPlugin],
+    parser: typescriptEslintBottomParser,
+    rules: Object.fromEntries(
+      Object.entries(ourRules).map(([name, config]) => [
+        name.replace('@typescript-eslint/', `${typescriptEslintBottom}/`),
+        config
+      ])
+    ),
+    parserOptions: {
+      project: './tsconfig.json'
+    }
   }
 
   const eslint = new ESLint({

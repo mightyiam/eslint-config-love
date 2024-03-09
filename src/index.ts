@@ -44,7 +44,7 @@ function fromEntries<T> (iterable: Array<[string, T]>): Record<string, T> {
   }, {})
 }
 
-const config: Linter.Config = {
+const config = {
   extends: 'eslint-config-standard',
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
@@ -229,6 +229,6 @@ const config: Linter.Config = {
     '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
     'no-void': ['error', { allowAsStatement: true }]
   }
-}
+} satisfies Linter.Config
 
 export = config
