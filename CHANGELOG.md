@@ -1,3 +1,30 @@
+## [43.1.0](https://github.com/mightyiam/eslint-config-love/compare/v43.0.1...v43.1.0) (2024-03-16)
+
+
+### Build system / dependencies
+
+* **ci:** 'ci' job does not need commitlint ([3d0ae58](https://github.com/mightyiam/eslint-config-love/commit/3d0ae582e8879ab4a0456cba03d9f03f181736d6))
+* **commitlint:** absorb external config ([12b3382](https://github.com/mightyiam/eslint-config-love/commit/12b33828ac31d914303d528714d8e7da905b4de5))
+* **commitlint:** don't use a github action ([8b49ee7](https://github.com/mightyiam/eslint-config-love/commit/8b49ee7e1f2e2d2d1e87d93c0bef7e1981d21f07))
+* flake.nix with devShell ([afa0a5b](https://github.com/mightyiam/eslint-config-love/commit/afa0a5b767d9b1581cc0f6ae6fbc40dddba8bad4))
+* merge-in renovate dependency ([3fab714](https://github.com/mightyiam/eslint-config-love/commit/3fab714069a48e21f37f12e7a1813d2a7956820d))
+* **semantic-release:** absorb external config ([43160a6](https://github.com/mightyiam/eslint-config-love/commit/43160a60fdc5a1af5b1dce8cccbd744595e6f2d0))
+
+
+### CI
+
+* no run on push to branch except master ([62c04c7](https://github.com/mightyiam/eslint-config-love/commit/62c04c7d48e1f08e9ba6e2f0013a2b3fdde89a2f))
+
+
+### Features
+
+* rename to eslint-config-love ([f71d143](https://github.com/mightyiam/eslint-config-love/commit/f71d143ef3c1a2f627cffe7a7367501d655a66e7))
+
+
+### Testing
+
+* config type change ([3c0c24b](https://github.com/mightyiam/eslint-config-love/commit/3c0c24b3f9632f2368c6a1e90e80ec84d325417c))
+
 ## [43.0.1](https://github.com/mightyiam/eslint-config-standard-with-typescript/compare/v43.0.0...v43.0.1) (2024-1-20)
 
 
