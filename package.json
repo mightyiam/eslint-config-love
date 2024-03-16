@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-standard-with-typescript",
+  "name": "eslint-config-love",
   "version": "43.0.1",
-  "description": "An ESLint Shareable Config for JavaScript Standard Style with TypeScript support",
+  "description": "A TypeScript ESLint config that loves you",
   "main": "lib/index.js",
   "scripts": {
     "compile": "tsc",
@@ -17,16 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mightyiam/eslint-config-standard-with-typescript.git"
+    "url": "git+https://github.com/mightyiam/eslint-config-love.git"
   },
   "author": "Shahar Or <mightyiampresence@gmail.com> (mightyiam)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mightyiam/eslint-config-standard-with-typescript/issues"
+    "url": "https://github.com/mightyiam/eslint-config-love/issues"
   },
-  "homepage": "https://github.com/mightyiam/eslint-config-standard-with-typescript#readme",
+  "homepage": "https://github.com/mightyiam/eslint-config-love#readme",
   "keywords": [
-    "JavaScript Standard Style",
     "check",
     "checker",
     "code",
@@ -44,8 +43,6 @@
     "policy",
     "quality",
     "simple",
-    "standard",
-    "standard style",
     "style",
     "style checker",
     "style linter",

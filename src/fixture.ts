@@ -1,11 +1,11 @@
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/10
+ * https://github.com/mightyiam/eslint-config-love/issues/10
  */
 export type Bar = null
 export type Foo<Bar> = (a: Bar) => Bar
 
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/2
+ * https://github.com/mightyiam/eslint-config-love/issues/2
  */
 export default class Zoo {
   public constructor (private readonly name: string) {}
@@ -16,7 +16,7 @@ export default class Zoo {
 }
 
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/3
+ * https://github.com/mightyiam/eslint-config-love/issues/3
  */
 export interface Boo { b_oo: null }
 
@@ -26,7 +26,7 @@ export interface Boo { b_oo: null }
 // console.log(undef)
 
 /**
- * https://github.com/mightyiam/eslint-config-standard-with-typescript/issues/110
+ * https://github.com/mightyiam/eslint-config-love/issues/110
  */
 // Inline callbacks don't need return types:
 setTimeout(() => { console.log() }, 1)

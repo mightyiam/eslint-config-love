@@ -1,8 +1,7 @@
-[![Build Status](https://github.com/mightyiam/eslint-config-standard-with-typescript/actions/workflows/ci.yaml/badge.svg)](https://github.com/mightyiam/eslint-config-standard-with-typescript/actions/workflows/ci.yaml)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![npm](https://img.shields.io/npm/v/eslint-config-standard-with-typescript)](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
+[![Build Status](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml/badge.svg)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
+[![npm](https://img.shields.io/npm/v/eslint-config-love)](https://www.npmjs.com/package/eslint-config-love)
 
-An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for TypeScript that is based on [eslint-config-standard](https://github.com/standard/eslint-config-standard) and has TypeScript specific rules from [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin).
+A TypeScript ESLint config that loves you
 
 # Peer dependencies 
 
@@ -44,7 +43,7 @@ yarn add --dev \
   eslint-plugin-import@^2.25.2 \
   eslint-plugin-n@^15.0.0 \
   @typescript-eslint/eslint-plugin@^6.4.0 \
-  eslint-config-standard-with-typescript@latest
+  eslint-config-love@latest
 ```
 
 # Example config
@@ -57,7 +56,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-      extends: 'standard-with-typescript'
+      extends: 'love'
     }
   ],
 }
