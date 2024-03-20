@@ -93,7 +93,7 @@
     "semver": "7.6.0",
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
-    "type-fest": "4.13.0",
+    "type-fest": "4.13.1",
     "typescript": "5.2.2"
   },
   "files": [
