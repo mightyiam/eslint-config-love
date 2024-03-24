@@ -55,7 +55,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - run: exit 0
+      - run: if [ "${{ needs.test.result }}" != 'success' ]; then exit 1; fi
   test:
     needs: get-supported-node-versions
     runs-on: ubuntu-latest

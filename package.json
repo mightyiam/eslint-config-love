@@ -75,7 +75,7 @@
     "@types/ungap__structured-clone": "1.2.0",
     "@typescript-eslint_bottom/eslint-plugin": "npm:@typescript-eslint/eslint-plugin@6.4.0",
     "@typescript-eslint_bottom/parser": "npm:@typescript-eslint/parser@6.4.0",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
     "@ungap/structured-clone": "1.2.0",
     "ava": "6.1.2",
     "editorconfig-checker": "5.1.5",
@@ -94,7 +94,7 @@
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
     "type-fest": "4.13.1",
-    "typescript": "5.4.3"
+    "typescript": "5.2.2"
   },
   "files": [
     "lib/index.js",
