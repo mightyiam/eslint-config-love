@@ -54,6 +54,7 @@ jobs:
   ci:
     needs: test
     runs-on: ubuntu-latest
+    if: ${{ !cancelled() }}
     steps:
       - run: if [ "${{ needs.test.result }}" != 'success' ]; then exit 1; fi
   test:
