@@ -421,8 +421,8 @@ test('configs of equivalents are supersets of upstream', async (t) => {
     const diff = justDiff({ _: standardRuleConfig }, { _: ourRuleConfig })
     diff.forEach((diff) => {
       if (diff.op !== 'add') {
-        t.fail()
         t.log(ruleName, diff)
+        t.fail()
       }
       t.pass()
     })
