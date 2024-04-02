@@ -11,6 +11,7 @@ const notYetConsideredRules: string[] = [
   'explicit-member-accessibility',
   'explicit-module-boundary-types',
   'member-ordering',
+  'no-array-delete',
   'no-confusing-non-null-assertion',
   'no-duplicate-enum-values',
   'no-duplicate-type-constituents',
@@ -34,10 +35,14 @@ const notYetConsideredRules: string[] = [
   'no-unsafe-enum-comparison',
   'no-unsafe-member-access',
   'no-unsafe-return',
+  'no-unsafe-unary-minus',
   'no-useless-empty-export',
+  'no-useless-template-literals',
+  'only-throw-error',
   'parameter-properties',
   'prefer-as-const',
   'prefer-enum-initializers',
+  'prefer-find',
   'prefer-for-of',
   'prefer-literal-enum-member',
   'prefer-namespace-keyword',
@@ -48,7 +53,8 @@ const notYetConsideredRules: string[] = [
   'sort-type-union-intersection-members',
   'switch-exhaustiveness-check',
   'typedef',
-  'unified-signatures'
+  'unified-signatures',
+  'use-unknown-in-catch-callback-variable'
 ]
 
 const equivalentsNotUsedUpstream = equivalents
