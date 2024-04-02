@@ -1,3 +1,29 @@
+## [44.0.0](https://github.com/mightyiam/eslint-config-love/compare/v43.1.0...v44.0.0) (2024-04-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** minimum @typescript-eslint is v7.0.1
+
+### Build system / dependencies
+
+* **ci:** "ci" job explicitly fails if test matrix fails ([7dddb49](https://github.com/mightyiam/eslint-config-love/commit/7dddb49e7072b7bf8fdc57d9efe6547adb2fb34d))
+* **ci:** ci workflow if not cancelled ([43b73e8](https://github.com/mightyiam/eslint-config-love/commit/43b73e8e36b47301ec7a8b8fc8e7e3af68e8a8f1))
+* **ci:** release from branch main ([03a84a5](https://github.com/mightyiam/eslint-config-love/commit/03a84a5cce61322cd447cf4c4d0c957422aa6db2))
+* **nix:** replace flake.nix with shell.nix ([023d0b0](https://github.com/mightyiam/eslint-config-love/commit/023d0b08287a3081ba96c23211b5f3dc3a7a17d9))
+* **shell.nix:** nodejs_latest ([75d18a0](https://github.com/mightyiam/eslint-config-love/commit/75d18a01dc3cb29cc20b72593d2e6a5d33e97bac))
+* **shell.nix:** typescript-language-server ([662a8f4](https://github.com/mightyiam/eslint-config-love/commit/662a8f42d6321c25d366f9d1f92482bbd0cc959c))
+
+
+### Features
+
+* **deps:** bump minimum [@typescript-eslint](https://github.com/typescript-eslint) to v7.0.1 ([44da116](https://github.com/mightyiam/eslint-config-love/commit/44da116df9cc3744445fe8138eb5e6481a7a72f8))
+
+
+### Testing
+
+* expected resolved config rules ([593ac1b](https://github.com/mightyiam/eslint-config-love/commit/593ac1b6c342c43ae91164624f3e70976f570011))
+
 ## [43.1.0](https://github.com/mightyiam/eslint-config-love/compare/v43.0.1...v43.1.0) (2024-03-16)
 
 
