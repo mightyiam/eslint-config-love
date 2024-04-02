@@ -2,7 +2,7 @@ on:
   pull_request: {}
   push:
     branches:
-      - master
+      - main
 
 jobs:
   commitlint:
@@ -28,7 +28,7 @@ jobs:
       - run: mv tsconfig.json.nope tsconfig.json
   publish:
     needs: ci
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: navikt/github-app-token-generator@v1
