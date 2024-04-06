@@ -26,16 +26,6 @@
       "enabled": false
     },
     {
-      "matchPackageNames": ["eslint-config-standard"],
-      "rangeStrategy": "pin",
-      "minor": {
-        "semanticCommitType": "feat"
-      },
-      "patch": {
-        "semanticCommitType": "fix"
-      }
-    },
-    {
       "matchPackagePrefixes": ["@typescript-eslint_bottom/"],
       "enabled": false
     }
