@@ -3,7 +3,6 @@ import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin
 import { Linter } from 'eslint'
 import semver from 'semver'
 import { type PackageJson } from 'type-fest'
-import configStandard from '../eslint-config-standard'
 
 interface PkgDetails {
   pkgPath: string
@@ -52,6 +51,3 @@ export const equivalents = [...(new Linter()).getRules().keys()]
   .filter(name => Object.prototype.hasOwnProperty.call(typescriptEslintRules, name))
 
 export const typescriptEslintBottom = '@typescript-eslint_bottom'
-
-if (configStandard.rules === undefined) throw new Error()
-export const standardRules = configStandard.rules

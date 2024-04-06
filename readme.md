@@ -9,7 +9,7 @@ This package specifies the following `peerDependencies`:
 
 - TypeScript, which you may already have installed
 - [ESLint](https://github.com/eslint/eslint)
-- 3 Peer dependencies of [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+- 3 ESLint plugins
 - [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
 
 Yes, this is a large number of `peerDependencies`.

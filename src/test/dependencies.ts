@@ -5,10 +5,7 @@ import { extractVersionSpec, getPkgDetails, isPinnedRange, isSingleCaretRange, t
 test('range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
 
-  t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser', 'eslint-config-standard'])
-  const eslintConfigStandard = ourDeps['eslint-config-standard']
-  if (eslintConfigStandard === undefined) throw new Error()
-  t.true(isPinnedRange(eslintConfigStandard), 'eslint-config-standard is pinned')
+  t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser'])
   const parser = ourDeps['@typescript-eslint/parser']
   if (parser === undefined) throw new Error()
   t.true(isSingleCaretRange(parser), '@typescript-eslint/parser is a single `^` range.')

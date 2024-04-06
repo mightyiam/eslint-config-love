@@ -28,7 +28,10 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
 
   const config = {
     ...structuredClone(exported),
-    plugins: [typescriptEslintBottomPlugin],
+    plugins: [
+      ...exported.plugins.filter(p => p !== '@typescript-eslint'),
+      typescriptEslintBottomPlugin
+    ],
     parser: typescriptEslintBottomParser,
     rules: Object.fromEntries(
       Object.entries(ourRules).map(([name, config]) => [

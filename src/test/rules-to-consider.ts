@@ -1,30 +1,42 @@
 import test from 'ava'
 import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
-import { equivalents, ourRules } from './_util'
-import configStandard from '../eslint-config-standard'
+import { ourRules } from './_util'
 
 // Some of these rules may have been considered but the reason for their exclusion
 // is not captured here.
 // This serves as a todo list and should ideally eventually end up empty
 // and then fail upon plugin upgrades where new rules are released.
 const notYetConsideredRules: string[] = [
+  'class-methods-use-this',
+  'consistent-return',
+  'default-param-last',
   'explicit-member-accessibility',
   'explicit-module-boundary-types',
+  'init-declarations',
+  'lines-around-comment',
+  'max-params',
   'member-ordering',
   'no-array-delete',
   'no-confusing-non-null-assertion',
   'no-duplicate-enum-values',
   'no-duplicate-type-constituents',
+  'no-empty-function',
   'no-explicit-any',
+  'no-extra-semi',
   'no-implicit-any-catch',
   'no-import-type-side-effects',
   'no-inferrable-types',
+  'no-invalid-this',
+  'no-loop-func',
+  'no-magic-numbers',
   'no-meaningless-void-operator',
   'no-mixed-enums',
   'no-non-null-asserted-nullish-coalescing',
   'no-parameter-properties',
   'no-redundant-type-constituents',
   'no-require-imports',
+  'no-restricted-imports',
+  'no-shadow',
   'no-type-alias',
   'no-unnecessary-condition',
   'no-unnecessary-qualifier',
@@ -39,8 +51,10 @@ const notYetConsideredRules: string[] = [
   'no-useless-empty-export',
   'no-useless-template-literals',
   'only-throw-error',
+  'padding-line-between-statements',
   'parameter-properties',
   'prefer-as-const',
+  'prefer-destructuring',
   'prefer-enum-initializers',
   'prefer-find',
   'prefer-for-of',
@@ -49,6 +63,7 @@ const notYetConsideredRules: string[] = [
   'prefer-readonly-parameter-types',
   'prefer-regexp-exec',
   'prefer-string-starts-ends-with',
+  'require-await',
   'sort-type-constituents',
   'sort-type-union-intersection-members',
   'switch-exhaustiveness-check',
@@ -56,9 +71,6 @@ const notYetConsideredRules: string[] = [
   'unified-signatures',
   'use-unknown-in-catch-callback-variable'
 ]
-
-const equivalentsNotUsedUpstream = equivalents
-  .filter(name => !Object.prototype.hasOwnProperty.call(configStandard.rules, name))
 
 test('all plugin rules are considered', (t) => {
   const intentionallyExcludedRules: string[] = [
@@ -69,15 +81,11 @@ test('all plugin rules are considered', (t) => {
   }
   intentionallyExcludedRules.forEach(assertNotInOurRules)
   notYetConsideredRules.forEach(assertNotInOurRules)
-  notYetConsideredRules.forEach((rule) => {
-    t.false(equivalentsNotUsedUpstream.includes(rule), `the equivalent rule ${rule} should not be considered because it is not used upstream`)
-  })
   const inexplicablyExcludedRules = Object.keys(typescriptEslintRules)
     .filter((rule) => {
       const typescriptRule = `@typescript-eslint/${rule}`
       return !Object.keys(ourRules).includes(typescriptRule) &&
         !intentionallyExcludedRules.includes(rule) &&
-        !equivalentsNotUsedUpstream.includes(rule) &&
         !notYetConsideredRules.includes(rule)
     })
   t.deepEqual(inexplicablyExcludedRules, [], 'rules inexplicably excluded')
