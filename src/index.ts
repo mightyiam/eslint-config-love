@@ -92,7 +92,15 @@ const rules = {
     disallowTypeAnnotations: true,
     fixStyle: 'inline-type-imports'
   }],
-  '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
+  '@typescript-eslint/dot-notation': ['error',
+    {
+      allowIndexSignaturePropertyAccess: false,
+      allowKeywords: true,
+      allowPattern: '',
+      allowPrivateClassPropertyAccess: false,
+      allowProtectedClassPropertyAccess: false
+    }
+  ],
   '@typescript-eslint/explicit-function-return-type': ['error', {
     allowExpressions: true,
     allowHigherOrderFunctions: true,
@@ -136,7 +144,7 @@ const rules = {
   }],
   '@typescript-eslint/key-spacing': ['error', { beforeColon: false, afterColon: true }],
   '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
-  '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+  '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterOverload: true, exceptAfterSingleLine: true }],
   '@typescript-eslint/member-delimiter-style': [
     'error',
     {
@@ -180,7 +188,8 @@ const rules = {
   '@typescript-eslint/no-unused-expressions': ['error', {
     allowShortCircuit: true,
     allowTernary: true,
-    allowTaggedTemplates: true
+    allowTaggedTemplates: true,
+    enforceForJSX: false
   }],
   '@typescript-eslint/no-unused-vars': ['error', {
     args: 'none',
@@ -231,10 +240,11 @@ const rules = {
   '@typescript-eslint/type-annotation-spacing': ['error'],
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
 
-  'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
+  'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true }],
   'array-bracket-spacing': ['error', 'never'],
   'array-callback-return': ['error', {
     allowImplicit: false,
+    allowVoid: false,
     checkForEach: false
   }],
   'arrow-spacing': ['error', { before: true, after: true }],
@@ -336,12 +346,12 @@ const rules = {
   'no-whitespace-before-property': ['error'],
   'no-with': ['error'],
   'object-curly-newline': ['error', { multiline: true, consistent: true }],
-  'object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+  'object-property-newline': ['error', { allowMultiplePropertiesPerLine: true, allowAllPropertiesOnSameLine: false }],
   'object-shorthand': ['warn', 'properties'],
   'one-var': ['error', { initialized: 'never' }],
   'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
   'padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
-  'prefer-const': ['error', { destructuring: 'all' }],
+  'prefer-const': ['error', { destructuring: 'all', ignoreReadBeforeAssign: false }],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'quote-props': ['error', 'as-needed'],
   'rest-spread-spacing': ['error', 'never'],

@@ -15,5 +15,5 @@ test('resolved config', async (t): Promise<void> => {
   t.deepEqual(actual.plugins, [...expectedExportedValue.plugins].reverse(), 'plugins')
   t.deepEqual(actual.globals, expectedExportedValue.globals, 'globals')
   t.true(actual.parser.includes(expectedExportedValue.parser), 'parser')
-  t.like(actual.rules, expectedExportedValue.rules, 'rules')
+  t.deepEqual(actual.rules, expectedExportedValue.rules, 'rules')
 })

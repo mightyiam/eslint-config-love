@@ -76,10 +76,11 @@ export const expectedExportedValue = {
     'no-var': ['warn'],
     'object-shorthand': ['warn', 'properties'],
 
-    'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
+    'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true }],
     'array-bracket-spacing': ['error', 'never'],
     'array-callback-return': ['error', {
       allowImplicit: false,
+      allowVoid: false,
       checkForEach: false
     }],
     'arrow-spacing': ['error', { before: true, after: true }],
@@ -202,11 +203,11 @@ export const expectedExportedValue = {
     'no-with': ['error'],
     'object-curly-newline': ['error', { multiline: true, consistent: true }],
     'object-curly-spacing': ['off'],
-    'object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: false, allowMultiplePropertiesPerLine: true }],
     'one-var': ['error', { initialized: 'never' }],
     'operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before', '|>': 'before' } }],
     'padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
-    'prefer-const': ['error', { destructuring: 'all' }],
+    'prefer-const': ['error', { destructuring: 'all', ignoreReadBeforeAssign: false }],
     'prefer-promise-reject-errors': ['off'],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'quote-props': ['error', 'as-needed'],
@@ -343,7 +344,15 @@ export const expectedExportedValue = {
       disallowTypeAnnotations: true,
       fixStyle: 'inline-type-imports'
     }],
-    '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
+    '@typescript-eslint/dot-notation': ['error',
+      {
+        allowIndexSignaturePropertyAccess: false,
+        allowKeywords: true,
+        allowPattern: '',
+        allowPrivateClassPropertyAccess: false,
+        allowProtectedClassPropertyAccess: false
+      }
+    ],
     '@typescript-eslint/explicit-function-return-type': ['error', {
       allowExpressions: true,
       allowHigherOrderFunctions: true,
@@ -369,7 +378,7 @@ export const expectedExportedValue = {
     }],
     '@typescript-eslint/key-spacing': ['error', { beforeColon: false, afterColon: true }],
     '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
-    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterOverload: true, exceptAfterSingleLine: true }],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -413,7 +422,7 @@ export const expectedExportedValue = {
     '@typescript-eslint/no-unsafe-argument': ['error'],
     '@typescript-eslint/no-unused-vars': ['error', { args: 'none', caughtErrors: 'none', ignoreRestSiblings: true, vars: 'all' }],
     '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, enums: false, variables: false, typedefs: false }],
-    '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
+    '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true, enforceForJSX: false }],
     '@typescript-eslint/no-useless-constructor': ['error'],
     '@typescript-eslint/no-var-requires': ['error'],
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
