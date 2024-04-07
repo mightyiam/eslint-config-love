@@ -8,6 +8,6 @@ test('JS equivalent rules are off', async (t) => {
     if (!Object.prototype.hasOwnProperty.call(typescriptEslintRules, bareName)) return
     if (!equivalents.includes(bareName)) return
     const config = ourRules[bareName]
-    t.is(config, 'off', bareName)
+    t.deepEqual(config, ['off'], bareName)
   })
 })
