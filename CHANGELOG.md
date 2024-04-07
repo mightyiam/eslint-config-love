@@ -1,3 +1,27 @@
+## [45.0.0](https://github.com/mightyiam/eslint-config-love/compare/v44.0.0...v45.0.0) (2024-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* all rule configs are arrays.
+This is a breaking change only if you are importing and processing the
+exported value yourself. Otherwise, this shouldn't affect you. Sorry for
+the major bump. Just being careful.
+
+### Features
+
+* all rule configs are arrays ([9738761](https://github.com/mightyiam/eslint-config-love/commit/97387613c6a55434c04bc0177e07048c0123c59d))
+
+
+### Refactoring
+
+* no extend from eslint-config-standard ([065ce30](https://github.com/mightyiam/eslint-config-love/commit/065ce30c322e371c5aaea9558491aac739168161))
+
+
+### Testing
+
+* rule todo list for eslint core & all plugins ([8c84a0e](https://github.com/mightyiam/eslint-config-love/commit/8c84a0e0899943976ad72ac161175f9fbd91069f))
+
 ## [44.0.0](https://github.com/mightyiam/eslint-config-love/compare/v43.1.0...v44.0.0) (2024-04-02)
 
 
