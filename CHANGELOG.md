@@ -1,3 +1,20 @@
+## [46.0.0](https://github.com/mightyiam/eslint-config-love/compare/v45.0.0...v46.0.0) (2024-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* (trying to) specify all options for rules that are used.
+Most likely will not affect you.
+
+### Features
+
+* try to specify all options for used rules ([dc6ad6a](https://github.com/mightyiam/eslint-config-love/commit/dc6ad6a209db0a9bf9a5c9f78986f6c194e289f0)), closes [#1003](https://github.com/mightyiam/eslint-config-love/issues/1003)
+
+
+### Testing
+
+* exported value deep equality ([c869c59](https://github.com/mightyiam/eslint-config-love/commit/c869c59d654af40869b26a50fd8e3205a3c5a13d))
+
 ## [45.0.0](https://github.com/mightyiam/eslint-config-love/compare/v44.0.0...v45.0.0) (2024-04-07)
 
 
