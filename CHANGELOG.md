@@ -1,3 +1,14 @@
+## [47.0.0](https://github.com/mightyiam/eslint-config-love/compare/v46.0.0...v47.0.0) (2024-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* no longer provides env nor globals.
+
+### Features
+
+* do not specify env nor globals ([53802ac](https://github.com/mightyiam/eslint-config-love/commit/53802acf8d1f4cd1618e46a6a8145167654992ce))
+
 ## [46.0.0](https://github.com/mightyiam/eslint-config-love/compare/v45.0.0...v46.0.0) (2024-04-07)
 
 
