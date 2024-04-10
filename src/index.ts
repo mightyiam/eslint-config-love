@@ -398,15 +398,6 @@ const namesOfEslintRulesForWhichWeAreUsingTsEquivalents = eslintRuleNames
   .filter(name => Object.hasOwn(rules, `@typescript-eslint/${name}`))
 
 const config = {
-  env: {
-    es2021: true,
-    node: true
-  },
-  globals: {
-    document: 'readonly',
-    navigator: 'readonly',
-    window: 'readonly'
-  },
   plugins: [
     '@typescript-eslint',
     'import',

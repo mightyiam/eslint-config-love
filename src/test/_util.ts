@@ -53,21 +53,12 @@ export const equivalents = [...(new Linter()).getRules().keys()]
 export const typescriptEslintBottom = '@typescript-eslint_bottom'
 
 export const expectedExportedValue = {
-  env: {
-    es2021: true,
-    node: true
-  },
   plugins: [
     '@typescript-eslint',
     'import',
     'n',
     'promise'
   ],
-  globals: {
-    document: 'readonly',
-    navigator: 'readonly',
-    window: 'readonly'
-  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true
