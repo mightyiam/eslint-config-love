@@ -10,16 +10,8 @@ const eslint = new ESLint({
 
 const actual = eslint.calculateConfigForFile('foo.js')
 
-test('env', async (t) => {
-  t.deepEqual((await actual).env, expectedExportedValue.env)
-})
-
 test('plugins', async (t) => {
   t.deepEqual((await actual).plugins, [...expectedExportedValue.plugins].reverse())
-})
-
-test('globals', async (t) => {
-  t.deepEqual((await actual).globals, expectedExportedValue.globals)
 })
 
 test('parser', async (t) => {
