@@ -2,17 +2,7 @@ branches:
   - main
 plugins:
   - - "@semantic-release/commit-analyzer"
-    - releaseRules:
-        - breaking: true
-          release: major
-        - revert: true
-          release: patch
-        - type: feat
-          release: minor
-        - type: fix
-          release: patch
-        - type: perf
-          release: patch
+    - preset: conventionalcommits
   - - "@semantic-release/release-notes-generator"
     - preset: conventionalcommits
       presetConfig:
