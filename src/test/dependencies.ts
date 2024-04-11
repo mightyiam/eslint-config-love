@@ -45,3 +45,12 @@ test('devDep plugin range subset of dep parser range', async (t) => {
   if (depParserRange === undefined) throw new Error()
   t.true(semver.subset(devPluginRange, depParserRange))
 })
+
+test('devDep @typescript-eslint/utils range equals devDep plugin range', async (t) => {
+  const { ourDevDeps } = await getPkgDetails()
+  const devPluginRange = ourDevDeps['@typescript-eslint/eslint-plugin']
+  const devUtilsRange = ourDevDeps['@typescript-eslint/utils']
+  if (devPluginRange === undefined) throw new Error()
+  if (devUtilsRange === undefined) throw new Error()
+  t.true(semver.subset(devUtilsRange, devPluginRange))
+})

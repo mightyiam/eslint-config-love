@@ -5,9 +5,9 @@ import { rules as importRules } from 'eslint-plugin-import'
 import { rules as promiseRules } from 'eslint-plugin-promise'
 import { ourRules } from './_util'
 import _ from 'lodash'
-import { Linter } from 'eslint'
+import { TSESLint } from '@typescript-eslint/utils'
 
-const eslintRules = (new Linter()).getRules()
+const eslintRules = (new TSESLint.Linter()).getRules()
 
 const rulesets: Array<[Record<string, any>, string]> = [
   [tsRules, '@typescript-eslint'],

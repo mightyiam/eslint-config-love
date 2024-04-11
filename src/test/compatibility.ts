@@ -1,5 +1,5 @@
 import test from 'ava'
-import { ESLint } from 'eslint'
+import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import semver from 'semver'
 import { extractVersionSpec, getPkgDetails, ourRules, typescriptEslintBottom } from './_util'
@@ -44,7 +44,7 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
     }
   }
 
-  const eslint = new ESLint({
+  const eslint = new TSESLint.ESLint({
     useEslintrc: false,
     overrideConfig: config
   })
