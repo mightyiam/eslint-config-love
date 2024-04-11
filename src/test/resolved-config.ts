@@ -1,9 +1,9 @@
 import test from 'ava'
-import { ESLint } from 'eslint'
+import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import { expectedExportedValue } from './_util'
 
-const eslint = new ESLint({
+const eslint = new TSESLint.ESLint({
   useEslintrc: false,
   overrideConfig: structuredClone(exported)
 })
@@ -15,7 +15,9 @@ test('plugins', async (t) => {
 })
 
 test('parser', async (t) => {
-  t.true((await actual).parser.includes(expectedExportedValue.parser))
+  const parser = (await actual).parser
+  if (typeof parser !== 'string') throw new Error()
+  t.true(parser.includes(expectedExportedValue.parser))
 })
 
 test('rules', async (t) => {

@@ -1,4 +1,4 @@
-import { Linter } from 'eslint'
+import { TSESLint } from '@typescript-eslint/utils'
 
 const rules = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
@@ -391,9 +391,9 @@ const rules = {
   'n/process-exit-as-throw': ['error'],
 
   'promise/param-names': ['error']
-} satisfies Linter.RulesRecord
+} satisfies TSESLint.ClassicConfig.RulesRecord
 
-const eslintRuleNames = [...(new Linter()).getRules().keys()]
+const eslintRuleNames = [...(new TSESLint.Linter()).getRules().keys()]
 const namesOfEslintRulesForWhichWeAreUsingTsEquivalents = eslintRuleNames
   .filter(name => Object.hasOwn(rules, `@typescript-eslint/${name}`))
 
@@ -413,6 +413,6 @@ const config = {
     ...rules
   }
 
-} satisfies Linter.Config
+} satisfies TSESLint.ClassicConfig.Config
 
 export = config
