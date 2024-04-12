@@ -1,5 +1,5 @@
 import exported from '..'
-import { rules as typescriptEslintRules } from '@typescript-eslint/eslint-plugin'
+import { rules as tseslintRules } from '@typescript-eslint/eslint-plugin'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import { type PackageJson } from 'type-fest'
@@ -48,9 +48,9 @@ if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
 export const ourRules = ourRules_
 
 export const equivalents = [...(new TSESLint.Linter()).getRules().keys()]
-  .filter(name => Object.prototype.hasOwnProperty.call(typescriptEslintRules, name))
+  .filter(name => Object.prototype.hasOwnProperty.call(tseslintRules, name))
 
-export const typescriptEslintBottom = '@typescript-eslint_bottom'
+export const tseslintBottom = '@typescript-eslint_bottom'
 
 export const expectedExportedValue = {
   plugins: [

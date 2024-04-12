@@ -2,10 +2,10 @@ import test from 'ava'
 import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import semver from 'semver'
-import { extractVersionRange, getPkgDetails, ourRules, typescriptEslintBottom } from './_util'
+import { extractVersionRange, getPkgDetails, ourRules, tseslintBottom } from './_util'
 
-const typescriptEslintBottomPlugin = `${typescriptEslintBottom}/eslint-plugin`
-const typescriptEslintBottomParser = `${typescriptEslintBottom}/parser`
+const tseslintBottomPlugin = `${tseslintBottom}/eslint-plugin`
+const tseslintBottomParser = `${tseslintBottom}/parser`
 
 test('our configuration is compatible with the plugin and parser at bottom of peer dep range', async (t) => {
   const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
@@ -13,10 +13,10 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
   const peerDepRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
   if (peerDepRange === undefined) throw new Error()
 
-  const bottomPluginRange = ourDevDeps[typescriptEslintBottomPlugin]
+  const bottomPluginRange = ourDevDeps[tseslintBottomPlugin]
   if (bottomPluginRange === undefined) throw new Error()
   const bottomPluginVersion = extractVersionRange(bottomPluginRange)
-  const bottomParserRange = ourDevDeps[typescriptEslintBottomParser]
+  const bottomParserRange = ourDevDeps[tseslintBottomParser]
   if (bottomParserRange === undefined) throw new Error()
   const bottomParserVersion = extractVersionRange(bottomParserRange)
 
@@ -30,12 +30,12 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
     ...structuredClone(exported),
     plugins: [
       ...exported.plugins.filter(p => p !== '@typescript-eslint'),
-      typescriptEslintBottomPlugin
+      tseslintBottomPlugin
     ],
-    parser: typescriptEslintBottomParser,
+    parser: tseslintBottomParser,
     rules: Object.fromEntries(
       Object.entries(ourRules).map(([name, config]) => [
-        name.replace('@typescript-eslint/', `${typescriptEslintBottom}/`),
+        name.replace('@typescript-eslint/', `${tseslintBottom}/`),
         config
       ])
     ),
