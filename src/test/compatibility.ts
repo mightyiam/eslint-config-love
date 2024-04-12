@@ -2,7 +2,7 @@ import test from 'ava'
 import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import semver from 'semver'
-import { extractVersionSpec, getPkgDetails, ourRules, typescriptEslintBottom } from './_util'
+import { extractVersionRange, getPkgDetails, ourRules, typescriptEslintBottom } from './_util'
 
 const typescriptEslintBottomPlugin = `${typescriptEslintBottom}/eslint-plugin`
 const typescriptEslintBottomParser = `${typescriptEslintBottom}/parser`
@@ -15,10 +15,10 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
 
   const bottomPluginRange = ourDevDeps[typescriptEslintBottomPlugin]
   if (bottomPluginRange === undefined) throw new Error()
-  const bottomPluginVersion = extractVersionSpec(bottomPluginRange)
+  const bottomPluginVersion = extractVersionRange(bottomPluginRange)
   const bottomParserRange = ourDevDeps[typescriptEslintBottomParser]
   if (bottomParserRange === undefined) throw new Error()
-  const bottomParserVersion = extractVersionSpec(bottomParserRange)
+  const bottomParserVersion = extractVersionRange(bottomParserRange)
 
   const minPeerDepVersion = semver.minVersion(peerDepRange)
   if (minPeerDepVersion === null) throw new Error()

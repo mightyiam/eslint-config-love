@@ -1,6 +1,6 @@
 import test from 'ava'
 import semver from 'semver'
-import { extractVersionSpec, getPkgDetails, isPinnedRange, isSingleCaretRange, typescriptEslintBottom } from './_util'
+import { extractVersionRange, getPkgDetails, isPinnedRange, isSingleCaretRange, typescriptEslintBottom } from './_util'
 
 test('range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
@@ -19,7 +19,7 @@ test('range types', async (t) => {
   )
   for (const [name, spec] of Object.entries(ourDevDeps)) {
     if (spec === undefined) throw new Error()
-    const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
+    const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionRange(spec) : spec
     t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
   }
 })
