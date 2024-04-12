@@ -19,7 +19,6 @@ test('range types', async (t) => {
   )
   for (const [name, spec] of Object.entries(ourDevDeps)) {
     if (spec === undefined) throw new Error()
-    if (spec.startsWith('github:')) continue
     const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionSpec(spec) : spec
     t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
   }
