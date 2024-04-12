@@ -41,7 +41,7 @@ export const isPinnedRange = (rangeStr: string): boolean => {
     range.set[0][0].operator === ''
 }
 
-export const extractVersionSpec = (range: string): string => range.split('@').slice(-1)[0]
+export const extractVersionRange = (spec: string): string => spec.split('@').slice(-1)[0]
 
 const ourRules_: TSESLint.ClassicConfig.RulesRecord = exported.rules
 if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
