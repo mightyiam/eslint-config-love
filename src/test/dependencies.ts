@@ -1,27 +1,40 @@
 import test from 'ava'
 import semver from 'semver'
-import { extractVersionRange, getPkgDetails, isPinnedRange, isSingleCaretRange, typescriptEslintBottom } from './_util'
+import { extractVersionRange, getPkgDetails, isPinnedRange, isSingleCaretRange } from './_util'
 
 test('range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
 
-  t.deepEqual(Object.keys(ourDeps).sort(), ['@typescript-eslint/parser'])
-  const parser = ourDeps['@typescript-eslint/parser']
-  if (parser === undefined) throw new Error()
-  t.true(isSingleCaretRange(parser), '@typescript-eslint/parser is a single `^` range.')
-  const typescriptValue = ourPeerDeps.typescript
-  t.is(typescriptValue, '*', 'Peer dependency typescript is `*`')
-  const typescriptEslintPluginValue = ourPeerDeps['@typescript-eslint/eslint-plugin']
-  if (typescriptEslintPluginValue === undefined) throw new Error()
-  t.true(
-    isSingleCaretRange(typescriptEslintPluginValue),
-    `Peer dependency \`@typescript-eslint/eslint-plugin: ${typescriptEslintPluginValue}\` is a single \`^\` range.`
-  )
-  for (const [name, spec] of Object.entries(ourDevDeps)) {
-    if (spec === undefined) throw new Error()
-    const range = name.startsWith(`${typescriptEslintBottom}/`) ? extractVersionRange(spec) : spec
-    t.true(isPinnedRange(range), `Dev dependency \`${name}: ${spec}\` is pinned`)
-  }
+  const nonCompliantDepRanges = Object.entries({ dep: ourDeps, peer: ourPeerDeps, dev: ourDevDeps })
+    .flatMap(([depType, deps]) => Object.entries(deps).map(([depName, spec]) => {
+      if (spec === undefined) throw new Error()
+      return [depName, depType, spec] as const
+    }))
+    .filter(([depName, depType, spec]) => {
+      if (depName === 'typescript' && depType === 'peer') {
+        return spec !== '*'
+      }
+
+      if (depName === 'eslint-plugin-n' && depType === 'peer') {
+        const ranges = spec.split('||').map(range => range.trim())
+        if (ranges.length !== 2) return true
+        return !ranges.every(range => isSingleCaretRange(range))
+      }
+
+      const range = extractVersionRange(spec)
+
+      switch (depType) {
+        case 'dep':
+          return !isSingleCaretRange(range)
+        case 'peer':
+          return !isSingleCaretRange(range)
+        case 'dev':
+          return !isPinnedRange(range)
+        default: throw new Error()
+      }
+    })
+
+  t.deepEqual(nonCompliantDepRanges, [])
 })
 
 test('@typescript-eslint/eslint-plugin, dev dep subset of peer dep', async (t) => {
