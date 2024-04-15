@@ -1,19 +1,23 @@
 import test from 'ava'
-import { rules as tsRules } from '@typescript-eslint/eslint-plugin'
-import { rules as nRules } from 'eslint-plugin-n'
-import { rules as importRules } from 'eslint-plugin-import'
-import { rules as promiseRules } from 'eslint-plugin-promise'
+import pluginTseslint from '@typescript-eslint/eslint-plugin'
+import * as pluginN from 'eslint-plugin-n'
+import * as pluginImport from 'eslint-plugin-import'
+import * as pluginPromise from 'eslint-plugin-promise'
 import { ourRules } from './_util'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 
 const eslintRules = (new TSESLint.Linter()).getRules()
 
-const rulesets: Array<[Record<string, any>, string]> = [
-  [tsRules, '@typescript-eslint'],
-  [nRules, 'n'],
-  [importRules, 'import'],
-  [promiseRules, 'promise']
+if (pluginN.rules === undefined) throw new Error()
+if (pluginImport.rules === undefined) throw new Error()
+if (pluginPromise.rules === undefined) throw new Error()
+
+const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
+  [pluginTseslint.rules, '@typescript-eslint'],
+  [pluginN.rules, 'n'],
+  [pluginImport.rules, 'import'],
+  [pluginPromise.rules, 'promise']
 ]
 
 const knownRules = [

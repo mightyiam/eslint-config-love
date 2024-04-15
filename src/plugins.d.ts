@@ -1,9 +1,15 @@
 declare module 'eslint-plugin-n' {
-  export const rules: Record<string, unknown>
+  import { type TSESLint } from '@typescript-eslint/utils'
+  const plugin: TSESLint.Linter.Plugin
+  export = plugin
 }
 declare module 'eslint-plugin-import' {
-  export const rules: Record<string, unknown>
+  import { type TSESLint } from '@typescript-eslint/utils'
+  const plugin: TSESLint.Linter.Plugin
+  export = plugin
 }
 declare module 'eslint-plugin-promise' {
-  export const rules: Record<string, unknown>
+  import { type TSESLint } from '@typescript-eslint/utils'
+  const plugin: TSESLint.Linter.Plugin
+  export = plugin
 }
