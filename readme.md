@@ -49,7 +49,6 @@ yarn add --dev \
 # Example config
 
 Here is an example `.eslintrc.js`.
-Pay close attention to the `files` property, because it [determines which files are linted][specifying-target-files-to-lint].
 
 ```js
 module.exports = {
@@ -66,8 +65,6 @@ Note: the config exported by this package sets `parserOptions.project = true`.
 Read about the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
-
-[specifying-target-files-to-lint]: https://eslint.org/docs/latest/use/configure/configuration-files#specifying-target-files-to-lint
 
 # Example command line usage:
 
