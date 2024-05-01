@@ -94,7 +94,7 @@
     "semver": "7.6.0",
     "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
-    "type-fest": "4.18.0",
+    "type-fest": "4.18.1",
     "typescript": "5.4.5"
   },
   "files": [
