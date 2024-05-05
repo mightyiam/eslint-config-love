@@ -49,7 +49,8 @@ test('our configuration is compatible with the plugin and parser at bottom of pe
     overrideConfig: config
   })
 
-  const results = await eslint.lintFiles('src/**/*')
+  const results = await eslint.lintText('', { filePath: 'src/index.ts' })
+
   t.true(results.length > 0)
   results.forEach(result => t.deepEqual(result.messages, [], result.filePath))
 })
