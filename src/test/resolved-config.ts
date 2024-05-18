@@ -3,23 +3,45 @@ import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import { expectedExportedValue } from './_util'
 
-const eslint = new TSESLint.ESLint({
-  useEslintrc: false,
-  overrideConfig: structuredClone(exported)
+const eslint = new TSESLint.FlatESLint({
+  baseConfig: [exported]
 })
 
-const actual = eslint.calculateConfigForFile('foo.js')
+const actualP = eslint.calculateConfigForFile('foo.js')
 
 test('plugins', async (t) => {
-  t.deepEqual((await actual).plugins, [...expectedExportedValue.plugins].reverse())
+  // @ts-expect-error type seems wrong
+  const actual: TSESLint.FlatConfig.Config = await actualP
+  if (actual.plugins === undefined) throw new Error()
+
+  const actualSansAt = Object.fromEntries(
+    Object.entries(actual.plugins).filter(([key, _]) => key !== '@')
+  )
+  t.deepEqual(actualSansAt, expectedExportedValue.plugins)
 })
 
-test('parser', async (t) => {
-  const parser = (await actual).parser
-  if (typeof parser !== 'string') throw new Error()
-  t.true(parser.includes(expectedExportedValue.parser))
+test('languageOptions', async (t) => {
+  // @ts-expect-error type seems wrong
+  const actual: TSESLint.FlatConfig.Config = await actualP
+  const actualLanguageOptions = actual.languageOptions
+  if (actualLanguageOptions === undefined) throw new Error()
+  t.deepEqual(actualLanguageOptions, {
+    ...expectedExportedValue.languageOptions,
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  })
 })
 
 test('rules', async (t) => {
-  t.deepEqual((await actual).rules, expectedExportedValue.rules)
+  // @ts-expect-error type seems wrong
+  const actual: TSESLint.FlatConfig.Config = await actualP
+  const rules: TSESLint.FlatConfig.Rules = expectedExportedValue.rules
+  const normalized = Object.fromEntries(Object.entries(rules).map(([name, value]) => {
+    if (value === undefined) throw new Error()
+    if (!Array.isArray(value)) throw new Error()
+    const [level, ...options] = value
+    if (typeof level === 'number') throw new Error()
+    return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
+  }))
+  t.deepEqual(actual.rules, normalized)
 })

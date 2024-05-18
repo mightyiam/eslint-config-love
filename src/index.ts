@@ -1,4 +1,8 @@
 import { TSESLint } from '@typescript-eslint/utils'
+import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
+import * as importPlugin from 'eslint-plugin-import'
+import * as nPlugin from 'eslint-plugin-n'
+import * as promisePlugin from 'eslint-plugin-promise'
 
 const rules = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
@@ -398,21 +402,23 @@ const namesOfEslintRulesForWhichWeAreUsingTsEquivalents = eslintRuleNames
   .filter(name => Object.hasOwn(rules, `@typescript-eslint/${name}`))
 
 const config = {
-  plugins: [
-    '@typescript-eslint',
-    'import',
-    'n',
-    'promise'
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: true
+  languageOptions: {
+    parser,
+    parserOptions: {
+      project: true
+    }
+  },
+  plugins: {
+    '@typescript-eslint': tseslintPlugin,
+    import: importPlugin,
+    n: nPlugin,
+    promise: promisePlugin
   },
   rules: {
     ...Object.fromEntries(namesOfEslintRulesForWhichWeAreUsingTsEquivalents.map(name => [name, ['off']])),
     ...rules
   }
 
-} satisfies TSESLint.ClassicConfig.Config
+} satisfies TSESLint.FlatConfig.Config
 
 export = config

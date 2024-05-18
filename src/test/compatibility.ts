@@ -2,51 +2,42 @@ import test from 'ava'
 import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import semver from 'semver'
-import { extractVersionRange, getPkgDetails, ourRules, tseslintBottom } from './_util'
+import { extractVersionRange, getPkgDetails } from './_util'
+import { parser as tseslintBottomParser, plugin as tseslintBottomPlugin } from 'typescript-eslint_bottom'
 
-const tseslintBottomPlugin = `${tseslintBottom}/eslint-plugin`
-const tseslintBottomParser = `${tseslintBottom}/parser`
+const tseslintBottom = 'typescript-eslint_bottom'
 
-test('our configuration is compatible with the plugin and parser at bottom of peer dep range', async (t) => {
-  const { ourPeerDeps, ourDevDeps } = await getPkgDetails()
+test('our configuration is compatible with the plugin and parser at bottom of dep range', async (t) => {
+  const { ourDeps, ourDevDeps } = await getPkgDetails()
 
-  const peerDepRange = ourPeerDeps['@typescript-eslint/eslint-plugin']
-  if (peerDepRange === undefined) throw new Error()
+  const tseslintDepRange = ourDeps['typescript-eslint']
+  if (tseslintDepRange === undefined) throw new Error()
 
-  const bottomPluginRange = ourDevDeps[tseslintBottomPlugin]
-  if (bottomPluginRange === undefined) throw new Error()
-  const bottomPluginVersion = extractVersionRange(bottomPluginRange)
-  const bottomParserRange = ourDevDeps[tseslintBottomParser]
-  if (bottomParserRange === undefined) throw new Error()
-  const bottomParserVersion = extractVersionRange(bottomParserRange)
+  const tseslintBottomRange = ourDevDeps[tseslintBottom]
+  if (tseslintBottomRange === undefined) throw new Error()
+  const tseslintBottomVersion = extractVersionRange(tseslintBottomRange)
 
-  const minPeerDepVersion = semver.minVersion(peerDepRange)
-  if (minPeerDepVersion === null) throw new Error()
+  const tseslintMinVersion = semver.minVersion(tseslintDepRange)
+  if (tseslintMinVersion === null) throw new Error()
 
-  t.deepEqual(bottomPluginVersion, minPeerDepVersion.version, 'bottom plugin version is bottom of peer dep')
-  t.deepEqual(bottomParserVersion, minPeerDepVersion.version, 'bottom parser version is bottom of peer dep')
+  t.deepEqual(tseslintBottomVersion, tseslintMinVersion.version, 'typescript-eslint_bottom version is min of dep')
 
   const config = {
-    ...structuredClone(exported),
-    plugins: [
-      ...exported.plugins.filter(p => p !== '@typescript-eslint'),
-      tseslintBottomPlugin
-    ],
-    parser: tseslintBottomParser,
-    rules: Object.fromEntries(
-      Object.entries(ourRules).map(([name, config]) => [
-        name.replace('@typescript-eslint/', `${tseslintBottom}/`),
-        config
-      ])
-    ),
-    parserOptions: {
-      project: './tsconfig.json'
+    ...exported,
+    languageOptions: {
+      parser: tseslintBottomParser,
+      parserOptions: {
+        project: './tsconfig.json'
+      }
+    },
+    plugins: {
+      ...exported.plugins,
+      'typescript-eslint': tseslintBottomPlugin
     }
-  }
+  } satisfies TSESLint.FlatConfig.Config
 
-  const eslint = new TSESLint.ESLint({
-    useEslintrc: false,
-    overrideConfig: config
+  const eslint = new TSESLint.FlatESLint({
+    baseConfig: [config]
   })
 
   const results = await eslint.lintText('', { filePath: 'src/index.ts' })

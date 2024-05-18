@@ -3,65 +3,22 @@
 
 A TypeScript ESLint config that loves you
 
-# Peer dependencies 
-
-This package specifies the following `peerDependencies`:
-
-- TypeScript, which you may already have installed
-- [ESLint](https://github.com/eslint/eslint)
-- 3 ESLint plugins
-- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin); ESLint rules for TypeScript.
-
-Yes, this is a large number of `peerDependencies`.
-This is due to [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458).
-
-# @typescript-eslint dependencies
-
-This package has `@typescript-eslint/parser` in `dependencies`.  
-And it has `@typescript-eslint/eslint-plugin` in `peerDependencies`.  
-Both are specified as ranges.
-It's probably safest for the installed versions of these packages to be the same.
-This can be achieved by:
-
-1. Pin (exact version) the `@typescript-eslint/eslint-plugin` in `package.json`.
-1. Have a `package-lock.json` which locks the version of the `@typescript-eslint/parser` sub-dependency.
-
-And both pin/lock to the same version.
-
-# Yarn
-
-Yarn does not automatically install `peerDependencies`,
-so if that's what you're using, install them manually.
-Here is an example, but use it only for reference,
-because your decisions regarding version ranges and range specifiers may vary.
-
-```
-yarn add --dev \
-  typescript@\* \
-  eslint@^8.0.1 \
-  eslint-plugin-promise@^6.0.0 \
-  eslint-plugin-import@^2.25.2 \
-  eslint-plugin-n@^15.0.0 \
-  @typescript-eslint/eslint-plugin@^7.0.1 \
-  eslint-config-love@latest
-```
-
 # Example config
 
-Here is an example `.eslintrc.js`.
+Here is an example `eslint.config.cjs`.
 
 ```js
-module.exports = {
-  overrides: [
-    {
-      files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
-      extends: 'love'
-    }
-  ],
-}
+module.exports = [
+  {
+    ...require('eslint-config-love'),
+    files: ['*.js', '*.jsx', '*.ts', '*.tsx'],
+  }
+]
 ```
 
-Note: the config exported by this package sets `parserOptions.project = true`.
+[Learn how to configure ESLint](https://eslint.org/docs/latest/use/configure/).
+
+Note: the config exported by this package sets `languageOptions.parserOptions.project = true`.
 Read about the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
