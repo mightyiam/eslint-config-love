@@ -7,6 +7,10 @@ import { ourRules } from './_util'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 
+if (pluginN === undefined) throw new Error()
+if (pluginImport === undefined) throw new Error()
+if (pluginPromise === undefined) throw new Error()
+
 const eslintRules = (new TSESLint.Linter()).getRules()
 
 if (pluginN.rules === undefined) throw new Error()
