@@ -1,3 +1,24 @@
+## [48.0.0](https://github.com/mightyiam/eslint-config-love/compare/v47.0.0...v48.0.0) (2024-05-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* exports an ESLint flat config.
+
+### Build system / dependencies
+
+* use semantic-release/commit-analyzer preset ([790b662](https://github.com/mightyiam/eslint-config-love/commit/790b662e65d52a0ccb8fcda61cc831cea3bb4499))
+
+
+### Features
+
+* flat config ([a0571e7](https://github.com/mightyiam/eslint-config-love/commit/a0571e762f5b1f1cb40658259c319e5de716415c)), closes [#1299](https://github.com/mightyiam/eslint-config-love/issues/1299) [#1210](https://github.com/mightyiam/eslint-config-love/issues/1210)
+
+
+### Testing
+
+* rm redundant parserOptions test ([0e49fea](https://github.com/mightyiam/eslint-config-love/commit/0e49fea9abbb444017ee5bac6a89727b694c9ab0))
+
 ## [47.0.0](https://github.com/mightyiam/eslint-config-love/compare/v46.0.0...v47.0.0) (2024-04-10)
 
 
