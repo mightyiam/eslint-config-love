@@ -1,3 +1,19 @@
+## [49.0.0](https://github.com/mightyiam/eslint-config-love/compare/v48.0.0...v49.0.0) (2024-05-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** drop support for eslint-plugin-n v15
+
+### chore
+
+* **deps:** drop support for eslint-plugin-n v15 ([d471d9f](https://github.com/mightyiam/eslint-config-love/commit/d471d9f9a84750082814366dd5b0459e7dade70d))
+
+
+### Build system / dependencies
+
+* **renovate:** fix outdated typescript-eslint settings ([c88d092](https://github.com/mightyiam/eslint-config-love/commit/c88d092f36ce713fdbe0f98cb9d1f41257c4145c))
+
 ## [48.0.0](https://github.com/mightyiam/eslint-config-love/compare/v47.0.0...v48.0.0) (2024-05-18)
 
 
