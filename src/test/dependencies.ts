@@ -14,12 +14,6 @@ test('range types', async (t) => {
         return spec !== '*'
       }
 
-      if (depName === 'eslint-plugin-n' && depType === 'dep') {
-        const ranges = spec.split('||').map(range => range.trim())
-        if (ranges.length !== 2) return true
-        return !ranges.every(range => isSingleCaretRange(range))
-      }
-
       const range = extractVersionRange(spec)
 
       switch (depType) {
