@@ -3,7 +3,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* exports an ESLint flat config.
+* exports an [ESLint flat config](https://eslint.org/docs/latest/use/configure/migration-guide).
 
 ### Build system / dependencies
 
