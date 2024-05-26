@@ -18,15 +18,11 @@
       "groupName": "@commitlint packages"
     },
     {
-      "matchPackagePrefixes": ["@typescript-eslint/"],
-      "groupName": "@typescript-eslint packages"
-    },
-    {
       "matchDepTypes": ["peerDependencies"],
       "enabled": false
     },
     {
-      "matchPackagePrefixes": ["@typescript-eslint_bottom/"],
+      "matchPackageNames": ["typescript-eslint_bottom"],
       "enabled": false
     }
   ]
