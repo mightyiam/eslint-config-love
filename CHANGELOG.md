@@ -1,3 +1,14 @@
+## [50.0.0](https://github.com/mightyiam/eslint-config-love/compare/v49.0.0...v50.0.0) (2024-05-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency eslint-plugin-n to v17
+
+### chore
+
+* **deps:** update dependency eslint-plugin-n to v17 ([3d6821a](https://github.com/mightyiam/eslint-config-love/commit/3d6821acd6b99df60659a9b7eb7c25778cf89669))
+
 ## [49.0.0](https://github.com/mightyiam/eslint-config-love/compare/v48.0.0...v49.0.0) (2024-05-26)
 
 
