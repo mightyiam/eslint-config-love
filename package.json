@@ -88,7 +88,7 @@
     "tsconfigs": "5.0.0",
     "type-fest": "4.18.3",
     "typescript": "5.4.5",
-    "typescript-eslint_bottom": "npm:typescript-eslint@7.0.1"
+    "typescript-eslint_bottom": "npm:typescript-eslint@7.10.0"
   },
   "files": [
     "lib/index.js",
