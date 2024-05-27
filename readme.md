@@ -28,6 +28,11 @@ Read about the `project` option [here](https://github.com/typescript-eslint/type
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
+# No formatting rules
+
+This config does provide formatting related rules.
+Please use a formatter, instead.
+
 # Example command line usage:
 
 ```

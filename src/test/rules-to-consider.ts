@@ -29,6 +29,15 @@ const knownRules = new Map([
   ...rulesets.flatMap(([rules, pkgName]) => Object.entries(rules).map(([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const))
 ])
 
+const deprecatedKnownRules = [...knownRules.entries()]
+  .filter(([_name, rule_]) => {
+    const rule = rule_ as ({ meta?: { deprecated?: boolean } })
+    const meta = rule.meta
+    if (meta === undefined) return false
+    return meta.deprecated === true
+  })
+  .map(([name, _rule]) => name)
+
 const notYetConsideredRules = [
   '@typescript-eslint/class-methods-use-this',
   '@typescript-eslint/consistent-return',
@@ -71,7 +80,6 @@ const notYetConsideredRules = [
   '@typescript-eslint/no-unsafe-unary-minus',
   '@typescript-eslint/no-useless-empty-export',
   '@typescript-eslint/no-useless-template-literals',
-  '@typescript-eslint/only-throw-error',
   '@typescript-eslint/padding-line-between-statements',
   '@typescript-eslint/parameter-properties',
   '@typescript-eslint/prefer-as-const',
@@ -250,7 +258,6 @@ const notYetConsideredRules = [
   'no-new-native-nonconstructor',
   'no-new-require',
   'no-nonoctal-decimal-escape',
-  'no-object-constructor',
   'no-param-reassign',
   'no-path-concat',
   'no-plusplus',
@@ -329,7 +336,7 @@ const intentionallyExcludedRules: string[] = [
 
 const usedRules = Object.keys(ourRules)
 
-const acknowledgedRules = [...notYetConsideredRules, ...intentionallyExcludedRules, ...usedRules]
+const acknowledgedRules = [...deprecatedKnownRules, ...notYetConsideredRules, ...intentionallyExcludedRules, ...usedRules]
 
 test('rule names valid', (t) => {
   const nonExistentRules = _.difference(acknowledgedRules, [...knownRules.keys()])
@@ -360,4 +367,9 @@ test('known rules are considered', (t) => {
   const inexplicablyExcludedRules = _.difference([...knownRules.keys()], acknowledgedRules)
 
   t.deepEqual(inexplicablyExcludedRules, [])
+})
+
+test('no deprecated rules', (t) => {
+  const usedDeprecatedRules = Object.keys(ourRules).filter((name) => deprecatedKnownRules.includes(name))
+  t.deepEqual(usedDeprecatedRules, [])
 })
