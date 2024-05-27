@@ -60,6 +60,12 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       project: true
     }
   },
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true
+    }
+  },
   plugins: {
     '@typescript-eslint': tseslintPlugin,
     import: importPlugin,
@@ -180,6 +186,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'import/no-duplicates': ['error'],
     'import/no-named-default': ['error'],
     'import/no-webpack-loader-syntax': ['error'],
+    'import/no-unresolved': ['error'],
 
     'n/handle-callback-err': ['error', '^(err|error)$'],
     'n/no-callback-literal': ['error'],

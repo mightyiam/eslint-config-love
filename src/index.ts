@@ -278,6 +278,7 @@ const rules = {
   'import/no-duplicates': ['error'],
   'import/no-named-default': ['error'],
   'import/no-webpack-loader-syntax': ['error'],
+  'import/no-unresolved': ['error'],
 
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': ['error'],
@@ -299,6 +300,12 @@ const config: TSESLint.FlatConfig.Config = {
     parser,
     parserOptions: {
       project: true
+    }
+  },
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true
     }
   },
   plugins: {

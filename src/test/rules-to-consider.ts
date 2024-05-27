@@ -161,7 +161,6 @@ const notYetConsideredRules = [
   'import/no-restricted-paths',
   'import/no-self-import',
   'import/no-unassigned-import',
-  'import/no-unresolved',
   'import/no-unused-modules',
   'import/no-useless-path-segments',
   'import/order',
