@@ -9,11 +9,7 @@
     "editorconfig": "editorconfig-checker",
     "unit": "ava",
     "test": "run-s clean-artifacts editorconfig compile lint unit",
-    "clean-artifacts": "git clean lib -X --force",
-    "is-code-clean": "git diff-index HEAD --quiet",
-    "prepare-release": "run-s is-code-clean bump-and-commit",
-    "bump-and-commit": "standard-version --skip.tag",
-    "prepublishOnly": "run-s is-code-clean test"
+    "clean-artifacts": "git clean lib -X --force"
   },
   "repository": {
     "type": "git",
@@ -84,7 +80,6 @@
     "runtypes": "6.7.0",
     "semantic-release": "23.1.1",
     "semver": "7.6.2",
-    "standard-version": "9.5.0",
     "tsconfigs": "5.0.0",
     "type-fest": "4.18.3",
     "typescript": "5.4.5",
