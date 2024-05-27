@@ -24,10 +24,10 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
   [pluginPromise.rules, 'promise']
 ]
 
-const knownRules = [
-  ...eslintRules.keys(),
-  ...rulesets.flatMap(([rules, pkgName]) => Object.keys(rules).map(rule => `${pkgName}/${rule}`))
-]
+const knownRules = new Map([
+  ...eslintRules.entries(),
+  ...rulesets.flatMap(([rules, pkgName]) => Object.entries(rules).map(([name, rule]) => [`${pkgName}/${name}`, rule] as const))
+])
 
 const notYetConsideredRules = [
   '@typescript-eslint/class-methods-use-this',
@@ -332,7 +332,7 @@ const usedRules = Object.keys(ourRules)
 const acknowledgedRules = [...notYetConsideredRules, ...intentionallyExcludedRules, ...usedRules]
 
 test('rule names valid', (t) => {
-  const nonExistentRules = _.difference(acknowledgedRules, knownRules)
+  const nonExistentRules = _.difference(acknowledgedRules, [...knownRules.keys()])
   t.deepEqual(nonExistentRules, [])
 })
 
@@ -357,7 +357,7 @@ test('no intersection between lists', (t) => {
 })
 
 test('known rules are considered', (t) => {
-  const inexplicablyExcludedRules = _.difference(knownRules, acknowledgedRules)
+  const inexplicablyExcludedRules = _.difference([...knownRules.keys()], acknowledgedRules)
 
   t.deepEqual(inexplicablyExcludedRules, [])
 })
