@@ -1,3 +1,15 @@
+## [51.0.0](https://github.com/mightyiam/eslint-config-love/compare/v50.0.0...v51.0.0) (2024-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rules:** No use of deprecated rules. Most notably, all formatting rules
+are removed. Please use a formatter, such as dprint, tsfmt and prettier.
+
+### Features
+
+* **rules:** no use of deprecated rules ([6db9c2b](https://github.com/mightyiam/eslint-config-love/commit/6db9c2ba1e8e95a7e31589fc999ceef60ce48b70))
+
 ## [50.0.0](https://github.com/mightyiam/eslint-config-love/compare/v49.0.0...v50.0.0) (2024-05-26)
 
 
