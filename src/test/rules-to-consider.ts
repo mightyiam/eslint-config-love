@@ -26,7 +26,7 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
 
 const knownRules = new Map([
   ...eslintRules.entries(),
-  ...rulesets.flatMap(([rules, pkgName]) => Object.entries(rules).map(([name, rule]) => [`${pkgName}/${name}`, rule] as const))
+  ...rulesets.flatMap(([rules, pkgName]) => Object.entries(rules).map(([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const))
 ])
 
 const notYetConsideredRules = [
