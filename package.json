@@ -9,7 +9,9 @@
     "editorconfig": "editorconfig-checker",
     "unit": "ava",
     "test": "run-s clean-artifacts editorconfig compile lint unit",
-    "clean-artifacts": "git clean lib -X --force"
+    "clean-artifacts": "git clean lib -X --force",
+    "is-code-clean": "git diff-index HEAD --quiet",
+    "prepublishOnly": "run-s is-code-clean test"
   },
   "repository": {
     "type": "git",
