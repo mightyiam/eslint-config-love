@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-love",
-  "version": "51.0.0",
+  "version": "51.0.1",
   "description": "A TypeScript ESLint config that loves you",
   "main": "lib/index.js",
   "scripts": {

@@ -1,3 +1,10 @@
+## [51.0.1](https://github.com/mightyiam/eslint-config-love/compare/v51.0.0...v51.0.1) (2024-05-27)
+
+
+### Bug fixes
+
+* include build artifacts in package ([3113bc4](https://github.com/mightyiam/eslint-config-love/commit/3113bc459af489daef8a3e1e71aac492039b305d)), closes [#1575](https://github.com/mightyiam/eslint-config-love/issues/1575)
+
 ## [51.0.0](https://github.com/mightyiam/eslint-config-love/compare/v50.0.0...v51.0.0) (2024-05-27)
 
 
