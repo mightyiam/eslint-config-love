@@ -1,9 +1,27 @@
-[![Build Status](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml/badge.svg)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
-[![npm](https://img.shields.io/npm/v/eslint-config-love)](https://www.npmjs.com/package/eslint-config-love)
+# eslint-config-love
 
 A TypeScript ESLint config that loves you
 
-# Example config
+![GitHub License](https://img.shields.io/github/license/mightyiam/eslint-config-love)
+[![main branch checks status](https://img.shields.io/github/check-runs/mightyiam/eslint-config-love/main)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
+[![npm](https://img.shields.io/npm/v/eslint-config-love)](https://www.npmjs.com/package/eslint-config-love)
+![Dependent repos prior to rename](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-standard-with-typescript?label="dependent%20repos%20prior%20to%20rename")
+![Dependent repos](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-love)
+![GitHub Repo stars](https://img.shields.io/github/stars/mightyiam/eslint-config-love)
+
+## Guidelines
+
+- Safety at the cost of verbosity
+- Convention over arbitrary choice
+- No formatting rules (please use a formatter)
+
+## Versioning
+
+Any change that might require a user to make changes beyond upgrading this package is considered major.
+For example, rule addition are obviously major.
+It is expected that most version bumps will be major.
+
+## Example config
 
 Here is an example `eslint.config.cjs`.
 
@@ -11,12 +29,7 @@ Here is an example `eslint.config.cjs`.
 module.exports = [
   {
     ...require('eslint-config-love'),
-    files: [
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.ts',
-      '**/*.tsx'
-    ],
+    files: [ '**/*.js', '**/*.ts' ],
   }
 ]
 ```
@@ -28,13 +41,13 @@ Read about the `project` option [here](https://github.com/typescript-eslint/type
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
 
-# No formatting rules
 
-This config does provide formatting related rules.
-Please use a formatter, instead.
-
-# Example command line usage:
+## Example command line usage:
 
 ```
 $ npx eslint .
 ```
+
+## Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
