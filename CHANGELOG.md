@@ -1,3 +1,19 @@
+## [52.0.0](https://github.com/mightyiam/eslint-config-love/compare/v51.0.1...v52.0.0) (2024-05-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** typescript-eslint minimum v7.11.0
+
+### Features
+
+* **deps:** update dependency typescript-eslint to v7.11.0 ([abd1b76](https://github.com/mightyiam/eslint-config-love/commit/abd1b765af1b841befb313a377a51ec27fbad96b))
+
+
+### Bug fixes
+
+* **deps:** typescript-eslint minimum v7.11.0 ([57f8339](https://github.com/mightyiam/eslint-config-love/commit/57f83398a46ae743dae8755a6db87c7a8b2302a2))
+
 ## [51.0.1](https://github.com/mightyiam/eslint-config-love/compare/v51.0.0...v51.0.1) (2024-05-27)
 
 
