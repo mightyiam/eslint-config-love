@@ -328,7 +328,6 @@ export const expectedExportedValue = {
     '@typescript-eslint/prefer-readonly': ['error'],
     '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
     '@typescript-eslint/prefer-return-this-type': ['error'],
-    '@typescript-eslint/prefer-ts-expect-error': ['error'],
     '@typescript-eslint/promise-function-async': ['error'],
     '@typescript-eslint/prefer-promise-reject-errors': ['error'],
     '@typescript-eslint/restrict-plus-operands': ['error', { skipCompoundAssignments: false }],
