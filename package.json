@@ -83,7 +83,7 @@
     "semantic-release": "23.1.1",
     "semver": "7.6.2",
     "tsconfigs": "5.0.0",
-    "type-fest": "4.18.3",
+    "type-fest": "4.19.0",
     "typescript": "5.4.5",
     "typescript-eslint_bottom": "npm:typescript-eslint@7.11.0"
   },
