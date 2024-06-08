@@ -53,7 +53,7 @@ export const ourRules = ourRules_
 export const equivalents = [...(new TSESLint.Linter()).getRules().keys()]
   .filter(name => Object.prototype.hasOwnProperty.call(tseslintPlugin.rules, name))
 
-export const expectedExportedValue = {
+export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   languageOptions: {
     parser,
     parserOptions: {
@@ -346,4 +346,4 @@ export const expectedExportedValue = {
     '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
     '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }]
   }
-} satisfies TSESLint.FlatConfig.Config
+}
