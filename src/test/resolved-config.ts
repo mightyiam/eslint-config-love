@@ -35,6 +35,7 @@ test('languageOptions', async (t) => {
 test('rules', async (t) => {
   // @ts-expect-error type seems wrong
   const actual: TSESLint.FlatConfig.Config = await actualP
+  if (expectedExportedValue.rules === undefined) throw new Error()
   const rules: TSESLint.FlatConfig.Rules = expectedExportedValue.rules
   const normalized = Object.fromEntries(Object.entries(rules).map(([name, value]) => {
     if (value === undefined) throw new Error()

@@ -294,7 +294,7 @@ const eslintRuleNames = [...(new TSESLint.Linter()).getRules().keys()]
 const namesOfEslintRulesForWhichWeAreUsingTsEquivalents = eslintRuleNames
   .filter(name => Object.hasOwn(rules, `@typescript-eslint/${name}`))
 
-const config = {
+const config: TSESLint.FlatConfig.Config = {
   languageOptions: {
     parser,
     parserOptions: {
@@ -312,6 +312,6 @@ const config = {
     ...rules
   }
 
-} satisfies TSESLint.FlatConfig.Config
+}
 
 export = config
