@@ -9,6 +9,11 @@ A TypeScript ESLint config that loves you
 ![Dependent repos](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-love)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mightyiam/eslint-config-love)
 
+## Mob programming
+
+This project is developed primarily in remote mob programming format.
+[See schedule and how to apply here](https://mobusoperandi.com/mobs/love.html).
+
 ## Guidelines
 
 - Safety at the cost of verbosity
