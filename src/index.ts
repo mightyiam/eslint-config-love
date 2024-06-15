@@ -8,64 +8,73 @@ const rules = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
   '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': ['error'],
-  '@typescript-eslint/ban-ts-comment': ['error', {
-    'ts-expect-error': 'allow-with-description',
-    'ts-ignore': true,
-    'ts-nocheck': true,
-    'ts-check': false,
-    minimumDescriptionLength: 3
-  }],
+  '@typescript-eslint/ban-ts-comment': [
+    'error',
+    {
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': true,
+      'ts-nocheck': true,
+      'ts-check': false,
+      minimumDescriptionLength: 3
+    }
+  ],
   '@typescript-eslint/ban-tslint-comment': ['error'],
-  '@typescript-eslint/ban-types': ['error', {
-    extendDefaults: false,
-    types: {
-      String: {
-        message: 'Use string instead',
-        fixWith: 'string'
-      },
-      Boolean: {
-        message: 'Use boolean instead',
-        fixWith: 'boolean'
-      },
-      Number: {
-        message: 'Use number instead',
-        fixWith: 'number'
-      },
-      Symbol: {
-        message: 'Use symbol instead',
-        fixWith: 'symbol'
-      },
-      BigInt: {
-        message: 'Use bigint instead',
-        fixWith: 'bigint'
-      },
-      Function: {
-        message: [
-          'The `Function` type accepts any function-like value.',
-          'It provides no type safety when calling the function, which can be a common source of bugs.',
-          'It also accepts things like class declarations, which will throw at runtime as they will not be called with `new`.',
-          'If you are expecting the function to accept certain arguments, you should explicitly define the function shape.'
-        ].join('\n')
-      },
-      // object typing
-      Object: {
-        message: [
-          'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
-          '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-          '- If you want a type meaning "any value", you probably want `unknown` instead.'
-        ].join('\n')
-      },
-      '{}': {
-        message: [
-          '`{}` actually means "any non-nullish value".',
-          '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-          '- If you want a type meaning "any value", you probably want `unknown` instead.'
-        ].join('\n')
+  '@typescript-eslint/ban-types': [
+    'error',
+    {
+      extendDefaults: false,
+      types: {
+        String: {
+          message: 'Use string instead',
+          fixWith: 'string'
+        },
+        Boolean: {
+          message: 'Use boolean instead',
+          fixWith: 'boolean'
+        },
+        Number: {
+          message: 'Use number instead',
+          fixWith: 'number'
+        },
+        Symbol: {
+          message: 'Use symbol instead',
+          fixWith: 'symbol'
+        },
+        BigInt: {
+          message: 'Use bigint instead',
+          fixWith: 'bigint'
+        },
+        Function: {
+          message: [
+            'The `Function` type accepts any function-like value.',
+            'It provides no type safety when calling the function, which can be a common source of bugs.',
+            'It also accepts things like class declarations, which will throw at runtime as they will not be called with `new`.',
+            'If you are expecting the function to accept certain arguments, you should explicitly define the function shape.'
+          ].join('\n')
+        },
+        // object typing
+        Object: {
+          message: [
+            'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
+            '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
+            '- If you want a type meaning "any value", you probably want `unknown` instead.'
+          ].join('\n')
+        },
+        '{}': {
+          message: [
+            '`{}` actually means "any non-nullish value".',
+            '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
+            '- If you want a type meaning "any value", you probably want `unknown` instead.'
+          ].join('\n')
+        }
       }
     }
-  }],
+  ],
   '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
-  '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
+  '@typescript-eslint/consistent-generic-constructors': [
+    'error',
+    'constructor'
+  ],
   '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
   '@typescript-eslint/consistent-type-assertions': [
     'error',
@@ -75,15 +84,22 @@ const rules = {
     }
   ],
   '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-  '@typescript-eslint/consistent-type-exports': ['error', {
-    fixMixedExportsWithInlineTypeSpecifier: true
-  }],
-  '@typescript-eslint/consistent-type-imports': ['error', {
-    prefer: 'type-imports',
-    disallowTypeAnnotations: true,
-    fixStyle: 'inline-type-imports'
-  }],
-  '@typescript-eslint/dot-notation': ['error',
+  '@typescript-eslint/consistent-type-exports': [
+    'error',
+    {
+      fixMixedExportsWithInlineTypeSpecifier: true
+    }
+  ],
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    {
+      prefer: 'type-imports',
+      disallowTypeAnnotations: true,
+      fixStyle: 'inline-type-imports'
+    }
+  ],
+  '@typescript-eslint/dot-notation': [
+    'error',
     {
       allowIndexSignaturePropertyAccess: false,
       allowKeywords: true,
@@ -92,27 +108,42 @@ const rules = {
       allowProtectedClassPropertyAccess: false
     }
   ],
-  '@typescript-eslint/explicit-function-return-type': ['error', {
-    allowExpressions: true,
-    allowHigherOrderFunctions: true,
-    allowTypedFunctionExpressions: true,
-    allowDirectConstAssertionInArrowFunctions: true
-  }],
+  '@typescript-eslint/explicit-function-return-type': [
+    'error',
+    {
+      allowExpressions: true,
+      allowHigherOrderFunctions: true,
+      allowTypedFunctionExpressions: true,
+      allowDirectConstAssertionInArrowFunctions: true
+    }
+  ],
   '@typescript-eslint/method-signature-style': ['error'],
-  '@typescript-eslint/naming-convention': ['error', {
-    selector: 'variableLike',
-    leadingUnderscore: 'allow',
-    trailingUnderscore: 'allow',
-    format: ['camelCase', 'PascalCase', 'UPPER_CASE']
-  }],
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'variableLike',
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+      format: ['camelCase', 'PascalCase', 'UPPER_CASE']
+    }
+  ],
   '@typescript-eslint/no-array-constructor': ['error'],
   '@typescript-eslint/no-base-to-string': ['error'],
-  '@typescript-eslint/no-confusing-void-expression': ['error', { ignoreArrowShorthand: false, ignoreVoidOperator: false }],
+  '@typescript-eslint/no-confusing-void-expression': [
+    'error',
+    { ignoreArrowShorthand: false, ignoreVoidOperator: false }
+  ],
   '@typescript-eslint/no-dupe-class-members': ['error'],
   '@typescript-eslint/no-dynamic-delete': ['error'],
-  '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
+  '@typescript-eslint/no-empty-interface': [
+    'error',
+    { allowSingleExtends: true }
+  ],
   '@typescript-eslint/no-extra-non-null-assertion': ['error'],
-  '@typescript-eslint/no-extraneous-class': ['error', { allowWithDecorator: true }],
+  '@typescript-eslint/no-extraneous-class': [
+    'error',
+    { allowWithDecorator: true }
+  ],
   '@typescript-eslint/no-floating-promises': ['error'],
   '@typescript-eslint/no-for-in-array': ['error'],
   '@typescript-eslint/no-implied-eval': ['error'],
@@ -129,60 +160,96 @@ const rules = {
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
-  '@typescript-eslint/no-unused-expressions': ['error', {
-    allowShortCircuit: true,
-    allowTernary: true,
-    allowTaggedTemplates: true,
-    enforceForJSX: false
-  }],
-  '@typescript-eslint/no-unused-vars': ['error', {
-    args: 'none',
-    caughtErrors: 'none',
-    ignoreRestSiblings: true,
-    vars: 'all'
-  }],
-  '@typescript-eslint/no-use-before-define': ['error', {
-    functions: false,
-    classes: false,
-    enums: false,
-    variables: false,
-    typedefs: false
-  }],
+  '@typescript-eslint/no-unused-expressions': [
+    'error',
+    {
+      allowShortCircuit: true,
+      allowTernary: true,
+      allowTaggedTemplates: true,
+      enforceForJSX: false
+    }
+  ],
+  '@typescript-eslint/no-unused-vars': [
+    'error',
+    {
+      args: 'none',
+      caughtErrors: 'none',
+      ignoreRestSiblings: true,
+      vars: 'all'
+    }
+  ],
+  '@typescript-eslint/no-use-before-define': [
+    'error',
+    {
+      functions: false,
+      classes: false,
+      enums: false,
+      variables: false,
+      typedefs: false
+    }
+  ],
   '@typescript-eslint/no-useless-constructor': ['error'],
   '@typescript-eslint/no-var-requires': ['error'],
   '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
-  '@typescript-eslint/only-throw-error': ['error', { allowThrowingAny: false, allowThrowingUnknown: false }],
+  '@typescript-eslint/only-throw-error': [
+    'error',
+    { allowThrowingAny: false, allowThrowingUnknown: false }
+  ],
   '@typescript-eslint/prefer-function-type': ['error'],
   '@typescript-eslint/prefer-includes': ['error'],
-  '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }],
+  '@typescript-eslint/prefer-nullish-coalescing': [
+    'error',
+    { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false }
+  ],
   '@typescript-eslint/prefer-optional-chain': ['error'],
   '@typescript-eslint/prefer-promise-reject-errors': ['error'],
   '@typescript-eslint/prefer-readonly': ['error'],
   '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
   '@typescript-eslint/prefer-return-this-type': ['error'],
   '@typescript-eslint/promise-function-async': ['error'],
-  '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArrays: true }],
-  '@typescript-eslint/restrict-plus-operands': ['error', { skipCompoundAssignments: false }],
-  '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
+  '@typescript-eslint/require-array-sort-compare': [
+    'error',
+    { ignoreStringArrays: true }
+  ],
+  '@typescript-eslint/restrict-plus-operands': [
+    'error',
+    { skipCompoundAssignments: false }
+  ],
+  '@typescript-eslint/restrict-template-expressions': [
+    'error',
+    { allowNumber: true }
+  ],
   '@typescript-eslint/return-await': ['error', 'always'],
-  '@typescript-eslint/strict-boolean-expressions': ['error', {
-    allowString: false,
-    allowNumber: false,
-    allowNullableObject: false,
-    allowNullableBoolean: false,
-    allowNullableString: false,
-    allowNullableNumber: false,
-    allowAny: false
-  }],
-  '@typescript-eslint/triple-slash-reference': ['error', { lib: 'never', path: 'never', types: 'never' }],
+  '@typescript-eslint/strict-boolean-expressions': [
+    'error',
+    {
+      allowString: false,
+      allowNumber: false,
+      allowNullableObject: false,
+      allowNullableBoolean: false,
+      allowNullableString: false,
+      allowNullableNumber: false,
+      allowAny: false
+    }
+  ],
+  '@typescript-eslint/triple-slash-reference': [
+    'error',
+    { lib: 'never', path: 'never', types: 'never' }
+  ],
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
 
-  'accessor-pairs': ['error', { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true }],
-  'array-callback-return': ['error', {
-    allowImplicit: false,
-    allowVoid: false,
-    checkForEach: false
-  }],
+  'accessor-pairs': [
+    'error',
+    { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true }
+  ],
+  'array-callback-return': [
+    'error',
+    {
+      allowImplicit: false,
+      allowVoid: false,
+      checkForEach: false
+    }
+  ],
   'constructor-super': ['error'],
   curly: ['error', 'multi-line'],
   'default-case-last': ['error'],
@@ -261,20 +328,29 @@ const rules = {
   'no-with': ['error'],
   'object-shorthand': ['warn', 'properties'],
   'one-var': ['error', { initialized: 'never' }],
-  'prefer-const': ['error', { destructuring: 'all', ignoreReadBeforeAssign: false }],
+  'prefer-const': [
+    'error',
+    { destructuring: 'all', ignoreReadBeforeAssign: false }
+  ],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'symbol-description': ['error'],
   'unicode-bom': ['error', 'never'],
-  'use-isnan': ['error', {
-    enforceForSwitchCase: true,
-    enforceForIndexOf: true
-  }],
+  'use-isnan': [
+    'error',
+    {
+      enforceForSwitchCase: true,
+      enforceForIndexOf: true
+    }
+  ],
   'valid-typeof': ['error', { requireStringLiterals: true }],
   yoda: ['error', 'never'],
 
   'import/export': ['error'],
   'import/first': ['error'],
-  'import/no-absolute-path': ['error', { esmodule: true, commonjs: true, amd: false }],
+  'import/no-absolute-path': [
+    'error',
+    { esmodule: true, commonjs: true, amd: false }
+  ],
   'import/no-duplicates': ['error'],
   'import/no-named-default': ['error'],
   'import/no-webpack-loader-syntax': ['error'],
@@ -290,9 +366,11 @@ const rules = {
   'promise/param-names': ['error']
 } satisfies TSESLint.ClassicConfig.RulesRecord
 
-const eslintRuleNames = [...(new TSESLint.Linter()).getRules().keys()]
-const namesOfEslintRulesForWhichWeAreUsingTsEquivalents = eslintRuleNames
-  .filter(name => Object.hasOwn(rules, `@typescript-eslint/${name}`))
+const eslintRuleNames = [...new TSESLint.Linter().getRules().keys()]
+const namesOfEslintRulesForWhichWeAreUsingTsEquivalents =
+  eslintRuleNames.filter((name) =>
+    Object.hasOwn(rules, `@typescript-eslint/${name}`)
+  )
 
 const config: TSESLint.FlatConfig.Config = {
   languageOptions: {
@@ -308,10 +386,14 @@ const config: TSESLint.FlatConfig.Config = {
     promise: promisePlugin
   },
   rules: {
-    ...Object.fromEntries(namesOfEslintRulesForWhichWeAreUsingTsEquivalents.map(name => [name, ['off']])),
+    ...Object.fromEntries(
+      namesOfEslintRulesForWhichWeAreUsingTsEquivalents.map((name) => [
+        name,
+        ['off']
+      ])
+    ),
     ...rules
   }
-
 }
 
 export = config

@@ -37,12 +37,14 @@ test('rules', async (t) => {
   const actual: TSESLint.FlatConfig.Config = await actualP
   if (expectedExportedValue.rules === undefined) throw new Error()
   const rules: TSESLint.FlatConfig.Rules = expectedExportedValue.rules
-  const normalized = Object.fromEntries(Object.entries(rules).map(([name, value]) => {
-    if (value === undefined) throw new Error()
-    if (!Array.isArray(value)) throw new Error()
-    const [level, ...options] = value
-    if (typeof level === 'number') throw new Error()
-    return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
-  }))
+  const normalized = Object.fromEntries(
+    Object.entries(rules).map(([name, value]) => {
+      if (value === undefined) throw new Error()
+      if (!Array.isArray(value)) throw new Error()
+      const [level, ...options] = value
+      if (typeof level === 'number') throw new Error()
+      return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
+    })
+  )
   t.deepEqual(actual.rules, normalized)
 })

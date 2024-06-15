@@ -3,11 +3,7 @@ const tseslint = require('typescript-eslint')
 module.exports = [
   require('.'),
   {
-    files: [
-      '**/*.cjs',
-      '**/*.js',
-      '**/*.ts'
-    ],
+    files: ['**/*.cjs', '**/*.js', '**/*.ts'],
     linterOptions: {
       reportUnusedDisableDirectives: 'error'
     }
