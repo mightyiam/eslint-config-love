@@ -23,4 +23,3 @@ There's a list of not yet considered rules in [this test file](./src/test/rules-
 Pick one — perhaps the first one — and consider it.
 Is it appropriate for this config?
 If so, [suggest](https://github.com/mightyiam/eslint-config-love/discussions) adding it.
-
