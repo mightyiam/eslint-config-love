@@ -1,5 +1,5 @@
 import test from 'ava'
-import pluginTseslint from '@typescript-eslint/eslint-plugin'
+import { plugin as pluginTseslint } from 'typescript-eslint'
 import * as pluginN from 'eslint-plugin-n'
 import * as pluginImport from 'eslint-plugin-import'
 import * as pluginPromise from 'eslint-plugin-promise'
@@ -16,6 +16,7 @@ const eslintRules = new TSESLint.Linter().getRules()
 if (pluginN.rules === undefined) throw new Error()
 if (pluginImport.rules === undefined) throw new Error()
 if (pluginPromise.rules === undefined) throw new Error()
+if (pluginTseslint.rules === undefined) throw new Error()
 
 const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
   [pluginTseslint.rules, '@typescript-eslint'],
@@ -74,6 +75,7 @@ const notYetConsideredRules = [
   '@typescript-eslint/no-type-alias',
   '@typescript-eslint/no-unnecessary-condition',
   '@typescript-eslint/no-unnecessary-qualifier',
+  '@typescript-eslint/no-unnecessary-template-expression',
   '@typescript-eslint/no-unnecessary-type-arguments',
   '@typescript-eslint/no-unsafe-assignment',
   '@typescript-eslint/no-unsafe-call',
