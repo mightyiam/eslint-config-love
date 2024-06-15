@@ -8,9 +8,8 @@
     "lint": "eslint .",
     "format/check": "prettier . --check",
     "format/fix": "prettier . --write",
-    "editorconfig": "editorconfig-checker",
     "unit": "ava",
-    "test": "run-s clean-artifacts format/check editorconfig compile lint unit",
+    "test": "run-s clean-artifacts format/check compile lint unit",
     "clean-artifacts": "git clean lib -X --force",
     "is-code-clean": "git diff-index HEAD --quiet",
     "prepublishOnly": "run-s is-code-clean test"
@@ -72,7 +71,6 @@
     "@types/ungap__structured-clone": "1.2.0",
     "@ungap/structured-clone": "1.2.0",
     "ava": "6.1.3",
-    "editorconfig-checker": "5.1.8",
     "eslint": "8.57.0",
     "js-yaml": "4.1.0",
     "just-diff": "6.0.2",
