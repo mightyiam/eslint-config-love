@@ -4,7 +4,7 @@ import exported from '..'
 import { expectedExportedValue } from './_util'
 
 const eslint = new TSESLint.FlatESLint({
-  baseConfig: [exported]
+  baseConfig: [exported],
 })
 
 const actualP = eslint.calculateConfigForFile('foo.js')
@@ -15,7 +15,7 @@ test('plugins', async (t) => {
   if (actual.plugins === undefined) throw new Error()
 
   const actualSansAt = Object.fromEntries(
-    Object.entries(actual.plugins).filter(([key, _]) => key !== '@')
+    Object.entries(actual.plugins).filter(([key, _]) => key !== '@'),
   )
   t.deepEqual(actualSansAt, expectedExportedValue.plugins)
 })
@@ -28,7 +28,7 @@ test('languageOptions', async (t) => {
   t.deepEqual(actualLanguageOptions, {
     ...expectedExportedValue.languageOptions,
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   })
 })
 
@@ -37,12 +37,14 @@ test('rules', async (t) => {
   const actual: TSESLint.FlatConfig.Config = await actualP
   if (expectedExportedValue.rules === undefined) throw new Error()
   const rules: TSESLint.FlatConfig.Rules = expectedExportedValue.rules
-  const normalized = Object.fromEntries(Object.entries(rules).map(([name, value]) => {
-    if (value === undefined) throw new Error()
-    if (!Array.isArray(value)) throw new Error()
-    const [level, ...options] = value
-    if (typeof level === 'number') throw new Error()
-    return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
-  }))
+  const normalized = Object.fromEntries(
+    Object.entries(rules).map(([name, value]) => {
+      if (value === undefined) throw new Error()
+      if (!Array.isArray(value)) throw new Error()
+      const [level, ...options] = value
+      if (typeof level === 'number') throw new Error()
+      return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
+    }),
+  )
   t.deepEqual(actual.rules, normalized)
 })

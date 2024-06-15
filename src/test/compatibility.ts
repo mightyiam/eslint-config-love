@@ -3,7 +3,10 @@ import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
 import semver from 'semver'
 import { extractVersionRange, getPkgDetails } from './_util'
-import { parser as tseslintBottomParser, plugin as tseslintBottomPlugin } from 'typescript-eslint_bottom'
+import {
+  parser as tseslintBottomParser,
+  plugin as tseslintBottomPlugin,
+} from 'typescript-eslint_bottom'
 
 const tseslintBottom = 'typescript-eslint_bottom'
 
@@ -20,28 +23,32 @@ test('our configuration is compatible with the plugin and parser at bottom of de
   const tseslintMinVersion = semver.minVersion(tseslintDepRange)
   if (tseslintMinVersion === null) throw new Error()
 
-  t.deepEqual(tseslintBottomVersion, tseslintMinVersion.version, 'typescript-eslint_bottom version is min of dep')
+  t.deepEqual(
+    tseslintBottomVersion,
+    tseslintMinVersion.version,
+    'typescript-eslint_bottom version is min of dep',
+  )
 
   const config = {
     ...exported,
     languageOptions: {
       parser: tseslintBottomParser,
       parserOptions: {
-        project: './tsconfig.json'
-      }
+        project: './tsconfig.json',
+      },
     },
     plugins: {
       ...exported.plugins,
-      'typescript-eslint': tseslintBottomPlugin
-    }
+      'typescript-eslint': tseslintBottomPlugin,
+    },
   } satisfies TSESLint.FlatConfig.Config
 
   const eslint = new TSESLint.FlatESLint({
-    baseConfig: [config]
+    baseConfig: [config],
   })
 
   const results = await eslint.lintText('', { filePath: 'src/index.ts' })
 
   t.true(results.length > 0)
-  results.forEach(result => t.deepEqual(result.messages, [], result.filePath))
+  results.forEach((result) => t.deepEqual(result.messages, [], result.filePath))
 })

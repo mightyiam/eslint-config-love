@@ -29,8 +29,8 @@ Here is an example `eslint.config.cjs`.
 module.exports = [
   {
     ...require('eslint-config-love'),
-    files: [ '**/*.js', '**/*.ts' ],
-  }
+    files: ['**/*.js', '**/*.ts'],
+  },
 ]
 ```
 
@@ -40,7 +40,6 @@ Note: the config exported by this package sets `languageOptions.parserOptions.pr
 Read about the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
 
 There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
-
 
 ## Example command line usage:
 

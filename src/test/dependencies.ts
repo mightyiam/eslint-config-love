@@ -1,14 +1,25 @@
 import test from 'ava'
-import { extractVersionRange, getPkgDetails, isPinnedRange, isSingleCaretRange } from './_util'
+import {
+  extractVersionRange,
+  getPkgDetails,
+  isPinnedRange,
+  isSingleCaretRange,
+} from './_util'
 
 test('range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
 
-  const nonCompliantDepRanges = Object.entries({ dep: ourDeps, peer: ourPeerDeps, dev: ourDevDeps })
-    .flatMap(([depType, deps]) => Object.entries(deps).map(([depName, spec]) => {
-      if (spec === undefined) throw new Error()
-      return [depName, depType, spec] as const
-    }))
+  const nonCompliantDepRanges = Object.entries({
+    dep: ourDeps,
+    peer: ourPeerDeps,
+    dev: ourDevDeps,
+  })
+    .flatMap(([depType, deps]) =>
+      Object.entries(deps).map(([depName, spec]) => {
+        if (spec === undefined) throw new Error()
+        return [depName, depType, spec] as const
+      }),
+    )
     .filter(([depName, depType, spec]) => {
       if (depName === 'typescript' && depType === 'peer') {
         return spec !== '*'
@@ -23,7 +34,8 @@ test('range types', async (t) => {
           return !isSingleCaretRange(range)
         case 'dev':
           return !isPinnedRange(range)
-        default: throw new Error()
+        default:
+          throw new Error()
       }
     })
 
