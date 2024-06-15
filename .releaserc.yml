@@ -1,9 +1,9 @@
 branches:
   - main
 plugins:
-  - - "@semantic-release/commit-analyzer"
+  - - '@semantic-release/commit-analyzer'
     - preset: conventionalcommits
-  - - "@semantic-release/release-notes-generator"
+  - - '@semantic-release/release-notes-generator'
     - preset: conventionalcommits
       presetConfig:
         types:
@@ -21,10 +21,10 @@ plugins:
             section: Refactoring
           - type: test
             section: Testing
-  - "@semantic-release/changelog"
-  - "@semantic-release/github"
-  - "@semantic-release/npm"
-  - - "@semantic-release/git"
+  - '@semantic-release/changelog'
+  - '@semantic-release/github'
+  - '@semantic-release/npm'
+  - - '@semantic-release/git'
     - assets:
         - CHANGELOG.md
         - package-lock.json
