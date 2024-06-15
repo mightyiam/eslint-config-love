@@ -1,3 +1,22 @@
+## [53.0.0](https://github.com/mightyiam/eslint-config-love/compare/v52.0.0...v53.0.0) (2024-06-15)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** exported value type declared, not inferred
+
+### chore
+
+* **deps:** update dependency typescript-eslint to v7.12.0 ([0788ddc](https://github.com/mightyiam/eslint-config-love/commit/0788ddcdbc26768c84cc10c6e8d4230b9bafe4de))
+
+### Build system / dependencies
+
+* **deps:** bump braces from 3.0.2 to 3.0.3 ([006ca4f](https://github.com/mightyiam/eslint-config-love/commit/006ca4f57457d1b21b8cfdd46e6b49ec2b0e3673))
+* explicit devDep conventional-changelog-conventionalcommits ([a0acf54](https://github.com/mightyiam/eslint-config-love/commit/a0acf549e8ac1f962eff661dfd362ee253da5bc5))
+
+### Testing
+
+* no import sub-dep @typescript-eslint/eslint-plugin ([de9b499](https://github.com/mightyiam/eslint-config-love/commit/de9b499303a19810dccab65f850dfbb9c5a13e04))
+
 ## [52.0.0](https://github.com/mightyiam/eslint-config-love/compare/v51.0.1...v52.0.0) (2024-05-31)
 
 
