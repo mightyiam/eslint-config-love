@@ -5,7 +5,7 @@ import semver from 'semver'
 import { extractVersionRange, getPkgDetails } from './_util'
 import {
   parser as tseslintBottomParser,
-  plugin as tseslintBottomPlugin
+  plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
 
 const tseslintBottom = 'typescript-eslint_bottom'
@@ -26,7 +26,7 @@ test('our configuration is compatible with the plugin and parser at bottom of de
   t.deepEqual(
     tseslintBottomVersion,
     tseslintMinVersion.version,
-    'typescript-eslint_bottom version is min of dep'
+    'typescript-eslint_bottom version is min of dep',
   )
 
   const config = {
@@ -34,17 +34,17 @@ test('our configuration is compatible with the plugin and parser at bottom of de
     languageOptions: {
       parser: tseslintBottomParser,
       parserOptions: {
-        project: './tsconfig.json'
-      }
+        project: './tsconfig.json',
+      },
     },
     plugins: {
       ...exported.plugins,
-      'typescript-eslint': tseslintBottomPlugin
-    }
+      'typescript-eslint': tseslintBottomPlugin,
+    },
   } satisfies TSESLint.FlatConfig.Config
 
   const eslint = new TSESLint.FlatESLint({
-    baseConfig: [config]
+    baseConfig: [config],
   })
 
   const results = await eslint.lintText('', { filePath: 'src/index.ts' })

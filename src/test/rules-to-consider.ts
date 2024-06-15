@@ -21,16 +21,16 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
   [pluginImport.rules, 'import'],
-  [pluginPromise.rules, 'promise']
+  [pluginPromise.rules, 'promise'],
 ]
 
 const knownRules = new Map([
   ...eslintRules.entries(),
   ...rulesets.flatMap(([rules, pkgName]) =>
     Object.entries(rules).map(
-      ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const
-    )
-  )
+      ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const,
+    ),
+  ),
 ])
 
 const deprecatedKnownRules = [...knownRules.entries()]
@@ -332,7 +332,7 @@ const notYetConsideredRules = [
   'switch-colon-spacing',
   'valid-jsdoc',
   'vars-on-top',
-  'wrap-regex'
+  'wrap-regex',
 ]
 
 const intentionallyExcludedRules: string[] = []
@@ -343,12 +343,12 @@ const acknowledgedRules = [
   ...deprecatedKnownRules,
   ...notYetConsideredRules,
   ...intentionallyExcludedRules,
-  ...usedRules
+  ...usedRules,
 ]
 
 test('rule names valid', (t) => {
   const nonExistentRules = _.difference(acknowledgedRules, [
-    ...knownRules.keys()
+    ...knownRules.keys(),
   ])
   t.deepEqual(nonExistentRules, [])
 })
@@ -357,7 +357,7 @@ test('no intersection between lists', (t) => {
   const lists = {
     notYetConsideredRules,
     intentionallyExcludedRules,
-    usedRules
+    usedRules,
   }
 
   const counts = Object.entries(lists)
@@ -370,7 +370,7 @@ test('no intersection between lists', (t) => {
     }, {})
 
   const intersection = Object.fromEntries(
-    Object.entries(counts).filter(([_rule, inLists]) => inLists.length > 1)
+    Object.entries(counts).filter(([_rule, inLists]) => inLists.length > 1),
   )
 
   t.deepEqual(intersection, {})
@@ -379,7 +379,7 @@ test('no intersection between lists', (t) => {
 test('known rules are considered', (t) => {
   const inexplicablyExcludedRules = _.difference(
     [...knownRules.keys()],
-    acknowledgedRules
+    acknowledgedRules,
   )
 
   t.deepEqual(inexplicablyExcludedRules, [])
@@ -387,7 +387,7 @@ test('known rules are considered', (t) => {
 
 test('no deprecated rules', (t) => {
   const usedDeprecatedRules = Object.keys(ourRules).filter((name) =>
-    deprecatedKnownRules.includes(name)
+    deprecatedKnownRules.includes(name),
   )
   t.deepEqual(usedDeprecatedRules, [])
 })

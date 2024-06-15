@@ -29,8 +29,8 @@ Here is an example `eslint.config.cjs`.
 module.exports = [
   {
     ...require('eslint-config-love'),
-    files: ['**/*.js', '**/*.ts']
-  }
+    files: ['**/*.js', '**/*.ts'],
+  },
 ]
 ```
 

@@ -3,7 +3,7 @@ import {
   extractVersionRange,
   getPkgDetails,
   isPinnedRange,
-  isSingleCaretRange
+  isSingleCaretRange,
 } from './_util'
 
 test('range types', async (t) => {
@@ -12,13 +12,13 @@ test('range types', async (t) => {
   const nonCompliantDepRanges = Object.entries({
     dep: ourDeps,
     peer: ourPeerDeps,
-    dev: ourDevDeps
+    dev: ourDevDeps,
   })
     .flatMap(([depType, deps]) =>
       Object.entries(deps).map(([depName, spec]) => {
         if (spec === undefined) throw new Error()
         return [depName, depType, spec] as const
-      })
+      }),
     )
     .filter(([depName, depType, spec]) => {
       if (depName === 'typescript' && depType === 'peer') {
