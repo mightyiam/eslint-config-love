@@ -1,6 +1,6 @@
-# eslint-config-love
-
-A TypeScript ESLint config that loves you
+<div align="center">
+  <img src="./logo.svg" width="150"/>
+  <h1>eslint-config-love</h1>
 
 ![GitHub License](https://img.shields.io/github/license/mightyiam/eslint-config-love)
 [![main branch checks status](https://img.shields.io/github/check-runs/mightyiam/eslint-config-love/main)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
@@ -8,6 +8,10 @@ A TypeScript ESLint config that loves you
 ![Dependent repos prior to rename](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-standard-with-typescript?label="dependent%20repos%20prior%20to%20rename")
 ![Dependent repos](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-love)
 ![GitHub Repo stars](https://img.shields.io/github/stars/mightyiam/eslint-config-love)
+
+_A TypeScript ESLint config that loves you_
+
+</div>
 
 ## Mob programming
 
