@@ -58,6 +58,7 @@ const notYetConsideredRules = [
   '@typescript-eslint/no-duplicate-enum-values',
   '@typescript-eslint/no-duplicate-type-constituents',
   '@typescript-eslint/no-empty-function',
+  '@typescript-eslint/no-empty-object-type',
   '@typescript-eslint/no-explicit-any',
   '@typescript-eslint/no-extra-semi',
   '@typescript-eslint/no-import-type-side-effects',
