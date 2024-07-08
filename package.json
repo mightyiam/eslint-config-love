@@ -86,7 +86,7 @@
     "semver": "7.6.2",
     "tsconfigs": "5.0.0",
     "type-fest": "4.21.0",
-    "typescript": "5.4.5",
+    "typescript": "5.5.3",
     "typescript-eslint_bottom": "npm:typescript-eslint@7.14.1"
   },
   "files": [
