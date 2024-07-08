@@ -1,3 +1,13 @@
+## [54.0.0](https://github.com/mightyiam/eslint-config-love/compare/v53.0.0...v54.0.0) (2024-07-08)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** minimum typescript-eslint v7.14.1
+
+### Miscellaneous Chores
+
+* **deps:** minimum typescript-eslint v7.14.1 ([a98f908](https://github.com/mightyiam/eslint-config-love/commit/a98f9081a288acc5f5e44a172ef4d363c2109f82))
+
 ## [53.0.0](https://github.com/mightyiam/eslint-config-love/compare/v52.0.0...v53.0.0) (2024-06-15)
 
 ### ⚠ BREAKING CHANGES
