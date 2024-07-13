@@ -6,6 +6,7 @@ import * as pluginPromise from 'eslint-plugin-promise'
 import { ourRules } from './_util'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
+import { intentionallyUnusedRules } from '../_intentionally-unused-rules'
 
 if (pluginN === undefined) throw new Error()
 if (pluginImport === undefined) throw new Error()
@@ -340,14 +341,12 @@ const notYetConsideredRules = [
   'wrap-regex',
 ]
 
-const intentionallyExcludedRules: string[] = []
-
 const usedRules = Object.keys(ourRules)
 
 const acknowledgedRules = [
   ...deprecatedKnownRules,
   ...notYetConsideredRules,
-  ...intentionallyExcludedRules,
+  ...intentionallyUnusedRules,
   ...usedRules,
 ]
 
@@ -361,7 +360,7 @@ test('rule names valid', (t) => {
 test('no intersection between lists', (t) => {
   const lists = {
     notYetConsideredRules,
-    intentionallyExcludedRules,
+    intentionallyUnusedRules,
     usedRules,
   }
 
