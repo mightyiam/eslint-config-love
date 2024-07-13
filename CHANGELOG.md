@@ -1,3 +1,13 @@
+## [55.0.0](https://github.com/mightyiam/eslint-config-love/compare/v54.0.0...v55.0.0) (2024-07-13)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/class-methods-use-this
+
+### Features
+
+* @typescript-eslint/class-methods-use-this ([55a6a8c](https://github.com/mightyiam/eslint-config-love/commit/55a6a8c5ecc6ad8e00d73ffcd9d2224f222fc5f1))
+
 ## [54.0.0](https://github.com/mightyiam/eslint-config-love/compare/v53.0.0...v54.0.0) (2024-07-08)
 
 ### ⚠ BREAKING CHANGES
