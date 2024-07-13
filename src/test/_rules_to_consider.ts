@@ -1,6 +1,5 @@
 export const rulesToConsider = [
   '@typescript-eslint/default-param-last',
-  '@typescript-eslint/explicit-member-accessibility',
   '@typescript-eslint/explicit-module-boundary-types',
   '@typescript-eslint/init-declarations',
   '@typescript-eslint/lines-around-comment',
