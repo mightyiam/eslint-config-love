@@ -13,13 +13,11 @@ _A TypeScript ESLint config that loves you_
 
 </div>
 
-## Mob programming
+## Description
 
-This project is developed primarily in remote mob programming format.
-[See schedule and how to apply here](https://mobusoperandi.com/mobs/love.html).
+This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/core-concepts#shareable-configurations).
 
-## Guidelines
-
+- No framework/library-specific rules
 - Safety at the cost of verbosity
 - Convention over arbitrary choice
 - No formatting rules (please use a formatter)
@@ -58,4 +56,7 @@ $ npx eslint .
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+This project is developed primarily in remote mob programming format.
+[See schedule and how to apply here](https://mobusoperandi.com/mobs/love.html).
+
+Otherwise, see [`CONTRIBUTING.md`](./CONTRIBUTING.md).
