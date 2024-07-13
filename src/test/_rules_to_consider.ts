@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/default-param-last',
   '@typescript-eslint/explicit-module-boundary-types',
   '@typescript-eslint/init-declarations',
   '@typescript-eslint/lines-around-comment',
@@ -70,7 +69,6 @@ export const rulesToConsider = [
   'complexity',
   'consistent-this',
   'default-case',
-  'default-param-last',
   'for-direction',
   'func-name-matching',
   'func-names',
