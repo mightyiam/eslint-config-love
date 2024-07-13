@@ -13,7 +13,9 @@ _A TypeScript ESLint config that loves you_
 
 </div>
 
-## Guidelines
+## Description
+
+This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/core-concepts#shareable-configurations).
 
 - Safety at the cost of verbosity
 - Convention over arbitrary choice
