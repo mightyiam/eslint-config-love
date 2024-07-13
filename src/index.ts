@@ -332,7 +332,7 @@ const rules = {
   'no-useless-escape': ['error'],
   'no-useless-rename': ['error'],
   'no-useless-return': ['error'],
-  'no-var': ['warn'],
+  'no-var': ['error'],
   'no-void': ['error', { allowAsStatement: true }],
   'no-with': ['error'],
   'object-shorthand': ['warn', 'properties'],
