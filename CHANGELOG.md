@@ -1,3 +1,13 @@
+## [56.0.0](https://github.com/mightyiam/eslint-config-love/compare/v55.0.0...v56.0.0) (2024-07-13)
+
+### ⚠ BREAKING CHANGES
+
+* no-var: warn -> error
+
+### Features
+
+* no-var: warn -> error ([ad63c39](https://github.com/mightyiam/eslint-config-love/commit/ad63c398430978a39380ebdae3d90037133703e5))
+
 ## [55.0.0](https://github.com/mightyiam/eslint-config-love/compare/v54.0.0...v55.0.0) (2024-07-13)
 
 ### ⚠ BREAKING CHANGES
