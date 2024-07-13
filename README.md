@@ -17,6 +17,7 @@ _A TypeScript ESLint config that loves you_
 
 This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/core-concepts#shareable-configurations).
 
+- No framework/library-specific rules
 - Safety at the cost of verbosity
 - Convention over arbitrary choice
 - No formatting rules (please use a formatter)
