@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/consistent-return',
   '@typescript-eslint/default-param-last',
   '@typescript-eslint/explicit-member-accessibility',
   '@typescript-eslint/explicit-module-boundary-types',
@@ -70,7 +69,6 @@ export const rulesToConsider = [
   'camelcase',
   'capitalized-comments',
   'complexity',
-  'consistent-return',
   'consistent-this',
   'default-case',
   'default-param-last',
