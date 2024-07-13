@@ -70,6 +70,15 @@ const rules = {
       },
     },
   ],
+  '@typescript-eslint/class-methods-use-this': [
+    'error',
+    {
+      exceptMethods: [],
+      enforceForClassFields: true,
+      ignoreOverrideMethods: false,
+      ignoreClassesThatImplementAnInterface: false,
+    },
+  ],
   '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   '@typescript-eslint/consistent-generic-constructors': [
     'error',

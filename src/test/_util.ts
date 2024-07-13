@@ -106,6 +106,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
         checkForEach: false,
       },
     ],
+    'class-methods-use-this': ['off'],
     'constructor-super': ['error'],
     curly: ['error', 'multi-line'],
     'default-case-last': ['error'],
@@ -292,6 +293,15 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
             ].join('\n'),
           },
         },
+      },
+    ],
+    '@typescript-eslint/class-methods-use-this': [
+      'error',
+      {
+        exceptMethods: [],
+        enforceForClassFields: true,
+        ignoreOverrideMethods: false,
+        ignoreClassesThatImplementAnInterface: false,
       },
     ],
     '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
