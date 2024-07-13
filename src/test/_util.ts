@@ -87,7 +87,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     promise: promisePlugin,
   },
   rules: {
-    'no-var': ['warn'],
+    'no-var': ['error'],
     'object-shorthand': ['warn', 'properties'],
 
     'accessor-pairs': [
