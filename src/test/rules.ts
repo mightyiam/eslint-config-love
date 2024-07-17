@@ -103,13 +103,17 @@ test('no deprecated rules', (t) => {
 test('JS equivalent rules are off', async (t) => {
   if (pluginTseslint.rules === undefined) throw new Error()
   const ourRules_: TSESLint.FlatConfig.Rules = ourRules
-  Object.keys(ourRules_).forEach((name) => {
-    const bareName = name.replace('@typescript-eslint/', '')
-    if (!Object.prototype.hasOwnProperty.call(pluginTseslint.rules, bareName)) {
-      return
-    }
-    if (!equivalents.includes(bareName)) return
-    const config = ourRules_[bareName]
-    t.deepEqual(config, ['off'], bareName)
+  if (ourRules_ === undefined) throw new Error()
+
+  const jsEquivalentRulesThatAreOn = equivalents.filter((ruleName) => {
+    const baseName = ruleName.replace('@typescript-eslint/', '')
+    const baseRuleConfig = ourRules_[baseName]
+    if (baseRuleConfig === undefined) return false
+    if (!Array.isArray(baseRuleConfig)) throw new Error()
+    const severity = baseRuleConfig[0]
+    if (typeof severity !== 'string') throw new Error()
+    return severity !== 'off'
   })
+
+  t.deepEqual(jsEquivalentRulesThatAreOn, [])
 })
