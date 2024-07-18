@@ -66,6 +66,7 @@ test('no intersection between lists', (t) => {
     rulesToConsider,
     intentionallyUnusedRules,
     usedRules,
+    deprecatedKnownRules,
   }
 
   const counts = Object.entries(lists)
