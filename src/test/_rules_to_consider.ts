@@ -1,6 +1,5 @@
 export const rulesToConsider = [
   '@typescript-eslint/explicit-module-boundary-types',
-  '@typescript-eslint/init-declarations',
   '@typescript-eslint/max-params',
   '@typescript-eslint/member-ordering',
   '@typescript-eslint/no-array-delete',
@@ -107,7 +106,6 @@ export const rulesToConsider = [
   'import/order',
   'import/prefer-default-export',
   'import/unambiguous',
-  'init-declarations',
   'line-comment-position',
   'logical-assignment-operators',
   'max-classes-per-file',
