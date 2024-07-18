@@ -44,6 +44,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'dot-notation': ['off'],
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'init-declarations': ['off'],
+    'max-params': ['off'],
     'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
     'no-array-constructor': ['off'],
     'no-async-promise-executor': ['error'],
@@ -284,6 +285,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       },
     ],
     '@typescript-eslint/init-declarations': ['error', 'always'],
+    '@typescript-eslint/max-params': ['error', { max: 4 }],
     '@typescript-eslint/method-signature-style': ['error'],
     '@typescript-eslint/naming-convention': [
       'error',

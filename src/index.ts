@@ -127,6 +127,7 @@ const rules = {
     },
   ],
   '@typescript-eslint/init-declarations': ['error', 'always'],
+  '@typescript-eslint/max-params': ['error', { max: 4 }],
   '@typescript-eslint/method-signature-style': ['error'],
   '@typescript-eslint/naming-convention': [
     'error',

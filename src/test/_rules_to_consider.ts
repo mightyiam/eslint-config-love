@@ -1,6 +1,5 @@
 export const rulesToConsider = [
   '@typescript-eslint/explicit-module-boundary-types',
-  '@typescript-eslint/max-params',
   '@typescript-eslint/member-ordering',
   '@typescript-eslint/no-confusing-non-null-assertion',
   '@typescript-eslint/no-duplicate-enum-values',
@@ -112,7 +111,6 @@ export const rulesToConsider = [
   'max-lines',
   'max-lines-per-function',
   'max-nested-callbacks',
-  'max-params',
   'max-statements',
   'multiline-comment-style',
   'n/callback-return',
