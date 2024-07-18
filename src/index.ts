@@ -126,6 +126,7 @@ const rules = {
       allowDirectConstAssertionInArrowFunctions: true,
     },
   ],
+  '@typescript-eslint/init-declarations': ['error', 'always'],
   '@typescript-eslint/method-signature-style': ['error'],
   '@typescript-eslint/naming-convention': [
     'error',
