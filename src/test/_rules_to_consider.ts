@@ -2,7 +2,6 @@ export const rulesToConsider = [
   '@typescript-eslint/explicit-module-boundary-types',
   '@typescript-eslint/max-params',
   '@typescript-eslint/member-ordering',
-  '@typescript-eslint/no-array-delete',
   '@typescript-eslint/no-confusing-non-null-assertion',
   '@typescript-eslint/no-duplicate-enum-values',
   '@typescript-eslint/no-duplicate-type-constituents',
