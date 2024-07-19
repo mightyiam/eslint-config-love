@@ -1,7 +1,7 @@
 import test from 'ava'
 import { TSESLint } from '@typescript-eslint/utils'
 import exported from '..'
-import { expectedExportedValue } from './_util'
+import { expectedExportedValue } from './_expected-exported-value'
 
 const eslint = new TSESLint.FlatESLint({
   baseConfig: [exported],
