@@ -10,4 +10,7 @@ export const intentionallyUnusedRules: string[] = [
 
   '@typescript-eslint/default-param-last',
   'default-param-last',
+
+  // style
+  '@typescript-eslint/member-ordering',
 ]

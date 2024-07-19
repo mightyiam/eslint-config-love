@@ -1,6 +1,5 @@
 export const rulesToConsider = [
   '@typescript-eslint/explicit-module-boundary-types',
-  '@typescript-eslint/member-ordering',
   '@typescript-eslint/no-confusing-non-null-assertion',
   '@typescript-eslint/no-duplicate-enum-values',
   '@typescript-eslint/no-duplicate-type-constituents',
