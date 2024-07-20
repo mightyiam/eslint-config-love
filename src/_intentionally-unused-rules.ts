@@ -13,4 +13,13 @@ export const intentionallyUnusedRules: string[] = [
 
   // style
   '@typescript-eslint/member-ordering',
+
+  // Made redundant by TS strict mode and `@typescript-eslint/explicit-function-return-type`
+  '@typescript-eslint/explicit-module-boundary-types',
+
+  // From rule documentation:
+  // > Requiring type annotations unnecessarily can be cumbersome to maintain and generally reduces code readability. TypeScript is often better at inferring types than easily written type annotations would allow.
+  // >
+  // > Instead of enabling typedef, it is generally recommended to use the --noImplicitAny and --strictPropertyInitialization compiler options to enforce type annotations only when useful.
+  '@typescript-eslint/typedef',
 ]

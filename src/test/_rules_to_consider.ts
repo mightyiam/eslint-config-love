@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/explicit-module-boundary-types',
   '@typescript-eslint/no-confusing-non-null-assertion',
   '@typescript-eslint/no-duplicate-enum-values',
   '@typescript-eslint/no-duplicate-type-constituents',
@@ -45,7 +44,6 @@ export const rulesToConsider = [
   '@typescript-eslint/prefer-string-starts-ends-with',
   '@typescript-eslint/require-await',
   '@typescript-eslint/switch-exhaustiveness-check',
-  '@typescript-eslint/typedef',
   '@typescript-eslint/unified-signatures',
   '@typescript-eslint/use-unknown-in-catch-callback-variable',
   'arrow-body-style',
