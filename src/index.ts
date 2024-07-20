@@ -153,6 +153,12 @@ const rules = {
     { ignoreIntersections: false, ignoreUnions: false },
   ],
   '@typescript-eslint/no-dynamic-delete': ['error'],
+  '@typescript-eslint/no-empty-function': [
+    'error',
+    {
+      allow: [],
+    },
+  ],
   '@typescript-eslint/no-empty-interface': [
     'error',
     { allowSingleExtends: true },

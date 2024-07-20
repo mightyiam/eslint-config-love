@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-empty-function',
   '@typescript-eslint/no-empty-object-type',
   '@typescript-eslint/no-explicit-any',
   '@typescript-eslint/no-import-type-side-effects',
@@ -149,7 +148,6 @@ export const rulesToConsider = [
   'no-dupe-else-if',
   'no-duplicate-imports',
   'no-else-return',
-  'no-empty-function',
   'no-empty-static-block',
   'no-eq-null',
   'no-extra-label',

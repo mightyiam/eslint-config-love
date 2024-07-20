@@ -65,6 +65,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'no-useless-backreference': ['error'],
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-empty-character-class': ['error'],
+    'no-empty-function': ['off'],
     'no-empty-pattern': ['error'],
     'no-eval': ['error'],
     'no-ex-assign': ['error'],
@@ -311,6 +312,12 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       { ignoreIntersections: false, ignoreUnions: false },
     ],
     '@typescript-eslint/no-dynamic-delete': ['error'],
+    '@typescript-eslint/no-empty-function': [
+      'error',
+      {
+        allow: [],
+      },
+    ],
     '@typescript-eslint/no-empty-interface': [
       'error',
       { allowSingleExtends: true },
