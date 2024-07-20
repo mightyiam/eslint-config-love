@@ -141,6 +141,7 @@ const rules = {
   '@typescript-eslint/no-array-constructor': ['error'],
   '@typescript-eslint/no-array-delete': ['error'],
   '@typescript-eslint/no-base-to-string': ['error'],
+  '@typescript-eslint/no-confusing-non-null-assertion': ['error'],
   '@typescript-eslint/no-confusing-void-expression': [
     'error',
     { ignoreArrowShorthand: false, ignoreVoidOperator: false },
