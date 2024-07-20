@@ -44,9 +44,9 @@ module.exports = [
 [Learn how to configure ESLint](https://eslint.org/docs/latest/use/configure/).
 
 Note: the config exported by this package sets `languageOptions.parserOptions.project = true`.
-Read about the `project` option [here](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration).
+Read about the `project` option [here](https://typescript-eslint.io/packages/parser/#project).
 
-There are [some more `parserOptions`](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser/README.md#configuration) you may care about.
+There are [some more `parserOptions`](https://typescript-eslint.io/packages/parser/#configuration) you may care about.
 
 ## Example command line usage:
 
