@@ -60,3 +60,7 @@ This project is developed primarily in remote mob programming format.
 [See schedule and how to apply here](https://mobusoperandi.com/mobs/love.html).
 
 Otherwise, see [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+## Sponsoring
+
+To ensure the continuity of this project, consider [sponsoring the author](https://github.com/sponsors/mightyiam).
