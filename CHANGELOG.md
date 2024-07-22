@@ -1,3 +1,25 @@
+## [57.0.0](https://github.com/mightyiam/eslint-config-love/compare/v56.0.0...v57.0.0) (2024-07-22)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-empty-function
+* @typescript-eslint/no-duplicate-type-constituents
+* @typescript-eslint/no-duplicate-enum-values
+* @typescript-eslint/no-confusing-non-null-assertion
+* @typescript-eslint/max-params
+* @typescript-eslint/no-array-delete
+* @typescript-eslint/init-declarations
+
+### Features
+
+* @typescript-eslint/init-declarations ([d63d8af](https://github.com/mightyiam/eslint-config-love/commit/d63d8afb8bb291e66cfa7d2c8d62f691c59338b6))
+* @typescript-eslint/max-params ([a97fa9e](https://github.com/mightyiam/eslint-config-love/commit/a97fa9ebac30dd652c9106fab595048241b43062))
+* @typescript-eslint/no-array-delete ([a513a37](https://github.com/mightyiam/eslint-config-love/commit/a513a37e9f43d8a707b851c249a81374ad872d8d))
+* @typescript-eslint/no-confusing-non-null-assertion ([92f1a2b](https://github.com/mightyiam/eslint-config-love/commit/92f1a2b05b798b3b728995cb1b374c613e4a74a7))
+* @typescript-eslint/no-duplicate-enum-values ([499b812](https://github.com/mightyiam/eslint-config-love/commit/499b81221ea710ed087979c4c697d8907ca6a1e5))
+* @typescript-eslint/no-duplicate-type-constituents ([22d7b2c](https://github.com/mightyiam/eslint-config-love/commit/22d7b2ce00220af4bcc7f387395cf6d96d218c11))
+* @typescript-eslint/no-empty-function ([d3fc473](https://github.com/mightyiam/eslint-config-love/commit/d3fc4736c571cdfff79f23f7b1e5ca97dd8ba32f))
+
 ## [56.0.0](https://github.com/mightyiam/eslint-config-love/compare/v55.0.0...v56.0.0) (2024-07-13)
 
 ### ⚠ BREAKING CHANGES
