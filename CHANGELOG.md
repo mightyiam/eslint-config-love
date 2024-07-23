@@ -1,3 +1,13 @@
+## [59.0.0](https://github.com/mightyiam/eslint-config-love/compare/v58.0.0...v59.0.0) (2024-07-23)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-import-type-side-effects
+
+### Features
+
+* @typescript-eslint/no-import-type-side-effects ([9970ecf](https://github.com/mightyiam/eslint-config-love/commit/9970ecf522b54a26fbf8f83a9c400dd93e9cd39b))
+
 ## [58.0.0](https://github.com/mightyiam/eslint-config-love/compare/v57.0.0...v58.0.0) (2024-07-23)
 
 ### ⚠ BREAKING CHANGES
