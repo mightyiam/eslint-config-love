@@ -163,6 +163,10 @@ const rules = {
     'error',
     { allowSingleExtends: true },
   ],
+  '@typescript-eslint/no-explicit-any': [
+    'error',
+    { fixToUnknown: false, ignoreRestArgs: false },
+  ],
   '@typescript-eslint/no-extra-non-null-assertion': ['error'],
   '@typescript-eslint/no-extraneous-class': [
     'error',
