@@ -1,3 +1,13 @@
+## [58.0.0](https://github.com/mightyiam/eslint-config-love/compare/v57.0.0...v58.0.0) (2024-07-23)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-explicit-any
+
+### Features
+
+* @typescript-eslint/no-explicit-any ([febca28](https://github.com/mightyiam/eslint-config-love/commit/febca28cb7a4fbffac8027aece9287ad022f491c))
+
 ## [57.0.0](https://github.com/mightyiam/eslint-config-love/compare/v56.0.0...v57.0.0) (2024-07-22)
 
 ### ⚠ BREAKING CHANGES
