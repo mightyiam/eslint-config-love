@@ -2,7 +2,7 @@ import exported from '..'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
-import { type PackageJson } from 'type-fest'
+import type { PackageJson } from 'type-fest'
 
 interface PkgDetails {
   pkgPath: string
