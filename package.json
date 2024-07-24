@@ -58,7 +58,7 @@
   "dependencies": {
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^17.0.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^7.0.0",
     "typescript-eslint": "^7.14.1"
   },
   "peerDependencies": {
