@@ -22,4 +22,7 @@ export const intentionallyUnusedRules: string[] = [
   // >
   // > Instead of enabling typedef, it is generally recommended to use the --noImplicitAny and --strictPropertyInitialization compiler options to enforce type annotations only when useful.
   '@typescript-eslint/typedef',
+
+  // Covered by strict TypeScript
+  '@typescript-eslint/no-invalid-this',
 ]

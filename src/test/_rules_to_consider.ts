@@ -1,7 +1,6 @@
 export const rulesToConsider = [
   '@typescript-eslint/no-empty-object-type',
   '@typescript-eslint/no-inferrable-types',
-  '@typescript-eslint/no-invalid-this',
   '@typescript-eslint/no-loop-func',
   '@typescript-eslint/no-magic-numbers',
   '@typescript-eslint/no-meaningless-void-operator',
