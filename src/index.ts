@@ -159,10 +159,6 @@ const rules = {
       allow: [],
     },
   ],
-  '@typescript-eslint/no-empty-interface': [
-    'error',
-    { allowSingleExtends: true },
-  ],
   '@typescript-eslint/no-explicit-any': [
     'error',
     { fixToUnknown: false, ignoreRestArgs: false },
@@ -171,6 +167,10 @@ const rules = {
   '@typescript-eslint/no-extraneous-class': [
     'error',
     { allowWithDecorator: true },
+  ],
+  '@typescript-eslint/no-empty-object-type': [
+    'error',
+    { allowInterfaces: 'with-single-extends', allowObjectTypes: 'never' },
   ],
   '@typescript-eslint/no-floating-promises': ['error'],
   '@typescript-eslint/no-for-in-array': ['error'],
