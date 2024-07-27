@@ -1,3 +1,13 @@
+## [60.0.0](https://github.com/mightyiam/eslint-config-love/compare/v59.0.0...v60.0.0) (2024-07-27)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-loop-func
+
+### Features
+
+* @typescript-eslint/no-loop-func ([d8e3d4d](https://github.com/mightyiam/eslint-config-love/commit/d8e3d4d4be89a8a51b18f5d64b816abb4a193b8b))
+
 ## [59.0.0](https://github.com/mightyiam/eslint-config-love/compare/v58.0.0...v59.0.0) (2024-07-23)
 
 ### ⚠ BREAKING CHANGES
