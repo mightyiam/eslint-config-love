@@ -1,3 +1,13 @@
+## [61.0.0](https://github.com/mightyiam/eslint-config-love/compare/v60.0.0...v61.0.0) (2024-07-27)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-empty-object-type
+
+### Features
+
+* @typescript-eslint/no-empty-object-type ([3746639](https://github.com/mightyiam/eslint-config-love/commit/3746639b9def2acc52ebb3ff3f5f12e5dfaf0e7a))
+
 ## [60.0.0](https://github.com/mightyiam/eslint-config-love/compare/v59.0.0...v60.0.0) (2024-07-27)
 
 ### ⚠ BREAKING CHANGES
