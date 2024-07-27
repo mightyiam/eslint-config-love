@@ -336,6 +336,10 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     '@typescript-eslint/no-for-in-array': ['error'],
     '@typescript-eslint/no-implied-eval': ['error'],
     '@typescript-eslint/no-import-type-side-effects': ['error'],
+    '@typescript-eslint/no-inferrable-types': [
+      'error',
+      { ignoreParameters: false, ignoreProperties: false },
+    ],
     '@typescript-eslint/no-invalid-void-type': ['error'],
     '@typescript-eslint/no-loop-func': ['error'],
     '@typescript-eslint/no-loss-of-precision': ['error'],
