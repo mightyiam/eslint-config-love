@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-inferrable-types',
   '@typescript-eslint/no-magic-numbers',
   '@typescript-eslint/no-meaningless-void-operator',
   '@typescript-eslint/no-mixed-enums',
