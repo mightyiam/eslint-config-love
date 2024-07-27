@@ -1,3 +1,13 @@
+## [62.0.0](https://github.com/mightyiam/eslint-config-love/compare/v61.0.0...v62.0.0) (2024-07-27)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-inferrable-types
+
+### Features
+
+* @typescript-eslint/no-inferrable-types ([8857927](https://github.com/mightyiam/eslint-config-love/commit/88579274cf7d3aad4800f166ae4135596d538c8b))
+
 ## [61.0.0](https://github.com/mightyiam/eslint-config-love/compare/v60.0.0...v61.0.0) (2024-07-27)
 
 ### ⚠ BREAKING CHANGES
