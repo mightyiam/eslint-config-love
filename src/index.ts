@@ -177,6 +177,7 @@ const rules = {
   '@typescript-eslint/no-implied-eval': ['error'],
   '@typescript-eslint/no-import-type-side-effects': ['error'],
   '@typescript-eslint/no-invalid-void-type': ['error'],
+  '@typescript-eslint/no-loop-func': ['error'],
   '@typescript-eslint/no-loss-of-precision': ['error'],
   '@typescript-eslint/no-misused-new': ['error'],
   '@typescript-eslint/no-misused-promises': ['error'],
