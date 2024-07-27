@@ -21,6 +21,7 @@ This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/c
 - Safety at the cost of verbosity
 - Convention over arbitrary choice
 - No formatting rules (please use a formatter)
+- No rules that are covered by strict TypeScript
 
 ## Versioning
 
