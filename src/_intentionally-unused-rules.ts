@@ -25,4 +25,7 @@ export const intentionallyUnusedRules: string[] = [
 
   // Covered by strict TypeScript
   '@typescript-eslint/no-invalid-this',
+
+  // Covered by `@typescript-eslint/no-empty-object-type`
+  '@typescript-eslint/no-empty-interface',
 ]
