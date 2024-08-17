@@ -4,7 +4,8 @@ import exported from '..'
 import { expectedExportedValue } from './_expected-exported-value'
 
 const eslint = new TSESLint.FlatESLint({
-  baseConfig: [exported],
+  // using `overrideConfig` to mitigate the affect of this project's config
+  overrideConfig: [exported],
 })
 
 const actualP = eslint.calculateConfigForFile('foo.js')
