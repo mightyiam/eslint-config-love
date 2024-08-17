@@ -89,7 +89,7 @@
     "prettier": "3.3.3",
     "read-pkg-up": "11.0.0",
     "runtypes": "6.7.0",
-    "semantic-release": "24.0.0",
+    "semantic-release": "24.1.0",
     "semver": "7.6.3",
     "tsconfigs": "5.0.0",
     "type-fest": "4.25.0",
