@@ -1,3 +1,21 @@
+## [63.0.0](https://github.com/mightyiam/eslint-config-love/compare/v62.0.1...v63.0.0) (2024-08-24)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/ban-types is replaced with
+@typescript-eslint/no-unsafe-function-type and
+@typescript-eslint/no-wrapper-object-types.
+@typescript-eslint/no-var-requires is replaced with
+@typescript-eslint/no-require-imports.
+@typescript-eslint/no-loss-of-precision is replaced with
+no-loss-of-precision.
+`languageOptions.parserOptions.project:true` is replaced with
+`languageOptions.parserOptions.projectService:true`.
+
+### Features
+
+* typescript-eslint@v8 ([dcabf55](https://github.com/mightyiam/eslint-config-love/commit/dcabf554dc3b28d2c1b984fae3b12f5501a51d77))
+
 ## [62.0.1](https://github.com/mightyiam/eslint-config-love/compare/v62.0.0...v62.0.1) (2024-08-24)
 
 ### Bug Fixes
