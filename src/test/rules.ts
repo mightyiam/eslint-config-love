@@ -108,6 +108,11 @@ test('JS equivalent rules are off', async (t) => {
 
   const jsEquivalentRulesThatAreOn = equivalents.filter((ruleName) => {
     const baseRuleConfig = ourRules_[ruleName]
+
+    if (deprecatedKnownRules.includes(`@typescript-eslint/${ruleName}`)) {
+      return false
+    }
+
     if (baseRuleConfig === undefined) return false
     if (!Array.isArray(baseRuleConfig)) throw new Error()
     const severity = baseRuleConfig[0]

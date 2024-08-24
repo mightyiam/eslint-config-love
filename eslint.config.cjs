@@ -1,20 +1,19 @@
-const tseslint = require('typescript-eslint')
-
 module.exports = [
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   require('.'),
   {
     files: ['**/*.cjs', '**/*.js', '**/*.ts'],
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
     },
-  },
-  {
-    files: ['eslint.config.cjs'],
-    rules: {
-      ...tseslint.configs.disableTypeChecked.rules,
-      '@typescript-eslint/no-var-requires': 'off',
+    languageOptions: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ['eslint.config.cjs', 'commitlint.config.js'],
+          defaultProject: './tsconfig.json',
+        },
+      },
     },
-    languageOptions: { parserOptions: { project: false } },
   },
   {
     ignores: ['lib/'],

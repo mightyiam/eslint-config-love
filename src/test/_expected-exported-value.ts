@@ -8,7 +8,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   languageOptions: {
     parser,
     parserOptions: {
-      project: true,
+      projectService: true,
     },
   },
   plugins: {
@@ -83,7 +83,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
     'no-lone-blocks': ['error'],
     'no-loop-func': ['off'],
-    'no-loss-of-precision': ['off'],
+    'no-loss-of-precision': ['error'],
     'no-misleading-character-class': ['error'],
     'no-prototype-builtins': ['error'],
     'no-useless-catch': ['error'],
@@ -179,50 +179,6 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       },
     ],
     '@typescript-eslint/ban-tslint-comment': ['error'],
-    '@typescript-eslint/ban-types': [
-      'error',
-      {
-        extendDefaults: false,
-        types: {
-          String: {
-            message: 'Use string instead',
-            fixWith: 'string',
-          },
-          Boolean: {
-            message: 'Use boolean instead',
-            fixWith: 'boolean',
-          },
-          Number: {
-            message: 'Use number instead',
-            fixWith: 'number',
-          },
-          Symbol: {
-            message: 'Use symbol instead',
-            fixWith: 'symbol',
-          },
-          BigInt: {
-            message: 'Use bigint instead',
-            fixWith: 'bigint',
-          },
-          Function: {
-            message: [
-              'The `Function` type accepts any function-like value.',
-              'It provides no type safety when calling the function, which can be a common source of bugs.',
-              'It also accepts things like class declarations, which will throw at runtime as they will not be called with `new`.',
-              'If you are expecting the function to accept certain arguments, you should explicitly define the function shape.',
-            ].join('\n'),
-          },
-          // object typing
-          Object: {
-            message: [
-              'The `Object` type actually means "any non-nullish value", so it is marginally better than `unknown`.',
-              '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-              '- If you want a type meaning "any value", you probably want `unknown` instead.',
-            ].join('\n'),
-          },
-        },
-      },
-    ],
     '@typescript-eslint/class-methods-use-this': [
       'error',
       {
@@ -335,7 +291,6 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     ],
     '@typescript-eslint/no-invalid-void-type': ['error'],
     '@typescript-eslint/no-loop-func': ['error'],
-    '@typescript-eslint/no-loss-of-precision': ['error'],
     '@typescript-eslint/no-misused-new': ['error'],
     '@typescript-eslint/no-misused-promises': ['error'],
     '@typescript-eslint/no-namespace': ['error'],
@@ -344,10 +299,15 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
     '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
     '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
+    '@typescript-eslint/no-require-imports': [
+      'error',
+      { allow: [], allowAsImport: false },
+    ],
     '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
     '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
     '@typescript-eslint/no-unsafe-argument': ['error'],
+    '@typescript-eslint/no-unsafe-function-type': ['error'],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -377,7 +337,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       },
     ],
     '@typescript-eslint/no-useless-constructor': ['error'],
-    '@typescript-eslint/no-var-requires': ['error'],
+    '@typescript-eslint/no-wrapper-object-types': ['error'],
     '@typescript-eslint/only-throw-error': [
       'error',
       { allowThrowingAny: false, allowThrowingUnknown: false },
