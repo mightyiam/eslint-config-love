@@ -1,3 +1,9 @@
+## [62.0.1](https://github.com/mightyiam/eslint-config-love/compare/v62.0.0...v62.0.1) (2024-08-24)
+
+### Bug Fixes
+
+* rm empty object from @typescript-eslint/ban-types ([79c1eaa](https://github.com/mightyiam/eslint-config-love/commit/79c1eaaf315dfbb5fcb9ed8b8092d61d1f66fc83))
+
 ## [62.0.0](https://github.com/mightyiam/eslint-config-love/compare/v61.0.0...v62.0.0) (2024-07-27)
 
 ### ⚠ BREAKING CHANGES
