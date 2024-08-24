@@ -60,13 +60,6 @@ const rules = {
             '- If you want a type meaning "any value", you probably want `unknown` instead.',
           ].join('\n'),
         },
-        '{}': {
-          message: [
-            '`{}` actually means "any non-nullish value".',
-            '- If you want a type meaning "any object", you probably want `Record<string, unknown>` instead.',
-            '- If you want a type meaning "any value", you probably want `unknown` instead.',
-          ].join('\n'),
-        },
       },
     },
   ],
