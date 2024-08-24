@@ -201,6 +201,7 @@ export const rulesToConsider = [
   'promise/no-return-wrap',
   'promise/prefer-await-to-callbacks',
   'promise/prefer-await-to-then',
+  'promise/spec-only',
   'promise/valid-params',
   'radix',
   'require-atomic-updates',
