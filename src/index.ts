@@ -1,6 +1,6 @@
 import { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
-import * as importPlugin from 'eslint-plugin-import'
+import * as importPlugin from 'eslint-plugin-import-x'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
@@ -340,6 +340,7 @@ const rules = {
     { esmodule: true, commonjs: true, amd: false },
   ],
   'import/no-duplicates': ['error'],
+  'import/no-rename-default': ['off'],
   'import/no-named-default': ['error'],
   'import/no-webpack-loader-syntax': ['error'],
 

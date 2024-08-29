@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
-import * as importPlugin from 'eslint-plugin-import'
+import * as importPlugin from 'eslint-plugin-import-x'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
@@ -154,6 +154,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     ],
     'import/no-duplicates': ['error'],
     'import/no-named-default': ['error'],
+    'import/no-rename-default': ['off'],
     'import/no-webpack-loader-syntax': ['error'],
 
     'n/handle-callback-err': ['error', '^(err|error)$'],

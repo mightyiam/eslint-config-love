@@ -1,7 +1,7 @@
 import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
 import * as pluginN from 'eslint-plugin-n'
-import * as pluginImport from 'eslint-plugin-import'
+import * as pluginImport from 'eslint-plugin-import-x'
 import * as pluginPromise from 'eslint-plugin-promise'
 import { equivalents, ourRules } from './_util'
 import _ from 'lodash'
