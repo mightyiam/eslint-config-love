@@ -1,8 +1,10 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+import { fixupPluginRules } from '@eslint/compat'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
 import * as importPlugin from 'eslint-plugin-import'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
+import type { ESLint } from 'eslint'
 
 export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   languageOptions: {
@@ -13,7 +15,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   },
   plugins: {
     '@typescript-eslint': tseslintPlugin,
-    import: importPlugin,
+    import: fixupPluginRules(importPlugin as ESLint.Plugin),
     n: nPlugin,
     promise: promisePlugin,
   },

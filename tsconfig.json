@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "lib",
     "module": "nodenext",
+    "skipLibCheck": true,
     "moduleResolution": "nodenext"
   },
   "include": ["src/**/*.ts", "commitlint.config.js"]
