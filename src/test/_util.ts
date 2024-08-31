@@ -1,6 +1,6 @@
 import exported from '..'
+import eslintUnsafe from 'eslint/use-at-your-own-risk'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
-import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import type { PackageJson } from 'type-fest'
 
@@ -66,6 +66,6 @@ const ourRules_ = exported.rules
 if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
 export const ourRules = ourRules_
 
-export const equivalents = [...new TSESLint.Linter().getRules().keys()].filter(
+export const equivalents = [...eslintUnsafe.builtinRules.keys()].filter(
   (name) => Object.prototype.hasOwnProperty.call(tseslintPlugin.rules, name),
 )

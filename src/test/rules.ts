@@ -1,11 +1,12 @@
 import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
 import * as pluginN from 'eslint-plugin-n'
-import * as pluginImport from 'eslint-plugin-import'
+import eslintUnsafe from 'eslint/use-at-your-own-risk'
+import * as pluginImport from 'eslint-plugin-import-x'
 import * as pluginPromise from 'eslint-plugin-promise'
 import { equivalents, ourRules } from './_util'
 import _ from 'lodash'
-import { TSESLint } from '@typescript-eslint/utils'
+import type { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from '../_intentionally-unused-rules'
 import { rulesToConsider } from './_rules_to_consider'
 
@@ -13,7 +14,7 @@ if (pluginN === undefined) throw new Error()
 if (pluginImport === undefined) throw new Error()
 if (pluginPromise === undefined) throw new Error()
 
-const eslintRules = new TSESLint.Linter().getRules()
+const eslintRules = eslintUnsafe.builtinRules
 
 if (pluginN.rules === undefined) throw new Error()
 if (pluginImport.rules === undefined) throw new Error()
@@ -23,7 +24,7 @@ if (pluginTseslint.rules === undefined) throw new Error()
 const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
-  [pluginImport.rules, 'import'],
+  [pluginImport.rules, 'import-x'],
   [pluginPromise.rules, 'promise'],
 ]
 
