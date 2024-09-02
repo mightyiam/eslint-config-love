@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
-import * as importPlugin from 'eslint-plugin-import'
+import * as importPlugin from 'eslint-plugin-import-x'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
@@ -13,7 +13,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   },
   plugins: {
     '@typescript-eslint': tseslintPlugin,
-    import: importPlugin,
+    'import-x': importPlugin,
     n: nPlugin,
     promise: promisePlugin,
   },
@@ -90,7 +90,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'no-multi-str': ['error'],
     'no-new': ['error'],
     'no-new-func': ['error'],
-    'no-new-symbol': ['error'],
+    'no-new-native-nonconstructor': ['error'],
     'no-new-wrappers': ['error'],
     'no-obj-calls': ['error'],
     'no-object-constructor': ['error'],
@@ -146,15 +146,15 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     'valid-typeof': ['error', { requireStringLiterals: true }],
     yoda: ['error', 'never'],
 
-    'import/export': ['error'],
-    'import/first': ['error'],
-    'import/no-absolute-path': [
+    'import-x/export': ['error'],
+    'import-x/first': ['error'],
+    'import-x/no-absolute-path': [
       'error',
       { esmodule: true, commonjs: true, amd: false },
     ],
-    'import/no-duplicates': ['error'],
-    'import/no-named-default': ['error'],
-    'import/no-webpack-loader-syntax': ['error'],
+    'import-x/no-duplicates': ['error'],
+    'import-x/no-named-default': ['error'],
+    'import-x/no-webpack-loader-syntax': ['error'],
 
     'n/handle-callback-err': ['error', '^(err|error)$'],
     'n/no-callback-literal': ['error'],

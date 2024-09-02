@@ -3,7 +3,7 @@ declare module 'eslint-plugin-n' {
   const plugin: TSESLint.Linter.Plugin
   export = plugin
 }
-declare module 'eslint-plugin-import' {
+declare module 'eslint-plugin-import-x' {
   import type { TSESLint } from '@typescript-eslint/utils'
   const plugin: TSESLint.Linter.Plugin
   export = plugin
