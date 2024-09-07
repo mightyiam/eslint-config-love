@@ -1,3 +1,13 @@
+## [64.0.0](https://github.com/mightyiam/eslint-config-love/compare/v63.0.0...v64.0.0) (2024-09-07)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-deprecated: warn
+
+### Features
+
+* @typescript-eslint/no-deprecated: warn ([34e32ba](https://github.com/mightyiam/eslint-config-love/commit/34e32bae2b2f1d723d102ef94ad89bffa8ebb036))
+
 ## [63.0.0](https://github.com/mightyiam/eslint-config-love/compare/v62.0.1...v63.0.0) (2024-08-24)
 
 ### ⚠ BREAKING CHANGES
