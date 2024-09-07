@@ -22,7 +22,7 @@
       "enabled": false
     },
     {
-      "matchPackageNames": ["typescript-eslint_bottom"],
+      "matchDepNames": ["typescript-eslint_bottom"],
       "enabled": false
     }
   ]
