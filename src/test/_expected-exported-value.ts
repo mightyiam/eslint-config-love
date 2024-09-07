@@ -255,6 +255,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       'error',
       { ignoreArrowShorthand: false, ignoreVoidOperator: false },
     ],
+    '@typescript-eslint/no-deprecated': ['warn'],
     '@typescript-eslint/no-dupe-class-members': ['error'],
     '@typescript-eslint/no-duplicate-enum-values': ['error'],
     '@typescript-eslint/no-duplicate-type-constituents': [
