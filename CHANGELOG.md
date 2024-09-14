@@ -1,3 +1,13 @@
+## [66.0.0](https://github.com/mightyiam/eslint-config-love/compare/v65.0.0...v66.0.0) (2024-09-14)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-meaningless-void-operator
+
+### Features
+
+* @typescript-eslint/no-meaningless-void-operator ([7e6d5d0](https://github.com/mightyiam/eslint-config-love/commit/7e6d5d03144b48ded8cd64f4fbcbeeefa4fdda82))
+
 ## [65.0.0](https://github.com/mightyiam/eslint-config-love/compare/v64.0.0...v65.0.0) (2024-09-14)
 
 ### ⚠ BREAKING CHANGES
