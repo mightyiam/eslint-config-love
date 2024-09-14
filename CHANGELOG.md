@@ -1,3 +1,13 @@
+## [65.0.0](https://github.com/mightyiam/eslint-config-love/compare/v64.0.0...v65.0.0) (2024-09-14)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-magic-numbers
+
+### Features
+
+* @typescript-eslint/no-magic-numbers ([c187e98](https://github.com/mightyiam/eslint-config-love/commit/c187e98f365d266d290728063c5f50635a4aeaee))
+
 ## [64.0.0](https://github.com/mightyiam/eslint-config-love/compare/v63.0.0...v64.0.0) (2024-09-07)
 
 ### ⚠ BREAKING CHANGES
