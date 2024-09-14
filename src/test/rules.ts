@@ -79,6 +79,7 @@ test('no intersection between lists', (t) => {
     }, {})
 
   const intersection = Object.fromEntries(
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     Object.entries(counts).filter(([_rule, inLists]) => inLists.length > 1),
   )
 
@@ -115,6 +116,7 @@ test('JS equivalent rules are off', async (t) => {
 
     if (baseRuleConfig === undefined) return false
     if (!Array.isArray(baseRuleConfig)) throw new Error()
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     const severity = baseRuleConfig[0]
     if (typeof severity !== 'string') throw new Error()
     return severity !== 'off'

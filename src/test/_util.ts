@@ -42,24 +42,25 @@ export const getPkgDetails = async (): Promise<PkgDetails> => {
 
 export const isSingleCaretRange = (rangeStr: string): boolean => {
   const range = new semver.Range(rangeStr)
-  return (
-    range.set.length === 1 &&
-    range.set[0].length === 2 &&
-    range.set[0][0].operator === '>=' &&
-    range.set[0][1].operator === '<'
-  )
+  /* eslint-disable @typescript-eslint/no-magic-numbers */
+  if (range.set.length !== 1) return false
+  const comparators = range.set[0]
+  if (comparators.length !== 2) return false
+  return comparators[0].operator === '>=' && comparators[1].operator === '<'
+  /* eslint-enable @typescript-eslint/no-magic-numbers */
 }
 
 export const isPinnedRange = (rangeStr: string): boolean => {
   const range = new semver.Range(rangeStr)
-  return (
-    range.set.length === 1 &&
-    range.set[0].length === 1 &&
-    range.set[0][0].operator === ''
-  )
+  /* eslint-disable @typescript-eslint/no-magic-numbers */
+  if (range.set.length !== 1) return false
+  const comparators = range.set[0]
+  return comparators.length === 1 && comparators[0].operator === ''
+  /* eslint-enable @typescript-eslint/no-magic-numbers */
 }
 
 export const extractVersionRange = (spec: string): string =>
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   spec.split('@').slice(-1)[0]
 
 const ourRules_ = exported.rules

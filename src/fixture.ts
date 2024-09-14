@@ -31,10 +31,13 @@ export interface Boo {
  * https://github.com/mightyiam/eslint-config-love/issues/110
  */
 // Inline callbacks don't need return types:
+const ONE_MILLISECOND = 1
 setTimeout(() => {
   console.log()
-}, 1)
+}, ONE_MILLISECOND)
 
 // The return type is clear from the left side of the assignment:
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 const double: (n: number) => number = (n) => n * 2
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 ;[1, 2].map(double)

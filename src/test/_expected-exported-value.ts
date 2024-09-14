@@ -18,6 +18,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     promise: promisePlugin,
   },
   rules: {
+    'no-magic-numbers': ['off'],
     'no-var': ['error'],
     'object-shorthand': ['warn', 'properties'],
 
@@ -175,6 +176,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
         'ts-ignore': true,
         'ts-nocheck': true,
         'ts-check': false,
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         minimumDescriptionLength: 3,
       },
     ],
@@ -236,6 +238,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       },
     ],
     '@typescript-eslint/init-declarations': ['error', 'always'],
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     '@typescript-eslint/max-params': ['error', { max: 4 }],
     '@typescript-eslint/method-signature-style': ['error'],
     '@typescript-eslint/naming-convention': [
@@ -292,6 +295,21 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     ],
     '@typescript-eslint/no-invalid-void-type': ['error'],
     '@typescript-eslint/no-loop-func': ['error'],
+    '@typescript-eslint/no-magic-numbers': [
+      'error',
+      {
+        ignore: [],
+        ignoreArrayIndexes: false,
+        ignoreDefaultValues: false,
+        ignoreClassFieldInitialValues: false,
+        enforceConst: true,
+        detectObjects: true,
+        ignoreEnums: true,
+        ignoreNumericLiteralTypes: false,
+        ignoreReadonlyClassProperties: true,
+        ignoreTypeIndexes: false,
+      },
+    ],
     '@typescript-eslint/no-misused-new': ['error'],
     '@typescript-eslint/no-misused-promises': ['error'],
     '@typescript-eslint/no-namespace': ['error'],
