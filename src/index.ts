@@ -149,6 +149,10 @@ const rules = {
       ignoreTypeIndexes: false,
     },
   ],
+  '@typescript-eslint/no-meaningless-void-operator': [
+    'error',
+    { checkNever: true },
+  ],
   '@typescript-eslint/no-misused-new': ['error'],
   '@typescript-eslint/no-misused-promises': ['error'],
   '@typescript-eslint/no-namespace': ['error'],
