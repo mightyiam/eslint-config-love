@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-magic-numbers',
   '@typescript-eslint/no-meaningless-void-operator',
   '@typescript-eslint/no-mixed-enums',
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing',
@@ -151,7 +150,6 @@ export const rulesToConsider = [
   'no-invalid-this',
   'no-label-var',
   'no-lonely-if',
-  'no-magic-numbers',
   'no-multi-assign',
   'no-negated-condition',
   'no-nested-ternary',

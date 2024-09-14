@@ -44,7 +44,12 @@ test('rules', async (t) => {
       if (!Array.isArray(value)) throw new Error()
       const [level, ...options] = value
       if (typeof level === 'number') throw new Error()
-      return [name, [{ error: 2, warn: 1, off: 0 }[level], ...options]]
+      enum Level {
+        error = 2,
+        warn = 1,
+        off = 0,
+      }
+      return [name, [Level[level], ...options]]
     }),
   )
   t.deepEqual(actual.rules, normalized)

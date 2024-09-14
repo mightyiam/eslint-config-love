@@ -49,6 +49,7 @@ test('our configuration is compatible with the plugin and parser at bottom of de
 
   const results = await eslint.lintText('', { filePath: 'src/index.ts' })
 
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   t.true(results.length > 0)
   results.forEach((result) => t.deepEqual(result.messages, [], result.filePath))
 })
