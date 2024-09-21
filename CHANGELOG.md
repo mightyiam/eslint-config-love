@@ -1,3 +1,13 @@
+## [69.0.0](https://github.com/mightyiam/eslint-config-love/compare/v68.0.0...v69.0.0) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-redundant-type-constituents
+
+### Features
+
+* @typescript-eslint/no-redundant-type-constituents ([f470d44](https://github.com/mightyiam/eslint-config-love/commit/f470d448c66a0036079cd0bad47254cda44e360e))
+
 ## [68.0.0](https://github.com/mightyiam/eslint-config-love/compare/v67.0.0...v68.0.0) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
