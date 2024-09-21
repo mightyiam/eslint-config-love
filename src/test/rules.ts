@@ -9,10 +9,6 @@ import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from '../_intentionally-unused-rules'
 import { rulesToConsider } from './_rules_to_consider'
 
-if (pluginN === undefined) throw new Error()
-if (pluginImport === undefined) throw new Error()
-if (pluginPromise === undefined) throw new Error()
-
 const eslintRules = new TSESLint.Linter().getRules()
 
 if (pluginN.rules === undefined) throw new Error()
@@ -105,7 +101,6 @@ test('no deprecated rules', (t) => {
 test('JS equivalent rules are off', async (t) => {
   if (pluginTseslint.rules === undefined) throw new Error()
   const ourRules_: TSESLint.FlatConfig.Rules = ourRules
-  if (ourRules_ === undefined) throw new Error()
 
   const jsEquivalentRulesThatAreOn = equivalents.filter((ruleName) => {
     const baseRuleConfig = ourRules_[ruleName]

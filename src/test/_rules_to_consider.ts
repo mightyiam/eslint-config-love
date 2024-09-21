@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-unnecessary-condition',
   '@typescript-eslint/no-unnecessary-parameter-property-assignment',
   '@typescript-eslint/no-unnecessary-qualifier',
   '@typescript-eslint/no-unnecessary-template-expression',

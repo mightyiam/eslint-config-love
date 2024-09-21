@@ -168,6 +168,12 @@ const rules = {
   ],
   '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
+  '@typescript-eslint/no-unnecessary-condition': [
+    'error',
+    {
+      allowConstantLoopConditions: true,
+    },
+  ],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
