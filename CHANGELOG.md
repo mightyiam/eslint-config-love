@@ -1,3 +1,13 @@
+## [68.0.0](https://github.com/mightyiam/eslint-config-love/compare/v67.0.0...v68.0.0) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-non-null-asserted-nullish-coalescing
+
+### Features
+
+* @typescript-eslint/no-non-null-asserted-nullish-coalescing ([0f20905](https://github.com/mightyiam/eslint-config-love/commit/0f2090579b3f97325a0dfe04c0bf52ede2a862f6))
+
 ## [67.0.0](https://github.com/mightyiam/eslint-config-love/compare/v66.0.0...v67.0.0) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
