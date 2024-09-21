@@ -161,6 +161,7 @@ const rules = {
   '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
   '@typescript-eslint/no-non-null-assertion': ['error'],
   '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
+  '@typescript-eslint/no-redundant-type-constituents': ['error'],
   '@typescript-eslint/no-require-imports': [
     'error',
     { allow: [], allowAsImport: false },
