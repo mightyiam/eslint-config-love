@@ -32,4 +32,8 @@ export const intentionallyUnusedRules: string[] = [
   'n/no-restricted-import',
   'n/no-restricted-require',
   'no-restricted-imports',
+
+  // Too strict
+  '@typescript-eslint/no-shadow',
+  'no-shadow',
 ]
