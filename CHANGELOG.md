@@ -1,3 +1,13 @@
+## [67.0.0](https://github.com/mightyiam/eslint-config-love/compare/v66.0.0...v67.0.0) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-mixed-enums
+
+### Features
+
+* @typescript-eslint/no-mixed-enums ([da072ba](https://github.com/mightyiam/eslint-config-love/commit/da072ba8bef575bea420943c16ac640b6631fa5a))
+
 ## [66.0.0](https://github.com/mightyiam/eslint-config-love/compare/v65.0.0...v66.0.0) (2024-09-14)
 
 ### ⚠ BREAKING CHANGES
