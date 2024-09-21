@@ -329,6 +329,12 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       'error',
       { allow: [], allowAsImport: false },
     ],
+    '@typescript-eslint/no-unnecessary-condition': [
+      'error',
+      {
+        allowConstantLoopConditions: true,
+      },
+    ],
     '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
     '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
