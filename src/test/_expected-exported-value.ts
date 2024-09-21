@@ -324,6 +324,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
     '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
     '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
+    '@typescript-eslint/no-redundant-type-constituents': ['error'],
     '@typescript-eslint/no-require-imports': [
       'error',
       { allow: [], allowAsImport: false },
