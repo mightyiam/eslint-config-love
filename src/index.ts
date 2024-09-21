@@ -4,7 +4,7 @@ import * as importPlugin from 'eslint-plugin-import'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
-const rules = {
+const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
   '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': ['error'],
@@ -255,7 +255,9 @@ const rules = {
     { lib: 'never', path: 'never', types: 'never' },
   ],
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
+}
 
+const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'accessor-pairs': [
     'error',
     { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true },
@@ -363,7 +365,9 @@ const rules = {
   ],
   'valid-typeof': ['error', { requireStringLiterals: true }],
   yoda: ['error', 'never'],
+}
 
+const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/export': ['error'],
   'import/first': ['error'],
   'import/no-absolute-path': [
@@ -373,7 +377,9 @@ const rules = {
   'import/no-duplicates': ['error'],
   'import/no-named-default': ['error'],
   'import/no-webpack-loader-syntax': ['error'],
+}
 
+const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': ['error'],
   'n/no-deprecated-api': ['error'],
@@ -381,9 +387,19 @@ const rules = {
   'n/no-new-require': ['error'],
   'n/no-path-concat': ['error'],
   'n/process-exit-as-throw': ['error'],
+}
 
+const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'promise/param-names': ['error'],
-} satisfies TSESLint.ClassicConfig.RulesRecord
+}
+
+const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+  ...eslintRules,
+  ...importRules,
+  ...nRules,
+  ...promiseRules,
+  ...tseslintRules,
+}
 
 const eslintRuleNames = [...new TSESLint.Linter().getRules().keys()]
 const namesOfEslintRulesForWhichWeAreUsingTsEquivalents =
