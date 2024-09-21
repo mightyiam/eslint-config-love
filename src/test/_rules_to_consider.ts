@@ -1,4 +1,4 @@
-const eslintRulesToConsider = [
+export const eslintRulesToConsider = [
   'arrow-body-style',
   'block-scoped-var',
   'camelcase',
@@ -92,7 +92,7 @@ const eslintRulesToConsider = [
   'vars-on-top',
 ]
 
-const importRulesToConsider = [
+export const importRulesToConsider = [
   'import/consistent-type-specifier-style',
   'import/default',
   'import/dynamic-import-chunkname',
@@ -133,7 +133,7 @@ const importRulesToConsider = [
   'import/unambiguous',
 ]
 
-const nRulesToConsider = [
+export const nRulesToConsider = [
   'n/callback-return',
   'n/exports-style',
   'n/file-extension-in-import',
@@ -165,7 +165,7 @@ const nRulesToConsider = [
   'n/prefer-promises/fs',
 ]
 
-const promiseRulesToConsider = [
+export const promiseRulesToConsider = [
   'promise/always-return',
   'promise/avoid-new',
   'promise/catch-or-return',
@@ -183,7 +183,7 @@ const promiseRulesToConsider = [
   'promise/valid-params',
 ]
 
-const tseslintRulesToConsider = [
+export const tseslintRulesToConsider = [
   '@typescript-eslint/no-unnecessary-parameter-property-assignment',
   '@typescript-eslint/no-unnecessary-qualifier',
   '@typescript-eslint/no-unnecessary-template-expression',

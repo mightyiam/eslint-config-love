@@ -4,11 +4,10 @@ import * as importPlugin from 'eslint-plugin-import'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
-const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
-  'no-magic-numbers': ['off'],
-  'no-var': ['error'],
-  'object-shorthand': ['warn', 'properties'],
-
+export const expectedEslintRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
   'accessor-pairs': [
     'error',
     {
@@ -50,7 +49,6 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'no-dupe-class-members': ['off'],
   'no-dupe-keys': ['error'],
   'no-duplicate-case': ['error'],
-  'no-useless-backreference': ['error'],
   'no-empty': ['error', { allowEmptyCatch: true }],
   'no-empty-character-class': ['error'],
   'no-empty-function': ['off'],
@@ -72,9 +70,8 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'no-lone-blocks': ['error'],
   'no-loop-func': ['off'],
   'no-loss-of-precision': ['error'],
+  'no-magic-numbers': ['off'],
   'no-misleading-character-class': ['error'],
-  'no-prototype-builtins': ['error'],
-  'no-useless-catch': ['error'],
   'no-multi-str': ['error'],
   'no-new': ['error'],
   'no-new-func': ['error'],
@@ -85,6 +82,7 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'no-octal': ['error'],
   'no-octal-escape': ['error'],
   'no-proto': ['error'],
+  'no-prototype-builtins': ['error'],
   'no-redeclare': ['off'],
   'no-regex-spaces': ['error'],
   'no-return-assign': ['error', 'except-parens'],
@@ -107,14 +105,18 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'no-unused-expressions': ['off'],
   'no-unused-vars': ['off'],
   'no-use-before-define': ['off'],
+  'no-useless-backreference': ['error'],
   'no-useless-call': ['error'],
+  'no-useless-catch': ['error'],
   'no-useless-computed-key': ['error'],
   'no-useless-constructor': ['off'],
   'no-useless-escape': ['error'],
   'no-useless-rename': ['error'],
   'no-useless-return': ['error'],
+  'no-var': ['error'],
   'no-void': ['error', { allowAsStatement: true }],
   'no-with': ['error'],
+  'object-shorthand': ['warn', 'properties'],
   'one-var': ['error', { initialized: 'never' }],
   'prefer-const': [
     'error',
@@ -135,7 +137,10 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   yoda: ['error', 'never'],
 }
 
-const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const expectedImportRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
   'import/export': ['error'],
   'import/first': ['error'],
   'import/no-absolute-path': [
@@ -147,7 +152,7 @@ const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/no-webpack-loader-syntax': ['error'],
 }
 
-const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const expectedNRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': ['error'],
   'n/no-deprecated-api': ['error'],
@@ -157,11 +162,17 @@ const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/process-exit-as-throw': ['error'],
 }
 
-const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const expectedPromiseRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
   'promise/param-names': ['error'],
 }
 
-const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const expectedTseslintRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
   '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': ['error'],
@@ -177,6 +188,7 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     },
   ],
   '@typescript-eslint/ban-tslint-comment': ['error'],
+  '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   '@typescript-eslint/class-methods-use-this': [
     'error',
     {
@@ -186,7 +198,6 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       ignoreClassesThatImplementAnInterface: false,
     },
   ],
-  '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   '@typescript-eslint/consistent-generic-constructors': [
     'error',
     'constructor',
@@ -268,6 +279,10 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       allow: [],
     },
   ],
+  '@typescript-eslint/no-empty-object-type': [
+    'error',
+    { allowInterfaces: 'with-single-extends', allowObjectTypes: 'never' },
+  ],
   '@typescript-eslint/no-explicit-any': [
     'error',
     { fixToUnknown: false, ignoreRestArgs: false },
@@ -276,10 +291,6 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/no-extraneous-class': [
     'error',
     { allowWithDecorator: true },
-  ],
-  '@typescript-eslint/no-empty-object-type': [
-    'error',
-    { allowInterfaces: 'with-single-extends', allowObjectTypes: 'never' },
   ],
   '@typescript-eslint/no-floating-promises': ['error'],
   '@typescript-eslint/no-for-in-array': ['error'],
@@ -317,14 +328,14 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': ['error'],
   '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
   '@typescript-eslint/no-non-null-assertion': ['error'],
-  '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
-  '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
   '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
   '@typescript-eslint/no-redundant-type-constituents': ['error'],
   '@typescript-eslint/no-require-imports': [
     'error',
     { allow: [], allowAsImport: false },
   ],
+  '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
+  '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
   '@typescript-eslint/no-unnecessary-condition': [
     'error',
     {
@@ -333,9 +344,17 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   ],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
-  '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
   '@typescript-eslint/no-unsafe-function-type': ['error'],
+  '@typescript-eslint/no-unused-expressions': [
+    'error',
+    {
+      allowShortCircuit: true,
+      allowTaggedTemplates: true,
+      allowTernary: true,
+      enforceForJSX: false,
+    },
+  ],
   '@typescript-eslint/no-unused-vars': [
     'error',
     {
@@ -355,17 +374,9 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       typedefs: false,
     },
   ],
-  '@typescript-eslint/no-unused-expressions': [
-    'error',
-    {
-      allowShortCircuit: true,
-      allowTaggedTemplates: true,
-      allowTernary: true,
-      enforceForJSX: false,
-    },
-  ],
   '@typescript-eslint/no-useless-constructor': ['error'],
   '@typescript-eslint/no-wrapper-object-types': ['error'],
+  '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
   '@typescript-eslint/only-throw-error': [
     'error',
     { allowThrowingAny: false, allowThrowingUnknown: false },
@@ -377,18 +388,18 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false },
   ],
   '@typescript-eslint/prefer-optional-chain': ['error'],
+  '@typescript-eslint/prefer-promise-reject-errors': ['error'],
   '@typescript-eslint/prefer-readonly': ['error'],
   '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
   '@typescript-eslint/prefer-return-this-type': ['error'],
   '@typescript-eslint/promise-function-async': ['error'],
-  '@typescript-eslint/prefer-promise-reject-errors': ['error'],
-  '@typescript-eslint/restrict-plus-operands': [
-    'error',
-    { skipCompoundAssignments: false },
-  ],
   '@typescript-eslint/require-array-sort-compare': [
     'error',
     { ignoreStringArrays: true },
+  ],
+  '@typescript-eslint/restrict-plus-operands': [
+    'error',
+    { skipCompoundAssignments: false },
   ],
   '@typescript-eslint/restrict-template-expressions': [
     'error',
@@ -414,6 +425,14 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
 }
 
+export const expectedExportedRules = {
+  ...expectedEslintRules,
+  ...expectedImportRules,
+  ...expectedNRules,
+  ...expectedPromiseRules,
+  ...expectedTseslintRules,
+}
+
 export const expectedExportedValue: TSESLint.FlatConfig.Config = {
   languageOptions: {
     parser,
@@ -421,17 +440,12 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
       projectService: true,
     },
   },
+
   plugins: {
     '@typescript-eslint': tseslintPlugin,
     import: importPlugin,
     n: nPlugin,
     promise: promisePlugin,
   },
-  rules: {
-    ...eslintRules,
-    ...importRules,
-    ...nRules,
-    ...promiseRules,
-    ...tseslintRules,
-  },
+  rules: expectedExportedRules,
 }

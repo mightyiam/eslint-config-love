@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
   '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': ['error'],
@@ -16,6 +16,7 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     },
   ],
   '@typescript-eslint/ban-tslint-comment': ['error'],
+  '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   '@typescript-eslint/class-methods-use-this': [
     'error',
     {
@@ -25,7 +26,6 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       ignoreClassesThatImplementAnInterface: false,
     },
   ],
-  '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   '@typescript-eslint/consistent-generic-constructors': [
     'error',
     'constructor',
@@ -107,6 +107,10 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       allow: [],
     },
   ],
+  '@typescript-eslint/no-empty-object-type': [
+    'error',
+    { allowInterfaces: 'with-single-extends', allowObjectTypes: 'never' },
+  ],
   '@typescript-eslint/no-explicit-any': [
     'error',
     { fixToUnknown: false, ignoreRestArgs: false },
@@ -115,10 +119,6 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/no-extraneous-class': [
     'error',
     { allowWithDecorator: true },
-  ],
-  '@typescript-eslint/no-empty-object-type': [
-    'error',
-    { allowInterfaces: 'with-single-extends', allowObjectTypes: 'never' },
   ],
   '@typescript-eslint/no-floating-promises': ['error'],
   '@typescript-eslint/no-for-in-array': ['error'],
@@ -253,7 +253,7 @@ const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
 }
 
-const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'accessor-pairs': [
     'error',
     { setWithoutGet: true, getWithoutSet: false, enforceForClassMembers: true },
@@ -363,7 +363,7 @@ const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   yoda: ['error', 'never'],
 }
 
-const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/export': ['error'],
   'import/first': ['error'],
   'import/no-absolute-path': [
@@ -375,7 +375,7 @@ const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/no-webpack-loader-syntax': ['error'],
 }
 
-const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': ['error'],
   'n/no-deprecated-api': ['error'],
@@ -385,7 +385,7 @@ const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/process-exit-as-throw': ['error'],
 }
 
-const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+export const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'promise/param-names': ['error'],
 }
 
