@@ -7,7 +7,22 @@ import { equivalents, ourRules } from './_util'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from '../_intentionally-unused-rules'
-import { rulesToConsider } from './_rules_to_consider'
+import {
+  eslintRulesToConsider,
+  importRulesToConsider,
+  nRulesToConsider,
+  promiseRulesToConsider,
+  rulesToConsider,
+  tseslintRulesToConsider,
+} from './_rules_to_consider'
+import {
+  expectedEslintRules,
+  expectedImportRules,
+  expectedNRules,
+  expectedPromiseRules,
+  expectedTseslintRules,
+} from './_expected-exported-value'
+import { importRules, nRules, promiseRules, tseslintRules } from '../rules'
 
 const eslintRules = new TSESLint.Linter().getRules()
 
@@ -118,4 +133,33 @@ test('JS equivalent rules are off', async (t) => {
   })
 
   t.deepEqual(jsEquivalentRulesThatAreOn, [])
+})
+
+test('rule lists and objects are sorted', (t) => {
+  const actualRuleLists = {
+    eslintRulesToConsider,
+    importRulesToConsider,
+    nRulesToConsider,
+    promiseRulesToConsider,
+    tseslintRulesToConsider,
+    expectedEslintRules: Object.keys(expectedEslintRules),
+    expectedImportRules: Object.keys(expectedImportRules),
+    expectedNRules: Object.keys(expectedNRules),
+    expectedPromiseRules: Object.keys(expectedPromiseRules),
+    expectedTseslintRules: Object.keys(expectedTseslintRules),
+    eslintRules: Object.keys(eslintRules),
+    importRules: Object.keys(importRules),
+    nRules: Object.keys(nRules),
+    promiseRules: Object.keys(promiseRules),
+    tseslintRules: Object.keys(tseslintRules),
+  }
+
+  const sortedRuleLists = Object.fromEntries(
+    Object.entries(actualRuleLists).map(([listName, ruleNames]) => {
+      const sorted = [...ruleNames]
+      sorted.sort()
+      return [listName, sorted]
+    }),
+  )
+  t.deepEqual(actualRuleLists, sortedRuleLists)
 })
