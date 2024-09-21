@@ -4,7 +4,7 @@ import * as importPlugin from 'eslint-plugin-import'
 import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 
-const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'no-magic-numbers': ['off'],
   'no-var': ['error'],
   'object-shorthand': ['warn', 'properties'],
@@ -133,7 +133,9 @@ const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   ],
   'valid-typeof': ['error', { requireStringLiterals: true }],
   yoda: ['error', 'never'],
+}
 
+const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/export': ['error'],
   'import/first': ['error'],
   'import/no-absolute-path': [
@@ -143,7 +145,9 @@ const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/no-duplicates': ['error'],
   'import/no-named-default': ['error'],
   'import/no-webpack-loader-syntax': ['error'],
+}
 
+const nRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/handle-callback-err': ['error', '^(err|error)$'],
   'n/no-callback-literal': ['error'],
   'n/no-deprecated-api': ['error'],
@@ -151,8 +155,13 @@ const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/no-new-require': ['error'],
   'n/no-path-concat': ['error'],
   'n/process-exit-as-throw': ['error'],
+}
 
+const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'promise/param-names': ['error'],
+}
+
+const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/adjacent-overload-signatures': ['error'],
   '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   '@typescript-eslint/await-thenable': ['error'],
@@ -418,5 +427,11 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
     n: nPlugin,
     promise: promisePlugin,
   },
-  rules,
+  rules: {
+    ...eslintRules,
+    ...importRules,
+    ...nRules,
+    ...promiseRules,
+    ...tseslintRules,
+  },
 }
