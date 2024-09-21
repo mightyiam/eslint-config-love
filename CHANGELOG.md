@@ -1,3 +1,13 @@
+## [70.0.0](https://github.com/mightyiam/eslint-config-love/compare/v69.0.0...v70.0.0) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-condition
+
+### Features
+
+* @typescript-eslint/no-unnecessary-condition ([edc29da](https://github.com/mightyiam/eslint-config-love/commit/edc29daecfa06135a4ed1b68807b2df6cf87c866))
+
 ## [69.0.0](https://github.com/mightyiam/eslint-config-love/compare/v68.0.0...v69.0.0) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
