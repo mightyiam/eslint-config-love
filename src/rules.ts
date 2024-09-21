@@ -170,6 +170,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       allowConstantLoopConditions: true,
     },
   ],
+  '@typescript-eslint/no-unnecessary-parameter-property-assignment': ['error'],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
