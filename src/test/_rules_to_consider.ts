@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-restricted-imports',
   '@typescript-eslint/no-shadow',
   '@typescript-eslint/no-unnecessary-condition',
   '@typescript-eslint/no-unnecessary-parameter-property-assignment',
@@ -106,8 +105,6 @@ export const rulesToConsider = [
   'n/no-mixed-requires',
   'n/no-process-env',
   'n/no-process-exit',
-  'n/no-restricted-import',
-  'n/no-restricted-require',
   'n/no-sync',
   'n/no-unpublished-bin',
   'n/no-unpublished-import',
@@ -156,7 +153,6 @@ export const rulesToConsider = [
   'no-promise-executor-return',
   'no-restricted-exports',
   'no-restricted-globals',
-  'no-restricted-imports',
   'no-restricted-properties',
   'no-restricted-syntax',
   'no-script-url',

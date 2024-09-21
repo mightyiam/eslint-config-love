@@ -27,5 +27,9 @@ export const intentionallyUnusedRules: string[] = [
   '@typescript-eslint/no-invalid-this',
 
   // For project specific usage
+  '@typescript-eslint/no-restricted-imports',
   '@typescript-eslint/no-restricted-types',
+  'n/no-restricted-import',
+  'n/no-restricted-require',
+  'no-restricted-imports',
 ]
