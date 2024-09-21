@@ -1,5 +1,4 @@
 export const rulesToConsider = [
-  '@typescript-eslint/no-mixed-enums',
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing',
   '@typescript-eslint/no-redundant-type-constituents',
   '@typescript-eslint/no-restricted-imports',
