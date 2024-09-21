@@ -1,3 +1,13 @@
+## [71.0.0](https://github.com/mightyiam/eslint-config-love/compare/v70.0.0...v71.0.0) (2024-09-21)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-parameter-property-assignment
+
+### Features
+
+* @typescript-eslint/no-unnecessary-parameter-property-assignment ([674dddc](https://github.com/mightyiam/eslint-config-love/commit/674dddc22c9341b35037f5ee33ab1d209f5068b8))
+
 ## [70.0.0](https://github.com/mightyiam/eslint-config-love/compare/v69.0.0...v70.0.0) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
