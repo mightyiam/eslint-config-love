@@ -184,7 +184,6 @@ export const promiseRulesToConsider = [
 ]
 
 export const tseslintRulesToConsider = [
-  '@typescript-eslint/no-unnecessary-template-expression',
   '@typescript-eslint/no-unnecessary-type-arguments',
   '@typescript-eslint/no-unnecessary-type-parameters',
   '@typescript-eslint/no-unsafe-assignment',

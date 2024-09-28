@@ -344,6 +344,7 @@ export const expectedTseslintRules: Record<
   ],
   '@typescript-eslint/no-unnecessary-parameter-property-assignment': ['error'],
   '@typescript-eslint/no-unnecessary-qualifier': ['error'],
+  '@typescript-eslint/no-unnecessary-template-expression': ['error'],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
