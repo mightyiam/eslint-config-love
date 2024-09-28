@@ -1,3 +1,13 @@
+## [82.0.0](https://github.com/mightyiam/eslint-config-love/compare/v81.0.0...v82.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-unary-minus
+
+### Features
+
+* @typescript-eslint/no-unsafe-unary-minus ([cd78330](https://github.com/mightyiam/eslint-config-love/commit/cd78330bd97f019206c8791fe5694df9a6f09691))
+
 ## [81.0.0](https://github.com/mightyiam/eslint-config-love/compare/v80.0.0...v81.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
