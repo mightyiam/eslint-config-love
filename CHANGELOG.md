@@ -1,3 +1,13 @@
+## [81.0.0](https://github.com/mightyiam/eslint-config-love/compare/v80.0.0...v81.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-return
+
+### Features
+
+* @typescript-eslint/no-unsafe-return ([cc8b20c](https://github.com/mightyiam/eslint-config-love/commit/cc8b20cb4024db23baaae7164a18cad62c2b4688))
+
 ## [80.0.0](https://github.com/mightyiam/eslint-config-love/compare/v79.0.0...v80.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
