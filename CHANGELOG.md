@@ -1,3 +1,13 @@
+## [83.0.0](https://github.com/mightyiam/eslint-config-love/compare/v82.0.0...v83.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-useless-empty-export
+
+### Features
+
+* @typescript-eslint/no-useless-empty-export ([2fcd608](https://github.com/mightyiam/eslint-config-love/commit/2fcd608133f4af089fafac935a1aa6d94e4b8770))
+
 ## [82.0.0](https://github.com/mightyiam/eslint-config-love/compare/v81.0.0...v82.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
