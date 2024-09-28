@@ -1,3 +1,13 @@
+## [76.0.0](https://github.com/mightyiam/eslint-config-love/compare/v75.0.0...v76.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-assignment
+
+### Features
+
+* @typescript-eslint/no-unsafe-assignment ([3ad9d35](https://github.com/mightyiam/eslint-config-love/commit/3ad9d357d1fc5fec5fa62a93d655e57e3e076054))
+
 ## [75.0.0](https://github.com/mightyiam/eslint-config-love/compare/v74.0.0...v75.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
