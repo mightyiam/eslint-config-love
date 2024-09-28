@@ -184,7 +184,6 @@ export const promiseRulesToConsider = [
 ]
 
 export const tseslintRulesToConsider = [
-  '@typescript-eslint/no-unsafe-enum-comparison',
   '@typescript-eslint/no-unsafe-member-access',
   '@typescript-eslint/no-unsafe-return',
   '@typescript-eslint/no-unsafe-unary-minus',
