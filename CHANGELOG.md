@@ -1,3 +1,13 @@
+## [79.0.0](https://github.com/mightyiam/eslint-config-love/compare/v78.0.0...v79.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-enum-comparison
+
+### Features
+
+* @typescript-eslint/no-unsafe-enum-comparison ([3d1e6a4](https://github.com/mightyiam/eslint-config-love/commit/3d1e6a4d1c837f18f2bb5392c13c2c5b4629142c))
+
 ## [78.0.0](https://github.com/mightyiam/eslint-config-love/compare/v77.0.0...v78.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
