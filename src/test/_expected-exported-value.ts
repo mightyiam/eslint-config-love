@@ -350,6 +350,7 @@ export const expectedTseslintRules: Record<
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unnecessary-type-parameters': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
+  '@typescript-eslint/no-unsafe-assignment': ['error'],
   '@typescript-eslint/no-unsafe-function-type': ['error'],
   '@typescript-eslint/no-unused-expressions': [
     'error',
