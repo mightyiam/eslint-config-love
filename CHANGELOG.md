@@ -1,3 +1,13 @@
+## [74.0.0](https://github.com/mightyiam/eslint-config-love/compare/v73.0.0...v74.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-type-arguments
+
+### Features
+
+* @typescript-eslint/no-unnecessary-type-arguments ([5260a95](https://github.com/mightyiam/eslint-config-love/commit/5260a95a5267aadb0f707920eaedc96e238fd816))
+
 ## [73.0.0](https://github.com/mightyiam/eslint-config-love/compare/v72.0.0...v73.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
