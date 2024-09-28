@@ -1,3 +1,13 @@
+## [78.0.0](https://github.com/mightyiam/eslint-config-love/compare/v77.0.0...v78.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-declaration-merging
+
+### Features
+
+* @typescript-eslint/no-unsafe-declaration-merging ([1ef8375](https://github.com/mightyiam/eslint-config-love/commit/1ef8375a5d21fbab28ce492876a78354b52da3a9))
+
 ## [77.0.0](https://github.com/mightyiam/eslint-config-love/compare/v76.0.0...v77.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
