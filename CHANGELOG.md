@@ -1,3 +1,13 @@
+## [73.0.0](https://github.com/mightyiam/eslint-config-love/compare/v72.0.0...v73.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-template-expression
+
+### Features
+
+* @typescript-eslint/no-unnecessary-template-expression ([b0499ee](https://github.com/mightyiam/eslint-config-love/commit/b0499eeaeefe3e6575ca72664f510d4837074a97))
+
 ## [72.0.0](https://github.com/mightyiam/eslint-config-love/compare/v71.0.0...v72.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
