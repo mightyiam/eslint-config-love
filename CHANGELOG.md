@@ -1,3 +1,13 @@
+## [77.0.0](https://github.com/mightyiam/eslint-config-love/compare/v76.0.0...v77.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-call
+
+### Features
+
+* @typescript-eslint/no-unsafe-call ([770e66f](https://github.com/mightyiam/eslint-config-love/commit/770e66fdf950a953160a25f483b88a52031aaf74))
+
 ## [76.0.0](https://github.com/mightyiam/eslint-config-love/compare/v75.0.0...v76.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
