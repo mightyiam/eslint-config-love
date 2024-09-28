@@ -176,6 +176,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/no-unnecessary-type-arguments': ['error'],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
+  '@typescript-eslint/no-unnecessary-type-parameters': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
   '@typescript-eslint/no-unsafe-function-type': ['error'],
   '@typescript-eslint/no-unused-expressions': [
