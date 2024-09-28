@@ -1,3 +1,13 @@
+## [80.0.0](https://github.com/mightyiam/eslint-config-love/compare/v79.0.0...v80.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-member-access
+
+### Features
+
+* @typescript-eslint/no-unsafe-member-access ([239ec33](https://github.com/mightyiam/eslint-config-love/commit/239ec33a2bf420d9cf6a738b2b08d49ba6bbfac1))
+
 ## [79.0.0](https://github.com/mightyiam/eslint-config-love/compare/v78.0.0...v79.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
