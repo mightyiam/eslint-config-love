@@ -1,3 +1,13 @@
+## [72.0.0](https://github.com/mightyiam/eslint-config-love/compare/v71.0.0...v72.0.0) (2024-09-28)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-qualifier
+
+### Features
+
+* @typescript-eslint/no-unnecessary-qualifier ([63ecc82](https://github.com/mightyiam/eslint-config-love/commit/63ecc8261f73fddf3bedda9f5d8cf800535555e7))
+
 ## [71.0.0](https://github.com/mightyiam/eslint-config-love/compare/v70.0.0...v71.0.0) (2024-09-21)
 
 ### ⚠ BREAKING CHANGES
