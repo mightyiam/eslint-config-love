@@ -173,6 +173,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/no-unnecessary-parameter-property-assignment': ['error'],
   '@typescript-eslint/no-unnecessary-qualifier': ['error'],
   '@typescript-eslint/no-unnecessary-template-expression': ['error'],
+  '@typescript-eslint/no-unnecessary-type-arguments': ['error'],
   '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
   '@typescript-eslint/no-unnecessary-type-constraint': ['error'],
   '@typescript-eslint/no-unsafe-argument': ['error'],
