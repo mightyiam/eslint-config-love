@@ -215,6 +215,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     },
   ],
   '@typescript-eslint/no-useless-constructor': ['error'],
+  '@typescript-eslint/no-useless-empty-export': ['error'],
   '@typescript-eslint/no-wrapper-object-types': ['error'],
   '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
   '@typescript-eslint/only-throw-error': [
