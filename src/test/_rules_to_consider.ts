@@ -49,7 +49,6 @@ export const eslintRulesToConsider = [
   'no-multi-assign',
   'no-negated-condition',
   'no-nested-ternary',
-  'no-new-native-nonconstructor',
   'no-nonoctal-decimal-escape',
   'no-param-reassign',
   'no-plusplus',
