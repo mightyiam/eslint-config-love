@@ -5,7 +5,9 @@ import * as nPlugin from 'eslint-plugin-n'
 import * as promisePlugin from 'eslint-plugin-promise'
 import { rules } from './rules'
 
-const eslintRuleNames = [...new TSESLint.Linter().getRules().keys()]
+const eslintRuleNames = [
+  ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
+]
 const namesOfEslintRulesForWhichWeAreUsingTsEquivalents =
   eslintRuleNames.filter((name) =>
     Object.hasOwn(rules, `@typescript-eslint/${name}`),

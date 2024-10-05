@@ -20,9 +20,6 @@ export const intentionallyUnusedRules: string[] = [
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
 
-  // no-new-native-nonconstructor
-  'no-new-symbol',
-
   // From rule documentation:
   // > If possible, it is recommended to use tsconfig's noImplicitReturns option rather than this rule. noImplicitReturns is powered by TS's type information and control-flow analysis so it has better coverage than this rule.
   '@typescript-eslint/consistent-return',

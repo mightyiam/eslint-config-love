@@ -67,6 +67,8 @@ const ourRules_ = exported.rules
 if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
 export const ourRules = ourRules_
 
-export const equivalents = [...new TSESLint.Linter().getRules().keys()].filter(
-  (name) => Object.prototype.hasOwnProperty.call(tseslintPlugin.rules, name),
+export const equivalents = [
+  ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
+].filter((name) =>
+  Object.prototype.hasOwnProperty.call(tseslintPlugin.rules, name),
 )
