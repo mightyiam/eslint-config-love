@@ -1,3 +1,13 @@
+## [84.0.0](https://github.com/mightyiam/eslint-config-love/compare/v83.0.0...v84.0.0) (2024-10-05)
+
+### ⚠ BREAKING CHANGES
+
+* no-new-native-nonconstructor
+
+### Features
+
+* no-new-native-nonconstructor ([a2b4e4b](https://github.com/mightyiam/eslint-config-love/commit/a2b4e4be7c8a7e71417e4e9da5b24ccddecf8ad0))
+
 ## [83.0.0](https://github.com/mightyiam/eslint-config-love/compare/v82.0.0...v83.0.0) (2024-09-28)
 
 ### ⚠ BREAKING CHANGES
