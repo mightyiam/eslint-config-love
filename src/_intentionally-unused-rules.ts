@@ -17,6 +17,9 @@ export const intentionallyUnusedRules: string[] = [
   // Made redundant by TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
 
+  // Made redundant by no-new-native-nonconstructor
+  'no-new-symbol',
+
   // From rule documentation:
   // > Requiring type annotations unnecessarily can be cumbersome to maintain and generally reduces code readability. TypeScript is often better at inferring types than easily written type annotations would allow.
   // >
