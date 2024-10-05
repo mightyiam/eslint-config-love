@@ -1,3 +1,9 @@
+## [84.1.0](https://github.com/mightyiam/eslint-config-love/compare/v84.0.0...v84.1.0) (2024-10-05)
+
+### Features
+
+* no-magic-numbers.enforceConst: false ([c711820](https://github.com/mightyiam/eslint-config-love/commit/c711820ac3064664388e7c5f8621804c60a65dd3)), closes [#1786](https://github.com/mightyiam/eslint-config-love/issues/1786)
+
 ## [84.0.0](https://github.com/mightyiam/eslint-config-love/compare/v83.0.0...v84.0.0) (2024-10-05)
 
 ### ⚠ BREAKING CHANGES
