@@ -137,7 +137,8 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       ignoreArrayIndexes: false,
       ignoreDefaultValues: false,
       ignoreClassFieldInitialValues: false,
-      enforceConst: true,
+      // https://github.com/mightyiam/eslint-config-love/issues/1786
+      enforceConst: false,
       detectObjects: true,
       ignoreEnums: true,
       ignoreNumericLiteralTypes: false,

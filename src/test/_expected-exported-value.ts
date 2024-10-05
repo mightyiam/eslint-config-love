@@ -309,7 +309,7 @@ export const expectedTseslintRules: Record<
       ignoreArrayIndexes: false,
       ignoreDefaultValues: false,
       ignoreClassFieldInitialValues: false,
-      enforceConst: true,
+      enforceConst: false,
       detectObjects: true,
       ignoreEnums: true,
       ignoreNumericLiteralTypes: false,
