@@ -80,7 +80,7 @@
     "ava": "6.1.3",
     "conventional-changelog-conventionalcommits": "8.0.0",
     "eslint": "8.57.1",
-    "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.25.2",
+    "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.31.0",
     "eslint-plugin-n_bottom": "npm:eslint-plugin-n@17.0.0",
     "eslint-plugin-promise_bottom": "npm:eslint-plugin-promise@7.0.0",
     "js-yaml": "4.1.0",
