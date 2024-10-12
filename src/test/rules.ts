@@ -24,7 +24,7 @@ import {
 } from './_expected-exported-value'
 import { importRules, nRules, promiseRules, tseslintRules } from '../rules'
 
-const eslintRules = new TSESLint.Linter().getRules()
+const eslintRules = new TSESLint.Linter({ configType: 'eslintrc' }).getRules()
 
 if (pluginN.rules === undefined) throw new Error()
 if (pluginImport.rules === undefined) throw new Error()
