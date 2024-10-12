@@ -1,3 +1,14 @@
+## [85.0.0](https://github.com/mightyiam/eslint-config-love/compare/v84.1.1...v85.0.0) (2024-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* peerDep eslint ^9.0.0
+* dep eslint-plugin-import ^2.31.0
+
+### Features
+
+* eslint v9 ([018e202](https://github.com/mightyiam/eslint-config-love/commit/018e2025f5db92f63d3f40bea6b7c0eb5621887e)), closes [#1589](https://github.com/mightyiam/eslint-config-love/issues/1589) [#1734](https://github.com/mightyiam/eslint-config-love/issues/1734)
+
 ## [84.1.1](https://github.com/mightyiam/eslint-config-love/compare/v84.1.0...v84.1.1) (2024-10-12)
 
 ### Bug Fixes
