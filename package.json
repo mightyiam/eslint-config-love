@@ -59,7 +59,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-promise": "^7.0.0",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.3.0"
   },
   "peerDependencies": {
     "eslint": "^8.0.1",
@@ -94,7 +94,7 @@
     "tsconfigs": "5.0.0",
     "type-fest": "4.26.1",
     "typescript": "5.6.3",
-    "typescript-eslint_bottom": "npm:typescript-eslint@8.0.0"
+    "typescript-eslint_bottom": "npm:typescript-eslint@8.3.0"
   },
   "files": [
     "lib/index.js",

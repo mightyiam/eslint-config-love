@@ -29,8 +29,11 @@ test('our configuration is compatible with the plugin and parser at bottom of de
     'typescript-eslint_bottom version is min of dep',
   )
 
+  const filePath = 'src/index.ts'
+
   const config = {
     ...exported,
+    files: [filePath],
     languageOptions: {
       parser: tseslintBottomParser,
       parserOptions: {
@@ -39,15 +42,16 @@ test('our configuration is compatible with the plugin and parser at bottom of de
     },
     plugins: {
       ...exported.plugins,
-      'typescript-eslint': tseslintBottomPlugin,
+      '@typescript-eslint': tseslintBottomPlugin,
     },
   } satisfies TSESLint.FlatConfig.Config
 
   const eslint = new TSESLint.FlatESLint({
+    overrideConfigFile: true,
     baseConfig: [config],
   })
 
-  const results = await eslint.lintText('', { filePath: 'src/index.ts' })
+  const results = await eslint.lintText('', { filePath })
 
   // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   t.true(results.length > 0)
