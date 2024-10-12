@@ -1,3 +1,9 @@
+## [84.1.1](https://github.com/mightyiam/eslint-config-love/compare/v84.1.0...v84.1.1) (2024-10-12)
+
+### Bug Fixes
+
+* bump incorrect typescript-eslint peerDep ([5d1261f](https://github.com/mightyiam/eslint-config-love/commit/5d1261f47b21a14de0e36b39d0bff740cc40003f))
+
 ## [84.1.0](https://github.com/mightyiam/eslint-config-love/compare/v84.0.0...v84.1.0) (2024-10-05)
 
 ### Features
