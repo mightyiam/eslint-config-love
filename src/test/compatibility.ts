@@ -7,28 +7,39 @@ import {
   parser as tseslintBottomParser,
   plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
+import * as importBottomPlugin from 'eslint-plugin-import_bottom'
+import * as nBottomPlugin from 'eslint-plugin-n_bottom'
+import * as promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 
-const tseslintBottom = 'typescript-eslint_bottom'
-
-test('our configuration is compatible with the plugin and parser at bottom of dep range', async (t) => {
+test('bottom dep version is minimum of dep range', async (t) => {
   const { ourDeps, ourDevDeps } = await getPkgDetails()
 
-  const tseslintDepRange = ourDeps['typescript-eslint']
-  if (tseslintDepRange === undefined) throw new Error()
+  const bottomDepsThatAreNotMinOfDepRange = [
+    'typescript-eslint',
+    'eslint-plugin-import',
+    'eslint-plugin-n',
+    'eslint-plugin-promise',
+  ]
+    .map((depName) => {
+      const bottomRange = ourDevDeps[`${depName}_bottom`]
+      if (bottomRange === undefined) throw new Error()
+      const bottomVersion = extractVersionRange(bottomRange)
 
-  const tseslintBottomRange = ourDevDeps[tseslintBottom]
-  if (tseslintBottomRange === undefined) throw new Error()
-  const tseslintBottomVersion = extractVersionRange(tseslintBottomRange)
+      const depRange = ourDeps[depName]
+      if (depRange === undefined) throw new Error()
 
-  const tseslintMinVersion = semver.minVersion(tseslintDepRange)
-  if (tseslintMinVersion === null) throw new Error()
+      return { depName, bottomVersion, depRange }
+    })
+    .filter(({ bottomVersion, depRange }) => {
+      const minDepVersion = semver.minVersion(depRange)
+      if (minDepVersion === null) throw new Error()
+      return bottomVersion !== minDepVersion.version
+    })
 
-  t.deepEqual(
-    tseslintBottomVersion,
-    tseslintMinVersion.version,
-    'typescript-eslint_bottom version is min of dep',
-  )
+  t.deepEqual(bottomDepsThatAreNotMinOfDepRange, [])
+})
 
+test('our configuration is compatible with the plugins and parser at bottom of dep ranges', async (t) => {
   const filePath = 'src/index.ts'
 
   const config = {
@@ -41,8 +52,10 @@ test('our configuration is compatible with the plugin and parser at bottom of de
       },
     },
     plugins: {
-      ...exported.plugins,
       '@typescript-eslint': tseslintBottomPlugin,
+      import: importBottomPlugin,
+      n: nBottomPlugin,
+      promise: promiseBottomPlugin,
     },
   } satisfies TSESLint.FlatConfig.Config
 
