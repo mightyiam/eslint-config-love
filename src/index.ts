@@ -14,6 +14,10 @@ const namesOfEslintRulesForWhichWeAreUsingTsEquivalents =
   )
 
 const config: TSESLint.FlatConfig.Config = {
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
+
   languageOptions: {
     parser,
     parserOptions: {
