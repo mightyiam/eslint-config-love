@@ -1,3 +1,9 @@
+## [86.1.0](https://github.com/mightyiam/eslint-config-love/compare/v86.0.0...v86.1.0) (2024-10-13)
+
+### Features
+
+* rm no-redeclare ([35180f1](https://github.com/mightyiam/eslint-config-love/commit/35180f1a1cd4bbdc1b0b6415cfe1c6f234d2f607)), closes [#1514](https://github.com/mightyiam/eslint-config-love/issues/1514)
+
 ## [86.0.0](https://github.com/mightyiam/eslint-config-love/compare/v85.0.0...v86.0.0) (2024-10-13)
 
 ### ⚠ BREAKING CHANGES
