@@ -34,6 +34,10 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by strict TypeScript
   '@typescript-eslint/no-invalid-this',
 
+  // Covered by TypeScript
+  'no-redeclare',
+  '@typescript-eslint/no-redeclare',
+
   // ## Project specific
 
   '@typescript-eslint/no-restricted-imports',

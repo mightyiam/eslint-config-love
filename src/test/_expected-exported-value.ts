@@ -83,7 +83,6 @@ export const expectedEslintRules: Record<
   'no-octal-escape': ['error'],
   'no-proto': ['error'],
   'no-prototype-builtins': ['error'],
-  'no-redeclare': ['off'],
   'no-regex-spaces': ['error'],
   'no-return-assign': ['error', 'except-parens'],
   'no-self-assign': ['error', { props: true }],
@@ -328,7 +327,6 @@ export const expectedTseslintRules: Record<
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': ['error'],
   '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
   '@typescript-eslint/no-non-null-assertion': ['error'],
-  '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
   '@typescript-eslint/no-redundant-type-constituents': ['error'],
   '@typescript-eslint/no-require-imports': [
     'error',
