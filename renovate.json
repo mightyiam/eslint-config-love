@@ -18,6 +18,10 @@
       "groupName": "@commitlint packages"
     },
     {
+      "matchPackageNames": ["@typescript-eslint/*", "typescript-eslint"],
+      "groupName": "typescript-eslint packages"
+    },
+    {
       "matchDepTypes": ["peerDependencies"],
       "enabled": false
     },
