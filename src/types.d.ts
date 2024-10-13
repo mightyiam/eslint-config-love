@@ -28,3 +28,7 @@ declare module 'eslint-plugin-promise_bottom' {
   const plugin: TSESLint.Linter.Plugin
   export = plugin
 }
+declare module 'eslint_bottom' {
+  import { TSESLint } from '@typescript-eslint/utils'
+  export class ESLint extends TSESLint.FlatESLint {}
+}

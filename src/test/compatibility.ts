@@ -1,5 +1,6 @@
 import test from 'ava'
-import { TSESLint } from '@typescript-eslint/utils'
+import type { TSESLint } from '@typescript-eslint/utils'
+import { ESLint } from 'eslint_bottom'
 import exported from '..'
 import semver from 'semver'
 import { extractVersionRange, getPkgDetails } from './_util'
@@ -12,20 +13,21 @@ import * as nBottomPlugin from 'eslint-plugin-n_bottom'
 import * as promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 
 test('bottom dep version is minimum of dep range', async (t) => {
-  const { ourDeps, ourDevDeps } = await getPkgDetails()
+  const { ourDeps, ourDevDeps, ourPeerDeps } = await getPkgDetails()
 
   const bottomDepsThatAreNotMinOfDepRange = [
-    'typescript-eslint',
-    'eslint-plugin-import',
-    'eslint-plugin-n',
-    'eslint-plugin-promise',
+    ['typescript-eslint', ourDeps] as const,
+    ['eslint', ourPeerDeps] as const,
+    ['eslint-plugin-import', ourDeps] as const,
+    ['eslint-plugin-n', ourDeps] as const,
+    ['eslint-plugin-promise', ourDeps] as const,
   ]
-    .map((depName) => {
+    .map(([depName, depCategory]) => {
       const bottomRange = ourDevDeps[`${depName}_bottom`]
       if (bottomRange === undefined) throw new Error()
       const bottomVersion = extractVersionRange(bottomRange)
 
-      const depRange = ourDeps[depName]
+      const depRange = depCategory[depName]
       if (depRange === undefined) throw new Error()
 
       return { depName, bottomVersion, depRange }
@@ -59,7 +61,7 @@ test('our configuration is compatible with the plugins and parser at bottom of d
     },
   } satisfies TSESLint.FlatConfig.Config
 
-  const eslint = new TSESLint.FlatESLint({
+  const eslint = new ESLint({
     overrideConfigFile: true,
     baseConfig: [config],
   })
