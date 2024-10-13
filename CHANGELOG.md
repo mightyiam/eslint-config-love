@@ -1,3 +1,13 @@
+## [86.0.0](https://github.com/mightyiam/eslint-config-love/compare/v85.0.0...v86.0.0) (2024-10-13)
+
+### ⚠ BREAKING CHANGES
+
+* linterOptions.reportUnusedDisableDirectives error
+
+### Features
+
+* linterOptions.reportUnusedDisableDirectives error ([8ce4578](https://github.com/mightyiam/eslint-config-love/commit/8ce457824cbd0a6f7f15b9b457c7d118541a69ae)), closes [#1513](https://github.com/mightyiam/eslint-config-love/issues/1513)
+
 ## [85.0.0](https://github.com/mightyiam/eslint-config-love/compare/v84.1.1...v85.0.0) (2024-10-12)
 
 ### ⚠ BREAKING CHANGES
