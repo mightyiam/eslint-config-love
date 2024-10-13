@@ -1,3 +1,9 @@
+## [86.1.1](https://github.com/mightyiam/eslint-config-love/compare/v86.1.0...v86.1.1) (2024-10-13)
+
+### Bug Fixes
+
+* add missing @typescript-eslint/utils dep ([9e5dae8](https://github.com/mightyiam/eslint-config-love/commit/9e5dae8b92f70736435f800cae32fb24aaa3ef35)), closes [#1801](https://github.com/mightyiam/eslint-config-love/issues/1801)
+
 ## [86.1.0](https://github.com/mightyiam/eslint-config-love/compare/v86.0.0...v86.1.0) (2024-10-13)
 
 ### Features
