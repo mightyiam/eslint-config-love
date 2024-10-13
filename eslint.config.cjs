@@ -3,9 +3,6 @@ module.exports = [
   require('.'),
   {
     files: ['**/*.cjs', '**/*.js', '**/*.ts'],
-    linterOptions: {
-      reportUnusedDisableDirectives: 'error',
-    },
     languageOptions: {
       parserOptions: {
         projectService: {

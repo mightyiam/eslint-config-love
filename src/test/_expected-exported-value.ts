@@ -447,6 +447,10 @@ export const expectedExportedRules = {
 }
 
 export const expectedExportedValue: TSESLint.FlatConfig.Config = {
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
+
   languageOptions: {
     parser,
     parserOptions: {
