@@ -6,7 +6,7 @@ import pluginPromise from 'eslint-plugin-promise'
 import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
-import { intentionallyUnusedRules } from '../_intentionally-unused-rules.js'
+import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import {
   eslintRulesToConsider,
   importRulesToConsider,
