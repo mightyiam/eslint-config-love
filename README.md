@@ -31,12 +31,14 @@ It is expected that most version bumps will be major.
 
 ## Example config
 
-Here is an example `eslint.config.cjs`.
+Here is an example `eslint.config.js`.
 
 ```js
-module.exports = [
+import love from 'eslint-config-love'
+
+export default [
   {
-    ...require('eslint-config-love'),
+    ...love,
     files: ['**/*.js', '**/*.ts'],
   },
 ]
