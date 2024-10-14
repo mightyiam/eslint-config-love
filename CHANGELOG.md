@@ -1,3 +1,13 @@
+## [87.0.0](https://github.com/mightyiam/eslint-config-love/compare/v86.1.1...v87.0.0) (2024-10-14)
+
+### ⚠ BREAKING CHANGES
+
+* package is in ecmascript module format
+
+### Features
+
+* package is in ecmascript module format ([1d0aae4](https://github.com/mightyiam/eslint-config-love/commit/1d0aae47057990141cfdea7201746ed7442e7037)), closes [#1528](https://github.com/mightyiam/eslint-config-love/issues/1528)
+
 ## [86.1.1](https://github.com/mightyiam/eslint-config-love/compare/v86.1.0...v86.1.1) (2024-10-13)
 
 ### Bug Fixes
