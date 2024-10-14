@@ -1,4 +1,4 @@
-import exported from '..'
+import exported from '../index.js'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'

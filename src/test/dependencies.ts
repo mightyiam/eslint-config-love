@@ -4,7 +4,7 @@ import {
   getPkgDetails,
   isPinnedRange,
   isSingleCaretRange,
-} from './_util'
+} from './_util.js'
 
 test('range types', async (t) => {
   const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()

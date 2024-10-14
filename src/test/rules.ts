@@ -1,12 +1,12 @@
 import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
-import * as pluginN from 'eslint-plugin-n'
-import * as pluginImport from 'eslint-plugin-import'
-import * as pluginPromise from 'eslint-plugin-promise'
-import { equivalents, ourRules } from './_util'
+import pluginN from 'eslint-plugin-n'
+import pluginImport from 'eslint-plugin-import'
+import pluginPromise from 'eslint-plugin-promise'
+import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
-import { intentionallyUnusedRules } from '../_intentionally-unused-rules'
+import { intentionallyUnusedRules } from '../_intentionally-unused-rules.js'
 import {
   eslintRulesToConsider,
   importRulesToConsider,
@@ -14,15 +14,15 @@ import {
   promiseRulesToConsider,
   rulesToConsider,
   tseslintRulesToConsider,
-} from './_rules_to_consider'
+} from './_rules_to_consider.js'
 import {
   expectedEslintRules,
   expectedImportRules,
   expectedNRules,
   expectedPromiseRules,
   expectedTseslintRules,
-} from './_expected-exported-value'
-import { importRules, nRules, promiseRules, tseslintRules } from '../rules'
+} from './_expected-exported-value.js'
+import { importRules, nRules, promiseRules, tseslintRules } from '../rules.js'
 
 const eslintRules = new TSESLint.Linter({ configType: 'eslintrc' }).getRules()
 

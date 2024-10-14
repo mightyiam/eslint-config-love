@@ -1,6 +1,6 @@
 import test from 'ava'
-import exported from '..'
-import { getPkgDetails } from './_util'
+import exported from '../index.js'
+import { getPkgDetails } from './_util.js'
 
 test('rule configs are arrays', (t) => {
   if (exported.rules === undefined) throw new Error()
