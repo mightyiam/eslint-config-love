@@ -1,8 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
-import * as importPlugin from 'eslint-plugin-import'
-import * as nPlugin from 'eslint-plugin-n'
-import * as promisePlugin from 'eslint-plugin-promise'
+import importPlugin from 'eslint-plugin-import'
+import nPlugin from 'eslint-plugin-n'
+import promisePlugin from 'eslint-plugin-promise'
 
 export const expectedEslintRules: Record<
   string,

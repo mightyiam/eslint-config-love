@@ -1,9 +1,12 @@
 {
-  "extends": "tsconfigs/nodejs-module",
   "compilerOptions": {
-    "outDir": "lib",
+    "declaration": true,
+    "lib": ["ESNext"],
     "module": "nodenext",
-    "moduleResolution": "nodenext"
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "types": ["node"]
   },
   "include": ["src/**/*.ts"]
 }

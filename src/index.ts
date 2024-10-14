@@ -1,9 +1,9 @@
 import { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
-import * as importPlugin from 'eslint-plugin-import'
-import * as nPlugin from 'eslint-plugin-n'
-import * as promisePlugin from 'eslint-plugin-promise'
-import { rules } from './rules'
+import importPlugin from 'eslint-plugin-import'
+import nPlugin from 'eslint-plugin-n'
+import promisePlugin from 'eslint-plugin-promise'
+import { rules } from './rules.js'
 
 const eslintRuleNames = [
   ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
@@ -41,4 +41,4 @@ const config: TSESLint.FlatConfig.Config = {
   },
 }
 
-export = config
+export default config

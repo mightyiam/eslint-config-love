@@ -1,12 +1,13 @@
-module.exports = [
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  require('.'),
+import project from './lib/index.js'
+
+export default [
+  project,
   {
     files: ['**/*.cjs', '**/*.js', '**/*.ts'],
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['eslint.config.cjs', 'commitlint.config.js'],
+          allowDefaultProject: ['eslint.config.js', 'commitlint.config.js'],
           defaultProject: './tsconfig.json',
         },
       },

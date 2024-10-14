@@ -1,16 +1,16 @@
 import test from 'ava'
 import type { TSESLint } from '@typescript-eslint/utils'
 import { ESLint } from 'eslint_bottom'
-import exported from '..'
+import exported from '../index.js'
 import semver from 'semver'
-import { extractVersionRange, getPkgDetails } from './_util'
+import { extractVersionRange, getPkgDetails } from './_util.js'
 import {
   parser as tseslintBottomParser,
   plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
-import * as importBottomPlugin from 'eslint-plugin-import_bottom'
-import * as nBottomPlugin from 'eslint-plugin-n_bottom'
-import * as promiseBottomPlugin from 'eslint-plugin-promise_bottom'
+import importBottomPlugin from 'eslint-plugin-import_bottom'
+import nBottomPlugin from 'eslint-plugin-n_bottom'
+import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 
 test('bottom dep version is minimum of dep range', async (t) => {
   const { ourDeps, ourDevDeps, ourPeerDeps } = await getPkgDetails()
