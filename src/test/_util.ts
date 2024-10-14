@@ -3,6 +3,7 @@ import { plugin as tseslintPlugin } from 'typescript-eslint'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import type { PackageJson } from 'type-fest'
+import { readPackageUp } from 'read-package-up'
 
 interface PkgDetails {
   pkgPath: string
@@ -13,7 +14,6 @@ interface PkgDetails {
 }
 
 export const getPkgDetails = async (): Promise<PkgDetails> => {
-  const { readPackageUp } = await import('read-pkg-up')
   const readResult = await readPackageUp()
   if (readResult === undefined) {
     throw new Error()
