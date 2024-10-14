@@ -2,43 +2,25 @@ import exported from '../index.js'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
-import type { PackageJson } from 'type-fest'
 import { readPackageUp } from 'read-package-up'
 
-interface PkgDetails {
-  pkgPath: string
-  pkgJson: PackageJson
-  ourDeps: NonNullable<PackageJson['dependencies']>
-  ourPeerDeps: NonNullable<PackageJson['peerDependencies']>
-  ourDevDeps: NonNullable<PackageJson['devDependencies']>
+const readResult = await readPackageUp()
+if (readResult === undefined) {
+  throw new Error()
 }
-
-export const getPkgDetails = async (): Promise<PkgDetails> => {
-  const readResult = await readPackageUp()
-  if (readResult === undefined) {
-    throw new Error()
-  }
-  const ourPkg = readResult.packageJson
-  if (ourPkg.dependencies === undefined) {
-    throw new Error()
-  }
-  const ourDeps = ourPkg.dependencies
-  if (ourPkg.peerDependencies === undefined) {
-    throw new Error()
-  }
-  const ourPeerDeps = ourPkg.peerDependencies
-  if (ourPkg.devDependencies === undefined) {
-    throw new Error()
-  }
-  const ourDevDeps = ourPkg.devDependencies
-  return {
-    pkgJson: ourPkg,
-    pkgPath: readResult.path,
-    ourDeps,
-    ourPeerDeps,
-    ourDevDeps,
-  }
+const ourPkg = readResult.packageJson
+if (ourPkg.dependencies === undefined) {
+  throw new Error()
 }
+export const ourDeps = ourPkg.dependencies
+if (ourPkg.peerDependencies === undefined) {
+  throw new Error()
+}
+export const ourPeerDeps = ourPkg.peerDependencies
+if (ourPkg.devDependencies === undefined) {
+  throw new Error()
+}
+export const ourDevDeps = ourPkg.devDependencies
 
 export const isSingleCaretRange = (rangeStr: string): boolean => {
   const range = new semver.Range(rangeStr)
