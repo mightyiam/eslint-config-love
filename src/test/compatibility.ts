@@ -3,7 +3,12 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import { ESLint } from 'eslint_bottom'
 import exported from '../index.js'
 import semver from 'semver'
-import { extractVersionRange, getPkgDetails } from './_util.js'
+import {
+  extractVersionRange,
+  ourDeps,
+  ourDevDeps,
+  ourPeerDeps,
+} from './_util.js'
 import {
   parser as tseslintBottomParser,
   plugin as tseslintBottomPlugin,
@@ -13,8 +18,6 @@ import nBottomPlugin from 'eslint-plugin-n_bottom'
 import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 
 test('bottom dep version is minimum of dep range', async (t) => {
-  const { ourDeps, ourDevDeps, ourPeerDeps } = await getPkgDetails()
-
   const bottomDepsThatAreNotMinOfDepRange = [
     ['typescript-eslint', ourDeps] as const,
     ['eslint', ourPeerDeps] as const,
@@ -24,7 +27,6 @@ test('bottom dep version is minimum of dep range', async (t) => {
   ]
     .map(([depName, depCategory]) => {
       const bottomRange = ourDevDeps[`${depName}_bottom`]
-      if (bottomRange === undefined) throw new Error()
       const bottomVersion = extractVersionRange(bottomRange)
 
       const depRange = depCategory[depName]

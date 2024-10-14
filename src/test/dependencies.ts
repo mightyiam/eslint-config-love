@@ -1,14 +1,14 @@
 import test from 'ava'
 import {
   extractVersionRange,
-  getPkgDetails,
   isPinnedRange,
   isSingleCaretRange,
+  ourDeps,
+  ourDevDeps,
+  ourPeerDeps,
 } from './_util.js'
 
 test('range types', async (t) => {
-  const { ourDeps, ourPeerDeps, ourDevDeps } = await getPkgDetails()
-
   const nonCompliantDepRanges = Object.entries({
     dep: ourDeps,
     peer: ourPeerDeps,
