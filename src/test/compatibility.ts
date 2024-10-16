@@ -26,10 +26,10 @@ test('bottom dep version is minimum of dep range', async (t) => {
     ['eslint-plugin-promise', ourDeps] as const,
   ]
     .map(([depName, depCategory]) => {
-      const bottomRange = ourDevDeps[`${depName}_bottom`]
+      const { [`${depName}_bottom`]: bottomRange } = ourDevDeps
       const bottomVersion = extractVersionRange(bottomRange)
 
-      const depRange = depCategory[depName]
+      const { [depName]: depRange } = depCategory
       if (depRange === undefined) throw new Error()
 
       return { depName, bottomVersion, depRange }

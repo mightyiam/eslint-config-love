@@ -121,6 +121,7 @@ export const expectedEslintRules: Record<
     'error',
     { destructuring: 'all', ignoreReadBeforeAssign: false },
   ],
+  'prefer-destructuring': ['off'],
   'prefer-promise-reject-errors': ['off'],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'symbol-description': ['error'],
@@ -393,6 +394,14 @@ export const expectedTseslintRules: Record<
     { allowThrowingAny: false, allowThrowingUnknown: false },
   ],
   '@typescript-eslint/prefer-as-const': ['error'],
+  '@typescript-eslint/prefer-destructuring': [
+    'error',
+    { array: true, object: true },
+    {
+      enforceForRenamedProperties: true,
+      enforceForDeclarationWithTypeAnnotation: false,
+    },
+  ],
   '@typescript-eslint/prefer-function-type': ['error'],
   '@typescript-eslint/prefer-includes': ['error'],
   '@typescript-eslint/prefer-nullish-coalescing': [

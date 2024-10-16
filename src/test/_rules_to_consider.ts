@@ -69,7 +69,6 @@ export const eslintRulesToConsider = [
   'no-warning-comments',
   'operator-assignment',
   'prefer-arrow-callback',
-  'prefer-destructuring',
   'prefer-exponentiation-operator',
   'prefer-named-capture-group',
   'prefer-numeric-literals',
@@ -183,7 +182,6 @@ export const promiseRulesToConsider = [
 
 export const tseslintRulesToConsider = [
   '@typescript-eslint/parameter-properties',
-  '@typescript-eslint/prefer-destructuring',
   '@typescript-eslint/prefer-enum-initializers',
   '@typescript-eslint/prefer-find',
   '@typescript-eslint/prefer-for-of',

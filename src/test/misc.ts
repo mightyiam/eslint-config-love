@@ -11,7 +11,7 @@ test('rule configs are arrays', (t) => {
 })
 
 test('tseslint dep group same version', async (t) => {
-  const tseslint = ourDeps['typescript-eslint']
-  const tseslintUtils = ourDeps['@typescript-eslint/utils']
+  const { 'typescript-eslint': tseslint } = ourDeps
+  const { '@typescript-eslint/utils': tseslintUtils } = ourDeps
   t.is(tseslint, tseslintUtils)
 })
