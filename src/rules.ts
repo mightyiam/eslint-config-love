@@ -223,6 +223,14 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     { allowThrowingAny: false, allowThrowingUnknown: false },
   ],
   '@typescript-eslint/prefer-as-const': ['error'],
+  '@typescript-eslint/prefer-destructuring': [
+    'error',
+    { array: true, object: true },
+    {
+      enforceForRenamedProperties: true,
+      enforceForDeclarationWithTypeAnnotation: false,
+    },
+  ],
   '@typescript-eslint/prefer-function-type': ['error'],
   '@typescript-eslint/prefer-includes': ['error'],
   '@typescript-eslint/prefer-nullish-coalescing': [

@@ -50,7 +50,7 @@ const knownRules = new Map([
 const deprecatedKnownRules = [...knownRules.entries()]
   .filter(([_name, rule_]) => {
     const rule = rule_ as { meta?: { deprecated?: boolean } }
-    const meta = rule.meta
+    const { meta } = rule
     if (meta === undefined) return false
     return meta.deprecated === true
   })
@@ -118,7 +118,7 @@ test('JS equivalent rules are off', async (t) => {
   const ourRules_: TSESLint.FlatConfig.Rules = ourRules
 
   const jsEquivalentRulesThatAreOn = equivalents.filter((ruleName) => {
-    const baseRuleConfig = ourRules_[ruleName]
+    const { [ruleName]: baseRuleConfig } = ourRules_
 
     if (deprecatedKnownRules.includes(`@typescript-eslint/${ruleName}`)) {
       return false
@@ -126,8 +126,7 @@ test('JS equivalent rules are off', async (t) => {
 
     if (baseRuleConfig === undefined) return false
     if (!Array.isArray(baseRuleConfig)) throw new Error()
-    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-    const severity = baseRuleConfig[0]
+    const [severity] = baseRuleConfig
     if (typeof severity !== 'string') throw new Error()
     return severity !== 'off'
   })

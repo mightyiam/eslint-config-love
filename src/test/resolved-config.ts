@@ -24,7 +24,7 @@ test('plugins', async (t) => {
 test('languageOptions', async (t) => {
   // @ts-expect-error type seems wrong
   const actual: TSESLint.FlatConfig.Config = await actualP
-  const actualLanguageOptions = actual.languageOptions
+  const { languageOptions: actualLanguageOptions } = actual
   if (actualLanguageOptions === undefined) throw new Error()
   t.deepEqual(actualLanguageOptions, {
     ...expectedExportedValue.languageOptions,
@@ -37,7 +37,7 @@ test('rules', async (t) => {
   // @ts-expect-error type seems wrong
   const actual: TSESLint.FlatConfig.Config = await actualP
   if (expectedExportedValue.rules === undefined) throw new Error()
-  const rules: TSESLint.FlatConfig.Rules = expectedExportedValue.rules
+  const { rules } = expectedExportedValue
   const normalized = Object.fromEntries(
     Object.entries(rules).map(([name, value]) => {
       if (value === undefined) throw new Error()
