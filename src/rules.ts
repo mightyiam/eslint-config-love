@@ -222,6 +222,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     'error',
     { allowThrowingAny: false, allowThrowingUnknown: false },
   ],
+  '@typescript-eslint/prefer-as-const': ['error'],
   '@typescript-eslint/prefer-function-type': ['error'],
   '@typescript-eslint/prefer-includes': ['error'],
   '@typescript-eslint/prefer-nullish-coalescing': [
