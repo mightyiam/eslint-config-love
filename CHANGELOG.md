@@ -1,3 +1,13 @@
+## [89.0.0](https://github.com/mightyiam/eslint-config-love/compare/v88.0.0...v89.0.0) (2024-10-17)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-destructuring
+
+### Features
+
+* @typescript-eslint/prefer-destructuring ([416f108](https://github.com/mightyiam/eslint-config-love/commit/416f108cf1e65228d6a9ca9163f0390457cf3e85))
+
 ## [88.0.0](https://github.com/mightyiam/eslint-config-love/compare/v87.0.0...v88.0.0) (2024-10-17)
 
 ### ⚠ BREAKING CHANGES
