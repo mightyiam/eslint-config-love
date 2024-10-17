@@ -1,3 +1,13 @@
+## [88.0.0](https://github.com/mightyiam/eslint-config-love/compare/v87.0.0...v88.0.0) (2024-10-17)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-as-const
+
+### Features
+
+* @typescript-eslint/prefer-as-const ([f6dfcfd](https://github.com/mightyiam/eslint-config-love/commit/f6dfcfd42a8e20ecb00949a6ac420e02f761efee))
+
 ## [87.0.0](https://github.com/mightyiam/eslint-config-love/compare/v86.1.1...v87.0.0) (2024-10-14)
 
 ### ⚠ BREAKING CHANGES
