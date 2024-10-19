@@ -57,6 +57,15 @@ There are [some more `parserOptions`](https://typescript-eslint.io/packages/pars
 $ npx eslint .
 ```
 
+## Disabling rules
+
+As with any ESLint configuration, some ad-hoc [disabling of rules](https://eslint.org/docs/latest/use/configure/rules#disabling-rules) is expected.
+It is further expected that the strict nature of this configuration would more frequently require the disabling of rules.
+
+Consider minimizing the scope in which rules are disabled;
+prefer using `eslint-disable-*` comments when possible.
+Otherwise, rules can be disabled for a subset of files using configuration.
+
 ## Contributing
 
 This project is developed primarily in remote mob programming format.
