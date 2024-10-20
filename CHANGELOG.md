@@ -1,3 +1,9 @@
+## [89.0.1](https://github.com/mightyiam/eslint-config-love/compare/v89.0.0...v89.0.1) (2024-10-20)
+
+### Bug Fixes
+
+* rm no-undef-init ([7038ca4](https://github.com/mightyiam/eslint-config-love/commit/7038ca47333e3249896b2edc1153533118b8aa7d)), closes [#1710](https://github.com/mightyiam/eslint-config-love/issues/1710)
+
 ## [89.0.0](https://github.com/mightyiam/eslint-config-love/compare/v88.0.0...v89.0.0) (2024-10-17)
 
 ### ⚠ BREAKING CHANGES
