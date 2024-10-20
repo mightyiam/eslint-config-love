@@ -93,7 +93,6 @@ export const expectedEslintRules: Record<
   'no-template-curly-in-string': ['error'],
   'no-this-before-super': ['error'],
   'no-throw-literal': ['off'],
-  'no-undef-init': ['error'],
   'no-unexpected-multiline': ['error'],
   'no-unmodified-loop-condition': ['error'],
   'no-unneeded-ternary': ['error', { defaultAssignment: false }],

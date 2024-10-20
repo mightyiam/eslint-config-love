@@ -49,4 +49,10 @@ export const intentionallyUnusedRules: string[] = [
   'n/no-restricted-require',
 
   'no-restricted-imports',
+
+  // ## Complicated
+
+  // Conflicts with `@typescript-eslint/init-declarations`
+  // https://github.com/mightyiam/eslint-config-love/issues/1710
+  'no-undef-init',
 ]
