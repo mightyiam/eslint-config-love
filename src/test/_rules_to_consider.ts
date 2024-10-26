@@ -181,7 +181,6 @@ export const promiseRulesToConsider = [
 ]
 
 export const tseslintRulesToConsider = [
-  '@typescript-eslint/prefer-readonly-parameter-types',
   '@typescript-eslint/prefer-regexp-exec',
   '@typescript-eslint/prefer-string-starts-ends-with',
   '@typescript-eslint/require-await',
