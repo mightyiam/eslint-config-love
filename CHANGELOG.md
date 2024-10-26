@@ -1,3 +1,13 @@
+## [90.0.0](https://github.com/mightyiam/eslint-config-love/compare/v89.0.1...v90.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-find
+
+### Features
+
+* @typescript-eslint/prefer-find ([ea7a3dc](https://github.com/mightyiam/eslint-config-love/commit/ea7a3dc0a6c7400c930740ab1bf5d82742fbd55b))
+
 ## [89.0.1](https://github.com/mightyiam/eslint-config-love/compare/v89.0.0...v89.0.1) (2024-10-20)
 
 ### Bug Fixes
