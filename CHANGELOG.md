@@ -1,3 +1,13 @@
+## [93.0.0](https://github.com/mightyiam/eslint-config-love/compare/v92.0.0...v93.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-namespace-keyword
+
+### Features
+
+* @typescript-eslint/prefer-namespace-keyword ([2c6cae5](https://github.com/mightyiam/eslint-config-love/commit/2c6cae5325b50f191a4660ae2f27def61536db18))
+
 ## [92.0.0](https://github.com/mightyiam/eslint-config-love/compare/v91.0.0...v92.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
