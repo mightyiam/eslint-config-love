@@ -1,3 +1,13 @@
+## [91.0.0](https://github.com/mightyiam/eslint-config-love/compare/v90.0.0...v91.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-for-of
+
+### Features
+
+* @typescript-eslint/prefer-for-of ([2c864f3](https://github.com/mightyiam/eslint-config-love/commit/2c864f3e1feb24887bf57be5a0ffbfbcba2f9c34))
+
 ## [90.0.0](https://github.com/mightyiam/eslint-config-love/compare/v89.0.1...v90.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
