@@ -231,6 +231,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       enforceForDeclarationWithTypeAnnotation: false,
     },
   ],
+  '@typescript-eslint/prefer-find': ['error'],
   '@typescript-eslint/prefer-function-type': ['error'],
   '@typescript-eslint/prefer-includes': ['error'],
   '@typescript-eslint/prefer-nullish-coalescing': [
