@@ -17,6 +17,8 @@ export const intentionallyUnusedRules: string[] = [
 
   '@typescript-eslint/parameter-properties',
 
+  '@typescript-eslint/prefer-enum-initializers',
+
   // ## redundant
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
