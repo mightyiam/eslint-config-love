@@ -42,6 +42,9 @@ export const intentionallyUnusedRules: string[] = [
   'no-redeclare',
   '@typescript-eslint/no-redeclare',
 
+  // Covered by `@typescript-eslint/naming-convention`
+  'camelcase',
+
   // ## Project specific
 
   '@typescript-eslint/no-restricted-imports',

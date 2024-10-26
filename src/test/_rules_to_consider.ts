@@ -1,6 +1,5 @@
 export const eslintRulesToConsider = [
   'block-scoped-var',
-  'camelcase',
   'capitalized-comments',
   'complexity',
   'consistent-this',
