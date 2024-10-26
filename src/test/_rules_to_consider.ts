@@ -181,7 +181,6 @@ export const promiseRulesToConsider = [
 ]
 
 export const tseslintRulesToConsider = [
-  '@typescript-eslint/parameter-properties',
   '@typescript-eslint/prefer-enum-initializers',
   '@typescript-eslint/prefer-find',
   '@typescript-eslint/prefer-for-of',
