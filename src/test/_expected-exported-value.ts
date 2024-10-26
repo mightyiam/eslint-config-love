@@ -409,6 +409,7 @@ export const expectedTseslintRules: Record<
     'error',
     { allowBitwiseExpressions: true },
   ],
+  '@typescript-eslint/prefer-namespace-keyword': ['error'],
   '@typescript-eslint/prefer-nullish-coalescing': [
     'error',
     { ignoreConditionalTests: false, ignoreMixedLogicalExpressions: false },
