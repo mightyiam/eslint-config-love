@@ -1,3 +1,15 @@
+## [96.0.0](https://github.com/mightyiam/eslint-config-love/compare/v95.0.0...v96.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* arrow-body-style
+* arrow-body-style
+
+### Features
+
+* arrow-body-style ([19aa4eb](https://github.com/mightyiam/eslint-config-love/commit/19aa4eb1f281688175f2ced739b13d5b4c005157))
+* arrow-body-style ([646fa51](https://github.com/mightyiam/eslint-config-love/commit/646fa515a9103dfab594f2fb82003c3ca3e5f736))
+
 ## [95.0.0](https://github.com/mightyiam/eslint-config-love/compare/v94.0.0...v95.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
