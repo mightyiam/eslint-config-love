@@ -1,5 +1,4 @@
 export const eslintRulesToConsider = [
-  'arrow-body-style',
   'block-scoped-var',
   'camelcase',
   'capitalized-comments',

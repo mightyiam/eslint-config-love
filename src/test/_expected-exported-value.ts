@@ -24,6 +24,11 @@ export const expectedEslintRules: Record<
       checkForEach: false,
     },
   ],
+  'arrow-body-style': [
+    'error',
+    'as-needed',
+    { requireReturnForObjectLiteral: false },
+  ],
   'class-methods-use-this': ['off'],
   'constructor-super': ['error'],
   curly: ['error', 'multi-line'],

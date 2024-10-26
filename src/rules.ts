@@ -300,6 +300,11 @@ export const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       checkForEach: false,
     },
   ],
+  'arrow-body-style': [
+    'error',
+    'as-needed',
+    { requireReturnForObjectLiteral: false },
+  ],
   'constructor-super': ['error'],
   curly: ['error', 'multi-line'],
   'default-case-last': ['error'],
