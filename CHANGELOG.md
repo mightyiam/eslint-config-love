@@ -1,3 +1,13 @@
+## [95.0.0](https://github.com/mightyiam/eslint-config-love/compare/v94.0.0...v95.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-string-starts-ends-with
+
+### Features
+
+* @typescript-eslint/prefer-string-starts-ends-with ([e8e262d](https://github.com/mightyiam/eslint-config-love/commit/e8e262d2bc56fc1a4615fef0847bfc5fd340ef5a))
+
 ## [94.0.0](https://github.com/mightyiam/eslint-config-love/compare/v93.0.0...v94.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
