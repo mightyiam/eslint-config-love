@@ -248,6 +248,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/prefer-promise-reject-errors': ['error'],
   '@typescript-eslint/prefer-readonly': ['error'],
   '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
+  '@typescript-eslint/prefer-regexp-exec': ['error'],
   '@typescript-eslint/prefer-return-this-type': ['error'],
   '@typescript-eslint/promise-function-async': ['error'],
   '@typescript-eslint/require-array-sort-compare': [
