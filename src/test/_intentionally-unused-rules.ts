@@ -15,6 +15,8 @@ export const intentionallyUnusedRules: string[] = [
   '@typescript-eslint/no-shadow',
   'no-shadow',
 
+  '@typescript-eslint/parameter-properties',
+
   // ## redundant
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
