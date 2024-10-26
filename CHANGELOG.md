@@ -1,3 +1,13 @@
+## [94.0.0](https://github.com/mightyiam/eslint-config-love/compare/v93.0.0...v94.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-regexp-exec
+
+### Features
+
+* @typescript-eslint/prefer-regexp-exec ([de6da5e](https://github.com/mightyiam/eslint-config-love/commit/de6da5e192383a4f89f3bbe81fa47546772f85a2))
+
 ## [93.0.0](https://github.com/mightyiam/eslint-config-love/compare/v92.0.0...v93.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
