@@ -181,7 +181,6 @@ export const promiseRulesToConsider = [
 ]
 
 export const tseslintRulesToConsider = [
-  '@typescript-eslint/prefer-literal-enum-member',
   '@typescript-eslint/prefer-namespace-keyword',
   '@typescript-eslint/prefer-readonly-parameter-types',
   '@typescript-eslint/prefer-regexp-exec',
