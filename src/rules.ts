@@ -250,6 +250,10 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
   '@typescript-eslint/prefer-regexp-exec': ['error'],
   '@typescript-eslint/prefer-return-this-type': ['error'],
+  '@typescript-eslint/prefer-string-starts-ends-with': [
+    'error',
+    { allowSingleElementEquality: 'never' },
+  ],
   '@typescript-eslint/promise-function-async': ['error'],
   '@typescript-eslint/require-array-sort-compare': [
     'error',
