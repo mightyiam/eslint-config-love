@@ -1,3 +1,13 @@
+## [92.0.0](https://github.com/mightyiam/eslint-config-love/compare/v91.0.0...v92.0.0) (2024-10-26)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/prefer-literal-enum-member
+
+### Features
+
+* @typescript-eslint/prefer-literal-enum-member ([cebe013](https://github.com/mightyiam/eslint-config-love/commit/cebe013eee57cc0df9cfebb2198de57852a7f375))
+
 ## [91.0.0](https://github.com/mightyiam/eslint-config-love/compare/v90.0.0...v91.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
