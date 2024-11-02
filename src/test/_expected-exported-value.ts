@@ -1,8 +1,21 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
+import eslintCommentsPlugin from 'eslint-plugin-eslint-comments'
 import importPlugin from 'eslint-plugin-import'
 import nPlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'
+
+export const expectedEslintCommentsRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
+  'eslint-comments/require-description': [
+    'error',
+    {
+      ignore: ['eslint-enable', 'eslint-env'],
+    },
+  ],
+}
 
 export const expectedEslintRules: Record<
   string,
@@ -187,7 +200,7 @@ export const expectedTseslintRules: Record<
       'ts-ignore': true,
       'ts-nocheck': true,
       'ts-check': false,
-      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+      // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- just enough to prevent abbreviations
       minimumDescriptionLength: 3,
     },
   ],
@@ -249,7 +262,7 @@ export const expectedTseslintRules: Record<
     },
   ],
   '@typescript-eslint/init-declarations': ['error', 'always'],
-  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- an arbitrary count
   '@typescript-eslint/max-params': ['error', { max: 4 }],
   '@typescript-eslint/method-signature-style': ['error'],
   '@typescript-eslint/naming-convention': [
@@ -463,6 +476,7 @@ export const expectedTseslintRules: Record<
 }
 
 export const expectedExportedRules = {
+  ...expectedEslintCommentsRules,
   ...expectedEslintRules,
   ...expectedImportRules,
   ...expectedNRules,
@@ -484,6 +498,7 @@ export const expectedExportedValue: TSESLint.FlatConfig.Config = {
 
   plugins: {
     '@typescript-eslint': tseslintPlugin,
+    'eslint-comments': eslintCommentsPlugin,
     import: importPlugin,
     n: nPlugin,
     promise: promisePlugin,

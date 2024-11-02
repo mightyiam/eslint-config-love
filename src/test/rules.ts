@@ -1,5 +1,6 @@
 import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
+import pluginEslintComments from 'eslint-plugin-eslint-comments'
 import pluginN from 'eslint-plugin-n'
 import pluginImport from 'eslint-plugin-import'
 import pluginPromise from 'eslint-plugin-promise'
@@ -8,6 +9,7 @@ import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import {
+  eslintCommentsRulesToConsider,
   eslintRulesToConsider,
   importRulesToConsider,
   nRulesToConsider,
@@ -16,22 +18,31 @@ import {
   tseslintRulesToConsider,
 } from './_rules_to_consider.js'
 import {
+  expectedEslintCommentsRules,
   expectedEslintRules,
   expectedImportRules,
   expectedNRules,
   expectedPromiseRules,
   expectedTseslintRules,
 } from './_expected-exported-value.js'
-import { importRules, nRules, promiseRules, tseslintRules } from '../rules.js'
+import {
+  eslintCommentsRules,
+  importRules,
+  nRules,
+  promiseRules,
+  tseslintRules,
+} from '../rules.js'
 
 const eslintRules = new TSESLint.Linter({ configType: 'eslintrc' }).getRules()
 
+if (pluginEslintComments.rules === undefined) throw new Error()
 if (pluginN.rules === undefined) throw new Error()
 if (pluginImport.rules === undefined) throw new Error()
 if (pluginPromise.rules === undefined) throw new Error()
 if (pluginTseslint.rules === undefined) throw new Error()
 
 const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
+  [pluginEslintComments.rules, 'eslint-comments'],
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
   [pluginImport.rules, 'import'],
@@ -90,7 +101,7 @@ test('no intersection between lists', (t) => {
     }, {})
 
   const intersection = Object.fromEntries(
-    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- more than one means intersection
     Object.entries(counts).filter(([_rule, inLists]) => inLists.length > 1),
   )
 
@@ -137,15 +148,18 @@ test('JS equivalent rules are off', async (t) => {
 test('rule lists and objects are sorted', (t) => {
   const actualRuleLists = {
     eslintRulesToConsider,
+    eslintCommentsRulesToConsider,
     importRulesToConsider,
     nRulesToConsider,
     promiseRulesToConsider,
     tseslintRulesToConsider,
+    expectedEslintCommentsRules: Object.keys(expectedEslintCommentsRules),
     expectedEslintRules: Object.keys(expectedEslintRules),
     expectedImportRules: Object.keys(expectedImportRules),
     expectedNRules: Object.keys(expectedNRules),
     expectedPromiseRules: Object.keys(expectedPromiseRules),
     expectedTseslintRules: Object.keys(expectedTseslintRules),
+    eslintCommentsRules: Object.keys(eslintCommentsRules),
     eslintRules: Object.keys(eslintRules),
     importRules: Object.keys(importRules),
     nRules: Object.keys(nRules),

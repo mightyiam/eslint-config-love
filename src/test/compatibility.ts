@@ -13,9 +13,11 @@ import {
   parser as tseslintBottomParser,
   plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
+import eslintCommentsBottomPlugin from 'eslint-plugin-eslint-comments_bottom'
 import importBottomPlugin from 'eslint-plugin-import_bottom'
 import nBottomPlugin from 'eslint-plugin-n_bottom'
 import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
+import _ from 'lodash'
 
 test('bottom dep version is minimum of dep range', async (t) => {
   const bottomDepsThatAreNotMinOfDepRange = [
@@ -57,6 +59,7 @@ test('our configuration is compatible with the plugins and parser at bottom of d
     },
     plugins: {
       '@typescript-eslint': tseslintBottomPlugin,
+      'eslint-comments': eslintCommentsBottomPlugin,
       import: importBottomPlugin,
       n: nBottomPlugin,
       promise: promiseBottomPlugin,
@@ -70,7 +73,6 @@ test('our configuration is compatible with the plugins and parser at bottom of d
 
   const results = await eslint.lintText('', { filePath })
 
-  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-  t.true(results.length > 0)
+  t.false(_.isEmpty(results))
   results.forEach((result) => t.deepEqual(result.messages, [], result.filePath))
 })

@@ -1,3 +1,14 @@
+export const eslintCommentsRulesToConsider = [
+  'eslint-comments/disable-enable-pair',
+  'eslint-comments/no-aggregating-enable',
+  'eslint-comments/no-duplicate-disable',
+  'eslint-comments/no-restricted-disable',
+  'eslint-comments/no-unlimited-disable',
+  'eslint-comments/no-unused-disable',
+  'eslint-comments/no-unused-enable',
+  'eslint-comments/no-use',
+]
+
 export const eslintRulesToConsider = [
   'block-scoped-var',
   'capitalized-comments',
@@ -186,6 +197,7 @@ export const tseslintRulesToConsider = [
 ]
 
 export const rulesToConsider = [
+  ...eslintCommentsRulesToConsider,
   ...eslintRulesToConsider,
   ...importRulesToConsider,
   ...nRulesToConsider,

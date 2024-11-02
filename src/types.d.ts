@@ -1,3 +1,13 @@
+declare module 'eslint-plugin-eslint-comments' {
+  import type { TSESLint } from '@typescript-eslint/utils'
+  const plugin: TSESLint.Linter.Plugin
+  export default plugin
+}
+declare module 'eslint-plugin-eslint-comments_bottom' {
+  import type { TSESLint } from '@typescript-eslint/utils'
+  const plugin: TSESLint.Linter.Plugin
+  export default plugin
+}
 declare module 'eslint-plugin-n' {
   import type { TSESLint } from '@typescript-eslint/utils'
   const plugin: TSESLint.Linter.Plugin
