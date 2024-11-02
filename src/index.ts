@@ -1,5 +1,6 @@
 import { TSESLint } from '@typescript-eslint/utils'
 import { parser, plugin as tseslintPlugin } from 'typescript-eslint'
+import eslintCommentsPlugin from 'eslint-plugin-eslint-comments'
 import importPlugin from 'eslint-plugin-import'
 import nPlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'
@@ -26,6 +27,7 @@ const config: TSESLint.FlatConfig.Config = {
   },
   plugins: {
     '@typescript-eslint': tseslintPlugin,
+    'eslint-comments': eslintCommentsPlugin,
     import: importPlugin,
     n: nPlugin,
     promise: promisePlugin,

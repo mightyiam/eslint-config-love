@@ -36,8 +36,5 @@ setTimeout(() => {
   console.log()
 }, ONE_MILLISECOND)
 
-// The return type is clear from the left side of the assignment:
-// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-const double: (n: number) => number = (n) => n * 2
-// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-;[1, 2].map(double)
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers -- function name
+export const double: (n: number) => number = (n) => n * 2

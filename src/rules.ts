@@ -11,7 +11,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
       'ts-ignore': true,
       'ts-nocheck': true,
       'ts-check': false,
-      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+      // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- just enough to prevent abbreviations
       minimumDescriptionLength: 3,
     },
   ],
@@ -73,7 +73,7 @@ export const tseslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
     },
   ],
   '@typescript-eslint/init-declarations': ['error', 'always'],
-  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- an arbitrary count
   '@typescript-eslint/max-params': ['error', { max: 4 }],
   '@typescript-eslint/method-signature-style': ['error'],
   '@typescript-eslint/naming-convention': [
@@ -401,6 +401,18 @@ export const eslintRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   yoda: ['error', 'never'],
 }
 
+export const eslintCommentsRules: Record<
+  string,
+  TSESLint.SharedConfig.RuleEntry
+> = {
+  'eslint-comments/require-description': [
+    'error',
+    {
+      ignore: ['eslint-enable', 'eslint-env'],
+    },
+  ],
+}
+
 export const importRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'import/export': ['error'],
   'import/first': ['error'],
@@ -428,6 +440,7 @@ export const promiseRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
 }
 
 export const rules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
+  ...eslintCommentsRules,
   ...eslintRules,
   ...importRules,
   ...nRules,

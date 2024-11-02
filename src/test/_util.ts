@@ -3,6 +3,7 @@ import { plugin as tseslintPlugin } from 'typescript-eslint'
 import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import { readPackageUp } from 'read-package-up'
+import _ from 'lodash'
 
 const readResult = await readPackageUp()
 if (readResult === undefined) {
@@ -24,10 +25,11 @@ export const { devDependencies: ourDevDeps } = ourPkg
 
 export const isSingleCaretRange = (rangeStr: string): boolean => {
   const range = new semver.Range(rangeStr)
-  /* eslint-disable @typescript-eslint/no-magic-numbers */
+  /* eslint-disable @typescript-eslint/no-magic-numbers -- name of function */
   if (range.set.length !== 1) return false
-  // eslint-disable-next-line @typescript-eslint/prefer-destructuring
-  const [comparators] = range.set
+  const {
+    set: [comparators],
+  } = range
   if (comparators.length !== 2) return false
   return comparators[0].operator === '>=' && comparators[1].operator === '<'
   /* eslint-enable @typescript-eslint/no-magic-numbers */
@@ -35,17 +37,20 @@ export const isSingleCaretRange = (rangeStr: string): boolean => {
 
 export const isPinnedRange = (rangeStr: string): boolean => {
   const range = new semver.Range(rangeStr)
-  /* eslint-disable @typescript-eslint/no-magic-numbers */
+  /* eslint-disable @typescript-eslint/no-magic-numbers -- pinned range can only be single */
   if (range.set.length !== 1) return false
-  // eslint-disable-next-line @typescript-eslint/prefer-destructuring
-  const [comparators] = range.set
+  const {
+    set: [comparators],
+  } = range
   return comparators.length === 1 && comparators[0].operator === ''
   /* eslint-enable @typescript-eslint/no-magic-numbers */
 }
 
-export const extractVersionRange = (spec: string): string =>
-  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-  spec.split('@').slice(-1)[0]
+export const extractVersionRange = (spec: string): string => {
+  const last = _.last(spec.split('@'))
+  if (last === undefined) throw new Error()
+  return last
+}
 
 const { rules: ourRules_ } = exported
 if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
