@@ -1,3 +1,13 @@
+## [97.0.0](https://github.com/mightyiam/eslint-config-love/compare/v96.0.0...v97.0.0) (2024-11-02)
+
+### ⚠ BREAKING CHANGES
+
+* eslint-comments/require-description
+
+### Features
+
+* eslint-comments/require-description ([5dffe3d](https://github.com/mightyiam/eslint-config-love/commit/5dffe3d33b6fb530bb31b377d9e390ac95eae532))
+
 ## [96.0.0](https://github.com/mightyiam/eslint-config-love/compare/v95.0.0...v96.0.0) (2024-10-26)
 
 ### ⚠ BREAKING CHANGES
