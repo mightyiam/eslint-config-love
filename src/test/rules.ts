@@ -27,13 +27,16 @@ import {
 } from './_expected-exported-value.js'
 import {
   eslintCommentsRules,
+  eslintRules,
   importRules,
   nRules,
   promiseRules,
   tseslintRules,
 } from '../rules.js'
 
-const eslintRules = new TSESLint.Linter({ configType: 'eslintrc' }).getRules()
+const knownEslintRules = new TSESLint.Linter({
+  configType: 'eslintrc',
+}).getRules()
 
 if (pluginEslintComments.rules === undefined) throw new Error()
 if (pluginN.rules === undefined) throw new Error()
@@ -50,7 +53,7 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
 ]
 
 const knownRules = new Map([
-  ...eslintRules.entries(),
+  ...knownEslintRules.entries(),
   ...rulesets.flatMap(([rules, pkgName]) =>
     Object.entries(rules).map(
       ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const,
