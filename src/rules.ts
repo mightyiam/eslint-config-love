@@ -22,12 +22,10 @@ const imports: PluginUsage[] = [
   importRules,
 ]
 
-export const rulesPerPlugin: Record<
-  string,
-  Record<string, TSESLint.SharedConfig.RuleEntry>
-> = Object.fromEntries(
-  imports.map(({ pluginName, rules }) => [pluginName, rules]),
-)
+export const rulesPerPlugin: Record<string, TSESLint.SharedConfig.RulesRecord> =
+  Object.fromEntries(
+    imports.map(({ pluginName, rules }) => [pluginName, rules]),
+  )
 
 const ruleEntries: Array<[string, TSESLint.SharedConfig.RuleEntry]> =
   imports.flatMap(({ pluginName, rules }) =>
@@ -37,7 +35,7 @@ const ruleEntries: Array<[string, TSESLint.SharedConfig.RuleEntry]> =
     ]),
   )
 
-export const rules: Record<string, TSESLint.SharedConfig.RuleEntry> =
+export const rules: TSESLint.SharedConfig.RulesRecord =
   Object.fromEntries(ruleEntries)
 
 export const plugins: Record<string, TSESLint.FlatConfig.Plugin> =
