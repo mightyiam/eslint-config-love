@@ -1,5 +1,9 @@
 {
   "extends": [":automergeMinor"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["friday"]
+  },
   "packageRules": [
     {
       "matchDepTypes": ["action"],
