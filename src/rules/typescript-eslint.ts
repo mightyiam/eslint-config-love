@@ -1,7 +1,7 @@
 import type { PluginRuleEntries } from '../rules.js'
 
 const rules: PluginRuleEntries = {
-  plugin: '@typescript-eslint',
+  pluginName: '@typescript-eslint',
   rules: {
     'adjacent-overload-signatures': ['error'],
     'array-type': ['error', { default: 'array-simple' }],

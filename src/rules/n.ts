@@ -1,7 +1,7 @@
 import type { PluginRuleEntries } from '../rules.js'
 
 const rules: PluginRuleEntries = {
-  plugin: 'n',
+  pluginName: 'n',
   rules: {
     'handle-callback-err': ['error', '^(err|error)$'],
     'no-callback-literal': ['error'],

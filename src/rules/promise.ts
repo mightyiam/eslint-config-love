@@ -1,7 +1,7 @@
 import type { PluginRuleEntries } from '../rules.js'
 
 const rules: PluginRuleEntries = {
-  plugin: 'promise',
+  pluginName: 'promise',
   rules: {
     'param-names': ['error'],
   },

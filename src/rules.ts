@@ -8,7 +8,7 @@ import typescriptEslint from './rules/typescript-eslint.js'
 import importRules from './rules/import.js'
 
 export interface PluginRuleEntries {
-  plugin: string
+  pluginName: string
   rules: Record<string, TSESLint.SharedConfig.RuleEntry>
 }
 
@@ -24,12 +24,14 @@ const imports: PluginRuleEntries[] = [
 export const rulesPerPlugin: Record<
   string,
   Record<string, TSESLint.SharedConfig.RuleEntry>
-> = Object.fromEntries(imports.map(({ plugin, rules }) => [plugin, rules]))
+> = Object.fromEntries(
+  imports.map(({ pluginName, rules }) => [pluginName, rules]),
+)
 
 const ruleEntries: Array<[string, TSESLint.SharedConfig.RuleEntry]> =
-  imports.flatMap(({ plugin, rules }) =>
+  imports.flatMap(({ pluginName, rules }) =>
     Object.entries(rules).map(([ruleNameLocal, ruleConfig]) => [
-      plugin === '' ? ruleNameLocal : `${plugin}/${ruleNameLocal}`,
+      pluginName === '' ? ruleNameLocal : `${pluginName}/${ruleNameLocal}`,
       ruleConfig,
     ]),
   )

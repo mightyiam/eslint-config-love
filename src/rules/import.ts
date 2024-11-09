@@ -1,7 +1,7 @@
 import type { PluginRuleEntries } from '../rules.js'
 
 const rules: PluginRuleEntries = {
-  plugin: 'import',
+  pluginName: 'import',
   rules: {
     export: ['error'],
     first: ['error'],
