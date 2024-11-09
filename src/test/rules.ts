@@ -25,14 +25,7 @@ import {
   expectedPromiseRules,
   expectedTseslintRules,
 } from './_expected-exported-value.js'
-import {
-  eslintCommentsRules,
-  eslintRules,
-  importRules,
-  nRules,
-  promiseRules,
-  tseslintRules,
-} from '../rules.js'
+import { rulesPerPlugin } from '../rules.js'
 
 const knownEslintRules = new TSESLint.Linter({
   configType: 'eslintrc',
@@ -162,12 +155,7 @@ test('rule lists and objects are sorted', (t) => {
     expectedNRules: Object.keys(expectedNRules),
     expectedPromiseRules: Object.keys(expectedPromiseRules),
     expectedTseslintRules: Object.keys(expectedTseslintRules),
-    eslintCommentsRules: Object.keys(eslintCommentsRules),
-    eslintRules: Object.keys(eslintRules),
-    importRules: Object.keys(importRules),
-    nRules: Object.keys(nRules),
-    promiseRules: Object.keys(promiseRules),
-    tseslintRules: Object.keys(tseslintRules),
+    ..._.mapValues(rulesPerPlugin, (rules) => Object.keys(rules)),
   }
 
   const sortedRuleLists = Object.fromEntries(
