@@ -2,7 +2,7 @@
   "extends": [":automergeMinor"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 0am on saturday"]
+    "schedule": ["before 12am on saturday"]
   },
   "packageRules": [
     {
