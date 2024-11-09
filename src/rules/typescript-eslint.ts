@@ -1,7 +1,9 @@
-import type { PluginRuleEntries } from '../rules.js'
+import type { PluginUsage } from '../rules.js'
+import { plugin } from 'typescript-eslint'
 
-const rules: PluginRuleEntries = {
+const rules: PluginUsage = {
   pluginName: '@typescript-eslint',
+  plugin,
   rules: {
     'adjacent-overload-signatures': ['error'],
     'array-type': ['error', { default: 'array-simple' }],

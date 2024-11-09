@@ -7,12 +7,13 @@ import promiseRules from './rules/promise.js'
 import typescriptEslint from './rules/typescript-eslint.js'
 import importRules from './rules/import.js'
 
-export interface PluginRuleEntries {
+export interface PluginUsage {
   pluginName: string
+  plugin: TSESLint.FlatConfig.Plugin | 'eslint'
   rules: Record<string, TSESLint.SharedConfig.RuleEntry>
 }
 
-const imports: PluginRuleEntries[] = [
+const imports: PluginUsage[] = [
   typescriptEslint,
   eslintCommentsRules,
   eslintRules,
@@ -38,3 +39,13 @@ const ruleEntries: Array<[string, TSESLint.SharedConfig.RuleEntry]> =
 
 export const rules: Record<string, TSESLint.SharedConfig.RuleEntry> =
   Object.fromEntries(ruleEntries)
+
+export const plugins: Record<string, TSESLint.FlatConfig.Plugin> =
+  Object.fromEntries(
+    imports
+      .filter(({ plugin }) => plugin !== 'eslint')
+      .map(({ pluginName, plugin }) => [
+        pluginName,
+        plugin as TSESLint.FlatConfig.Plugin,
+      ]),
+  )

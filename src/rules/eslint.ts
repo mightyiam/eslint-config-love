@@ -1,7 +1,8 @@
-import type { PluginRuleEntries } from '../rules.js'
+import type { PluginUsage } from '../rules.js'
 
-const rules: PluginRuleEntries = {
+const rules: PluginUsage = {
   pluginName: '',
+  plugin: 'eslint',
   rules: {
     'accessor-pairs': [
       'error',

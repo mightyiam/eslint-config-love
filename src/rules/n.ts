@@ -1,7 +1,9 @@
-import type { PluginRuleEntries } from '../rules.js'
+import plugin from 'eslint-plugin-n'
+import type { PluginUsage } from '../rules.js'
 
-const rules: PluginRuleEntries = {
+const rules: PluginUsage = {
   pluginName: 'n',
+  plugin,
   rules: {
     'handle-callback-err': ['error', '^(err|error)$'],
     'no-callback-literal': ['error'],

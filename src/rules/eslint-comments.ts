@@ -1,7 +1,9 @@
-import type { PluginRuleEntries } from '../rules.js'
+import plugin from 'eslint-plugin-eslint-comments'
+import type { PluginUsage } from '../rules.js'
 
-const rules: PluginRuleEntries = {
+const rules: PluginUsage = {
   pluginName: 'eslint-comments',
+  plugin,
   rules: {
     'require-description': [
       'error',
