@@ -1,3 +1,13 @@
+## [98.0.0](https://github.com/mightyiam/eslint-config-love/compare/v97.0.0...v98.0.0) (2024-11-09)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/switch-exhaustiveness-check
+
+### Features
+
+* @typescript-eslint/switch-exhaustiveness-check ([e411f71](https://github.com/mightyiam/eslint-config-love/commit/e411f712ad618107f7c5b01255710d4819600c2b))
+
 ## [97.0.0](https://github.com/mightyiam/eslint-config-love/compare/v96.0.0...v97.0.0) (2024-11-02)
 
 ### ⚠ BREAKING CHANGES
