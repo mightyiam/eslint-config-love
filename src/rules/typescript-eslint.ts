@@ -260,6 +260,14 @@ const rules: PluginUsage = {
         allowAny: false,
       },
     ],
+    'switch-exhaustiveness-check': [
+      'error',
+      {
+        allowDefaultCaseForExhaustiveSwitch: false,
+        requireDefaultForNonUnion: false,
+        considerDefaultExhaustiveForUnions: true,
+      },
+    ],
     'triple-slash-reference': [
       'error',
       { lib: 'never', path: 'never', types: 'never' },
