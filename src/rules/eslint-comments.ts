@@ -1,9 +1,6 @@
-import type { TSESLint } from '@typescript-eslint/utils'
+import type { PluginRuleEntries } from '../rules.js'
 
-const rules: {
-  plugin: 'eslint-comments'
-  rules: Record<string, TSESLint.SharedConfig.RuleEntry>
-} = {
+const rules: PluginRuleEntries = {
   plugin: 'eslint-comments',
   rules: {
     'require-description': [

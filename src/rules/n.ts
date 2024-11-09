@@ -1,9 +1,6 @@
-import type { TSESLint } from '@typescript-eslint/utils'
+import type { PluginRuleEntries } from '../rules.js'
 
-const rules: {
-  plugin: string
-  rules: Record<string, TSESLint.SharedConfig.RuleEntry>
-} = {
+const rules: PluginRuleEntries = {
   plugin: 'n',
   rules: {
     'handle-callback-err': ['error', '^(err|error)$'],

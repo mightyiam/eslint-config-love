@@ -7,10 +7,12 @@ import promiseRules from './rules/promise.js'
 import typescriptEslint from './rules/typescript-eslint.js'
 import importRules from './rules/import.js'
 
-const imports: Array<{
+export interface PluginRuleEntries {
   plugin: string
   rules: Record<string, TSESLint.SharedConfig.RuleEntry>
-}> = [
+}
+
+const imports: PluginRuleEntries[] = [
   typescriptEslint,
   eslintCommentsRules,
   eslintRules,
