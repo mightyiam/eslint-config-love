@@ -8,15 +8,7 @@ import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
-import {
-  eslintCommentsRulesToConsider,
-  eslintRulesToConsider,
-  importRulesToConsider,
-  nRulesToConsider,
-  promiseRulesToConsider,
-  rulesToConsider,
-  tseslintRulesToConsider,
-} from './_rules_to_consider.js'
+import { rulesToConsider } from './_rules_to_consider.js'
 import {
   expectedEslintCommentsRules,
   expectedEslintRules,
@@ -67,7 +59,7 @@ const usedRules = Object.keys(ourRules)
 
 const acknowledgedRules = [
   ...deprecatedKnownRules,
-  ...rulesToConsider,
+  ...Object.values(rulesToConsider).flat(),
   ...intentionallyUnusedRules,
   ...usedRules,
 ]
@@ -80,8 +72,8 @@ test('rule names valid', (t) => {
 })
 
 test('no intersection between lists', (t) => {
-  const lists = {
-    rulesToConsider,
+  const lists: Record<string, string[]> = {
+    rulesToConsider: Object.values(rulesToConsider).flat(),
     intentionallyUnusedRules,
     usedRules,
     deprecatedKnownRules,
@@ -143,12 +135,10 @@ test('JS equivalent rules are off', async (t) => {
 
 test('rule lists and objects are sorted', (t) => {
   const actualRuleLists = {
-    eslintRulesToConsider,
-    eslintCommentsRulesToConsider,
-    importRulesToConsider,
-    nRulesToConsider,
-    promiseRulesToConsider,
-    tseslintRulesToConsider,
+    ..._.mapKeys(
+      rulesToConsider,
+      (_rules, pluginName) => `${pluginName}ToConsider`,
+    ),
     expectedEslintCommentsRules: Object.keys(expectedEslintCommentsRules),
     expectedEslintRules: Object.keys(expectedEslintRules),
     expectedImportRules: Object.keys(expectedImportRules),
