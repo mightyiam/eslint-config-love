@@ -8,15 +8,7 @@ import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
-import {
-  eslintCommentsRulesToConsider,
-  eslintRulesToConsider,
-  importRulesToConsider,
-  nRulesToConsider,
-  promiseRulesToConsider,
-  rulesToConsider,
-  tseslintRulesToConsider,
-} from './_rules_to_consider.js'
+import { rulesToConsider } from './_rules_to_consider.js'
 import {
   expectedEslintCommentsRules,
   expectedEslintRules,
@@ -25,14 +17,7 @@ import {
   expectedPromiseRules,
   expectedTseslintRules,
 } from './_expected-exported-value.js'
-import {
-  eslintCommentsRules,
-  eslintRules,
-  importRules,
-  nRules,
-  promiseRules,
-  tseslintRules,
-} from '../rules.js'
+import { rulesPerPlugin } from '../rules.js'
 
 const knownEslintRules = new TSESLint.Linter({
   configType: 'eslintrc',
@@ -74,7 +59,7 @@ const usedRules = Object.keys(ourRules)
 
 const acknowledgedRules = [
   ...deprecatedKnownRules,
-  ...rulesToConsider,
+  ...Object.values(rulesToConsider).flat(),
   ...intentionallyUnusedRules,
   ...usedRules,
 ]
@@ -87,8 +72,8 @@ test('rule names valid', (t) => {
 })
 
 test('no intersection between lists', (t) => {
-  const lists = {
-    rulesToConsider,
+  const lists: Record<string, string[]> = {
+    rulesToConsider: Object.values(rulesToConsider).flat(),
     intentionallyUnusedRules,
     usedRules,
     deprecatedKnownRules,
@@ -150,24 +135,17 @@ test('JS equivalent rules are off', async (t) => {
 
 test('rule lists and objects are sorted', (t) => {
   const actualRuleLists = {
-    eslintRulesToConsider,
-    eslintCommentsRulesToConsider,
-    importRulesToConsider,
-    nRulesToConsider,
-    promiseRulesToConsider,
-    tseslintRulesToConsider,
-    expectedEslintCommentsRules: Object.keys(expectedEslintCommentsRules),
-    expectedEslintRules: Object.keys(expectedEslintRules),
-    expectedImportRules: Object.keys(expectedImportRules),
-    expectedNRules: Object.keys(expectedNRules),
-    expectedPromiseRules: Object.keys(expectedPromiseRules),
-    expectedTseslintRules: Object.keys(expectedTseslintRules),
-    eslintCommentsRules: Object.keys(eslintCommentsRules),
-    eslintRules: Object.keys(eslintRules),
-    importRules: Object.keys(importRules),
-    nRules: Object.keys(nRules),
-    promiseRules: Object.keys(promiseRules),
-    tseslintRules: Object.keys(tseslintRules),
+    ..._.mapKeys(
+      rulesToConsider,
+      (_rules, pluginName) => `rules to consider/${pluginName}`,
+    ),
+    'expected rules/eslint-comments': Object.keys(expectedEslintCommentsRules),
+    'expected rules/eslint': Object.keys(expectedEslintRules),
+    'expected rules/import': Object.keys(expectedImportRules),
+    'expected rules/n': Object.keys(expectedNRules),
+    'expected rules/promise': Object.keys(expectedPromiseRules),
+    'expected rules/@typescript-eslint': Object.keys(expectedTseslintRules),
+    ..._.mapValues(rulesPerPlugin, (rules) => Object.keys(rules)),
   }
 
   const sortedRuleLists = Object.fromEntries(
