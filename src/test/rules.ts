@@ -137,14 +137,14 @@ test('rule lists and objects are sorted', (t) => {
   const actualRuleLists = {
     ..._.mapKeys(
       rulesToConsider,
-      (_rules, pluginName) => `${pluginName}ToConsider`,
+      (_rules, pluginName) => `rules to consider/${pluginName}`,
     ),
-    expectedEslintCommentsRules: Object.keys(expectedEslintCommentsRules),
-    expectedEslintRules: Object.keys(expectedEslintRules),
-    expectedImportRules: Object.keys(expectedImportRules),
-    expectedNRules: Object.keys(expectedNRules),
-    expectedPromiseRules: Object.keys(expectedPromiseRules),
-    expectedTseslintRules: Object.keys(expectedTseslintRules),
+    'expected rules/eslint-comments': Object.keys(expectedEslintCommentsRules),
+    'expected rules/eslint': Object.keys(expectedEslintRules),
+    'expected rules/import': Object.keys(expectedImportRules),
+    'expected rules/n': Object.keys(expectedNRules),
+    'expected rules/promise': Object.keys(expectedPromiseRules),
+    'expected rules/@typescript-eslint': Object.keys(expectedTseslintRules),
     ..._.mapValues(rulesPerPlugin, (rules) => Object.keys(rules)),
   }
 
