@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+import _ from 'lodash'
 
 import eslintCommentsRules from './rules/eslint-comments.js'
 import eslintRules from './rules/eslint.js'
@@ -22,28 +23,26 @@ const imports: PluginUsage[] = [
   importRules,
 ]
 
-export const rulesPerPlugin: Record<string, TSESLint.SharedConfig.RulesRecord> =
-  Object.fromEntries(
-    imports.map(({ pluginName, rules }) => [pluginName, rules]),
-  )
+interface Exports {
+  rulesPerPlugin: Record<string, TSESLint.SharedConfig.RulesRecord>
+  rules: TSESLint.SharedConfig.RulesRecord
+  plugins: Record<string, TSESLint.FlatConfig.Plugin>
+}
 
-const ruleEntries: Array<[string, TSESLint.SharedConfig.RuleEntry]> =
-  imports.flatMap(({ pluginName, rules }) =>
-    Object.entries(rules).map(([ruleNameLocal, ruleConfig]) => [
-      pluginName === '' ? ruleNameLocal : `${pluginName}/${ruleNameLocal}`,
-      ruleConfig,
-    ]),
-  )
+export const { rulesPerPlugin, rules, plugins }: Exports =
+  imports.reduce<Exports>(
+    (acc, { pluginName, plugin, rules: localRules }) => {
+      if (plugin !== 'eslint') {
+        acc.plugins[pluginName] = plugin
+      }
 
-export const rules: TSESLint.SharedConfig.RulesRecord =
-  Object.fromEntries(ruleEntries)
+      const rules = _.mapKeys(localRules, (_rule, localRuleName) =>
+        plugin === 'eslint' ? localRuleName : `${pluginName}/${localRuleName}`,
+      )
+      acc.rulesPerPlugin[pluginName] = rules
+      acc.rules = { ...acc.rules, ...rules }
 
-export const plugins: Record<string, TSESLint.FlatConfig.Plugin> =
-  Object.fromEntries(
-    imports
-      .filter(({ plugin }) => plugin !== 'eslint')
-      .map(({ pluginName, plugin }) => [
-        pluginName,
-        plugin as TSESLint.FlatConfig.Plugin,
-      ]),
+      return acc
+    },
+    { rulesPerPlugin: {}, rules: {}, plugins: {} },
   )
