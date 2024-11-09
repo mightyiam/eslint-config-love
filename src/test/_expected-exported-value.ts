@@ -468,6 +468,14 @@ export const expectedTseslintRules: Record<
       allowAny: false,
     },
   ],
+  '@typescript-eslint/switch-exhaustiveness-check': [
+    'error',
+    {
+      allowDefaultCaseForExhaustiveSwitch: false,
+      requireDefaultForNonUnion: false,
+      considerDefaultExhaustiveForUnions: true,
+    },
+  ],
   '@typescript-eslint/triple-slash-reference': [
     'error',
     { lib: 'never', path: 'never', types: 'never' },
