@@ -1,5 +1,4 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-import _ from 'lodash'
 
 import eslintCommentsRules from './rules/eslint-comments.js'
 import eslintRules from './rules/eslint.js'
@@ -36,8 +35,13 @@ export const { rulesPerPlugin, rules, plugins }: Exports =
         acc.plugins[pluginName] = plugin
       }
 
-      const rules = _.mapKeys(localRules, (_rule, localRuleName) =>
-        plugin === 'eslint' ? localRuleName : `${pluginName}/${localRuleName}`,
+      const rules = Object.fromEntries(
+        Object.entries(localRules).map(([localRuleName, ruleConfig]) => [
+          plugin === 'eslint'
+            ? localRuleName
+            : `${pluginName}/${localRuleName}`,
+          ruleConfig,
+        ]),
       )
       acc.rulesPerPlugin[pluginName] = rules
       acc.rules = { ...acc.rules, ...rules }
