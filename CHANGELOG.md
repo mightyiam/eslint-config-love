@@ -1,3 +1,9 @@
+## [98.0.2](https://github.com/mightyiam/eslint-config-love/compare/v98.0.1...v98.0.2) (2024-11-11)
+
+### Bug Fixes
+
+* no use lodash in impl ([90bb65a](https://github.com/mightyiam/eslint-config-love/commit/90bb65a35bbd674485ec346f8df7f5ed32bfb091)), closes [#1892](https://github.com/mightyiam/eslint-config-love/issues/1892)
+
 ## [98.0.1](https://github.com/mightyiam/eslint-config-love/compare/v98.0.0...v98.0.1) (2024-11-11)
 
 ### Bug Fixes
