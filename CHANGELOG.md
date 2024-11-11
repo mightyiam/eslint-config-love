@@ -1,3 +1,9 @@
+## [98.0.1](https://github.com/mightyiam/eslint-config-love/compare/v98.0.0...v98.0.1) (2024-11-11)
+
+### Bug Fixes
+
+* include missing files in package ([62a2673](https://github.com/mightyiam/eslint-config-love/commit/62a2673f65ab1f592063628bf3879d851a02591e)), closes [#1890](https://github.com/mightyiam/eslint-config-love/issues/1890)
+
 ## [98.0.0](https://github.com/mightyiam/eslint-config-love/compare/v97.0.0...v98.0.0) (2024-11-09)
 
 ### ⚠ BREAKING CHANGES
