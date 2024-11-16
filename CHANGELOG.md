@@ -1,3 +1,13 @@
+## [99.0.0](https://github.com/mightyiam/eslint-config-love/compare/v98.0.2...v99.0.0) (2024-11-16)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/unified-signatures
+
+### Features
+
+* @typescript-eslint/unified-signatures ([cefd3b8](https://github.com/mightyiam/eslint-config-love/commit/cefd3b81dfa3310ea93d8f5ddb62e02c0d8277fc))
+
 ## [98.0.2](https://github.com/mightyiam/eslint-config-love/compare/v98.0.1...v98.0.2) (2024-11-11)
 
 ### Bug Fixes
