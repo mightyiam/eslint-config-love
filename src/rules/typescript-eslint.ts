@@ -273,6 +273,10 @@ const rules: PluginUsage = {
       { lib: 'never', path: 'never', types: 'never' },
     ],
     'unbound-method': ['error', { ignoreStatic: false }],
+    'unified-signatures': [
+      'error',
+      { ignoreDifferentlyNamedParameters: false },
+    ],
   },
 }
 

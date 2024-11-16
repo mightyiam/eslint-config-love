@@ -187,7 +187,6 @@ export const rulesToConsider: Record<string, string[]> = {
   ],
   '@typescript-eslint': [
     '@typescript-eslint/require-await',
-    '@typescript-eslint/unified-signatures',
     '@typescript-eslint/use-unknown-in-catch-callback-variable',
   ],
 }
