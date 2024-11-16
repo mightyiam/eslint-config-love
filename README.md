@@ -31,7 +31,9 @@ It is expected that most version bumps will be major.
 
 ## Example config
 
-Here is an example `eslint.config.js`.
+Here are example [ESLint configuration files](https://eslint.org/docs/latest/use/configure/configuration-files).
+
+ECMAScript Modules:
 
 ```js
 import love from 'eslint-config-love'
@@ -42,6 +44,21 @@ export default [
     files: ['**/*.js', '**/*.ts'],
   },
 ]
+```
+
+CommonJS:
+
+```js
+module.exports = (async function config() {
+  const { default: love } = await import('eslint-config-love')
+
+  return [
+    {
+      ...love,
+      files: ['**/*.js', '**/*.ts'],
+    },
+  ]
+})()
 ```
 
 [Learn how to configure ESLint](https://eslint.org/docs/latest/use/configure/).
