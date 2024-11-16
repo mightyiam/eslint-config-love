@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: latest
       - run: npm ci
+      - run: npm run compile
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
