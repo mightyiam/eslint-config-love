@@ -4,11 +4,15 @@ import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import { readPackageUp } from 'read-package-up'
 import _ from 'lodash'
+import { dirname } from 'node:path'
 
 const readResult = await readPackageUp()
 if (readResult === undefined) {
   throw new Error()
 }
+
+export const projectRoot = dirname(readResult.path)
+
 const { packageJson: ourPkg } = readResult
 if (ourPkg.dependencies === undefined) {
   throw new Error()
