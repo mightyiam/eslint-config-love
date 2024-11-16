@@ -481,6 +481,10 @@ export const expectedTseslintRules: Record<
     { lib: 'never', path: 'never', types: 'never' },
   ],
   '@typescript-eslint/unbound-method': ['error', { ignoreStatic: false }],
+  '@typescript-eslint/unified-signatures': [
+    'error',
+    { ignoreDifferentlyNamedParameters: false },
+  ],
 }
 
 export const expectedExportedRules = {
