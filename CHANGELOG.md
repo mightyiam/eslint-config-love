@@ -1,3 +1,16 @@
+## [100.0.0](https://github.com/mightyiam/eslint-config-love/compare/v99.0.0...v100.0.0) (2024-11-19)
+
+### ⚠ BREAKING CHANGES
+
+* This config no longer turns off rules whose
+typescript-eslint equivalents it uses. Turning off of such rules
+historically made sense, but since 065ce30c322e371c5aaea9558491aac739168161
+it does not. For some, this may require some turning off of rules.
+
+### Features
+
+* no turn off rules whose typescript-eslint equivs are used ([4302e11](https://github.com/mightyiam/eslint-config-love/commit/4302e11bf6bf3f4d91b4b92235389ed9d2d54767))
+
 ## [99.0.0](https://github.com/mightyiam/eslint-config-love/compare/v98.0.2...v99.0.0) (2024-11-16)
 
 ### ⚠ BREAKING CHANGES
