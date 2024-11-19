@@ -17,7 +17,7 @@ import {
   expectedPromiseRules,
   expectedTseslintRules,
 } from './_expected-exported-value.js'
-import { rulesPerPlugin } from '../rules.js'
+import { rulesPerPlugin } from '../plugin-usage.js'
 
 const knownEslintRules = new TSESLint.Linter({
   configType: 'eslintrc',

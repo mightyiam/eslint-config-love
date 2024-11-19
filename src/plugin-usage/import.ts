@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-import'
-import type { PluginUsage } from '../rules.js'
+import type { PluginUsage } from '../plugin-usage.js'
 
-const rules: PluginUsage = {
+const usage: PluginUsage = {
   pluginName: 'import',
   plugin,
   rules: {
@@ -17,4 +17,4 @@ const rules: PluginUsage = {
   },
 }
 
-export default rules
+export default usage

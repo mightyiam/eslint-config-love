@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-eslint-comments'
-import type { PluginUsage } from '../rules.js'
+import type { PluginUsage } from '../plugin-usage.js'
 
-const rules: PluginUsage = {
+const usage: PluginUsage = {
   pluginName: 'eslint-comments',
   plugin,
   rules: {
@@ -14,4 +14,4 @@ const rules: PluginUsage = {
   },
 }
 
-export default rules
+export default usage

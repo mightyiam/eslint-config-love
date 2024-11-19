@@ -1,11 +1,11 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import eslintCommentsRules from './rules/eslint-comments.js'
-import eslintRules from './rules/eslint.js'
-import nRules from './rules/n.js'
-import promiseRules from './rules/promise.js'
-import typescriptEslint from './rules/typescript-eslint.js'
-import importRules from './rules/import.js'
+import eslintCommentsRules from './plugin-usage/eslint-comments.js'
+import eslintRules from './plugin-usage/eslint.js'
+import nRules from './plugin-usage/n.js'
+import promiseRules from './plugin-usage/promise.js'
+import typescriptEslint from './plugin-usage/typescript-eslint.js'
+import importRules from './plugin-usage/import.js'
 
 export interface PluginUsage {
   pluginName: string

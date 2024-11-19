@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-n'
-import type { PluginUsage } from '../rules.js'
+import type { PluginUsage } from '../plugin-usage.js'
 
-const rules: PluginUsage = {
+const usage: PluginUsage = {
   pluginName: 'n',
   plugin,
   rules: {
@@ -15,4 +15,4 @@ const rules: PluginUsage = {
   },
 }
 
-export default rules
+export default usage

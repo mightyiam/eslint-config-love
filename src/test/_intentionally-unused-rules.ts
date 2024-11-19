@@ -1,5 +1,5 @@
 import { TSESLint } from '@typescript-eslint/utils'
-import tseslintUsage from '../rules/typescript-eslint.js'
+import tseslintUsage from '../plugin-usage/typescript-eslint.js'
 
 export const intentionallyUnusedRules: string[] = [
   // ## Incompatible with JS

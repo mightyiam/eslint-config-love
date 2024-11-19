@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import { parser } from 'typescript-eslint'
-import { rules, plugins } from './rules.js'
+import { rules, plugins } from './plugin-usage.js'
 
 const config: TSESLint.FlatConfig.Config = {
   linterOptions: {

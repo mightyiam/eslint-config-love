@@ -1,7 +1,7 @@
-import type { PluginUsage } from '../rules.js'
+import type { PluginUsage } from '../plugin-usage.js'
 import { plugin } from 'typescript-eslint'
 
-const rules: PluginUsage = {
+const usage: PluginUsage = {
   pluginName: '@typescript-eslint',
   plugin,
   rules: {
@@ -280,4 +280,4 @@ const rules: PluginUsage = {
   },
 }
 
-export default rules
+export default usage

@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-promise'
-import type { PluginUsage } from '../rules.js'
+import type { PluginUsage } from '../plugin-usage.js'
 
-const rules: PluginUsage = {
+const usage: PluginUsage = {
   pluginName: 'promise',
   plugin,
   rules: {
@@ -9,4 +9,4 @@ const rules: PluginUsage = {
   },
 }
 
-export default rules
+export default usage
