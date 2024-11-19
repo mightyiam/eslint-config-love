@@ -33,24 +33,27 @@ test('languageOptions', async (t) => {
   })
 })
 
-test('rules', async (t) => {
+test('rule levels', async (t) => {
   // @ts-expect-error type seems wrong
   const actual: TSESLint.FlatConfig.Config = await actualP
-  if (expectedExportedValue.rules === undefined) throw new Error()
-  const { rules } = expectedExportedValue
-  const normalized = Object.fromEntries(
-    Object.entries(rules).map(([name, value]) => {
-      if (value === undefined) throw new Error()
-      if (!Array.isArray(value)) throw new Error()
-      const [level, ...options] = value
-      if (typeof level === 'number') throw new Error()
-      enum Level {
-        error = 2,
-        warn = 1,
-        off = 0,
-      }
-      return [name, [Level[level], ...options]] as const
-    }),
-  )
-  t.deepEqual(actual.rules, normalized)
+  t.deepEqual(normalize(actual.rules), normalize(expectedExportedValue.rules))
+
+  function normalize(
+    rules?: TSESLint.SharedConfig.RulesRecord,
+  ): Record<string, string> {
+    if (rules === undefined) throw new Error()
+    return Object.fromEntries(
+      Object.entries(rules).map(([name, value]) => {
+        if (value === undefined) throw new Error()
+        if (!Array.isArray(value)) throw new Error()
+        const [level] = value
+        return [
+          name,
+          typeof level === 'string'
+            ? level
+            : { '0': 'off', '1': 'warn', '2': 'error' }[level],
+        ]
+      }),
+    )
+  }
 })
