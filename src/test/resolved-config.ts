@@ -49,7 +49,7 @@ test('rules', async (t) => {
         warn = 1,
         off = 0,
       }
-      return [name, [Level[level], ...options]]
+      return [name, [Level[level], ...options]] as const
     }),
   )
   t.deepEqual(actual.rules, normalized)
