@@ -186,7 +186,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/valid-params',
   ],
   '@typescript-eslint': [
-    '@typescript-eslint/no-unsafe-type-assertion',
     '@typescript-eslint/related-getter-setter-pairs',
     '@typescript-eslint/require-await',
     '@typescript-eslint/use-unknown-in-catch-callback-variable',

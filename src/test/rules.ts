@@ -48,6 +48,7 @@ const knownRules = new Map([
 
 const deprecatedKnownRules = [...knownRules.entries()]
   .filter(([_name, rule_]) => {
+    if (typeof rule_ !== 'object' || rule_ === null) throw new Error()
     const rule = rule_ as { meta?: { deprecated?: boolean } }
     const { meta } = rule
     if (meta === undefined) return false
