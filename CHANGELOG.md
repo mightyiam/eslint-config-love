@@ -1,3 +1,14 @@
+## [101.0.0](https://github.com/mightyiam/eslint-config-love/compare/v100.0.0...v101.0.0) (2024-11-19)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-type-assertion and
+bump minimum typescript-eslint to v8.15.0.
+
+### Features
+
+* @typescript-eslint/no-unsafe-type-assertion ([f24848b](https://github.com/mightyiam/eslint-config-love/commit/f24848bd984ff2b1daa78f6b23db484e149004ef))
+
 ## [100.0.0](https://github.com/mightyiam/eslint-config-love/compare/v99.0.0...v100.0.0) (2024-11-19)
 
 ### ⚠ BREAKING CHANGES
