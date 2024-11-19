@@ -8,11 +8,11 @@ const eslint = new TSESLint.FlatESLint({
   overrideConfig: [exported],
 })
 
-const actualP = eslint.calculateConfigForFile('foo.js')
+// @ts-expect-error -- seems like a type error
+const actual: TSESLint.FlatConfig.Config =
+  await eslint.calculateConfigForFile('foo.js')
 
 test('plugins', async (t) => {
-  // @ts-expect-error type seems wrong
-  const actual: TSESLint.FlatConfig.Config = await actualP
   if (actual.plugins === undefined) throw new Error()
 
   const actualSansAt = Object.fromEntries(
@@ -22,8 +22,6 @@ test('plugins', async (t) => {
 })
 
 test('languageOptions', async (t) => {
-  // @ts-expect-error type seems wrong
-  const actual: TSESLint.FlatConfig.Config = await actualP
   const { languageOptions: actualLanguageOptions } = actual
   if (actualLanguageOptions === undefined) throw new Error()
   t.deepEqual(actualLanguageOptions, {
@@ -35,8 +33,6 @@ test('languageOptions', async (t) => {
 })
 
 test('rule levels', async (t) => {
-  // @ts-expect-error type seems wrong
-  const actual: TSESLint.FlatConfig.Config = await actualP
   t.deepEqual(normalize(actual.rules), normalize(expectedExportedValue.rules))
 
   function normalize(
