@@ -28,7 +28,8 @@ test('languageOptions', async (t) => {
   if (actualLanguageOptions === undefined) throw new Error()
   t.deepEqual(actualLanguageOptions, {
     ...expectedExportedValue.languageOptions,
-    ecmaVersion: 'latest',
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- version string
+    ecmaVersion: 2025,
     sourceType: 'module',
   })
 })
