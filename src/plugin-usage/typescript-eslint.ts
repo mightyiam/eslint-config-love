@@ -177,6 +177,7 @@ const usage: PluginUsage = {
     'no-unsafe-function-type': ['error'],
     'no-unsafe-member-access': ['error'],
     'no-unsafe-return': ['error'],
+    'no-unsafe-type-assertion': ['error'],
     'no-unsafe-unary-minus': ['error'],
     'no-unused-expressions': [
       'error',
