@@ -1,3 +1,6 @@
+import { TSESLint } from '@typescript-eslint/utils'
+import tseslintUsage from '../rules/typescript-eslint.js'
+
 export const intentionallyUnusedRules: string[] = [
   // ## Incompatible with JS
 
@@ -44,6 +47,13 @@ export const intentionallyUnusedRules: string[] = [
 
   // Covered by `@typescript-eslint/naming-convention`
   'camelcase',
+
+  // Covered by `@typescript-eslint/only-throw-error`
+  'no-throw-literal',
+
+  ...[
+    ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
+  ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
 
   // ## Project specific
 
