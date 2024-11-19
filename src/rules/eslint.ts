@@ -83,7 +83,6 @@ const rules: PluginUsage = {
     'no-sparse-arrays': ['error'],
     'no-template-curly-in-string': ['error'],
     'no-this-before-super': ['error'],
-    'no-throw-literal': ['off'],
     'no-unexpected-multiline': ['error'],
     'no-unmodified-loop-condition': ['error'],
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
