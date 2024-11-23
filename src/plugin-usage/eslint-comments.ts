@@ -5,6 +5,7 @@ const usage: PluginUsage = {
   pluginName: 'eslint-comments',
   plugin,
   rules: {
+    'disable-enable-pair': ['error', { allowWholeFile: true }],
     'require-description': [
       'error',
       {

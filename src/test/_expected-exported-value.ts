@@ -9,6 +9,7 @@ export const expectedEslintCommentsRules: Record<
   string,
   TSESLint.SharedConfig.RuleEntry
 > = {
+  'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
   'eslint-comments/require-description': [
     'error',
     {
