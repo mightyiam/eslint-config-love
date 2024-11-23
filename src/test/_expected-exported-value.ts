@@ -471,6 +471,7 @@ export const expectedTseslintRules: Record<
     'error',
     { ignoreDifferentlyNamedParameters: false },
   ],
+  '@typescript-eslint/use-unknown-in-catch-callback-variable': ['error'],
 }
 
 export const expectedExportedRules = {

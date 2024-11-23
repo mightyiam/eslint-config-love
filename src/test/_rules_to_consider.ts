@@ -185,8 +185,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/spec-only',
     'promise/valid-params',
   ],
-  '@typescript-eslint': [
-    '@typescript-eslint/require-await',
-    '@typescript-eslint/use-unknown-in-catch-callback-variable',
-  ],
+  '@typescript-eslint': ['@typescript-eslint/require-await'],
 }

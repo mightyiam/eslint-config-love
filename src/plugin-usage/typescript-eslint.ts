@@ -279,6 +279,7 @@ const usage: PluginUsage = {
       'error',
       { ignoreDifferentlyNamedParameters: false },
     ],
+    'use-unknown-in-catch-callback-variable': ['error'],
   },
 }
 
