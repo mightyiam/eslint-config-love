@@ -1,3 +1,17 @@
+## [107.0.0](https://github.com/mightyiam/eslint-config-love/compare/v106.0.0...v107.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* eslint-comments/no-unused-enable
+* eslint-comments/no-unlimited-disable
+* eslint-comments/no-duplicate-disable
+
+### Features
+
+* eslint-comments/no-duplicate-disable ([e60dd79](https://github.com/mightyiam/eslint-config-love/commit/e60dd7954708347f7141a00cce917696cecc9c9d))
+* eslint-comments/no-unlimited-disable ([1a133b4](https://github.com/mightyiam/eslint-config-love/commit/1a133b4361c3aecfb24866478ea238ee8938bad7))
+* eslint-comments/no-unused-enable ([3232076](https://github.com/mightyiam/eslint-config-love/commit/32320769b445eea3c3b270aee5dbcb5696f9c65a))
+
 ## [106.0.0](https://github.com/mightyiam/eslint-config-love/compare/v105.0.0...v106.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES
