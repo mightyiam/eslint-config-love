@@ -7,6 +7,7 @@ const usage: PluginUsage = {
   rules: {
     'disable-enable-pair': ['error', { allowWholeFile: true }],
     'no-aggregating-enable': ['error'],
+    'no-duplicate-disable': ['error'],
     'require-description': [
       'error',
       {
