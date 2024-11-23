@@ -1,3 +1,13 @@
+## [104.0.0](https://github.com/mightyiam/eslint-config-love/compare/v103.0.0...v104.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/require-await
+
+### Features
+
+* @typescript-eslint/require-await ([4678416](https://github.com/mightyiam/eslint-config-love/commit/4678416cb3fc5de747fa03e5e6a8ad3bd276b803))
+
 ## [103.0.0](https://github.com/mightyiam/eslint-config-love/compare/v102.0.0...v103.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES
