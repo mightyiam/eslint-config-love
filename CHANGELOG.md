@@ -1,3 +1,13 @@
+## [106.0.0](https://github.com/mightyiam/eslint-config-love/compare/v105.0.0...v106.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* eslint-comments/no-aggregating-enable
+
+### Features
+
+* eslint-comments/no-aggregating-enable ([b513d3a](https://github.com/mightyiam/eslint-config-love/commit/b513d3a30e1501041618225cc4e3ad5b73f36bca))
+
 ## [105.0.0](https://github.com/mightyiam/eslint-config-love/compare/v104.0.0...v105.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES
