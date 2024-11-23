@@ -63,6 +63,8 @@ export const intentionallyUnusedRules: string[] = [
 
   '@typescript-eslint/prefer-readonly-parameter-types',
 
+  'eslint-comments/no-restricted-disable',
+
   'n/no-restricted-import',
 
   'n/no-restricted-require',
