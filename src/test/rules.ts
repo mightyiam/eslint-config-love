@@ -113,7 +113,7 @@ test('no deprecated rules', (t) => {
   t.deepEqual(usedDeprecatedRules, [])
 })
 
-test('JS equivalent rules are off', async (t) => {
+test('JS equivalent rules are off', (t) => {
   if (pluginTseslint.rules === undefined) throw new Error()
   const ourRules_: TSESLint.FlatConfig.Rules = ourRules
 

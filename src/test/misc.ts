@@ -10,7 +10,7 @@ test('rule configs are arrays', (t) => {
   t.deepEqual(nonArrayConfigs, [])
 })
 
-test('tseslint dep group same version', async (t) => {
+test('tseslint dep group same version', (t) => {
   const { 'typescript-eslint': tseslint } = ourDeps
   const { '@typescript-eslint/utils': tseslintUtils } = ourDeps
   t.is(tseslint, tseslintUtils)

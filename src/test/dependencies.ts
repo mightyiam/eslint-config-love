@@ -8,7 +8,7 @@ import {
   ourPeerDeps,
 } from './_util.js'
 
-test('range types', async (t) => {
+test('range types', (t) => {
   const nonCompliantDepRanges = Object.entries({
     dep: ourDeps,
     peer: ourPeerDeps,

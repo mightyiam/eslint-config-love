@@ -247,6 +247,7 @@ const usage: PluginUsage = {
     'promise-function-async': ['error'],
     'related-getter-setter-pairs': ['error'],
     'require-array-sort-compare': ['error', { ignoreStringArrays: true }],
+    'require-await': ['error'],
     'restrict-plus-operands': ['error', { skipCompoundAssignments: false }],
     'restrict-template-expressions': ['error', { allowNumber: true }],
     'return-await': ['error', 'always'],

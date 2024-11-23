@@ -88,7 +88,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'prefer-template',
     'radix',
     'require-atomic-updates',
-    'require-await',
     'require-unicode-regexp',
     'require-yield',
     'sort-imports',
@@ -185,5 +184,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/spec-only',
     'promise/valid-params',
   ],
-  '@typescript-eslint': ['@typescript-eslint/require-await'],
+  '@typescript-eslint': [],
 }
