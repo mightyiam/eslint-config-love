@@ -17,7 +17,7 @@
     "format/check": "prettier . --check",
     "format/fix": "prettier . --write",
     "unit": "ava",
-    "test": "run-s clean-artifacts format/check compile lint unit",
+    "test": "run-s clean-artifacts format/check compile unit lint",
     "clean-artifacts": "git clean lib -X --force",
     "is-code-clean": "git diff-index HEAD --quiet",
     "prepublishOnly": "run-s is-code-clean compile"
