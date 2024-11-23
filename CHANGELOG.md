@@ -1,3 +1,13 @@
+## [102.0.0](https://github.com/mightyiam/eslint-config-love/compare/v101.0.0...v102.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/related-getter-setter-pairs
+
+### Features
+
+* @typescript-eslint/related-getter-setter-pairs ([586c4bf](https://github.com/mightyiam/eslint-config-love/commit/586c4bf58e0b7418feff773f4ead7f30733b291c))
+
 ## [101.0.0](https://github.com/mightyiam/eslint-config-love/compare/v100.0.0...v101.0.0) (2024-11-19)
 
 ### ⚠ BREAKING CHANGES
