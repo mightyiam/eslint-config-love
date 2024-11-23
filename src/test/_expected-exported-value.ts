@@ -433,6 +433,7 @@ export const expectedTseslintRules: Record<
     'error',
     { ignoreStringArrays: true },
   ],
+  '@typescript-eslint/require-await': ['error'],
   '@typescript-eslint/restrict-plus-operands': [
     'error',
     { skipCompoundAssignments: false },

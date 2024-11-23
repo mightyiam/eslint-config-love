@@ -19,7 +19,7 @@ import nBottomPlugin from 'eslint-plugin-n_bottom'
 import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 import _ from 'lodash'
 
-test('bottom dep version is minimum of dep range', async (t) => {
+test('bottom dep version is minimum of dep range', (t) => {
   const bottomDepsThatAreNotMinOfDepRange = [
     ['typescript-eslint', ourDeps] as const,
     ['eslint', ourPeerDeps] as const,

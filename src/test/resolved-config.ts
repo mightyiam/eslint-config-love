@@ -12,7 +12,7 @@ const eslint = new TSESLint.FlatESLint({
 const actual: TSESLint.FlatConfig.Config =
   await eslint.calculateConfigForFile('foo.js')
 
-test('plugins', async (t) => {
+test('plugins', (t) => {
   if (actual.plugins === undefined) throw new Error()
 
   const actualSansAt = Object.fromEntries(
@@ -21,7 +21,7 @@ test('plugins', async (t) => {
   t.deepEqual(actualSansAt, expectedExportedValue.plugins)
 })
 
-test('languageOptions', async (t) => {
+test('languageOptions', (t) => {
   const { languageOptions: actualLanguageOptions } = actual
   if (actualLanguageOptions === undefined) throw new Error()
   t.deepEqual(actualLanguageOptions, {
@@ -32,7 +32,7 @@ test('languageOptions', async (t) => {
   })
 })
 
-test('rule levels', async (t) => {
+test('rule levels', (t) => {
   t.deepEqual(normalize(actual.rules), normalize(expectedExportedValue.rules))
 
   function normalize(
