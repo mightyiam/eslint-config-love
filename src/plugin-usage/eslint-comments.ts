@@ -9,6 +9,7 @@ const usage: PluginUsage = {
     'no-aggregating-enable': ['error'],
     'no-duplicate-disable': ['error'],
     'no-unlimited-disable': ['error'],
+    'no-unused-enable': ['error'],
     'require-description': [
       'error',
       {
