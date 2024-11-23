@@ -1,3 +1,13 @@
+## [103.0.0](https://github.com/mightyiam/eslint-config-love/compare/v102.0.0...v103.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/use-unknown-in-catch-callback-variable
+
+### Features
+
+* @typescript-eslint/use-unknown-in-catch-callback-variable ([47b0def](https://github.com/mightyiam/eslint-config-love/commit/47b0def689da8d16880b1f21304c2c877bf2a156))
+
 ## [102.0.0](https://github.com/mightyiam/eslint-config-love/compare/v101.0.0...v102.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES
