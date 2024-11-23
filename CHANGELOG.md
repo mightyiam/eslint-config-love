@@ -1,3 +1,13 @@
+## [105.0.0](https://github.com/mightyiam/eslint-config-love/compare/v104.0.0...v105.0.0) (2024-11-23)
+
+### ⚠ BREAKING CHANGES
+
+* eslint-comments/disable-enable-pair
+
+### Features
+
+* eslint-comments/disable-enable-pair ([8668647](https://github.com/mightyiam/eslint-config-love/commit/866864700d6d4097c0661d18c041c4535bb1aece))
+
 ## [104.0.0](https://github.com/mightyiam/eslint-config-love/compare/v103.0.0...v104.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES

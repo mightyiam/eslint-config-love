@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-love",
   "type": "module",
-  "version": "104.0.0",
+  "version": "105.0.0",
   "description": "A TypeScript ESLint config that loves you",
   "funding": [
     {
