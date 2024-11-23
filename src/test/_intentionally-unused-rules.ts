@@ -65,6 +65,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'eslint-comments/no-restricted-disable',
 
+  'eslint-comments/no-use',
+
   'n/no-restricted-import',
 
   'n/no-restricted-require',
