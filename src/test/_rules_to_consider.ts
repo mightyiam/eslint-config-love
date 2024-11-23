@@ -1,6 +1,5 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [
-    'eslint-comments/no-unused-disable',
     'eslint-comments/no-unused-enable',
     'eslint-comments/no-use',
   ],
