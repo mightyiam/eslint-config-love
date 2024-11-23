@@ -1,6 +1,5 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [
-    'eslint-comments/disable-enable-pair',
     'eslint-comments/no-aggregating-enable',
     'eslint-comments/no-duplicate-disable',
     'eslint-comments/no-restricted-disable',
