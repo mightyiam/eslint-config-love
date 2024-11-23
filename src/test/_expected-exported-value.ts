@@ -427,6 +427,8 @@ export const expectedTseslintRules: Record<
     { allowSingleElementEquality: 'never' },
   ],
   '@typescript-eslint/promise-function-async': ['error'],
+
+  '@typescript-eslint/related-getter-setter-pairs': ['error'],
   '@typescript-eslint/require-array-sort-compare': [
     'error',
     { ignoreStringArrays: true },

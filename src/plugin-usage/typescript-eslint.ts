@@ -245,6 +245,7 @@ const usage: PluginUsage = {
       { allowSingleElementEquality: 'never' },
     ],
     'promise-function-async': ['error'],
+    'related-getter-setter-pairs': ['error'],
     'require-array-sort-compare': ['error', { ignoreStringArrays: true }],
     'restrict-plus-operands': ['error', { skipCompoundAssignments: false }],
     'restrict-template-expressions': ['error', { allowNumber: true }],
