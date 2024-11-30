@@ -51,6 +51,9 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by `@typescript-eslint/naming-convention`
   'camelcase',
 
+  // Covered by `@typescript-eslint/switch-exhaustiveness-check`
+  'default-case',
+
   // Covered by `@typescript-eslint/only-throw-error`
   'no-throw-literal',
 

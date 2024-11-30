@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'default-case',
     'for-direction',
     'func-name-matching',
     'func-names',
