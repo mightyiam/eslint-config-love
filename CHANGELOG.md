@@ -1,3 +1,13 @@
+## [108.0.0](https://github.com/mightyiam/eslint-config-love/compare/v107.0.0...v108.0.0) (2024-11-30)
+
+### ⚠ BREAKING CHANGES
+
+* add rule `complexity` and bump min eslint v9.12.0.
+
+### Features
+
+* complexity ([2f24687](https://github.com/mightyiam/eslint-config-love/commit/2f24687d5eded22bab152a17a15399d6ccd2ea26))
+
 ## [107.0.0](https://github.com/mightyiam/eslint-config-love/compare/v106.0.0...v107.0.0) (2024-11-23)
 
 ### ⚠ BREAKING CHANGES
