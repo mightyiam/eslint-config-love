@@ -25,6 +25,14 @@ const usage: PluginUsage = {
       'as-needed',
       { requireReturnForObjectLiteral: false },
     ],
+    complexity: [
+      'error',
+      {
+        variant: 'modified',
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- arbitrary choice
+        max: 5,
+      },
+    ],
     'constructor-super': ['error'],
     curly: ['error', 'multi-line'],
     'default-case-last': ['error'],
