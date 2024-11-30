@@ -78,6 +78,9 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## Complicated
 
+  // Rule is too simple
+  'capitalized-comments',
+
   // Rule docs claim implementation hacky
   'eslint-comments/no-unused-disable',
 
