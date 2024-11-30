@@ -55,6 +55,7 @@ export const expectedEslintRules: Record<
       max: 5,
     },
   ],
+  'consistent-this': ['error', 'that'],
   'constructor-super': ['error'],
   curly: ['error', 'multi-line'],
   'default-case-last': ['error'],
