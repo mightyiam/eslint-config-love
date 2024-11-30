@@ -1,3 +1,13 @@
+## [109.0.0](https://github.com/mightyiam/eslint-config-love/compare/v108.0.0...v109.0.0) (2024-11-30)
+
+### ⚠ BREAKING CHANGES
+
+* consistent-this
+
+### Features
+
+* consistent-this ([6b75345](https://github.com/mightyiam/eslint-config-love/commit/6b753458f09b38cc2146f301f8a1d6f6647f97cf))
+
 ## [108.0.0](https://github.com/mightyiam/eslint-config-love/compare/v107.0.0...v108.0.0) (2024-11-30)
 
 ### ⚠ BREAKING CHANGES
