@@ -45,6 +45,9 @@ export const intentionallyUnusedRules: string[] = [
   'no-redeclare',
   '@typescript-eslint/no-redeclare',
 
+  // Covered by `no-var`
+  'block-scoped-var',
+
   // Covered by `@typescript-eslint/naming-convention`
   'camelcase',
 

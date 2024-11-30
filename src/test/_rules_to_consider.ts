@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'block-scoped-var',
     'capitalized-comments',
     'complexity',
     'consistent-this',
