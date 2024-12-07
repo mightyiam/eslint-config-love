@@ -73,6 +73,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'eslint-comments/no-use',
 
+  'func-name-matching',
+
   'n/no-restricted-import',
 
   'n/no-restricted-require',
