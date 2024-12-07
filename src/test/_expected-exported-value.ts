@@ -62,6 +62,7 @@ export const expectedEslintRules: Record<
   eqeqeq: ['error', 'always', { null: 'ignore' }],
   'for-direction': ['error'],
   'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+  'guard-for-in': ['error'],
   'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
   'no-async-promise-executor': ['error'],
   'no-caller': ['error'],
