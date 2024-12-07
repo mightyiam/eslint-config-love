@@ -3,7 +3,6 @@ export const rulesToConsider: Record<string, string[]> = {
   '': [
     'func-names',
     'func-style',
-    'getter-return',
     'grouped-accessor-pairs',
     'guard-for-in',
     'id-denylist',

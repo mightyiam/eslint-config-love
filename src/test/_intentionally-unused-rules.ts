@@ -24,6 +24,9 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## redundant
 
+  // Covered by TypeScript
+  'getter-return',
+
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
 
