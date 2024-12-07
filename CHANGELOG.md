@@ -1,3 +1,17 @@
+## [110.0.0](https://github.com/mightyiam/eslint-config-love/compare/v109.0.0...v110.0.0) (2024-12-07)
+
+### ⚠ BREAKING CHANGES
+
+* guard-for-in
+* grouped-accessor-pairs getBeforeSet
+* for-direction
+
+### Features
+
+* for-direction ([8f45d39](https://github.com/mightyiam/eslint-config-love/commit/8f45d396c1f37bd564d946902f51facd410ba464))
+* grouped-accessor-pairs getBeforeSet ([8c33592](https://github.com/mightyiam/eslint-config-love/commit/8c33592dab9d87355a35ec49672146eef1deef83))
+* guard-for-in ([714c44b](https://github.com/mightyiam/eslint-config-love/commit/714c44b8d86c7f18377ae9f48e5f4aa869ce1711))
+
 ## [109.0.0](https://github.com/mightyiam/eslint-config-love/compare/v108.0.0...v109.0.0) (2024-11-30)
 
 ### ⚠ BREAKING CHANGES
