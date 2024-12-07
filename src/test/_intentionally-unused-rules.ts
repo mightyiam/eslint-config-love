@@ -78,6 +78,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'func-name-matching',
 
+  'id-denylist',
+
   'n/no-restricted-import',
 
   'n/no-restricted-require',
