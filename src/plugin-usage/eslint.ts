@@ -38,6 +38,7 @@ const usage: PluginUsage = {
     curly: ['error', 'multi-line'],
     'default-case-last': ['error'],
     eqeqeq: ['error', 'always', { null: 'ignore' }],
+    'for-direction': ['error'],
     'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
     'no-async-promise-executor': ['error'],
     'no-caller': ['error'],
