@@ -3,7 +3,7 @@
   <h1>eslint-config-love</h1>
 
 ![GitHub License](https://img.shields.io/github/license/mightyiam/eslint-config-love)
-[![main branch checks status](https://img.shields.io/github/check-runs/mightyiam/eslint-config-love/main)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
+[![.github/workflows/ci.yaml](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/mightyiam/eslint-config-love/actions/workflows/ci.yaml)
 [![npm](https://img.shields.io/npm/v/eslint-config-love)](https://www.npmjs.com/package/eslint-config-love)
 ![Dependent repos prior to rename](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-standard-with-typescript?label="dependent%20repos%20prior%20to%20rename")
 ![Dependent repos](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-love)
