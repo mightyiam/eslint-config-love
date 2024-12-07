@@ -80,6 +80,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'id-denylist',
 
+  'id-length',
+
   'n/no-restricted-import',
 
   'n/no-restricted-require',

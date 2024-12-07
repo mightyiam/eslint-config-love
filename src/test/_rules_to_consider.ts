@@ -3,7 +3,6 @@ export const rulesToConsider: Record<string, string[]> = {
   '': [
     'func-names',
     'func-style',
-    'id-length',
     'id-match',
     'logical-assignment-operators',
     'max-classes-per-file',
