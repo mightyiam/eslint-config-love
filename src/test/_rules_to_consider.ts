@@ -146,7 +146,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/fs',
   ],
   promise: [
-    'promise/always-return',
     'promise/avoid-new',
     'promise/catch-or-return',
     'promise/no-callback-in-promise',

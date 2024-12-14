@@ -60,6 +60,9 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by `@typescript-eslint/only-throw-error`
   'no-throw-literal',
 
+  // Covered by TypeScript
+  'promise/always-return',
+
   ...[
     ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
   ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
