@@ -105,4 +105,7 @@ export const intentionallyUnusedRules: string[] = [
   // Conflicts with `@typescript-eslint/init-declarations`
   // https://github.com/mightyiam/eslint-config-love/issues/1710
   'no-undef-init',
+
+  // Implemented using a blacklist of function names
+  'promise/no-callback-in-promise',
 ]
