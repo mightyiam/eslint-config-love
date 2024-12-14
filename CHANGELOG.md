@@ -1,3 +1,13 @@
+## [112.0.0](https://github.com/mightyiam/eslint-config-love/compare/v111.0.0...v112.0.0) (2024-12-14)
+
+### ⚠ BREAKING CHANGES
+
+* promise/avoid-new
+
+### Features
+
+* promise/avoid-new ([727d02b](https://github.com/mightyiam/eslint-config-love/commit/727d02ba118913d787d1a69c09108d16cf14de7c))
+
 ## [111.0.0](https://github.com/mightyiam/eslint-config-love/compare/v110.0.0...v111.0.0) (2024-12-14)
 
 ### ⚠ BREAKING CHANGES
