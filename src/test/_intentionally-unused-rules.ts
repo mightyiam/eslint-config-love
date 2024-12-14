@@ -63,6 +63,9 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by TypeScript
   'promise/always-return',
 
+  // Covered by `@typescript-eslint/no-floating-promises`
+  'promise/catch-or-return',
+
   ...[
     ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
   ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
