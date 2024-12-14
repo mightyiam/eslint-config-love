@@ -4,7 +4,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'func-names',
     'func-style',
     'id-match',
-    'logical-assignment-operators',
     'max-classes-per-file',
     'max-depth',
     'max-lines',

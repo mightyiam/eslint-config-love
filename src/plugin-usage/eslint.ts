@@ -41,6 +41,11 @@ const usage: PluginUsage = {
     'for-direction': ['error'],
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': ['error'],
+    'logical-assignment-operators': [
+      'error',
+      'always',
+      { enforceForIfStatements: true },
+    ],
     'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
     'no-async-promise-executor': ['error'],
     'no-caller': ['error'],
