@@ -5,6 +5,7 @@ const usage: PluginUsage = {
   pluginName: 'promise',
   plugin,
   rules: {
+    'avoid-new': ['error'],
     'param-names': ['error'],
   },
 }
