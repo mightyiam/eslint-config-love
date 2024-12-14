@@ -1,3 +1,13 @@
+## [111.0.0](https://github.com/mightyiam/eslint-config-love/compare/v110.0.0...v111.0.0) (2024-12-14)
+
+### ⚠ BREAKING CHANGES
+
+* logical-assignment-operators
+
+### Features
+
+* logical-assignment-operators ([a008387](https://github.com/mightyiam/eslint-config-love/commit/a008387c6b8a73eb41f090da95125ddbc71c2154))
+
 ## [110.0.0](https://github.com/mightyiam/eslint-config-love/compare/v109.0.0...v110.0.0) (2024-12-07)
 
 ### ⚠ BREAKING CHANGES
