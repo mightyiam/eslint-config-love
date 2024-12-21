@@ -9,15 +9,13 @@ import _ from 'lodash'
 import { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import { rulesToConsider } from './_rules_to_consider.js'
-import {
-  expectedEslintCommentsRules,
-  expectedEslintRules,
-  expectedImportRules,
-  expectedNRules,
-  expectedPromiseRules,
-  expectedTseslintRules,
-} from './_expected-exported-value.js'
 import { rulesPerPlugin } from '../plugin-usage.js'
+import { expectedEslintCommentsRules } from './expected-exported-value/_eslint-comments.js'
+import { expectedEslintRules } from './expected-exported-value/_eslint.js'
+import { expectedImportRules } from './expected-exported-value/_import.js'
+import { expectedNRules } from './expected-exported-value/_n.js'
+import { expectedPromiseRules } from './expected-exported-value/_promise.js'
+import { expectedTseslintRules } from './expected-exported-value/_typescript-eslint.js'
 
 const knownEslintRules = new TSESLint.Linter({
   configType: 'eslintrc',
