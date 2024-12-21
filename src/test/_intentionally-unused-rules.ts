@@ -32,6 +32,9 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## redundant
 
+  // Covered by `@typescript-eslint/naming-convention`
+  'id-match',
+
   // Covered by TypeScript
   'getter-return',
 
