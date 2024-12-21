@@ -1,3 +1,19 @@
+## [113.0.0](https://github.com/mightyiam/eslint-config-love/compare/v112.0.0...v113.0.0) (2024-12-21)
+
+### ⚠ BREAKING CHANGES
+
+* max-lines at 450
+* max-depth with max: 5
+* no-constructor-return
+* no-constant-binary-expression
+
+### Features
+
+* max-depth with max: 5 ([de0c1e5](https://github.com/mightyiam/eslint-config-love/commit/de0c1e588041dc25ddd0324764cc9f5b6c7eb610))
+* max-lines at 450 ([76a649a](https://github.com/mightyiam/eslint-config-love/commit/76a649a6bfb58be04b8017719c4effd971152ab8))
+* no-constant-binary-expression ([2ee4130](https://github.com/mightyiam/eslint-config-love/commit/2ee413000aaa25f13fb9479bd00ddb1b21586975))
+* no-constructor-return ([fb328d4](https://github.com/mightyiam/eslint-config-love/commit/fb328d44df6441169b50617ca1d1fde40c255ca2))
+
 ## [112.0.0](https://github.com/mightyiam/eslint-config-love/compare/v111.0.0...v112.0.0) (2024-12-14)
 
 ### ⚠ BREAKING CHANGES
