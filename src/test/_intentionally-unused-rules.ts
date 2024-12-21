@@ -24,6 +24,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'no-bitwise',
 
+  'no-continue',
+
   // ## redundant
 
   // Covered by TypeScript
