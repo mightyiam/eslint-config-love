@@ -30,6 +30,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'func-style',
 
+  'max-classes-per-file',
+
   // ## redundant
 
   // Covered by `@typescript-eslint/naming-convention`
