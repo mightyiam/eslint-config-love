@@ -26,6 +26,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'no-continue',
 
+  'func-names',
+
   // ## redundant
 
   // Covered by TypeScript

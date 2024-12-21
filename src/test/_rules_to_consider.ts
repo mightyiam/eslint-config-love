@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'func-names',
     'func-style',
     'id-match',
     'max-classes-per-file',
