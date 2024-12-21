@@ -68,7 +68,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm --global install npm@latest
       - run: npm install
       - run: npm test
       - uses: numtide/clean-git-action@v2
