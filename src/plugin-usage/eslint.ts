@@ -56,6 +56,7 @@ const usage: PluginUsage = {
     'no-const-assign': ['error'],
     'no-constant-binary-expression': ['error'],
     'no-constant-condition': ['error', { checkLoops: false }],
+    'no-constructor-return': ['error'],
     'no-control-regex': ['error'],
     'no-debugger': ['error'],
     'no-delete-var': ['error'],

@@ -13,7 +13,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-alert',
     'no-await-in-loop',
     'no-console',
-    'no-constructor-return',
     'no-continue',
     'no-div-regex',
     'no-dupe-else-if',
