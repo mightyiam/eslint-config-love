@@ -46,6 +46,8 @@ const usage: PluginUsage = {
       'always',
       { enforceForIfStatements: true },
     ],
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- default plus one
+    'max-depth': ['error', { max: 5 }],
     'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
     'no-async-promise-executor': ['error'],
     'no-caller': ['error'],
