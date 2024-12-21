@@ -12,7 +12,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'max-statements',
     'no-alert',
     'no-await-in-loop',
-    'no-bitwise',
     'no-console',
     'no-constant-binary-expression',
     'no-constructor-return',

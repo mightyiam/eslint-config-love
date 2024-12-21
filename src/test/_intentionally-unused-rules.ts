@@ -22,6 +22,8 @@ export const intentionallyUnusedRules: string[] = [
 
   '@typescript-eslint/prefer-enum-initializers',
 
+  'no-bitwise',
+
   // ## redundant
 
   // Covered by TypeScript
