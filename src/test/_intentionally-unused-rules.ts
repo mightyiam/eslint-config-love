@@ -28,6 +28,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'func-names',
 
+  'func-style',
+
   // ## redundant
 
   // Covered by TypeScript
