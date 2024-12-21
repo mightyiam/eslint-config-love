@@ -76,6 +76,7 @@ export const expectedEslintRules: Record<
   'no-compare-neg-zero': ['error'],
   'no-cond-assign': ['error'],
   'no-const-assign': ['error'],
+  'no-constant-binary-expression': ['error'],
   'no-constant-condition': ['error', { checkLoops: false }],
   'no-control-regex': ['error'],
   'no-debugger': ['error'],
