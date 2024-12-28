@@ -53,6 +53,11 @@ export const expectedEslintRules: Record<
     // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- default plus 150
     { max: 450, skipBlankLines: true, skipComments: true },
   ],
+  'max-nested-callbacks': [
+    'error',
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- arbitrary value
+    { max: 3 },
+  ],
   'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
   'no-async-promise-executor': ['error'],
   'no-caller': ['error'],

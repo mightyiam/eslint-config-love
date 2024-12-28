@@ -2,7 +2,6 @@ export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
     'max-lines-per-function',
-    'max-nested-callbacks',
     'max-statements',
     'no-alert',
     'no-await-in-loop',
