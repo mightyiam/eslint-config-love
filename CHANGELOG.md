@@ -1,3 +1,13 @@
+## [114.0.0](https://github.com/mightyiam/eslint-config-love/compare/v113.0.0...v114.0.0) (2024-12-28)
+
+### ⚠ BREAKING CHANGES
+
+* max-nested-callbacks (max: 3)
+
+### Features
+
+* max-nested-callbacks (max: 3) ([31fe71c](https://github.com/mightyiam/eslint-config-love/commit/31fe71c964e66a54dabbd0d788c72c71ffdd351d))
+
 ## [113.0.0](https://github.com/mightyiam/eslint-config-love/compare/v112.0.0...v113.0.0) (2024-12-21)
 
 ### ⚠ BREAKING CHANGES
