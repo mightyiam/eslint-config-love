@@ -33,6 +33,7 @@ export interface Boo {
 // Inline callbacks don't need return types:
 const ONE_MILLISECOND = 1
 setTimeout(() => {
+  // eslint-disable-next-line no-console -- never executed
   console.log()
 }, ONE_MILLISECOND)
 
