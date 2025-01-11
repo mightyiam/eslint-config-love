@@ -1,3 +1,18 @@
+## [116.0.0](https://github.com/mightyiam/eslint-config-love/compare/v115.0.0...v116.0.0) (2025-01-11)
+
+### ⚠ BREAKING CHANGES
+
+* no-empty-static-block
+* no-dupe-else-if
+* no-console
+
+### Features
+
+* complexity 10 ([dceb72d](https://github.com/mightyiam/eslint-config-love/commit/dceb72d6274a34b31115f161de2d80d7efce3133))
+* no-console ([b34a7df](https://github.com/mightyiam/eslint-config-love/commit/b34a7df1ab756b876be20495bb1482a60921f516))
+* no-dupe-else-if ([817f58b](https://github.com/mightyiam/eslint-config-love/commit/817f58b80df296f21b1a08498135d74182b26edd))
+* no-empty-static-block ([2cc343e](https://github.com/mightyiam/eslint-config-love/commit/2cc343e320eba9280883e55fb9228ddf74d869b1))
+
 ## [115.0.0](https://github.com/mightyiam/eslint-config-love/compare/v114.0.0...v115.0.0) (2025-01-11)
 
 ### ⚠ BREAKING CHANGES
