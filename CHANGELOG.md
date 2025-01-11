@@ -1,3 +1,13 @@
+## [115.0.0](https://github.com/mightyiam/eslint-config-love/compare/v114.0.0...v115.0.0) (2025-01-11)
+
+### ⚠ BREAKING CHANGES
+
+* no-alert
+
+### Features
+
+* no-alert ([e76b272](https://github.com/mightyiam/eslint-config-love/commit/e76b272c16e01ebe38867dbc8d6fcde8f0108493))
+
 ## [114.0.0](https://github.com/mightyiam/eslint-config-love/compare/v113.0.0...v114.0.0) (2024-12-28)
 
 ### ⚠ BREAKING CHANGES
