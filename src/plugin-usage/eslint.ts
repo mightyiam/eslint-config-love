@@ -30,7 +30,7 @@ const usage: PluginUsage = {
       {
         variant: 'modified',
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- arbitrary choice
-        max: 5,
+        max: 10,
       },
     ],
     'consistent-this': ['error', 'that'],
