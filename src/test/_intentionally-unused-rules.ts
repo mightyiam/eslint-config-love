@@ -32,6 +32,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'max-classes-per-file',
 
+  'no-else-return',
+
   // ## redundant
 
   // Covered by `imports/no-duplicates`
