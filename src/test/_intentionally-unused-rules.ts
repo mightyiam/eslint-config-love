@@ -83,6 +83,9 @@ export const intentionallyUnusedRules: string[] = [
   'max-lines-per-function',
   'max-statements',
 
+  // Did this ever actually happen to someone?
+  'no-div-regex',
+
   ...[
     ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
   ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
