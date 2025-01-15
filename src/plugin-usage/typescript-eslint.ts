@@ -147,6 +147,7 @@ const usage: PluginUsage = {
     'no-meaningless-void-operator': ['error', { checkNever: true }],
     'no-misused-new': ['error'],
     'no-misused-promises': ['error'],
+    'no-misused-spread': ['error', { allow: [] }],
     'no-mixed-enums': ['error'],
     'no-namespace': ['error'],
     'no-non-null-asserted-nullish-coalescing': ['error'],

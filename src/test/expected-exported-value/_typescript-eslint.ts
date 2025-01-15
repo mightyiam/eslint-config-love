@@ -154,6 +154,7 @@ export const expectedTseslintRules: Record<
   ],
   '@typescript-eslint/no-misused-new': ['error'],
   '@typescript-eslint/no-misused-promises': ['error'],
+  '@typescript-eslint/no-misused-spread': ['error', { allow: [] }],
   '@typescript-eslint/no-mixed-enums': ['error'],
   '@typescript-eslint/no-namespace': ['error'],
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': ['error'],
