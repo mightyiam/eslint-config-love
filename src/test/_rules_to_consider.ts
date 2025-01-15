@@ -139,5 +139,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/spec-only',
     'promise/valid-params',
   ],
-  '@typescript-eslint': [],
+  '@typescript-eslint': ['@typescript-eslint/no-misused-spread'],
 }
