@@ -1,3 +1,13 @@
+## [117.0.0](https://github.com/mightyiam/eslint-config-love/compare/v116.0.0...v117.0.0) (2025-01-15)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-misused-spread, bump min plugin version
+
+### Features
+
+* @typescript-eslint/no-misused-spread, bump min plugin version ([eb1c1df](https://github.com/mightyiam/eslint-config-love/commit/eb1c1dff4b77539cdce927fe2cc9a44873323b32))
+
 ## [116.0.0](https://github.com/mightyiam/eslint-config-love/compare/v115.0.0...v116.0.0) (2025-01-11)
 
 ### ⚠ BREAKING CHANGES
