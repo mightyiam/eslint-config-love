@@ -138,4 +138,7 @@ export const intentionallyUnusedRules: string[] = [
 
   // Implemented using a blacklist of function names
   'promise/no-callback-in-promise',
+
+  // a typescript-eslint equivalent would be more useful
+  'no-implicit-coercion',
 ]
