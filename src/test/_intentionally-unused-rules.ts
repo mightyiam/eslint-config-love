@@ -10,6 +10,8 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## "too much"
 
+  'no-inline-comments',
+
   '@typescript-eslint/default-param-last',
   'default-param-last',
 
