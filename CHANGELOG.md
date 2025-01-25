@@ -1,3 +1,13 @@
+## [118.0.0](https://github.com/mightyiam/eslint-config-love/compare/v117.0.0...v118.0.0) (2025-01-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-implicit-globals
+
+### Features
+
+* no-implicit-globals ([1eea953](https://github.com/mightyiam/eslint-config-love/commit/1eea9532f6ab2189778edc1f59e1c35ae02255e1))
+
 ## [117.0.0](https://github.com/mightyiam/eslint-config-love/compare/v116.0.0...v117.0.0) (2025-01-15)
 
 ### ⚠ BREAKING CHANGES
