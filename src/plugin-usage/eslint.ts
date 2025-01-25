@@ -90,6 +90,7 @@ const usage: PluginUsage = {
     'no-fallthrough': ['error'],
     'no-func-assign': ['error'],
     'no-global-assign': ['error'],
+    'no-implicit-globals': ['error'],
     'no-import-assign': ['error'],
     'no-invalid-regexp': ['error'],
     'no-irregular-whitespace': ['error'],
