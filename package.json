@@ -86,7 +86,7 @@
     "eslint-plugin-n_bottom": "npm:eslint-plugin-n@17.0.0",
     "eslint-plugin-promise_bottom": "npm:eslint-plugin-promise@7.0.0",
     "execa": "9.5.2",
-    "lefthook": "1.11.1",
+    "lefthook": "1.11.2",
     "lodash": "4.17.21",
     "npm-run-all": "4.1.5",
     "prettier": "3.5.2",
