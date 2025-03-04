@@ -1,3 +1,13 @@
+## [119.0.0](https://github.com/mightyiam/eslint-config-love/compare/v118.0.0...v119.0.0) (2025-03-04)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** bump minimum typescript-eslint to v8.26.0
+
+### Miscellaneous Chores
+
+* **deps:** update dependency typescript to v5.8.2 ([ff168df](https://github.com/mightyiam/eslint-config-love/commit/ff168df20e84cd5f9303a3bb73302eca72b03fcb))
+
 ## [118.0.0](https://github.com/mightyiam/eslint-config-love/compare/v117.0.0...v118.0.0) (2025-01-25)
 
 ### ⚠ BREAKING CHANGES
