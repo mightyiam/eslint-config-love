@@ -59,7 +59,7 @@
   "dependencies": {
     "@typescript-eslint/utils": "^8.26.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import-x": "^4.10.5",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-promise": "^7.0.0",
     "typescript-eslint": "^8.26.0"
@@ -82,7 +82,7 @@
     "eslint": "9.24.0",
     "eslint_bottom": "npm:eslint@9.12.0",
     "eslint-plugin-eslint-comments_bottom": "npm:eslint-plugin-eslint-comments@3.2.0",
-    "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.31.0",
+    "eslint-plugin-import-x_bottom": "npm:eslint-plugin-import-x@4.10.5",
     "eslint-plugin-n_bottom": "npm:eslint-plugin-n@17.0.0",
     "eslint-plugin-promise_bottom": "npm:eslint-plugin-promise@7.0.0",
     "execa": "9.5.2",

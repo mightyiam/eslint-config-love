@@ -1,8 +1,9 @@
-import plugin from 'eslint-plugin-import'
+import plugin from 'eslint-plugin-import-x'
 import type { PluginUsage } from '../plugin-usage.js'
 
 const usage: PluginUsage = {
-  pluginName: 'import',
+  pluginName: 'import-x',
+  // @ts-expect-error -- too strict...
   plugin,
   rules: {
     export: ['error'],

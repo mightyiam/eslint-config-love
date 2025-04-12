@@ -73,6 +73,9 @@ export const intentionallyUnusedRules: string[] = [
   'no-redeclare',
   '@typescript-eslint/no-redeclare',
 
+  // Covered by strict TypeScript
+  'import-x/no-rename-default',
+
   // Covered by `no-var`
   'block-scoped-var',
 

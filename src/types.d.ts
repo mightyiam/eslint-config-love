@@ -18,16 +18,6 @@ declare module 'eslint-plugin-n_bottom' {
   const plugin: TSESLint.FlatConfig.Plugin
   export default plugin
 }
-declare module 'eslint-plugin-import' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
-  export default plugin
-}
-declare module 'eslint-plugin-import_bottom' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
-  export default plugin
-}
 declare module 'eslint-plugin-promise' {
   import type { TSESLint } from '@typescript-eslint/utils'
   const plugin: TSESLint.FlatConfig.Plugin
