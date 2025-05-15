@@ -1,3 +1,13 @@
+## [120.0.0](https://github.com/mightyiam/eslint-config-love/compare/v119.0.0...v120.0.0) (2025-05-15)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unnecessary-type-conversion
+
+### Features
+
+* @typescript-eslint/no-unnecessary-type-conversion ([bdb0edb](https://github.com/mightyiam/eslint-config-love/commit/bdb0edb768958acf0c08eb73e914a95899e923d3))
+
 ## [119.0.0](https://github.com/mightyiam/eslint-config-love/compare/v118.0.0...v119.0.0) (2025-03-04)
 
 ### ⚠ BREAKING CHANGES
