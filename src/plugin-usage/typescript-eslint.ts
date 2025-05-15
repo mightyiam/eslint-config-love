@@ -169,6 +169,7 @@ const usage: PluginUsage = {
     'no-unnecessary-type-arguments': ['error'],
     'no-unnecessary-type-assertion': ['error'],
     'no-unnecessary-type-constraint': ['error'],
+    'no-unnecessary-type-conversion': ['error'],
     'no-unnecessary-type-parameters': ['error'],
     'no-unsafe-argument': ['error'],
     'no-unsafe-assignment': ['error'],
