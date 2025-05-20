@@ -73,7 +73,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/lodash": "4.17.16",
+    "@types/lodash": "4.17.17",
     "@types/node": "22.15.19",
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.7.0",
