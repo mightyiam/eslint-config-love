@@ -61,12 +61,6 @@ export const intentionallyUnusedRules: string[] = [
   '@typescript-eslint/consistent-return',
   'consistent-return',
 
-  // From rule documentation:
-  // > Requiring type annotations unnecessarily can be cumbersome to maintain and generally reduces code readability. TypeScript is often better at inferring types than easily written type annotations would allow.
-  // >
-  // > Instead of enabling typedef, it is generally recommended to use the --noImplicitAny and --strictPropertyInitialization compiler options to enforce type annotations only when useful.
-  '@typescript-eslint/typedef',
-
   // Covered by strict TypeScript
   '@typescript-eslint/no-invalid-this',
 
