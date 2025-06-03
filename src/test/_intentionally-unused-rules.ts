@@ -119,6 +119,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'n/no-restricted-require',
 
+  'n/no-top-level-await',
+
   'no-restricted-imports',
 
   // ## Complicated
