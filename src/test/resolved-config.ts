@@ -27,7 +27,7 @@ test('languageOptions', (t) => {
   t.deepEqual(actualLanguageOptions, {
     ...expectedExportedValue.languageOptions,
     // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- version string
-    ecmaVersion: 2025,
+    ecmaVersion: 2026,
     sourceType: 'module',
   })
 })
