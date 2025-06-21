@@ -1,3 +1,14 @@
+## [121.0.0](https://github.com/mightyiam/eslint-config-love/compare/v120.0.0...v121.0.0) (2025-06-21)
+
+### ⚠ BREAKING CHANGES
+
+* import/enforce-node-protocol-usage
+and minimum eslint-plugin-import v2.32.0
+
+### Features
+
+* import/enforce-node-protocol-usage ([a9d8391](https://github.com/mightyiam/eslint-config-love/commit/a9d8391532d712ca9ab8af53baaeae556946e53e))
+
 ## [120.0.0](https://github.com/mightyiam/eslint-config-love/compare/v119.0.0...v120.0.0) (2025-05-15)
 
 ### ⚠ BREAKING CHANGES
