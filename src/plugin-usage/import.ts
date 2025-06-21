@@ -5,6 +5,7 @@ const usage: PluginUsage = {
   pluginName: 'import',
   plugin,
   rules: {
+    'enforce-node-protocol-usage': ['error', 'always'],
     export: ['error'],
     first: ['error'],
     'no-absolute-path': [

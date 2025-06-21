@@ -4,6 +4,7 @@ export const expectedImportRules: Record<
   string,
   TSESLint.SharedConfig.RuleEntry
 > = {
+  'import/enforce-node-protocol-usage': ['error', 'always'],
   'import/export': ['error'],
   'import/first': ['error'],
   'import/no-absolute-path': [
