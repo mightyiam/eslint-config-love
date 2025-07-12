@@ -77,7 +77,7 @@
     "@types/node": "24.0.13",
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.7.0",
-    "ava": "6.4.0",
+    "ava": "6.4.1",
     "conventional-changelog-conventionalcommits": "9.1.0",
     "eslint": "9.31.0",
     "eslint_bottom": "npm:eslint@9.12.0",
