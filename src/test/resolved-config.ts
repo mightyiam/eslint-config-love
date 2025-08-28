@@ -8,7 +8,6 @@ const eslint = new TSESLint.FlatESLint({
   overrideConfig: [exported],
 })
 
-// @ts-expect-error -- seems like a type error
 const actual: TSESLint.FlatConfig.Config =
   await eslint.calculateConfigForFile('foo.js')
 

@@ -42,3 +42,8 @@ declare module 'eslint_bottom' {
   import { TSESLint } from '@typescript-eslint/utils'
   export class ESLint extends TSESLint.FlatESLint {}
 }
+declare module 'typescript-eslint' {
+  import type { TSESLint } from '@typescript-eslint/utils'
+  export const plugin: TSESLint.FlatConfig.Plugin
+  export const parser: TSESLint.FlatConfig.Parser
+}
