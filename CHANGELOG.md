@@ -1,3 +1,13 @@
+## [122.0.0](https://github.com/mightyiam/eslint-config-love/compare/v121.0.0...v122.0.0) (2025-08-28)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update typescript-eslint packages to v8.41.0
+
+### Miscellaneous Chores
+
+* **deps:** update typescript-eslint packages to v8.41.0 ([9327fc4](https://github.com/mightyiam/eslint-config-love/commit/9327fc4f8a4845b98e5cf30105ffff5e8f3ba5d7))
+
 ## [121.0.0](https://github.com/mightyiam/eslint-config-love/compare/v120.0.0...v121.0.0) (2025-06-21)
 
 ### ⚠ BREAKING CHANGES
