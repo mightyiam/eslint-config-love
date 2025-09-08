@@ -1,3 +1,13 @@
+## [123.0.0](https://github.com/mightyiam/eslint-config-love/compare/v122.0.0...v123.0.0) (2025-09-08)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** minimum eslint v9.35.0
+
+### Features
+
+* **deps:** minimum eslint v9.35.0 ([5075c9b](https://github.com/mightyiam/eslint-config-love/commit/5075c9bc5638a56e2e4e5210a469f761c6252f3d))
+
 ## [122.0.0](https://github.com/mightyiam/eslint-config-love/compare/v121.0.0...v122.0.0) (2025-08-28)
 
 ### ⚠ BREAKING CHANGES
