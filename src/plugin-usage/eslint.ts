@@ -144,6 +144,7 @@ const usage: PluginUsage = {
       { destructuring: 'all', ignoreReadBeforeAssign: false },
     ],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
+    'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
     'symbol-description': ['error'],
     'unicode-bom': ['error', 'never'],

@@ -33,7 +33,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'prefer-object-has-own',
     'prefer-object-spread',
     'prefer-rest-params',
-    'prefer-spread',
     'prefer-template',
     'radix',
     'require-atomic-updates',
