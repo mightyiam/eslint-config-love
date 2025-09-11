@@ -18,7 +18,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-restricted-properties',
     'no-restricted-syntax',
     'no-setter-return',
-    'no-ternary',
     'no-undef',
     'no-undefined',
     'no-underscore-dangle',
