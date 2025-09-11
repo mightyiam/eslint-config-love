@@ -126,6 +126,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'no-restricted-imports',
 
+  'no-warning-comments',
+
   // ## Complicated
 
   // Rule is too simple

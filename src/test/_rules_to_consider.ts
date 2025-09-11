@@ -25,7 +25,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-unused-private-class-members',
     'no-useless-assignment',
     'no-useless-concat',
-    'no-warning-comments',
     'operator-assignment',
     'prefer-arrow-callback',
     'prefer-exponentiation-operator',
