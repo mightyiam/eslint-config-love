@@ -1,3 +1,13 @@
+## [125.0.0](https://github.com/mightyiam/eslint-config-love/compare/v124.0.0...v125.0.0) (2025-09-11)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-spread
+
+### Features
+
+* prefer-spread ([70eefd2](https://github.com/mightyiam/eslint-config-love/commit/70eefd2ddf3f4087181f5811afe8c75d253f3bdf))
+
 ## [124.0.0](https://github.com/mightyiam/eslint-config-love/compare/v123.0.0...v124.0.0) (2025-09-11)
 
 ### ⚠ BREAKING CHANGES
