@@ -17,7 +17,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-restricted-globals',
     'no-restricted-properties',
     'no-restricted-syntax',
-    'no-script-url',
     'no-setter-return',
     'no-ternary',
     'no-undef',

@@ -112,6 +112,7 @@ const usage: PluginUsage = {
     'no-prototype-builtins': ['error'],
     'no-regex-spaces': ['error'],
     'no-return-assign': ['error', 'except-parens'],
+    'no-script-url': ['error'],
     'no-self-assign': ['error', { props: true }],
     'no-self-compare': ['error'],
     'no-sequences': ['error'],
