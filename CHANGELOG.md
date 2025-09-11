@@ -1,3 +1,13 @@
+## [124.0.0](https://github.com/mightyiam/eslint-config-love/compare/v123.0.0...v124.0.0) (2025-09-11)
+
+### ⚠ BREAKING CHANGES
+
+* no-script-url
+
+### Features
+
+* no-script-url ([c8fa077](https://github.com/mightyiam/eslint-config-love/commit/c8fa0774086d287d21728f184ec97f6dd05fdf96))
+
 ## [123.0.0](https://github.com/mightyiam/eslint-config-love/compare/v122.0.0...v123.0.0) (2025-09-08)
 
 ### ⚠ BREAKING CHANGES
