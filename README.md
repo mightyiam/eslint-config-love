@@ -46,6 +46,51 @@ export default [
 ]
 ```
 
+### Optional: friendlier rules for test files
+
+Some teams prefer lighter rules in tests. This package now exports a small
+`testOverrides` config and a `withTests()` helper you can opt into.
+
+ESM:
+
+```js
+import love, { testOverrides, withTests } from 'eslint-config-love'
+
+// Option A: spread the override yourself
+export default [
+  { ...love, files: ['**/*.js', '**/*.ts'] },
+  testOverrides,
+]
+
+// Option B: convenience helper
+export default withTests()
+```
+
+CommonJS:
+
+```js
+module.exports = (async function config() {
+  const { default: love, testOverrides, withTests } = await import('eslint-config-love')
+
+  // Option A
+  return [
+    { ...love, files: ['**/*.js', '**/*.ts'] },
+    testOverrides,
+  ]
+
+  // Option B
+  // return withTests()
+})()
+```
+
+What it does:
+
+- turns off `@typescript-eslint/no-magic-numbers` in tests
+- turns off `max-lines` in tests
+- turns off `max-nested-callbacks` in tests
+
+Targeted at common test file patterns: `**/__tests__/**` and `**/*.{test,spec}.{js,jsx,ts,tsx}`.
+
 CommonJS:
 
 ```js
