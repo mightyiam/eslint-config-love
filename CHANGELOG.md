@@ -1,3 +1,13 @@
+## [127.0.0](https://github.com/mightyiam/eslint-config-love/compare/v126.0.0...v127.0.0) (2025-09-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-negated-condition
+
+### Features
+
+* no-negated-condition ([2a16f76](https://github.com/mightyiam/eslint-config-love/commit/2a16f768a86311d849049f5c959f698b72d29c30))
+
 ## [126.0.0](https://github.com/mightyiam/eslint-config-love/compare/v125.1.0...v126.0.0) (2025-09-25)
 
 ### ⚠ BREAKING CHANGES
