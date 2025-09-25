@@ -10,6 +10,7 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## removes a desired language feature
   'no-ternary',
+  'no-nested-ternary',
 
   // ## "too much"
 

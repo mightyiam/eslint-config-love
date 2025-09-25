@@ -5,7 +5,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-eq-null',
     'no-inner-declarations',
     'no-negated-condition',
-    'no-nested-ternary',
     'no-nonoctal-decimal-escape',
     'no-param-reassign',
     'no-plusplus',
