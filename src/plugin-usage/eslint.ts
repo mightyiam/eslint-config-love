@@ -107,6 +107,7 @@ const usage: PluginUsage = {
     'no-new-func': ['error'],
     'no-new-native-nonconstructor': ['error'],
     'no-new-wrappers': ['error'],
+    'no-nonoctal-decimal-escape': ['error'],
     'no-obj-calls': ['error'],
     'no-object-constructor': ['error'],
     'no-octal': ['error'],
