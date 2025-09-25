@@ -1,3 +1,13 @@
+## [130.0.0](https://github.com/mightyiam/eslint-config-love/compare/v129.0.0...v130.0.0) (2025-09-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-plusplus
+
+### Features
+
+* no-plusplus ([69a9d17](https://github.com/mightyiam/eslint-config-love/commit/69a9d17fb1d1a856ac47a349414049a49d02773c))
+
 ## [129.0.0](https://github.com/mightyiam/eslint-config-love/compare/v128.0.0...v129.0.0) (2025-09-25)
 
 ### ⚠ BREAKING CHANGES
