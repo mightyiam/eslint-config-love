@@ -97,6 +97,7 @@ const usage: PluginUsage = {
     'no-iterator': ['error'],
     'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
     'no-lone-blocks': ['error'],
+    'no-lonely-if': ['error'],
     'no-loss-of-precision': ['error'],
     'no-misleading-character-class': ['error'],
     'no-multi-str': ['error'],
