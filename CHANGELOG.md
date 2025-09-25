@@ -1,3 +1,13 @@
+## [126.0.0](https://github.com/mightyiam/eslint-config-love/compare/v125.1.0...v126.0.0) (2025-09-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-multi-assign
+
+### Features
+
+* no-multi-assign ([c4df189](https://github.com/mightyiam/eslint-config-love/commit/c4df189f60fbf1faa781d74606688ebfbb7ecace))
+
 ## [125.1.0](https://github.com/mightyiam/eslint-config-love/compare/v125.0.0...v125.1.0) (2025-09-25)
 
 ### Features
