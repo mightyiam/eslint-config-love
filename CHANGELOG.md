@@ -1,3 +1,13 @@
+## [129.0.0](https://github.com/mightyiam/eslint-config-love/compare/v128.0.0...v129.0.0) (2025-09-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-param-reassign
+
+### Features
+
+* no-param-reassign ([ed78d8b](https://github.com/mightyiam/eslint-config-love/commit/ed78d8b3099bc4d8da4a12a1c1c8da714e488e3e))
+
 ## [128.0.0](https://github.com/mightyiam/eslint-config-love/compare/v127.0.0...v128.0.0) (2025-09-25)
 
 ### ⚠ BREAKING CHANGES
