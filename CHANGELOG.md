@@ -1,3 +1,9 @@
+## [125.1.0](https://github.com/mightyiam/eslint-config-love/compare/v125.0.0...v125.1.0) (2025-09-25)
+
+### Features
+
+* no-lonely-if ([9a7eb37](https://github.com/mightyiam/eslint-config-love/commit/9a7eb378512b9334c0d1844491183a5b1659fc36))
+
 ## [125.0.0](https://github.com/mightyiam/eslint-config-love/compare/v124.0.0...v125.0.0) (2025-09-11)
 
 ### ⚠ BREAKING CHANGES
