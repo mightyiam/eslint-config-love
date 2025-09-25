@@ -102,6 +102,7 @@ const usage: PluginUsage = {
     'no-misleading-character-class': ['error'],
     'no-multi-assign': ['error', { ignoreNonDeclaration: false }],
     'no-multi-str': ['error'],
+    'no-negated-condition': ['error'],
     'no-new': ['error'],
     'no-new-func': ['error'],
     'no-new-native-nonconstructor': ['error'],

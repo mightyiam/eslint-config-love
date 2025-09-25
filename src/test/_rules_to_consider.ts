@@ -4,7 +4,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-await-in-loop',
     'no-eq-null',
     'no-inner-declarations',
-    'no-negated-condition',
     'no-nonoctal-decimal-escape',
     'no-param-reassign',
     'no-plusplus',
