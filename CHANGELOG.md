@@ -1,3 +1,13 @@
+## [128.0.0](https://github.com/mightyiam/eslint-config-love/compare/v127.0.0...v128.0.0) (2025-09-25)
+
+### ⚠ BREAKING CHANGES
+
+* no-nonoctal-decimal-escape
+
+### Features
+
+* no-nonoctal-decimal-escape ([cda5e9b](https://github.com/mightyiam/eslint-config-love/commit/cda5e9b53694633ba1d008818cb97f111d37326c))
+
 ## [127.0.0](https://github.com/mightyiam/eslint-config-love/compare/v126.0.0...v127.0.0) (2025-09-25)
 
 ### ⚠ BREAKING CHANGES
