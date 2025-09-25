@@ -112,6 +112,7 @@ const usage: PluginUsage = {
     'no-object-constructor': ['error'],
     'no-octal': ['error'],
     'no-octal-escape': ['error'],
+    'no-param-reassign': ['error', { props: true }],
     'no-proto': ['error'],
     'no-prototype-builtins': ['error'],
     'no-regex-spaces': ['error'],

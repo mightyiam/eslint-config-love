@@ -32,6 +32,7 @@ export const { rulesPerPlugin, rules, plugins }: Exports =
   imports.reduce<Exports>(
     (acc, { pluginName, plugin, rules: localRules }) => {
       if (plugin !== 'eslint') {
+        /* eslint-disable no-param-reassign -- caller does not have access to param */
         acc.plugins[pluginName] = plugin
       }
 
@@ -47,6 +48,7 @@ export const { rulesPerPlugin, rules, plugins }: Exports =
       acc.rules = { ...acc.rules, ...rules }
 
       return acc
+      /* eslint-enable no-param-reassign */
     },
     { rulesPerPlugin: {}, rules: {}, plugins: {} },
   )

@@ -81,10 +81,12 @@ test('no intersection between lists', (t) => {
   const counts = Object.entries(lists)
     .flatMap(([listTitle, list]) => list.map((rule) => [listTitle, rule]))
     .reduce<Record<string, string[]>>((acc, [listTitle, rule]) => {
+      /* eslint-disable no-param-reassign -- caller does not have access to param */
       acc[rule] = Object.hasOwn(acc, rule)
         ? [...acc[rule], listTitle]
         : [listTitle]
       return acc
+      /* eslint-enable no-param-reassign */
     }, {})
 
   const intersection = Object.fromEntries(
