@@ -100,6 +100,7 @@ export const expectedEslintRules: Record<
   'no-lonely-if': ['error'],
   'no-loss-of-precision': ['error'],
   'no-misleading-character-class': ['error'],
+  'no-multi-assign': ['error', { ignoreNonDeclaration: false }],
   'no-multi-str': ['error'],
   'no-new': ['error'],
   'no-new-func': ['error'],
