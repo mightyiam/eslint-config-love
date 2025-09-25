@@ -55,6 +55,7 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by TypeScript
   'getter-return',
   'no-unassigned-vars',
+  'no-invalid-this',
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
