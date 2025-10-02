@@ -66,6 +66,9 @@ export const intentionallyUnusedRules: string[] = [
   '@typescript-eslint/consistent-return',
   'consistent-return',
 
+  // Covered by strict mode
+  'no-inner-declarations',
+
   // Covered by strict TypeScript
   '@typescript-eslint/no-invalid-this',
 
