@@ -133,6 +133,10 @@ export const intentionallyUnusedRules: string[] = [
 
   'no-warning-comments',
 
+  'no-restricted-exports',
+  'no-restricted-globals',
+  'no-restricted-properties',
+
   // ## Complicated
 
   // Rule is too simple
