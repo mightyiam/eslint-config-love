@@ -18,7 +18,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'prefer-object-spread',
     'prefer-rest-params',
     'prefer-template',
-    'radix',
     'require-atomic-updates',
     'require-unicode-regexp',
     'require-yield',

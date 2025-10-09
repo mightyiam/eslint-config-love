@@ -153,6 +153,7 @@ const usage: PluginUsage = {
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
+    radix: ['error', 'always'],
     'symbol-description': ['error'],
     'unicode-bom': ['error', 'never'],
     'use-isnan': [
