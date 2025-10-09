@@ -1,3 +1,13 @@
+## [133.0.0](https://github.com/mightyiam/eslint-config-love/compare/v132.0.0...v133.0.0) (2025-10-09)
+
+### ⚠ BREAKING CHANGES
+
+* strict
+
+### Features
+
+* strict ([946f09f](https://github.com/mightyiam/eslint-config-love/commit/946f09fa3614b266edc24f9e42bd0d071713667a))
+
 ## [132.0.0](https://github.com/mightyiam/eslint-config-love/compare/v131.0.0...v132.0.0) (2025-10-09)
 
 ### ⚠ BREAKING CHANGES
