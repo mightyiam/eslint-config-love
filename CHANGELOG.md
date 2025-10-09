@@ -1,3 +1,13 @@
+## [131.0.0](https://github.com/mightyiam/eslint-config-love/compare/v130.0.0...v131.0.0) (2025-10-09)
+
+### ⚠ BREAKING CHANGES
+
+* no-promise-executor-return
+
+### Features
+
+* no-promise-executor-return ([28b4565](https://github.com/mightyiam/eslint-config-love/commit/28b45659f416e20727e3c0d6a292024a26b71146))
+
 ## [130.0.0](https://github.com/mightyiam/eslint-config-love/compare/v129.0.0...v130.0.0) (2025-09-25)
 
 ### ⚠ BREAKING CHANGES
