@@ -24,7 +24,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'sort-imports',
     'sort-keys',
     'sort-vars',
-    'vars-on-top',
   ],
   import: [
     'import/consistent-type-specifier-style',

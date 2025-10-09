@@ -81,6 +81,7 @@ export const intentionallyUnusedRules: string[] = [
 
   // Covered by `no-var`
   'block-scoped-var',
+  'vars-on-top',
 
   // Covered by `@typescript-eslint/naming-convention`
   'camelcase',
