@@ -4,7 +4,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'no-await-in-loop',
     'no-eq-null',
     'no-restricted-syntax',
-    'no-setter-return',
     'no-undef',
     'no-undefined',
     'no-underscore-dangle',
