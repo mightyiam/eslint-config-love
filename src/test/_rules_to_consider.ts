@@ -3,7 +3,6 @@ export const rulesToConsider: Record<string, string[]> = {
   '': [
     'no-await-in-loop',
     'no-eq-null',
-    'no-promise-executor-return',
     'no-restricted-syntax',
     'no-setter-return',
     'no-undef',

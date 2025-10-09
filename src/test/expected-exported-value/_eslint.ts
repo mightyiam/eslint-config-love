@@ -114,6 +114,7 @@ export const expectedEslintRules: Record<
   'no-octal-escape': ['error'],
   'no-param-reassign': ['error', { props: true }],
   'no-plusplus': ['error'],
+  'no-promise-executor-return': ['error', { allowVoid: false }],
   'no-proto': ['error'],
   'no-prototype-builtins': ['error'],
   'no-regex-spaces': ['error'],
