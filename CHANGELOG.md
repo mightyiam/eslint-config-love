@@ -1,3 +1,13 @@
+## [132.0.0](https://github.com/mightyiam/eslint-config-love/compare/v131.0.0...v132.0.0) (2025-10-09)
+
+### ⚠ BREAKING CHANGES
+
+* radix
+
+### Features
+
+* radix ([d586d7d](https://github.com/mightyiam/eslint-config-love/commit/d586d7d6a75ca616bd2fed964f13cbcfbd879bed))
+
 ## [131.0.0](https://github.com/mightyiam/eslint-config-love/compare/v130.0.0...v131.0.0) (2025-10-09)
 
 ### ⚠ BREAKING CHANGES
