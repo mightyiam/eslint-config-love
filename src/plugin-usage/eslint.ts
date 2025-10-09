@@ -154,6 +154,7 @@ const usage: PluginUsage = {
     'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
     radix: ['error', 'always'],
+    strict: ['error', 'safe'],
     'symbol-description': ['error'],
     'unicode-bom': ['error', 'never'],
     'use-isnan': [
