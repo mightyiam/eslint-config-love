@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'no-await-in-loop',
     'no-eq-null',
     'no-undefined',
     'no-underscore-dangle',
