@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'no-eq-null',
     'no-undefined',
     'no-underscore-dangle',
     'no-unsafe-optional-chaining',
