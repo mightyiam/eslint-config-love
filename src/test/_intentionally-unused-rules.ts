@@ -13,6 +13,13 @@ export const intentionallyUnusedRules: string[] = [
   'no-nested-ternary',
   'no-restricted-syntax',
 
+  // This is mostly covered by no-global-assign and no-shadow-restricted-names.
+  // What is not covered is that `typeof foo === "undefined"` is safer regardless.
+  // And even though we are willing to accept verbosity to gain safety, having an
+  // `undefined` global variable makes for more readable code, especially because
+  // it can be used in `switch` statements.
+  'no-undefined',
+
   // ## "too much"
 
   'no-inline-comments',
