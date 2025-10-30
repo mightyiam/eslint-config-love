@@ -37,7 +37,7 @@ const usage: PluginUsage = {
     'constructor-super': ['error'],
     curly: ['error', 'multi-line'],
     'default-case-last': ['error'],
-    eqeqeq: ['error', 'always', { null: 'ignore' }],
+    eqeqeq: ['error', 'always', { null: 'always' }],
     'for-direction': ['error'],
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': ['error'],
