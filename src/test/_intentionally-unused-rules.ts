@@ -43,6 +43,9 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## redundant
 
+  // Covered by `eqeqeq`
+  'no-eq-null',
+
   // Covered by `no-labels`
   'no-extra-label',
   'no-label-var',
