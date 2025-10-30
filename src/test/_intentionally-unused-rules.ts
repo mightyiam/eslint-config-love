@@ -50,6 +50,9 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## redundant
 
+  // Covered by `typescript-eslint/naming-convention`
+  'no-underscore-dangle',
+
   // Covered by `eqeqeq`
   'no-eq-null',
 
