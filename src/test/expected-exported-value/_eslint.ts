@@ -135,6 +135,7 @@ export const expectedEslintRules: Record<
   'no-unreachable-loop': ['error'],
   'no-unsafe-finally': ['error'],
   'no-unsafe-negation': ['error'],
+  'no-unused-private-class-members': ['error'],
   'no-useless-backreference': ['error'],
   'no-useless-call': ['error'],
   'no-useless-catch': ['error'],
