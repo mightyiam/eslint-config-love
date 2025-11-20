@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: latest
+      - run: npm --global install npm@latest
       - run: npm ci
       # Hiding tsconfig.json to workaround
       # https://github.com/conventional-changelog/commitlint/issues/3256
@@ -42,6 +43,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: latest
+      - run: npm --global install npm@latest
       - run: npm ci
       - run: npx semantic-release
         env:
@@ -68,6 +70,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm --global install npm@latest
       - run: npm install
       - run: npm test
       - uses: numtide/clean-git-action@v2
