@@ -1,3 +1,21 @@
+## [134.0.0](https://github.com/mightyiam/eslint-config-love/compare/v133.0.0...v134.0.0) (2025-11-20)
+
+### ⚠ BREAKING CHANGES
+
+* no-useless-concat
+* no-useless-assignment
+* no-unused-private-class-members
+* no eqeqeq exception for null
+* no-await-in-loop
+
+### Features
+
+* no eqeqeq exception for null ([c4ebd74](https://github.com/mightyiam/eslint-config-love/commit/c4ebd7479697c666685a3636aec661e32c6967bf))
+* no-await-in-loop ([5668d78](https://github.com/mightyiam/eslint-config-love/commit/5668d78a09671445124643fc62d7e41477493405))
+* no-unused-private-class-members ([4d9580c](https://github.com/mightyiam/eslint-config-love/commit/4d9580cebacb8c55a4cd0f1006ed5ae7fcb064a8))
+* no-useless-assignment ([0123db4](https://github.com/mightyiam/eslint-config-love/commit/0123db4fda9a33917aba5a380cc1b3bf389082fa))
+* no-useless-concat ([e142477](https://github.com/mightyiam/eslint-config-love/commit/e142477b13c5a004e55f63ec93a3aaa2b2db2bf0))
+
 ## [133.0.0](https://github.com/mightyiam/eslint-config-love/compare/v132.0.0...v133.0.0) (2025-10-09)
 
 ### ⚠ BREAKING CHANGES
