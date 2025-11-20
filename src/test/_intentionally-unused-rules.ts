@@ -70,6 +70,7 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by TypeScript
   'getter-return',
   'no-unassigned-vars',
+  'no-unsafe-optional-chaining',
   'no-invalid-this',
   'no-setter-return',
   'no-undef',
