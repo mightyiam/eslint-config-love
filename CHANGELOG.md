@@ -1,3 +1,13 @@
+## [135.0.0](https://github.com/mightyiam/eslint-config-love/compare/v134.0.0...v135.0.0) (2025-12-04)
+
+### ⚠ BREAKING CHANGES
+
+* operator-assignment always
+
+### Features
+
+* operator-assignment always ([e9a0638](https://github.com/mightyiam/eslint-config-love/commit/e9a063868af184fd043a8cf61fe5622add77e65a))
+
 ## [134.0.0](https://github.com/mightyiam/eslint-config-love/compare/v133.0.0...v134.0.0) (2025-11-20)
 
 ### ⚠ BREAKING CHANGES
