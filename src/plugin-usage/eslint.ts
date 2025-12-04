@@ -150,6 +150,7 @@ const usage: PluginUsage = {
     'no-with': ['error'],
     'object-shorthand': ['warn', 'properties'],
     'one-var': ['error', { initialized: 'never' }],
+    'operator-assignment': ['error', 'always'],
     'prefer-const': [
       'error',
       { destructuring: 'all', ignoreReadBeforeAssign: false },
