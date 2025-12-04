@@ -1,3 +1,13 @@
+## [136.0.0](https://github.com/mightyiam/eslint-config-love/compare/v135.0.0...v136.0.0) (2025-12-04)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-arrow-callback
+
+### Features
+
+* prefer-arrow-callback ([db5b13a](https://github.com/mightyiam/eslint-config-love/commit/db5b13ab06eb88f995a46e7871c220038c40ef70))
+
 ## [135.0.0](https://github.com/mightyiam/eslint-config-love/compare/v134.0.0...v135.0.0) (2025-12-04)
 
 ### ⚠ BREAKING CHANGES
