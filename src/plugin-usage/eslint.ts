@@ -151,6 +151,10 @@ const usage: PluginUsage = {
     'object-shorthand': ['warn', 'properties'],
     'one-var': ['error', { initialized: 'never' }],
     'operator-assignment': ['error', 'always'],
+    'prefer-arrow-callback': [
+      'error',
+      { allowNamedFunctions: true, allowUnboundThis: true },
+    ],
     'prefer-const': [
       'error',
       { destructuring: 'all', ignoreReadBeforeAssign: false },
