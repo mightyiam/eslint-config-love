@@ -45,6 +45,7 @@ jobs:
     strategy:
       matrix:
         runner:
+          - macos-latest
           - ubuntu-latest
           - windows-latest
         node-version: ${{ fromJson(needs.fetch-nodejs-versions.outputs.versions) }}
