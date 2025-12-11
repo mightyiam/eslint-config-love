@@ -25,7 +25,7 @@ test('integration', async (t) => {
 
   await execa(
     'npm',
-    ['install', '--production', '--offline', path.join(cwd, packageFileName)],
+    ['install', '--omit=dev', '--offline', path.join(cwd, packageFileName)],
     {
       cwd,
     },
