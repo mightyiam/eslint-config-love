@@ -21,9 +21,15 @@ test('integration', async (t) => {
 
   await execa('npm', ['init', '--yes'], { cwd })
 
-  await execa('npm', ['install', path.join(cwd, packageFileName)], {
-    cwd,
-  })
+  await execa('cp', [path.join(projectRoot, 'package-lock.json'), cwd])
+
+  await execa(
+    'npm',
+    ['install', '--production', '--offline', path.join(cwd, packageFileName)],
+    {
+      cwd,
+    },
+  )
 
   await execa('node', ['--eval', 'import("eslint-config-love")'], { cwd })
 
