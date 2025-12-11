@@ -3,6 +3,10 @@ on:
     branches:
       - master
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   test-matrix:
     uses: ./.github/workflows/test.yaml
@@ -28,4 +32,3 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
