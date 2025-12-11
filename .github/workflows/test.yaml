@@ -40,11 +40,11 @@ jobs:
     steps:
       - run: if [ "${{ needs.test.result }}" != 'success' ]; then exit 1; fi
   test:
-    needs: get-supported-node-versions
+    needs: fetch-nodejs-versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ${{ fromJson(needs.get-supported-node-versions.outputs.versions) }}
+        node-version: ${{ fromJson(needs.fetch-nodejs-versions.outputs.versions) }}
     name: Node.js v${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v5
@@ -56,14 +56,15 @@ jobs:
       - run: npm install
       - run: npm test
       - uses: numtide/clean-git-action@v2
-  get-supported-node-versions:
+  fetch-nodejs-versions:
+    name: Fetch Node.js versions
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - id: get
         run: |
           set -euxo pipefail
-          active_versions=$(bash get-node-supported-versions.sh)
+          active_versions=$(bash fetch-nodejs-versions.sh)
           echo "active=$active_versions" >> "$GITHUB_OUTPUT"
     outputs:
       versions: ${{ steps.get.outputs.active }}
