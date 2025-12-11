@@ -43,6 +43,7 @@ jobs:
     strategy:
       matrix:
         node-version: ${{ fromJson(needs.get-supported-node-versions.outputs.versions) }}
+    name: Node.js v${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v6
