@@ -41,11 +41,14 @@ jobs:
       - run: if [ "${{ needs.test.result }}" != 'success' ]; then exit 1; fi
   test:
     needs: fetch-nodejs-versions
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runner }}
     strategy:
       matrix:
+        runner:
+          - ubuntu-latest
+          - windows-latest
         node-version: ${{ fromJson(needs.fetch-nodejs-versions.outputs.versions) }}
-    name: Node.js v${{ matrix.node-version }}
+    name: ${{ matrix.runner }}, Node.js v${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v6
@@ -55,7 +58,8 @@ jobs:
       - run: npm --version
       - run: npm install
       - run: npm test
-      - uses: numtide/clean-git-action@v2
+      - if: ${{ runner.os != 'Windows' }}
+        uses: numtide/clean-git-action@v2
   fetch-nodejs-versions:
     name: Fetch Node.js versions
     runs-on: ubuntu-latest

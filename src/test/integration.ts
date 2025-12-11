@@ -7,7 +7,7 @@ import path from 'node:path'
 
 test('integration', async (t) => {
   // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- `npm install` might take long
-  t.timeout(1000 * 60)
+  t.timeout(1000 * (process.env.CI === 'true' ? 360 : 60))
 
   const cwd = await mkdtemp(tmpdir() + path.sep)
 
