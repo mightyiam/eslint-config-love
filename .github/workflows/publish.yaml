@@ -12,17 +12,12 @@ jobs:
     environment: publishing
     permissions:
       id-token: write
-      contents: read
+      contents: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: navikt/github-app-token-generator@v1
-        id: get-token
-        with:
-          app-id: ${{ secrets.BOT_APP_ID }}
-          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: actions/checkout@v5
-        with:
-          persist-credentials: false # for later steps to use a different authentication
       - uses: actions/setup-node@v6
         with:
           node-version: latest
@@ -31,5 +26,3 @@ jobs:
       - run: npm ci
       - run: npm audit signatures
       - run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
