@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-matrix:
+    uses: ./.github/workflows/test.yaml
+
+  publish:
+    needs: test-matrix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: navikt/github-app-token-generator@v1
+        id: get-token
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false # for later steps to use a different authentication
+      - uses: actions/setup-node@v6
+        with:
+          node-version: latest
+      - run: npm --global install npm@latest
+      - run: npm --version
+      - run: npm ci
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ steps.get-token.outputs.token }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
