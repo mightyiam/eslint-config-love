@@ -160,6 +160,7 @@ const usage: PluginUsage = {
       { destructuring: 'all', ignoreReadBeforeAssign: false },
     ],
     'prefer-exponentiation-operator': ['error'],
+    'prefer-named-capture-group': ['error'],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],

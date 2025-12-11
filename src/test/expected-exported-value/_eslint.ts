@@ -160,6 +160,7 @@ export const expectedEslintRules: Record<
     { destructuring: 'all', ignoreReadBeforeAssign: false },
   ],
   'prefer-exponentiation-operator': ['error'],
+  'prefer-named-capture-group': ['error'],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'prefer-spread': ['error'],
   'preserve-caught-error': ['error', { requireCatchParameter: true }],
