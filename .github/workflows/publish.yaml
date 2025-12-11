@@ -13,6 +13,7 @@ jobs:
 
   publish:
     needs: test-matrix
+    environment: publishing
     runs-on: ubuntu-latest
     steps:
       - uses: navikt/github-app-token-generator@v1
