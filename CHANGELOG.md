@@ -1,3 +1,15 @@
+## [137.0.0](https://github.com/mightyiam/eslint-config-love/compare/v136.0.0...v137.0.0) (2025-12-11)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-named-capture-group
+* prefer-exponentiation-operator
+
+### Features
+
+* prefer-exponentiation-operator ([a010301](https://github.com/mightyiam/eslint-config-love/commit/a010301df6440aebb02ac45dfb141497cb1acc4c))
+* prefer-named-capture-group ([49fbcb7](https://github.com/mightyiam/eslint-config-love/commit/49fbcb7d498b85866916da066c0450437d944f31))
+
 ## [136.0.0](https://github.com/mightyiam/eslint-config-love/compare/v135.0.0...v136.0.0) (2025-12-04)
 
 ### ⚠ BREAKING CHANGES
