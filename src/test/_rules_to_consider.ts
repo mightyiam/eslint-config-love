@@ -1,7 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   'eslint-comments': [],
   '': [
-    'prefer-numeric-literals',
     'prefer-object-has-own',
     'prefer-object-spread',
     'prefer-rest-params',

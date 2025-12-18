@@ -161,6 +161,7 @@ const usage: PluginUsage = {
     ],
     'prefer-exponentiation-operator': ['error'],
     'prefer-named-capture-group': ['error'],
+    'prefer-numeric-literals': ['error'],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
