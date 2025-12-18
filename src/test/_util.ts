@@ -62,6 +62,8 @@ export const ourRules = ourRules_
 
 export const equivalents = [
   ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-].filter((name) =>
-  Object.prototype.hasOwnProperty.call(tseslintPlugin.rules, name),
-)
+].filter((name) => {
+  const { rules: tsRules } = tseslintPlugin
+  if (tsRules === undefined) throw new Error()
+  return Object.hasOwn(tsRules, name)
+})
