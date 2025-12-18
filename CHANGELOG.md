@@ -1,3 +1,9 @@
+## [138.0.1](https://github.com/mightyiam/eslint-config-love/compare/v138.0.0...v138.0.1) (2025-12-18)
+
+### Reverts
+
+* Revert "ci: rm environment from publish job" ([e0bb16a](https://github.com/mightyiam/eslint-config-love/commit/e0bb16a11b1a37a171650681ef96e6b89bb28def))
+
 ## [138.0.0](https://github.com/mightyiam/eslint-config-love/compare/v137.0.0...v138.0.0) (2025-12-18)
 
 ### ⚠ BREAKING CHANGES
