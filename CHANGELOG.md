@@ -1,3 +1,13 @@
+## [140.0.0](https://github.com/mightyiam/eslint-config-love/compare/v139.0.0...v140.0.0) (2025-12-18)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-object-spread
+
+### Features
+
+* prefer-object-spread ([1274725](https://github.com/mightyiam/eslint-config-love/commit/1274725ffff89de413982d990e0eab221c9a8308))
+
 ## [139.0.0](https://github.com/mightyiam/eslint-config-love/compare/v138.0.1...v139.0.0) (2025-12-18)
 
 ### ⚠ BREAKING CHANGES
