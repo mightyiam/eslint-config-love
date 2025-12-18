@@ -113,25 +113,27 @@ test('no deprecated rules', (t) => {
   t.deepEqual(usedDeprecatedRules, [])
 })
 
-test('JS equivalent rules are off', (t) => {
+test('no eslint rule is used for which a ts equivalent is used as well', (t) => {
   if (pluginTseslint.rules === undefined) throw new Error()
   const ourRules_: TSESLint.FlatConfig.Rules = ourRules
 
-  const jsEquivalentRulesThatAreOn = equivalents.filter((ruleName) => {
-    const { [ruleName]: baseRuleConfig } = ourRules_
+  const usedEslintRulesForWhichATSEquivalentIsUsedAsWell = equivalents.filter(
+    (ruleName) => {
+      const {
+        [ruleName]: eslintRuleConfig,
+        [`@typescript-eslint/${ruleName}`]: tsRuleConfig,
+      } = ourRules_
 
-    if (deprecatedKnownRules.includes(`@typescript-eslint/${ruleName}`)) {
-      return false
-    }
+      if (tsRuleConfig === undefined) return false
+      if (eslintRuleConfig === undefined) return false
+      if (!Array.isArray(eslintRuleConfig)) throw new Error()
+      const [severity] = eslintRuleConfig
+      if (typeof severity !== 'string') throw new Error()
+      return severity !== 'off'
+    },
+  )
 
-    if (baseRuleConfig === undefined) return false
-    if (!Array.isArray(baseRuleConfig)) throw new Error()
-    const [severity] = baseRuleConfig
-    if (typeof severity !== 'string') throw new Error()
-    return severity !== 'off'
-  })
-
-  t.deepEqual(jsEquivalentRulesThatAreOn, [])
+  t.deepEqual(usedEslintRulesForWhichATSEquivalentIsUsedAsWell, [])
 })
 
 test('rule lists and objects are sorted', (t) => {
