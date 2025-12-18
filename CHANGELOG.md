@@ -1,3 +1,13 @@
+## [139.0.0](https://github.com/mightyiam/eslint-config-love/compare/v138.0.1...v139.0.0) (2025-12-18)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-object-has-own
+
+### Features
+
+* prefer-object-has-own ([3e9ab57](https://github.com/mightyiam/eslint-config-love/commit/3e9ab579f18de7da1ca0e8dfd5ef90e17bf14296))
+
 ## [138.0.1](https://github.com/mightyiam/eslint-config-love/compare/v138.0.0...v138.0.1) (2025-12-18)
 
 ### Reverts
