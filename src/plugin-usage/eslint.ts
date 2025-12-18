@@ -163,6 +163,7 @@ const usage: PluginUsage = {
     'prefer-named-capture-group': ['error'],
     'prefer-numeric-literals': ['error'],
     'prefer-object-has-own': ['error'],
+    'prefer-object-spread': ['error'],
     'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
     'prefer-spread': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
