@@ -1,3 +1,13 @@
+## [138.0.0](https://github.com/mightyiam/eslint-config-love/compare/v137.0.0...v138.0.0) (2025-12-18)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-numeric-literals
+
+### Features
+
+* prefer-numeric-literals ([5fe5112](https://github.com/mightyiam/eslint-config-love/commit/5fe51126f44f8778fc468effc20bab87a853a035))
+
 ## [137.0.0](https://github.com/mightyiam/eslint-config-love/compare/v136.0.0...v137.0.0) (2025-12-11)
 
 ### ⚠ BREAKING CHANGES
