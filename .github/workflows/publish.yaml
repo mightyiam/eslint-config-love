@@ -11,6 +11,7 @@ jobs:
 
   publish:
     needs: test-matrix
+    environment: publishing
     permissions:
       id-token: write
     runs-on: ubuntu-latest
