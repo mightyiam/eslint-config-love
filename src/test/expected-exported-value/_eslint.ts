@@ -170,6 +170,7 @@ export const expectedEslintRules: Record<
   'prefer-template': ['error'],
   'preserve-caught-error': ['error', { requireCatchParameter: true }],
   radix: ['error', 'always'],
+  'require-atomic-updates': ['error', { allowProperties: false }],
   strict: ['error', 'safe'],
   'symbol-description': ['error'],
   'unicode-bom': ['error', 'never'],
