@@ -171,6 +171,7 @@ const usage: PluginUsage = {
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
     radix: ['error', 'always'],
     'require-atomic-updates': ['error', { allowProperties: false }],
+    'require-unicode-regexp': ['error', { requireFlag: 'v' }],
     strict: ['error', 'safe'],
     'symbol-description': ['error'],
     'unicode-bom': ['error', 'never'],
