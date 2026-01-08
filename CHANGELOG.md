@@ -1,3 +1,13 @@
+## [144.0.0](https://github.com/mightyiam/eslint-config-love/compare/v143.0.0...v144.0.0) (2026-01-08)
+
+### ⚠ BREAKING CHANGES
+
+* require-unicode-regexp
+
+### Features
+
+* require-unicode-regexp ([3b46062](https://github.com/mightyiam/eslint-config-love/commit/3b46062c92563b351e81cc5ea5f692c6fb39e6b3))
+
 ## [143.0.0](https://github.com/mightyiam/eslint-config-love/compare/v142.0.0...v143.0.0) (2026-01-08)
 
 ### ⚠ BREAKING CHANGES
