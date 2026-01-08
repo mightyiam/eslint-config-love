@@ -165,6 +165,7 @@ export const expectedEslintRules: Record<
   'prefer-object-has-own': ['error'],
   'prefer-object-spread': ['error'],
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
+  'prefer-rest-params': ['error'],
   'prefer-spread': ['error'],
   'preserve-caught-error': ['error', { requireCatchParameter: true }],
   radix: ['error', 'always'],
