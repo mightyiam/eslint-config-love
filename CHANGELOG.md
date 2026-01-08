@@ -1,3 +1,13 @@
+## [141.0.0](https://github.com/mightyiam/eslint-config-love/compare/v140.0.0...v141.0.0) (2026-01-08)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-rest-params
+
+### Features
+
+* prefer-rest-params ([8349e7d](https://github.com/mightyiam/eslint-config-love/commit/8349e7d721e50b53fe46755e20ee8901dd6ba3ac))
+
 ## [140.0.0](https://github.com/mightyiam/eslint-config-love/compare/v139.0.0...v140.0.0) (2025-12-18)
 
 ### ⚠ BREAKING CHANGES
