@@ -1,3 +1,13 @@
+## [142.0.0](https://github.com/mightyiam/eslint-config-love/compare/v141.0.0...v142.0.0) (2026-01-08)
+
+### ⚠ BREAKING CHANGES
+
+* prefer-template
+
+### Features
+
+* prefer-template ([5f410d1](https://github.com/mightyiam/eslint-config-love/commit/5f410d11981e13aacc4f4198e98fba6b2a76d238))
+
 ## [141.0.0](https://github.com/mightyiam/eslint-config-love/compare/v140.0.0...v141.0.0) (2026-01-08)
 
 ### ⚠ BREAKING CHANGES
