@@ -167,6 +167,7 @@ export const expectedEslintRules: Record<
   'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
   'prefer-rest-params': ['error'],
   'prefer-spread': ['error'],
+  'prefer-template': ['error'],
   'preserve-caught-error': ['error', { requireCatchParameter: true }],
   radix: ['error', 'always'],
   strict: ['error', 'safe'],
