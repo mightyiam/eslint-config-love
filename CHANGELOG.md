@@ -1,3 +1,13 @@
+## [143.0.0](https://github.com/mightyiam/eslint-config-love/compare/v142.0.0...v143.0.0) (2026-01-08)
+
+### ⚠ BREAKING CHANGES
+
+* require-atomic-updates
+
+### Features
+
+* require-atomic-updates ([e8d17e3](https://github.com/mightyiam/eslint-config-love/commit/e8d17e3d0d0100f2ee4773722bc52dcfbd78ca17))
+
 ## [142.0.0](https://github.com/mightyiam/eslint-config-love/compare/v141.0.0...v142.0.0) (2026-01-08)
 
 ### ⚠ BREAKING CHANGES
