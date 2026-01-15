@@ -30,7 +30,7 @@
       "enabled": false
     },
     {
-      "matchDepNames": ["*_bottom"],
+      "matchDepNames": ["/.*_bottom$/"],
       "enabled": false
     }
   ]
