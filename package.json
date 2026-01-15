@@ -81,7 +81,7 @@
     "conventional-changelog-conventionalcommits": "9.1.0",
     "eslint": "9.39.2",
     "eslint_bottom": "npm:eslint@9.35.0",
-    "@eslint-community/eslint-plugin-eslint-comments_bottom": "npm:@eslint-community/eslint-plugin-eslint-comments@3.2.0",
+    "@eslint-community/eslint-plugin-eslint-comments_bottom": "npm:@eslint-community/eslint-plugin-eslint-comments@3.2.1",
     "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.32.0",
     "eslint-plugin-n_bottom": "npm:eslint-plugin-n@17.0.0",
     "eslint-plugin-promise_bottom": "npm:eslint-plugin-promise@7.0.0",
