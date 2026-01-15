@@ -1,3 +1,13 @@
+## [145.0.0](https://github.com/mightyiam/eslint-config-love/compare/v144.0.0...v145.0.0) (2026-01-15)
+
+### ⚠ BREAKING CHANGES
+
+* use eslint-community fork of eslint-plugin-eslint-comments
+
+### Features
+
+* use eslint-community fork of eslint-plugin-eslint-comments ([502a6da](https://github.com/mightyiam/eslint-config-love/commit/502a6dae67b6978a5fd24726ef6e5c840474c5dc)), closes [#2245](https://github.com/mightyiam/eslint-config-love/issues/2245)
+
 ## [144.0.0](https://github.com/mightyiam/eslint-config-love/compare/v143.0.0...v144.0.0) (2026-01-08)
 
 ### ⚠ BREAKING CHANGES
