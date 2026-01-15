@@ -1,8 +1,8 @@
-import plugin from 'eslint-plugin-eslint-comments'
+import plugin from '@eslint-community/eslint-plugin-eslint-comments'
 import type { PluginUsage } from '../plugin-usage.js'
 
 const usage: PluginUsage = {
-  pluginName: 'eslint-comments',
+  pluginName: '@eslint-community/eslint-comments',
   plugin,
   rules: {
     'disable-enable-pair': ['error', { allowWholeFile: true }],

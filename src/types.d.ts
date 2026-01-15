@@ -1,9 +1,9 @@
-declare module 'eslint-plugin-eslint-comments' {
+declare module '@eslint-community/eslint-plugin-eslint-comments' {
   import type { TSESLint } from '@typescript-eslint/utils'
   const plugin: TSESLint.FlatConfig.Plugin
   export default plugin
 }
-declare module 'eslint-plugin-eslint-comments_bottom' {
+declare module '@eslint-community/eslint-plugin-eslint-comments_bottom' {
   import type { TSESLint } from '@typescript-eslint/utils'
   const plugin: TSESLint.FlatConfig.Plugin
   export default plugin

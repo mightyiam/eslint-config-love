@@ -131,9 +131,9 @@ export const intentionallyUnusedRules: string[] = [
 
   '@typescript-eslint/prefer-readonly-parameter-types',
 
-  'eslint-comments/no-restricted-disable',
+  '@eslint-community/eslint-comments/no-restricted-disable',
 
-  'eslint-comments/no-use',
+  '@eslint-community/eslint-comments/no-use',
 
   'func-name-matching',
 
@@ -161,7 +161,7 @@ export const intentionallyUnusedRules: string[] = [
   'capitalized-comments',
 
   // Rule docs claim implementation hacky
-  'eslint-comments/no-unused-disable',
+  '@eslint-community/eslint-comments/no-unused-disable',
 
   // Conflicts with `@typescript-eslint/init-declarations`
   // https://github.com/mightyiam/eslint-config-love/issues/1710

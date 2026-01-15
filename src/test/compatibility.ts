@@ -13,7 +13,7 @@ import {
   parser as tseslintBottomParser,
   plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
-import eslintCommentsBottomPlugin from 'eslint-plugin-eslint-comments_bottom'
+import eslintCommentsBottomPlugin from '@eslint-community/eslint-plugin-eslint-comments_bottom'
 import importBottomPlugin from 'eslint-plugin-import_bottom'
 import nBottomPlugin from 'eslint-plugin-n_bottom'
 import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
@@ -59,7 +59,7 @@ test('our configuration is compatible with the plugins and parser at bottom of d
     },
     plugins: {
       '@typescript-eslint': tseslintBottomPlugin,
-      'eslint-comments': eslintCommentsBottomPlugin,
+      '@eslint-community/eslint-comments': eslintCommentsBottomPlugin,
       import: importBottomPlugin,
       n: nBottomPlugin,
       promise: promiseBottomPlugin,

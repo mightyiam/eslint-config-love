@@ -1,6 +1,6 @@
 import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
-import pluginEslintComments from 'eslint-plugin-eslint-comments'
+import pluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments'
 import pluginN from 'eslint-plugin-n'
 import pluginImport from 'eslint-plugin-import'
 import pluginPromise from 'eslint-plugin-promise'
@@ -28,7 +28,7 @@ if (pluginPromise.rules === undefined) throw new Error()
 if (pluginTseslint.rules === undefined) throw new Error()
 
 const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
-  [pluginEslintComments.rules, 'eslint-comments'],
+  [pluginEslintComments.rules, '@eslint-community/eslint-comments'],
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
   [pluginImport.rules, 'import'],
