@@ -58,7 +58,7 @@
   ],
   "dependencies": {
     "@typescript-eslint/utils": "^8.47.0",
-    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.0.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-promise": "^7.0.0",
