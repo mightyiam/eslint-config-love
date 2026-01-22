@@ -86,8 +86,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/spec-only',
     'promise/valid-params',
   ],
-  '@typescript-eslint': [
-    '@typescript-eslint/no-unused-private-class-members',
-    '@typescript-eslint/no-useless-default-assignment',
-  ],
+  '@typescript-eslint': ['@typescript-eslint/no-useless-default-assignment'],
 }

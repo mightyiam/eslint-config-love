@@ -190,6 +190,7 @@ const usage: PluginUsage = {
         enforceForJSX: false,
       },
     ],
+    'no-unused-private-class-members': ['error'],
     'no-unused-vars': [
       'error',
       {

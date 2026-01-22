@@ -135,7 +135,6 @@ const usage: PluginUsage = {
     'no-unreachable-loop': ['error'],
     'no-unsafe-finally': ['error'],
     'no-unsafe-negation': ['error'],
-    'no-unused-private-class-members': ['error'],
     'no-useless-assignment': ['error'],
     'no-useless-backreference': ['error'],
     'no-useless-call': ['error'],

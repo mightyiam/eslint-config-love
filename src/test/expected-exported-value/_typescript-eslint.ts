@@ -200,6 +200,7 @@ export const expectedTseslintRules: Record<
       enforceForJSX: false,
     },
   ],
+  '@typescript-eslint/no-unused-private-class-members': ['error'],
   '@typescript-eslint/no-unused-vars': [
     'error',
     {

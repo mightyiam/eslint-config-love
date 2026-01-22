@@ -57,12 +57,12 @@
     "TypeScript"
   ],
   "dependencies": {
-    "@typescript-eslint/utils": "^8.41.0",
+    "@typescript-eslint/utils": "^8.47.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-promise": "^7.0.0",
-    "typescript-eslint": "^8.41.0"
+    "typescript-eslint": "^8.47.0"
   },
   "peerDependencies": {
     "eslint": "^9.35.0",
@@ -95,6 +95,6 @@
     "semver": "7.7.3",
     "type-fest": "5.3.1",
     "typescript": "5.9.3",
-    "typescript-eslint_bottom": "npm:typescript-eslint@8.41.0"
+    "typescript-eslint_bottom": "npm:typescript-eslint@8.47.0"
   }
 }
