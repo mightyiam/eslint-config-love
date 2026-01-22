@@ -50,6 +50,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'sort-keys',
 
+  'sort-vars',
+
   // ## redundant
 
   // Covered by `typescript-eslint/naming-convention`
