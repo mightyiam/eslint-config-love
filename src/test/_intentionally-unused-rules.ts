@@ -48,6 +48,8 @@ export const intentionallyUnusedRules: string[] = [
 
   'no-else-return',
 
+  'sort-keys',
+
   // ## redundant
 
   // Covered by `typescript-eslint/naming-convention`
