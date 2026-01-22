@@ -1,3 +1,13 @@
+## [147.0.0](https://github.com/mightyiam/eslint-config-love/compare/v146.0.0...v147.0.0) (2026-01-22)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unused-private-class-members
+
+### Features
+
+* @typescript-eslint/no-unused-private-class-members ([e4f5a60](https://github.com/mightyiam/eslint-config-love/commit/e4f5a60b076d7a12681f7623233f8f6e69df925d))
+
 ## [146.0.0](https://github.com/mightyiam/eslint-config-love/compare/v145.0.0...v146.0.0) (2026-01-22)
 
 ### ⚠ BREAKING CHANGES
