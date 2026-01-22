@@ -172,6 +172,7 @@ export const expectedEslintRules: Record<
   radix: ['error', 'always'],
   'require-atomic-updates': ['error', { allowProperties: false }],
   'require-unicode-regexp': ['error', { requireFlag: 'v' }],
+  'require-yield': ['error'],
   strict: ['error', 'safe'],
   'symbol-description': ['error'],
   'unicode-bom': ['error', 'never'],

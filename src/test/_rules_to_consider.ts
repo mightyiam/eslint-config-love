@@ -1,6 +1,6 @@
 export const rulesToConsider: Record<string, string[]> = {
   '@eslint-community/eslint-comments': [],
-  '': ['require-yield', 'sort-imports', 'sort-keys', 'sort-vars'],
+  '': ['sort-imports', 'sort-keys', 'sort-vars'],
   import: [
     'import/consistent-type-specifier-style',
     'import/default',
