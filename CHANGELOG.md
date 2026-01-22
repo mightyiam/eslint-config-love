@@ -1,3 +1,13 @@
+## [146.0.0](https://github.com/mightyiam/eslint-config-love/compare/v145.0.0...v146.0.0) (2026-01-22)
+
+### ⚠ BREAKING CHANGES
+
+* require-yield
+
+### Features
+
+* require-yield ([311520f](https://github.com/mightyiam/eslint-config-love/commit/311520f4b673ca24b558952c96460a7e78d0cd7f))
+
 ## [145.0.0](https://github.com/mightyiam/eslint-config-love/compare/v144.0.0...v145.0.0) (2026-01-15)
 
 ### ⚠ BREAKING CHANGES
