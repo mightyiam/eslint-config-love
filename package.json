@@ -89,7 +89,7 @@
     "lefthook": "2.0.15",
     "lodash": "4.17.23",
     "npm-run-all": "4.1.5",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "read-package-up": "12.0.0",
     "semantic-release": "25.0.2",
     "semver": "7.7.3",
