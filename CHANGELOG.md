@@ -1,3 +1,13 @@
+## [148.0.0](https://github.com/mightyiam/eslint-config-love/compare/v147.0.0...v148.0.0) (2026-01-29)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-useless-default-assignment
+
+### Features
+
+* @typescript-eslint/no-useless-default-assignment ([006e1c5](https://github.com/mightyiam/eslint-config-love/commit/006e1c58eb71173373439b32ae439714a33a86e6))
+
 ## [147.0.0](https://github.com/mightyiam/eslint-config-love/compare/v146.0.0...v147.0.0) (2026-01-22)
 
 ### ⚠ BREAKING CHANGES
