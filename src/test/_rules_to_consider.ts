@@ -86,5 +86,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'promise/spec-only',
     'promise/valid-params',
   ],
-  '@typescript-eslint': ['@typescript-eslint/strict-void-return'],
+  '@typescript-eslint': [],
 }

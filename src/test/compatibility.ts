@@ -74,5 +74,7 @@ test('our configuration is compatible with the plugins and parser at bottom of d
   const results = await eslint.lintText('', { filePath })
 
   t.false(_.isEmpty(results))
-  results.forEach((result) => t.deepEqual(result.messages, [], result.filePath))
+  results.forEach((result) => {
+    t.deepEqual(result.messages, [], result.filePath)
+  })
 })

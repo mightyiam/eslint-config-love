@@ -290,6 +290,7 @@ export const expectedTseslintRules: Record<
       allowAny: false,
     },
   ],
+  '@typescript-eslint/strict-void-return': ['error', { allowReturnAny: false }],
   '@typescript-eslint/switch-exhaustiveness-check': [
     'error',
     {

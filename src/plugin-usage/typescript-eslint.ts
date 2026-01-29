@@ -267,6 +267,7 @@ const usage: PluginUsage = {
         allowAny: false,
       },
     ],
+    'strict-void-return': ['error', { allowReturnAny: false }],
     'switch-exhaustiveness-check': [
       'error',
       {
