@@ -211,6 +211,7 @@ const usage: PluginUsage = {
       },
     ],
     'no-useless-constructor': ['error'],
+    'no-useless-default-assignment': ['error'],
     'no-useless-empty-export': ['error'],
     'no-wrapper-object-types': ['error'],
     'non-nullable-type-assertion-style': ['error'],
