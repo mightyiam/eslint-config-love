@@ -1,3 +1,13 @@
+## [149.0.0](https://github.com/mightyiam/eslint-config-love/compare/v148.0.0...v149.0.0) (2026-01-29)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/strict-void-return
+
+### Features
+
+* @typescript-eslint/strict-void-return ([a800b1a](https://github.com/mightyiam/eslint-config-love/commit/a800b1a6ff9e289a4daeac00477d9a3f54fda8b5))
+
 ## [148.0.0](https://github.com/mightyiam/eslint-config-love/compare/v147.0.0...v148.0.0) (2026-01-29)
 
 ### ⚠ BREAKING CHANGES
