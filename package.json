@@ -92,7 +92,7 @@
     "prettier": "3.8.1",
     "read-package-up": "12.0.0",
     "semantic-release": "25.0.3",
-    "semver": "7.7.3",
+    "semver": "7.7.4",
     "type-fest": "5.4.3",
     "typescript": "5.9.3",
     "typescript-eslint_bottom": "npm:typescript-eslint@8.53.0"
