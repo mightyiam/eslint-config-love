@@ -5,5 +5,6 @@ export const expectedPromiseRules: Record<
   TSESLint.SharedConfig.RuleEntry
 > = {
   'promise/avoid-new': ['error'],
+  'promise/no-multiple-resolved': ['error'],
   'promise/param-names': ['error'],
 }
