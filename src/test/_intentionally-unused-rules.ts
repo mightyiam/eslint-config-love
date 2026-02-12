@@ -81,6 +81,7 @@ export const intentionallyUnusedRules: string[] = [
   'no-invalid-this',
   'no-setter-return',
   'no-undef',
+  'promise/no-native',
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
