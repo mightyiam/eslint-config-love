@@ -1,3 +1,13 @@
+## [150.0.0](https://github.com/mightyiam/eslint-config-love/compare/v149.0.0...v150.0.0) (2026-02-12)
+
+### ⚠ BREAKING CHANGES
+
+* promise/no-multiple-resolved
+
+### Features
+
+* promise/no-multiple-resolved ([55bb5e7](https://github.com/mightyiam/eslint-config-love/commit/55bb5e7212b1ee062b3894bdef2f7691b403b5d1))
+
 ## [149.0.0](https://github.com/mightyiam/eslint-config-love/compare/v148.0.0...v149.0.0) (2026-01-29)
 
 ### ⚠ BREAKING CHANGES
