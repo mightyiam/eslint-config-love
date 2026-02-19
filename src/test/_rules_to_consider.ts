@@ -75,7 +75,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/fs',
   ],
   promise: [
-    'promise/prefer-await-to-callbacks',
     'promise/prefer-await-to-then',
     'promise/prefer-catch',
     'promise/spec-only',
