@@ -22,6 +22,8 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## "too much"
 
+  'promise/no-promise-in-callback',
+
   'promise/no-nesting',
 
   'no-inline-comments',
