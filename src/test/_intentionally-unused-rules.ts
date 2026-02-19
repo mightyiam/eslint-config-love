@@ -22,6 +22,8 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## "too much"
 
+  'promise/no-nesting',
+
   'no-inline-comments',
 
   '@typescript-eslint/default-param-last',
