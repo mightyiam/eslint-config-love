@@ -75,7 +75,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/fs',
   ],
   promise: [
-    'promise/no-new-statics',
     'promise/no-promise-in-callback',
     'promise/no-return-in-finally',
     'promise/no-return-wrap',
