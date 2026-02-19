@@ -1,3 +1,13 @@
+## [151.0.0](https://github.com/mightyiam/eslint-config-love/compare/v150.0.0...v151.0.0) (2026-02-19)
+
+### ⚠ BREAKING CHANGES
+
+* promise/no-return-wrap
+
+### Features
+
+* promise/no-return-wrap ([077345a](https://github.com/mightyiam/eslint-config-love/commit/077345a46081fba1c74a1993dc30509513c3b1c4))
+
 ## [150.0.0](https://github.com/mightyiam/eslint-config-love/compare/v149.0.0...v150.0.0) (2026-02-12)
 
 ### ⚠ BREAKING CHANGES
