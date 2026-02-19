@@ -7,6 +7,7 @@ const usage: PluginUsage = {
   rules: {
     'avoid-new': ['error'],
     'no-multiple-resolved': ['error'],
+    'no-return-wrap': ['error'],
     'param-names': ['error'],
   },
 }
