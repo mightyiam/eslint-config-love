@@ -79,7 +79,7 @@
     "@types/semver": "7.7.1",
     "ava": "6.4.1",
     "conventional-changelog-conventionalcommits": "9.1.0",
-    "eslint": "9.39.2",
+    "eslint": "9.39.3",
     "eslint_bottom": "npm:eslint@9.35.0",
     "@eslint-community/eslint-plugin-eslint-comments_bottom": "npm:@eslint-community/eslint-plugin-eslint-comments@3.2.0",
     "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.32.0",
