@@ -1,4 +1,4 @@
-import { TSESLint } from '@typescript-eslint/utils'
+import js from '@eslint/js'
 import tseslintUsage from '../plugin-usage/typescript-eslint.js'
 
 export const intentionallyUnusedRules: string[] = [
@@ -135,9 +135,9 @@ export const intentionallyUnusedRules: string[] = [
   // Did this ever actually happen to someone?
   'no-div-regex',
 
-  ...[
-    ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-  ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
+  ...Object.keys(js.configs.all.rules).filter((name) =>
+    Object.hasOwn(tseslintUsage.rules, name),
+  ),
 
   // ## Project specific
 
@@ -175,9 +175,6 @@ export const intentionallyUnusedRules: string[] = [
 
   // Rule is too simple
   'capitalized-comments',
-
-  // Rule docs claim implementation hacky
-  '@eslint-community/eslint-comments/no-unused-disable',
 
   // Conflicts with `@typescript-eslint/init-declarations`
   // https://github.com/mightyiam/eslint-config-love/issues/1710
