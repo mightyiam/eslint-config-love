@@ -168,7 +168,7 @@ const usage: PluginUsage = {
     'prefer-spread': ['error'],
     'prefer-template': ['error'],
     'preserve-caught-error': ['error', { requireCatchParameter: true }],
-    radix: ['error', 'always'],
+    radix: ['error'],
     'require-atomic-updates': ['error', { allowProperties: false }],
     'require-unicode-regexp': ['error', { requireFlag: 'v' }],
     'require-yield': ['error'],
