@@ -176,9 +176,6 @@ export const intentionallyUnusedRules: string[] = [
   // Rule is too simple
   'capitalized-comments',
 
-  // Rule docs claim implementation hacky
-  '@eslint-community/eslint-comments/no-unused-disable',
-
   // Conflicts with `@typescript-eslint/init-declarations`
   // https://github.com/mightyiam/eslint-config-love/issues/1710
   'no-undef-init',
