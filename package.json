@@ -110,12 +110,6 @@
     },
     "eslint-plugin-promise_bottom": {
       "eslint": "$eslint"
-    },
-    "@eslint-community/eslint-plugin-eslint-comments": {
-      "eslint": "$eslint"
-    },
-    "@eslint-community/eslint-plugin-eslint-comments_bottom": {
-      "eslint": "$eslint"
     }
   },
   "engines": {
