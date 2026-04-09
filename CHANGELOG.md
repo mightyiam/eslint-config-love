@@ -1,3 +1,13 @@
+## [152.0.0](https://github.com/mightyiam/eslint-config-love/compare/v151.0.0...v152.0.0) (2026-04-09)
+
+### ⚠ BREAKING CHANGES
+
+* typescript-eslint@^8.58.1
+
+### Features
+
+* typescript-eslint@^8.58.1 ([b09ac09](https://github.com/mightyiam/eslint-config-love/commit/b09ac09b85532c02bc893639f0b6dff186114248))
+
 ## [151.0.0](https://github.com/mightyiam/eslint-config-love/compare/v150.0.0...v151.0.0) (2026-02-19)
 
 ### ⚠ BREAKING CHANGES
