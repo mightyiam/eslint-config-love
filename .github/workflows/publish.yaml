@@ -27,9 +27,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: latest
-      - run: npm --global install npm@latest
-      - run: npm --version
-      - run: npm ci
+      - run: bash ci-install-dependencies.sh
       - run: npm audit signatures
       - run: npx semantic-release
         env:

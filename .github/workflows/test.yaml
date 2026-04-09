@@ -15,9 +15,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: latest
-      - run: npm --global install npm@latest
-      - run: npm --version
-      - run: npm ci
+      - run: bash ci-install-dependencies.sh
       - name: commitlint
         run: |
           npx commitlint \
@@ -51,9 +49,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm --global install npm@latest
-      - run: npm --version
-      - run: npm ci
+      - run: bash ci-install-dependencies.sh
       - run: npm test
       - if: ${{ runner.os != 'Windows' }}
         uses: numtide/clean-git-action@v2
