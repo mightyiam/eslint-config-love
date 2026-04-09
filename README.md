@@ -84,9 +84,8 @@ Otherwise, rules can be disabled for a subset of files using configuration.
 
 ## Contributing
 
-This project is developed primarily in remote mob programming format.
-[See schedule and how to apply here](https://mobusoperandi.com/mobs/love.html).
-
+This project is developed primarily in [remote mob programming format](https://www.remotemobprogramming.org/).
+To apply for participation contact the author.
 Otherwise, see [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## Sponsoring
