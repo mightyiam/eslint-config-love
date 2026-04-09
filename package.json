@@ -71,7 +71,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/lodash": "4.17.24",
-    "@types/node": "25.5.0",
+    "@types/node": "25.5.2",
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.7.1",
     "ava": "7.0.0",
