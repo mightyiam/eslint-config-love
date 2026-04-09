@@ -22,6 +22,17 @@ This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/c
 - No rules that are covered by strict TypeScript
 - No library/framework/syntactic-extension-specific rules
 
+## Metrics
+
+268 rules from the following sources:
+
+- ESLint itself
+- `@typescript-eslint`
+- `@eslint-community/eslint-comments`
+- `n`
+- `promise`
+- `import`
+
 ## Versioning
 
 Any change that might require a user to make changes beyond upgrading this package is considered major.
