@@ -56,9 +56,13 @@ export const extractVersionRange = (spec: string): string => {
   return last
 }
 
-const { rules: ourRules_ } = exported
+const { rules: ourRules_, plugins: ourPlugins_ } = exported
 if (ourRules_ === undefined) throw new Error('we seem to be exporting no rules')
 export const ourRules = ourRules_
+if (ourPlugins_ === undefined) {
+  throw new Error('we seem to be exporting no plugins')
+}
+export const ourPlugins = ourPlugins_
 
 export const equivalents = [
   ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),

@@ -1,6 +1,6 @@
 import test from 'ava'
 import fs from 'node:fs/promises'
-import { projectRoot } from './_util.js'
+import { ourPlugins, ourRules, projectRoot } from './_util.js'
 import path from 'node:path'
 import dedent from 'dedent'
 
@@ -31,6 +31,15 @@ test('worktree readme is up-to-date', async (t) => {
     - No formatting rules (please use a formatter)
     - No rules that are covered by strict TypeScript
     - No library/framework/syntactic-extension-specific rules
+
+    ## Metrics
+
+    ${Object.keys(ourRules).length} rules from the following sources:
+
+    - ESLint itself
+    ${Object.keys(ourPlugins)
+      .map((key) => `- \`${key}\``)
+      .join('\n')}
 
     ## Versioning
 
