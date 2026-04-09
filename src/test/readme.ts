@@ -1,0 +1,115 @@
+import test from 'ava'
+import fs from 'node:fs/promises'
+import { projectRoot } from './_util.js'
+import path from 'node:path'
+import dedent from 'dedent'
+
+test('worktree readme is up-to-date', async (t) => {
+  const filePath = path.join(projectRoot, 'README.md')
+
+  const expected = dedent`
+    <div align="center">
+      <img src="./logo.svg" width="150"/>
+      <h1>eslint-config-love</h1>
+
+    ![GitHub License](https://img.shields.io/github/license/mightyiam/eslint-config-love)
+    [![npm](https://img.shields.io/npm/v/eslint-config-love)](https://www.npmjs.com/package/eslint-config-love)
+    ![Dependent repos prior to rename](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-standard-with-typescript?label="dependent%20repos%20prior%20to%20rename")
+    ![Dependent repos](https://img.shields.io/librariesio/dependent-repos/npm/eslint-config-love)
+    ![GitHub Repo stars](https://img.shields.io/github/stars/mightyiam/eslint-config-love)
+
+    _A TypeScript ESLint config that loves you_
+
+    </div>
+
+    ## Description
+
+    This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/core-concepts#shareable-configurations).
+
+    - Safety at the cost of verbosity
+    - Convention over arbitrary choice
+    - No formatting rules (please use a formatter)
+    - No rules that are covered by strict TypeScript
+    - No library/framework/syntactic-extension-specific rules
+
+    ## Versioning
+
+    Any change that might require a user to make changes beyond upgrading this package is considered major.
+    For example, rule addition are obviously major.
+    It is expected that most version bumps will be major.
+
+    ## Example config
+
+    Here are example [ESLint configuration files](https://eslint.org/docs/latest/use/configure/configuration-files).
+
+    ECMAScript Modules:
+
+    \`\`\`js
+    import love from 'eslint-config-love'
+
+    export default [
+      {
+        ...love,
+        files: ['**/*.js', '**/*.ts'],
+      },
+    ]
+    \`\`\`
+
+    CommonJS:
+
+    \`\`\`js
+    module.exports = (async function config() {
+      const { default: love } = await import('eslint-config-love')
+
+      return [
+        {
+          ...love,
+          files: ['**/*.js', '**/*.ts'],
+        },
+      ]
+    })()
+    \`\`\`
+
+    [Learn how to configure ESLint](https://eslint.org/docs/latest/use/configure/).
+
+    Note: the config exported by this package sets \`languageOptions.parserOptions.project = true\`.
+    Read about the \`project\` option [here](https://typescript-eslint.io/packages/parser/#project).
+
+    There are [some more \`parserOptions\`](https://typescript-eslint.io/packages/parser/#configuration) you may care about.
+
+    ## Example command line usage:
+
+    \`\`\`
+    $ npx eslint .
+    \`\`\`
+
+    ## Disabling rules
+
+    As with any ESLint configuration, some ad-hoc [disabling of rules](https://eslint.org/docs/latest/use/configure/rules#disabling-rules) is expected.
+    It is further expected that the strict nature of this configuration would more frequently require the disabling of rules.
+
+    Consider minimizing the scope in which rules are disabled;
+    prefer using \`eslint-disable-*\` comments when possible.
+    Otherwise, rules can be disabled for a subset of files using configuration.
+
+    ## Contributing
+
+    This project is developed primarily in [remote mob programming format](https://www.remotemobprogramming.org/).
+    To apply for participation contact the author.
+    Otherwise, see [\`CONTRIBUTING.md\`](./CONTRIBUTING.md).
+
+    ## Sponsoring
+
+    To ensure the continuity of this project, consider [sponsoring the author](https://github.com/sponsors/mightyiam).\n
+  `
+
+  if ('UPDATE_README' in process.env) {
+    await fs.writeFile(filePath, expected)
+  }
+
+  const actual = await fs.readFile(filePath, {
+    encoding: 'utf-8',
+  })
+
+  t.is(actual, expected)
+})
