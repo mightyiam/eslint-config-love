@@ -3,6 +3,7 @@
     "declaration": true,
     "lib": ["ESNext"],
     "module": "nodenext",
+    "rootDir": "src",
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
