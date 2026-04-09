@@ -58,11 +58,11 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.0.0",
-    "@typescript-eslint/utils": "^8.53.0",
+    "@typescript-eslint/utils": "^8.58.1",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-n": "^17.0.0",
     "eslint-plugin-promise": "^7.0.0",
-    "typescript-eslint": "^8.53.0"
+    "typescript-eslint": "^8.58.1"
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
@@ -93,7 +93,7 @@
     "semver": "7.7.4",
     "type-fest": "5.5.0",
     "typescript": "5.9.3",
-    "typescript-eslint_bottom": "npm:typescript-eslint@8.53.0"
+    "typescript-eslint_bottom": "npm:typescript-eslint@8.58.1"
   },
   "peerDependencies": {
     "eslint": "^9.35.0",
