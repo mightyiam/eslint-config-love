@@ -77,7 +77,7 @@
     "ava": "7.0.0",
     "conventional-changelog-conventionalcommits": "9.3.1",
     "dedent": "1.7.2",
-    "eslint": "9.39.4",
+    "eslint": "10.2.0",
     "eslint_bottom": "npm:eslint@9.35.0",
     "eslint-plugin-import_bottom": "npm:eslint-plugin-import@2.32.0",
     "eslint-plugin-n_bottom": "npm:eslint-plugin-n@17.0.0",
