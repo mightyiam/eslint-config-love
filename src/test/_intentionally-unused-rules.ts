@@ -94,6 +94,9 @@ export const intentionallyUnusedRules: string[] = [
   'promise/no-return-in-finally',
   'promise/spec-only',
   'promise/valid-params',
+  'no-redeclare',
+  '@typescript-eslint/no-redeclare',
+  'promise/always-return',
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
@@ -109,10 +112,6 @@ export const intentionallyUnusedRules: string[] = [
   // Covered by strict TypeScript
   '@typescript-eslint/no-invalid-this',
 
-  // Covered by TypeScript
-  'no-redeclare',
-  '@typescript-eslint/no-redeclare',
-
   // Covered by `no-var`
   'block-scoped-var',
   'vars-on-top',
@@ -125,9 +124,6 @@ export const intentionallyUnusedRules: string[] = [
 
   // Covered by `@typescript-eslint/only-throw-error`
   'no-throw-literal',
-
-  // Covered by TypeScript
-  'promise/always-return',
 
   // Covered by `@typescript-eslint/no-floating-promises`
   'promise/catch-or-return',
