@@ -22,6 +22,8 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## "too much"
 
+  'promise/prefer-await-to-then',
+
   'promise/prefer-await-to-callbacks',
 
   'promise/no-promise-in-callback',
