@@ -92,6 +92,7 @@ export const intentionallyUnusedRules: string[] = [
   'promise/no-native',
   'promise/no-new-statics',
   'promise/no-return-in-finally',
+  'promise/spec-only',
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
