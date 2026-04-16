@@ -93,6 +93,7 @@ export const intentionallyUnusedRules: string[] = [
   'promise/no-new-statics',
   'promise/no-return-in-finally',
   'promise/spec-only',
+  'promise/valid-params',
 
   //  TS strict mode and `@typescript-eslint/explicit-function-return-type`
   '@typescript-eslint/explicit-module-boundary-types',
