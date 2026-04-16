@@ -1,3 +1,15 @@
+## [153.0.0](https://github.com/mightyiam/eslint-config-love/compare/v152.0.0...v153.0.0) (2026-04-16)
+
+### ⚠ BREAKING CHANGES
+
+* promise/prefer-catch
+* eslint-plugin-promise@^7.2.0
+
+### Features
+
+* eslint-plugin-promise@^7.2.0 ([ed4d579](https://github.com/mightyiam/eslint-config-love/commit/ed4d5795b371b5744c4a0b58e83104cc6a09c131))
+* promise/prefer-catch ([0ed00b0](https://github.com/mightyiam/eslint-config-love/commit/0ed00b0b0cc059d73c2a36276170cb3e9336660b))
+
 ## [152.0.0](https://github.com/mightyiam/eslint-config-love/compare/v151.0.0...v152.0.0) (2026-04-09)
 
 ### ⚠ BREAKING CHANGES
