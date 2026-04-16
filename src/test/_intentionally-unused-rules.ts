@@ -143,6 +143,10 @@ export const intentionallyUnusedRules: string[] = [
     ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
   ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
 
+  // ## Unsound implementation
+
+  'n/callback-return',
+
   // ## Project specific
 
   '@typescript-eslint/no-restricted-imports',

@@ -42,7 +42,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'import/unambiguous',
   ],
   n: [
-    'n/callback-return',
     'n/exports-style',
     'n/file-extension-in-import',
     'n/global-require',
