@@ -9,6 +9,7 @@ const usage: PluginUsage = {
     'no-multiple-resolved': ['error'],
     'no-return-wrap': ['error'],
     'param-names': ['error'],
+    'prefer-catch': ['error'],
   },
 }
 

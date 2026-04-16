@@ -8,4 +8,5 @@ export const expectedPromiseRules: Record<
   'promise/no-multiple-resolved': ['error'],
   'promise/no-return-wrap': ['error'],
   'promise/param-names': ['error'],
+  'promise/prefer-catch': ['error'],
 }

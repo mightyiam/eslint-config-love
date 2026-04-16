@@ -24,7 +24,7 @@ This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/c
 
 ## Metrics
 
-268 rules from the following sources:
+269 rules from the following sources:
 
 - ESLint itself
 - `@typescript-eslint`

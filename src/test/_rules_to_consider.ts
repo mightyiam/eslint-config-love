@@ -74,10 +74,6 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/dns',
     'n/prefer-promises/fs',
   ],
-  promise: [
-    'promise/prefer-catch',
-    'promise/spec-only',
-    'promise/valid-params',
-  ],
+  promise: ['promise/spec-only', 'promise/valid-params'],
   '@typescript-eslint': [],
 }
