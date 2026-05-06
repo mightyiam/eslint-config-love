@@ -1,3 +1,13 @@
+## [154.0.0](https://github.com/mightyiam/eslint-config-love/compare/v153.0.0...v154.0.0) (2026-05-06)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency eslint-plugin-n to v18
+
+### Miscellaneous Chores
+
+* **deps:** update dependency eslint-plugin-n to v18 ([aa6c803](https://github.com/mightyiam/eslint-config-love/commit/aa6c8031508e59445638175b8450c75fc75a9d63))
+
 ## [153.0.0](https://github.com/mightyiam/eslint-config-love/compare/v152.0.0...v153.0.0) (2026-04-16)
 
 ### ⚠ BREAKING CHANGES
