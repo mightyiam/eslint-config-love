@@ -89,7 +89,7 @@
     "prettier": "3.8.4",
     "prettier-plugin-packagejson": "3.0.2",
     "read-package-up": "12.0.0",
-    "semantic-release": "25.0.3",
+    "semantic-release": "25.0.5",
     "semver": "7.8.4",
     "type-fest": "5.7.0",
     "typescript": "6.0.3",
