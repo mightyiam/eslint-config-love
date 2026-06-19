@@ -10,7 +10,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v6
@@ -46,7 +46,7 @@ jobs:
         node-version: ${{ fromJson(needs.fetch-nodejs-versions.outputs.versions) }}
     name: ${{ matrix.runner }}, Node.js v${{ matrix.node-version }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
