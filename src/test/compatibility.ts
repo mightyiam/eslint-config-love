@@ -1,5 +1,5 @@
 import test from 'ava'
-import type { TSESLint } from '@typescript-eslint/utils'
+import type { Linter } from 'eslint'
 import { ESLint } from 'eslint_bottom'
 import exported from '../index.js'
 import semver from 'semver'
@@ -64,7 +64,7 @@ test('our configuration is compatible with the plugins and parser at bottom of d
       n: nBottomPlugin,
       promise: promiseBottomPlugin,
     },
-  } satisfies TSESLint.FlatConfig.Config
+  } satisfies Linter.Config
 
   const eslint = new ESLint({
     overrideConfigFile: true,

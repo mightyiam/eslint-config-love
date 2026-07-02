@@ -6,7 +6,8 @@ import pluginImport from 'eslint-plugin-import'
 import pluginPromise from 'eslint-plugin-promise'
 import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
-import { TSESLint } from '@typescript-eslint/utils'
+import type { TSESLint } from '@typescript-eslint/utils'
+import js from '@eslint/js'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import { rulesToConsider } from './_rules_to_consider.js'
 import { rulesPerPlugin } from '../plugin-usage.js'
@@ -17,9 +18,8 @@ import { expectedNRules } from './expected-exported-value/_n.js'
 import { expectedPromiseRules } from './expected-exported-value/_promise.js'
 import { expectedTseslintRules } from './expected-exported-value/_typescript-eslint.js'
 
-const knownEslintRules = new TSESLint.Linter({
-  configType: 'eslintrc',
-}).getRules()
+// Core ESLint rule names (configs.all excludes deprecated rules)
+const knownEslintRuleNames = Object.keys(js.configs.all.rules)
 
 if (pluginEslintComments.rules === undefined) throw new Error()
 if (pluginN.rules === undefined) throw new Error()
@@ -35,24 +35,25 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
   [pluginPromise.rules, 'promise'],
 ]
 
-const knownRules = new Map([
-  ...knownEslintRules.entries(),
+const knownRuleNames = [
+  ...knownEslintRuleNames,
   ...rulesets.flatMap(([rules, pkgName]) =>
-    Object.entries(rules).map(
-      ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const,
-    ),
+    Object.keys(rules).map((name) => `${pkgName}/${name}`),
   ),
-])
+]
 
-const deprecatedKnownRules = [...knownRules.entries()]
-  .filter(([_name, rule_]) => {
-    if (typeof rule_ !== 'object' || rule_ === null) throw new Error()
-    const rule = rule_ as { meta?: object }
-    const { meta } = rule
-    if (meta === undefined) return false
-    return Object.hasOwn(meta, 'deprecated')
-  })
-  .map(([name, _rule]) => name)
+// Deprecated rules — only from plugins (core deprecated are excluded by configs.all)
+const deprecatedKnownRules = rulesets.flatMap(([rules, pkgName]) =>
+  Object.entries(rules)
+    .filter(([_name, rule_]: [string, unknown]) => {
+      if (typeof rule_ !== 'object' || rule_ === null) throw new Error()
+      if (!('meta' in rule_)) return false
+      const { meta } = rule_
+      if (typeof meta !== 'object' || meta === null) return false
+      return Object.hasOwn(meta, 'deprecated')
+    })
+    .map(([name, _rule]) => `${pkgName}/${name}`),
+)
 
 const usedRules = Object.keys(ourRules)
 
@@ -64,9 +65,7 @@ const acknowledgedRules = [
 ]
 
 test('rule names valid', (t) => {
-  const nonExistentRules = _.difference(acknowledgedRules, [
-    ...knownRules.keys(),
-  ])
+  const nonExistentRules = _.difference(acknowledgedRules, knownRuleNames)
   t.deepEqual(nonExistentRules, [])
 })
 
@@ -99,7 +98,7 @@ test('no intersection between lists', (t) => {
 
 test('known rules are considered', (t) => {
   const inexplicablyExcludedRules = _.difference(
-    [...knownRules.keys()],
+    knownRuleNames,
     acknowledgedRules,
   )
 
