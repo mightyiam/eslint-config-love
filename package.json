@@ -91,7 +91,7 @@
     "read-package-up": "12.0.0",
     "semantic-release": "25.0.5",
     "semver": "7.8.5",
-    "type-fest": "5.7.0",
+    "type-fest": "5.8.0",
     "typescript": "6.0.3",
     "typescript-eslint_bottom": "npm:typescript-eslint@8.58.1"
   },
