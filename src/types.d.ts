@@ -4,8 +4,8 @@ declare module '@eslint-community/eslint-plugin-eslint-comments' {
   export default plugin
 }
 declare module '@eslint-community/eslint-plugin-eslint-comments_bottom' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
+  import type { ESLint } from 'eslint'
+  const plugin: ESLint.Plugin
   export default plugin
 }
 declare module 'eslint-plugin-n' {
@@ -14,8 +14,8 @@ declare module 'eslint-plugin-n' {
   export default plugin
 }
 declare module 'eslint-plugin-n_bottom' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
+  import type { ESLint } from 'eslint'
+  const plugin: ESLint.Plugin
   export default plugin
 }
 declare module 'eslint-plugin-import' {
@@ -24,8 +24,8 @@ declare module 'eslint-plugin-import' {
   export default plugin
 }
 declare module 'eslint-plugin-import_bottom' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
+  import type { ESLint } from 'eslint'
+  const plugin: ESLint.Plugin
   export default plugin
 }
 declare module 'eslint-plugin-promise' {
@@ -34,13 +34,12 @@ declare module 'eslint-plugin-promise' {
   export default plugin
 }
 declare module 'eslint-plugin-promise_bottom' {
-  import type { TSESLint } from '@typescript-eslint/utils'
-  const plugin: TSESLint.FlatConfig.Plugin
+  import type { ESLint } from 'eslint'
+  const plugin: ESLint.Plugin
   export default plugin
 }
 declare module 'eslint_bottom' {
-  import { TSESLint } from '@typescript-eslint/utils'
-  export class ESLint extends TSESLint.FlatESLint {}
+  export { ESLint } from 'eslint'
 }
 declare module 'typescript-eslint' {
   import type { TSESLint } from '@typescript-eslint/utils'
