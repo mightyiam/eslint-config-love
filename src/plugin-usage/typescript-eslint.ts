@@ -127,7 +127,6 @@ const usage: PluginUsage = {
       { ignoreParameters: false, ignoreProperties: false },
     ],
     'no-invalid-void-type': ['error'],
-    'no-loop-func': ['error'],
     'no-magic-numbers': [
       'error',
       {

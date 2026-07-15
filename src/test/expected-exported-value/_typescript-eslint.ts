@@ -132,7 +132,6 @@ export const expectedTseslintRules: Record<
     { ignoreParameters: false, ignoreProperties: false },
   ],
   '@typescript-eslint/no-invalid-void-type': ['error'],
-  '@typescript-eslint/no-loop-func': ['error'],
   '@typescript-eslint/no-magic-numbers': [
     'error',
     {
