@@ -68,7 +68,7 @@
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
     "@eslint-community/eslint-plugin-eslint-comments_bottom": "npm:@eslint-community/eslint-plugin-eslint-comments@3.2.0",
-    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "10.0.1",
     "@types/lodash": "4.17.24",
     "@types/node": "26.1.1",
