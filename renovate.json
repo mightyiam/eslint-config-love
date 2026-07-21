@@ -26,6 +26,10 @@
       "groupName": "typescript-eslint packages"
     },
     {
+      "matchPackageNames": ["@semantic-release/*", "semantic-release"],
+      "groupName": "semantic-release packages"
+    },
+    {
       "matchDepTypes": ["peerDependencies"],
       "enabled": false
     },
