@@ -145,8 +145,6 @@ export const intentionallyUnusedRules: string[] = [
 
   // ## Project specific
 
-  '@typescript-eslint/no-restricted-imports',
-
   '@typescript-eslint/no-restricted-types',
 
   '@typescript-eslint/prefer-readonly-parameter-types',
