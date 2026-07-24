@@ -92,7 +92,7 @@
     "semantic-release": "25.0.8",
     "semver": "7.8.5",
     "type-fest": "5.8.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "typescript-eslint_bottom": "npm:typescript-eslint@8.58.1"
   },
   "peerDependencies": {
