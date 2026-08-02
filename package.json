@@ -73,7 +73,7 @@
     "@types/lodash": "4.17.25",
     "@types/node": "26.1.2",
     "@types/npm-package-arg": "6.1.4",
-    "@types/semver": "7.7.1",
+    "@types/semver": "7.8.0",
     "ava": "8.0.1",
     "conventional-changelog-conventionalcommits": "10.2.1",
     "dedent": "1.7.2",
