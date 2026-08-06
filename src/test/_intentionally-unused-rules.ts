@@ -1,4 +1,4 @@
-import { TSESLint } from '@typescript-eslint/utils'
+import js from '@eslint/js'
 import tseslintUsage from '../plugin-usage/typescript-eslint.js'
 
 export const intentionallyUnusedRules: string[] = [
@@ -73,10 +73,10 @@ export const intentionallyUnusedRules: string[] = [
   'no-label-var',
   'no-unused-labels',
 
-  // Covered by `import/no-duplicates`
+  // Covered by `import-x/no-duplicates`
   'no-duplicate-imports',
 
-  // Covered by `import/order`
+  // Covered by `import-x/order`
   'sort-imports',
 
   // Covered by `@typescript-eslint/naming-convention`
@@ -135,9 +135,9 @@ export const intentionallyUnusedRules: string[] = [
   // Did this ever actually happen to someone?
   'no-div-regex',
 
-  ...[
-    ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-  ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
+  ...Object.keys(js.configs.all.rules).filter((name) =>
+    Object.hasOwn(tseslintUsage.rules, name),
+  ),
 
   // ## Unsound implementation
 

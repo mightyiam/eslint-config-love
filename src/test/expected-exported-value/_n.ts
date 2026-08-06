@@ -7,5 +7,6 @@ export const expectedNRules: Record<string, TSESLint.SharedConfig.RuleEntry> = {
   'n/no-exports-assign': ['error'],
   'n/no-new-require': ['error'],
   'n/no-path-concat': ['error'],
+  'n/prefer-node-protocol': ['error', { version: '>=16.0.0' }],
   'n/process-exit-as-throw': ['error'],
 }

@@ -1,11 +1,10 @@
-import plugin from 'eslint-plugin-import'
+import { importX } from 'eslint-plugin-import-x'
 import type { PluginUsage } from '../plugin-usage.js'
 
 const usage: PluginUsage = {
-  pluginName: 'import',
-  plugin,
+  pluginName: 'import-x',
+  plugin: importX,
   rules: {
-    'enforce-node-protocol-usage': ['error', 'always'],
     export: ['error'],
     first: ['error'],
     'no-absolute-path': [

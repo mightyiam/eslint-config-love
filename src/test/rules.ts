@@ -2,57 +2,57 @@ import test from 'ava'
 import { plugin as pluginTseslint } from 'typescript-eslint'
 import pluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments'
 import pluginN from 'eslint-plugin-n'
-import pluginImport from 'eslint-plugin-import'
+import { importX } from 'eslint-plugin-import-x'
 import pluginPromise from 'eslint-plugin-promise'
 import { equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
-import { TSESLint } from '@typescript-eslint/utils'
+import type { TSESLint } from '@typescript-eslint/utils'
+import js from '@eslint/js'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import { rulesToConsider } from './_rules_to_consider.js'
 import { rulesPerPlugin } from '../plugin-usage.js'
 import { expectedEslintCommentsRules } from './expected-exported-value/_eslint-comments.js'
 import { expectedEslintRules } from './expected-exported-value/_eslint.js'
-import { expectedImportRules } from './expected-exported-value/_import.js'
+import { expectedImportXRules } from './expected-exported-value/_import.js'
 import { expectedNRules } from './expected-exported-value/_n.js'
 import { expectedPromiseRules } from './expected-exported-value/_promise.js'
 import { expectedTseslintRules } from './expected-exported-value/_typescript-eslint.js'
 
-const knownEslintRules = new TSESLint.Linter({
-  configType: 'eslintrc',
-}).getRules()
+const knownEslintRuleNames = Object.keys(js.configs.all.rules)
 
 if (pluginEslintComments.rules === undefined) throw new Error()
 if (pluginN.rules === undefined) throw new Error()
-if (pluginImport.rules === undefined) throw new Error()
 if (pluginPromise.rules === undefined) throw new Error()
 if (pluginTseslint.rules === undefined) throw new Error()
 
-const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
+type PluginRules = NonNullable<TSESLint.FlatConfig.Plugins[string]['rules']>
+
+const rulesets: Array<[PluginRules, string]> = [
   [pluginEslintComments.rules, '@eslint-community/eslint-comments'],
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
-  [pluginImport.rules, 'import'],
+  [importX.rules, 'import-x'],
   [pluginPromise.rules, 'promise'],
 ]
 
-const knownRules = new Map([
-  ...knownEslintRules.entries(),
+const knownRuleNames = [
+  ...knownEslintRuleNames,
   ...rulesets.flatMap(([rules, pkgName]) =>
-    Object.entries(rules).map(
-      ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const,
-    ),
+    Object.keys(rules).map((name) => `${pkgName}/${name}`),
   ),
-])
+]
 
-const deprecatedKnownRules = [...knownRules.entries()]
-  .filter(([_name, rule_]) => {
-    if (typeof rule_ !== 'object' || rule_ === null) throw new Error()
-    const rule = rule_ as { meta?: object }
-    const { meta } = rule
-    if (meta === undefined) return false
-    return Object.hasOwn(meta, 'deprecated')
-  })
-  .map(([name, _rule]) => name)
+const deprecatedKnownRules = rulesets.flatMap(([rules, pkgName]) =>
+  Object.entries(rules)
+    .filter(([_name, rule_]: [string, unknown]) => {
+      if (typeof rule_ !== 'object' || rule_ === null) throw new Error()
+      if (!('meta' in rule_)) return false
+      const { meta } = rule_
+      if (typeof meta !== 'object' || meta === null) return false
+      return Object.hasOwn(meta, 'deprecated')
+    })
+    .map(([name, _rule]) => `${pkgName}/${name}`),
+)
 
 const usedRules = Object.keys(ourRules)
 
@@ -64,9 +64,7 @@ const acknowledgedRules = [
 ]
 
 test('rule names valid', (t) => {
-  const nonExistentRules = _.difference(acknowledgedRules, [
-    ...knownRules.keys(),
-  ])
+  const nonExistentRules = _.difference(acknowledgedRules, knownRuleNames)
   t.deepEqual(nonExistentRules, [])
 })
 
@@ -99,7 +97,7 @@ test('no intersection between lists', (t) => {
 
 test('known rules are considered', (t) => {
   const inexplicablyExcludedRules = _.difference(
-    [...knownRules.keys()],
+    knownRuleNames,
     acknowledgedRules,
   )
 
@@ -144,7 +142,7 @@ test('rule lists and objects are sorted', (t) => {
     ),
     'expected rules/eslint-comments': Object.keys(expectedEslintCommentsRules),
     'expected rules/eslint': Object.keys(expectedEslintRules),
-    'expected rules/import': Object.keys(expectedImportRules),
+    'expected rules/import-x': Object.keys(expectedImportXRules),
     'expected rules/n': Object.keys(expectedNRules),
     'expected rules/promise': Object.keys(expectedPromiseRules),
     'expected rules/@typescript-eslint': Object.keys(expectedTseslintRules),
