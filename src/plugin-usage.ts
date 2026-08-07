@@ -9,7 +9,7 @@ import importRules from './plugin-usage/import.js'
 
 export interface PluginUsage {
   pluginName: string
-  plugin: TSESLint.FlatConfig.Plugin | 'eslint'
+  plugin: TSESLint.FlatConfig.Plugins[string] | 'eslint'
   rules: Record<string, TSESLint.SharedConfig.RuleEntry>
 }
 
@@ -25,7 +25,7 @@ const imports: PluginUsage[] = [
 interface Exports {
   rulesPerPlugin: Record<string, TSESLint.SharedConfig.RulesRecord>
   rules: TSESLint.SharedConfig.RulesRecord
-  plugins: Record<string, TSESLint.FlatConfig.Plugin>
+  plugins: TSESLint.FlatConfig.Plugins
 }
 
 export const { rulesPerPlugin, rules, plugins }: Exports =
