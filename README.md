@@ -24,14 +24,13 @@ This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/c
 
 ## Metrics
 
-269 rules from the following sources:
+262 rules from the following sources:
 
 - ESLint itself
 - `@typescript-eslint`
 - `@eslint-community/eslint-comments`
 - `n`
 - `promise`
-- `import`
 
 ## Versioning
 

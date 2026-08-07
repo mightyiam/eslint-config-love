@@ -1,5 +1,5 @@
 import test from 'ava'
-import type { TSESLint } from '@typescript-eslint/utils'
+import type { Linter } from 'eslint'
 import { ESLint } from 'eslint_bottom'
 import exported from '../index.js'
 import semver from 'semver'
@@ -14,7 +14,6 @@ import {
   plugin as tseslintBottomPlugin,
 } from 'typescript-eslint_bottom'
 import eslintCommentsBottomPlugin from '@eslint-community/eslint-plugin-eslint-comments_bottom'
-import importBottomPlugin from 'eslint-plugin-import_bottom'
 import nBottomPlugin from 'eslint-plugin-n_bottom'
 import promiseBottomPlugin from 'eslint-plugin-promise_bottom'
 import _ from 'lodash'
@@ -23,7 +22,6 @@ test('bottom dep version is minimum of dep range', (t) => {
   const bottomDepsThatAreNotMinOfDepRange = [
     ['typescript-eslint', ourDeps] as const,
     ['eslint', ourPeerDeps] as const,
-    ['eslint-plugin-import', ourDeps] as const,
     ['eslint-plugin-n', ourDeps] as const,
     ['eslint-plugin-promise', ourDeps] as const,
   ]
@@ -60,11 +58,10 @@ test('our configuration is compatible with the plugins and parser at bottom of d
     plugins: {
       '@typescript-eslint': tseslintBottomPlugin,
       '@eslint-community/eslint-comments': eslintCommentsBottomPlugin,
-      import: importBottomPlugin,
       n: nBottomPlugin,
       promise: promiseBottomPlugin,
     },
-  } satisfies TSESLint.FlatConfig.Config
+  } satisfies Linter.Config
 
   const eslint = new ESLint({
     overrideConfigFile: true,
