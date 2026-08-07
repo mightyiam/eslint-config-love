@@ -5,7 +5,7 @@ import eslintRules from './plugin-usage/eslint.js'
 import nRules from './plugin-usage/n.js'
 import promiseRules from './plugin-usage/promise.js'
 import typescriptEslint from './plugin-usage/typescript-eslint.js'
-import importRules from './plugin-usage/import.js'
+import importXRules from './plugin-usage/import-x.js'
 
 export interface PluginUsage {
   pluginName: string
@@ -19,7 +19,7 @@ const imports: PluginUsage[] = [
   eslintRules,
   nRules,
   promiseRules,
-  importRules,
+  importXRules,
 ]
 
 interface Exports {
