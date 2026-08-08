@@ -11,6 +11,7 @@ const usage: PluginUsage = {
     'no-exports-assign': ['error'],
     'no-new-require': ['error'],
     'no-path-concat': ['error'],
+    'prefer-node-protocol': ['error', { version: '>=16.0.0' }],
     'process-exit-as-throw': ['error'],
   },
 }

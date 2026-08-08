@@ -5,11 +5,11 @@ import eslintRules from './plugin-usage/eslint.js'
 import nRules from './plugin-usage/n.js'
 import promiseRules from './plugin-usage/promise.js'
 import typescriptEslint from './plugin-usage/typescript-eslint.js'
-import importRules from './plugin-usage/import.js'
+import importXRules from './plugin-usage/import-x.js'
 
 export interface PluginUsage {
   pluginName: string
-  plugin: TSESLint.FlatConfig.Plugin | 'eslint'
+  plugin: TSESLint.FlatConfig.Plugins[string] | 'eslint'
   rules: Record<string, TSESLint.SharedConfig.RuleEntry>
 }
 
@@ -19,13 +19,13 @@ const imports: PluginUsage[] = [
   eslintRules,
   nRules,
   promiseRules,
-  importRules,
+  importXRules,
 ]
 
 interface Exports {
   rulesPerPlugin: Record<string, TSESLint.SharedConfig.RulesRecord>
   rules: TSESLint.SharedConfig.RulesRecord
-  plugins: Record<string, TSESLint.FlatConfig.Plugin>
+  plugins: TSESLint.FlatConfig.Plugins
 }
 
 export const { rulesPerPlugin, rules, plugins }: Exports =

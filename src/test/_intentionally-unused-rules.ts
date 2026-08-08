@@ -73,10 +73,10 @@ export const intentionallyUnusedRules: string[] = [
   'no-label-var',
   'no-unused-labels',
 
-  // Covered by `import/no-duplicates`
+  // Covered by `import-x/no-duplicates`
   'no-duplicate-imports',
 
-  // Covered by `import/order`
+  // Covered by `import-x/order`
   'sort-imports',
 
   // Covered by `@typescript-eslint/naming-convention`
