@@ -31,7 +31,7 @@ This is an [ESLint shareable configuration](https://eslint.org/docs/latest/use/c
 - `@eslint-community/eslint-comments`
 - `n`
 - `promise`
-- `import`
+- `import-x`
 
 ## Versioning
 
