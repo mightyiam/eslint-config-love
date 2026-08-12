@@ -1,3 +1,5 @@
+## [155.0.0](https://github.com/mightyiam/eslint-config-love/compare/v154.1.0...v155.0.0) (2026-08-12)
+
 ## [154.1.0](https://github.com/mightyiam/eslint-config-love/compare/v154.0.0...v154.1.0) (2026-07-15)
 
 ## [154.0.0](https://github.com/mightyiam/eslint-config-love/compare/v153.0.0...v154.0.0) (2026-05-06)
