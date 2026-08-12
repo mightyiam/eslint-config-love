@@ -24,7 +24,9 @@ if (pluginN.rules === undefined) throw new Error()
 if (pluginPromise.rules === undefined) throw new Error()
 if (pluginTseslint.rules === undefined) throw new Error()
 
-const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
+type PluginRules = NonNullable<TSESLint.FlatConfig.Plugins[string]['rules']>
+
+const rulesets: Array<[PluginRules, string]> = [
   [pluginEslintComments.rules, '@eslint-community/eslint-comments'],
   [pluginTseslint.rules, '@typescript-eslint'],
   [pluginN.rules, 'n'],
