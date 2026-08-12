@@ -1,6 +1,6 @@
 import exported from '../index.js'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
-import { TSESLint } from '@typescript-eslint/utils'
+import js from '@eslint/js'
 import semver from 'semver'
 import { readPackageUp } from 'read-package-up'
 import _ from 'lodash'
@@ -64,9 +64,7 @@ if (ourPlugins_ === undefined) {
 }
 export const ourPlugins = ourPlugins_
 
-export const equivalents = [
-  ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-].filter((name) => {
+export const equivalents = Object.keys(js.configs.all.rules).filter((name) => {
   const { rules: tsRules } = tseslintPlugin
   if (tsRules === undefined) throw new Error()
   return Object.hasOwn(tsRules, name)
