@@ -70,7 +70,7 @@
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
     "@types/lodash": "4.17.25",
-    "@types/node": "26.4.0",
+    "@types/node": "26.4.1",
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.8.0",
     "ava": "8.0.1",
