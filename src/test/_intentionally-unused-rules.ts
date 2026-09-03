@@ -1,4 +1,4 @@
-import { TSESLint } from '@typescript-eslint/utils'
+import { coreRuleNames } from './_eslint-rules-metadata.js'
 import tseslintUsage from '../plugin-usage/typescript-eslint.js'
 
 export const intentionallyUnusedRules: string[] = [
@@ -135,9 +135,7 @@ export const intentionallyUnusedRules: string[] = [
   // Did this ever actually happen to someone?
   'no-div-regex',
 
-  ...[
-    ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-  ].filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
+  ...coreRuleNames.filter((name) => Object.hasOwn(tseslintUsage.rules, name)),
 
   // ## Unsound implementation
 

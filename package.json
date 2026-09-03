@@ -50,6 +50,7 @@
     "compile": "tsc",
     "format/check": "prettier . --check",
     "format/fix": "prettier . --write",
+    "generate/eslint-rules-metadata": "npm run compile && node lib/test/_generate-eslint-rules-metadata.js",
     "is-code-clean": "git diff-index HEAD --quiet",
     "lint": "eslint .",
     "prepublishOnly": "run-s is-code-clean compile",
