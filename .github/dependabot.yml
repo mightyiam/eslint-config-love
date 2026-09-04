@@ -1,0 +1,31 @@
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      include: scope
+      prefix: chore
+    ignore:
+      - dependency-name: '*_bottom'
+    groups:
+      '@commitlint packages':
+        patterns:
+          - '@commitlint/*'
+      '@typescript-eslint packages':
+        patterns:
+          - '@typescript-eslint/*'
+          - typescript-eslint
+      '@semantic-release packages':
+        patterns:
+          - '@semantic-release/*'
+          - semantic-release
+
+  - package-ecosystem: github-actions
+    directory: /
+    commit-message:
+      prefix: ci
+    schedule:
+      interval: daily
+
+version: 2
