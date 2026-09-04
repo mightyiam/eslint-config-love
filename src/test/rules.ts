@@ -3,9 +3,9 @@ import { plugin as pluginTseslint } from 'typescript-eslint'
 import pluginEslintComments from '@eslint-community/eslint-plugin-eslint-comments'
 import pluginN from 'eslint-plugin-n'
 import pluginPromise from 'eslint-plugin-promise'
-import { equivalents, ourRules } from './_util.js'
+import { coreEslintRules, equivalents, ourRules } from './_util.js'
 import _ from 'lodash'
-import { TSESLint } from '@typescript-eslint/utils'
+import type { TSESLint } from '@typescript-eslint/utils'
 import { intentionallyUnusedRules } from './_intentionally-unused-rules.js'
 import { rulesToConsider } from './_rules_to_consider.js'
 import { rulesPerPlugin } from '../plugin-usage.js'
@@ -14,10 +14,6 @@ import { expectedEslintRules } from './expected-exported-value/_eslint.js'
 import { expectedNRules } from './expected-exported-value/_n.js'
 import { expectedPromiseRules } from './expected-exported-value/_promise.js'
 import { expectedTseslintRules } from './expected-exported-value/_typescript-eslint.js'
-
-const knownEslintRules = new TSESLint.Linter({
-  configType: 'eslintrc',
-}).getRules()
 
 if (pluginEslintComments.rules === undefined) throw new Error()
 if (pluginN.rules === undefined) throw new Error()
@@ -32,7 +28,7 @@ const rulesets: Array<[TSESLint.Linter.Plugin, string]> = [
 ]
 
 const knownRules = new Map([
-  ...knownEslintRules.entries(),
+  ...coreEslintRules.entries(),
   ...rulesets.flatMap(([rules, pkgName]) =>
     Object.entries(rules).map(
       ([name, rule]) => [`${pkgName}/${name}`, rule as unknown] as const,

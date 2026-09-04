@@ -64,9 +64,11 @@ if (ourPlugins_ === undefined) {
 }
 export const ourPlugins = ourPlugins_
 
-export const equivalents = [
-  ...new TSESLint.Linter({ configType: 'eslintrc' }).getRules().keys(),
-].filter((name) => {
+export const coreEslintRules = new TSESLint.Linter({
+  configType: 'eslintrc',
+}).getRules()
+
+export const equivalents = [...coreEslintRules.keys()].filter((name) => {
   const { rules: tsRules } = tseslintPlugin
   if (tsRules === undefined) throw new Error()
   return Object.hasOwn(tsRules, name)
