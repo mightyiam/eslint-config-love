@@ -1,3 +1,13 @@
+## [156.0.0](https://github.com/mightyiam/eslint-config-love/compare/v155.0.0...v156.0.0) (2026-09-04)
+
+### ⚠ BREAKING CHANGES
+
+* eslint v10
+
+### Features
+
+* eslint v10 ([1e29162](https://github.com/mightyiam/eslint-config-love/commit/1e29162e9b8f61b42f054e7db37092375d79e990)), closes [#2293](https://github.com/mightyiam/eslint-config-love/issues/2293)
+
 ## [155.0.0](https://github.com/mightyiam/eslint-config-love/compare/v154.1.0...v155.0.0) (2026-08-12)
 
 ## [154.1.0](https://github.com/mightyiam/eslint-config-love/compare/v154.0.0...v154.1.0) (2026-07-15)
