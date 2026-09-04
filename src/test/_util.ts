@@ -1,10 +1,10 @@
 import exported from '../index.js'
 import { plugin as tseslintPlugin } from 'typescript-eslint'
-import { TSESLint } from '@typescript-eslint/utils'
 import semver from 'semver'
 import { readPackageUp } from 'read-package-up'
 import _ from 'lodash'
 import { dirname } from 'node:path'
+import { builtinRules } from 'eslint/use-at-your-own-risk'
 
 const readResult = await readPackageUp()
 if (readResult === undefined) {
@@ -64,9 +64,8 @@ if (ourPlugins_ === undefined) {
 }
 export const ourPlugins = ourPlugins_
 
-export const coreEslintRules = new TSESLint.Linter({
-  configType: 'eslintrc',
-}).getRules()
+// eslint-disable-next-line @typescript-eslint/no-deprecated -- no reasonable alternative since eslint v10
+export const coreEslintRules = builtinRules
 
 export const equivalents = [...coreEslintRules.keys()].filter((name) => {
   const { rules: tsRules } = tseslintPlugin
