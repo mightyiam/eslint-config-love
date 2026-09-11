@@ -125,6 +125,7 @@ export const expectedTseslintRules: Record<
   ],
   '@typescript-eslint/no-floating-promises': ['error'],
   '@typescript-eslint/no-for-in-array': ['error'],
+  '@typescript-eslint/no-generated-empty-object-type': ['error'],
   '@typescript-eslint/no-implied-eval': ['error'],
   '@typescript-eslint/no-import-type-side-effects': ['error'],
   '@typescript-eslint/no-inferrable-types': [
