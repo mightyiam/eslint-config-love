@@ -7,6 +7,7 @@ import type { Options } from 'semantic-release'
 import assert from 'node:assert'
 import { load } from 'js-yaml'
 import { writeFile, mkdir, open } from 'node:fs/promises'
+import { generateNotes } from '@semantic-release/release-notes-generator'
 
 test('semantic-release dry-run', async (t) => {
   const realConfigText = await readFile(join(projectRoot, '.releaserc.yml'), {
@@ -53,4 +54,24 @@ test('semantic-release dry-run', async (t) => {
   await execa('npx', ['semantic-release', '--dry-run'], { cwd })
 
   t.pass()
+})
+
+// prevents this incompatibility: https://github.com/conventional-changelog/conventional-changelog/issues/1495
+test('changelog generation', async (t) => {
+  const notes = await generateNotes(
+    { preset: 'conventionalcommits' },
+    {
+      commits: [
+        {
+          hash: 'abc1234',
+          message: 'feat: yadayada',
+        },
+      ],
+      lastRelease: { gitTag: 'v1.0.0', version: '1.0.0', gitHead: '0000000' },
+      nextRelease: { gitTag: 'v1.1.0', version: '1.1.0', gitHead: 'abc1234' },
+      options: { repositoryUrl: 'https://example.com/example.git' },
+    },
+  )
+
+  t.true(notes.includes('yadayada'))
 })

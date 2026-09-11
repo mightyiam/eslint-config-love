@@ -37,3 +37,6 @@ declare module 'typescript-eslint' {
   export const plugin: TSESLint.FlatConfig.Plugin
   export const parser: TSESLint.FlatConfig.Parser
 }
+declare module '@semantic-release/release-notes-generator' {
+  export function generateNotes(...rest: unknown[]): Promise<string[]>
+}
