@@ -120,6 +120,7 @@ const usage: PluginUsage = {
     'no-extraneous-class': ['error', { allowWithDecorator: true }],
     'no-floating-promises': ['error'],
     'no-for-in-array': ['error'],
+    'no-generated-empty-object-type': ['error'],
     'no-implied-eval': ['error'],
     'no-import-type-side-effects': ['error'],
     'no-inferrable-types': [
