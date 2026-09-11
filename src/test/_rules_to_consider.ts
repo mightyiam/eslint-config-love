@@ -36,5 +36,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/fs',
   ],
   promise: [],
-  '@typescript-eslint': [],
+  '@typescript-eslint': ['@typescript-eslint/no-generated-empty-object-type'],
 }
