@@ -64,8 +64,8 @@
     "typescript-eslint": "^8.70.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.2.2",
-    "@commitlint/config-conventional": "21.2.2",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "@eslint-community/eslint-plugin-eslint-comments_bottom": "npm:@eslint-community/eslint-plugin-eslint-comments@4.7.0",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
