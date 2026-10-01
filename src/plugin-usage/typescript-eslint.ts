@@ -175,6 +175,7 @@ const usage: PluginUsage = {
     'no-unsafe-assignment': ['error'],
     'no-unsafe-call': ['error'],
     'no-unsafe-declaration-merging': ['error'],
+    'no-unsafe-enum-assignment': ['error'],
     'no-unsafe-enum-comparison': ['error'],
     'no-unsafe-function-type': ['error'],
     'no-unsafe-member-access': ['error'],

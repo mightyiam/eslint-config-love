@@ -36,5 +36,5 @@ export const rulesToConsider: Record<string, string[]> = {
     'n/prefer-promises/fs',
   ],
   promise: [],
-  '@typescript-eslint': ['@typescript-eslint/no-unsafe-enum-assignment'],
+  '@typescript-eslint': [],
 }
