@@ -1,3 +1,13 @@
+## [158.0.0](https://github.com/mightyiam/eslint-config-love/compare/v157.0.0...v158.0.0) (2026-10-02)
+
+### ⚠ BREAKING CHANGES
+
+* @typescript-eslint/no-unsafe-enum-assignment
+
+### Features
+
+* @typescript-eslint/no-unsafe-enum-assignment ([6d2e35b](https://github.com/mightyiam/eslint-config-love/commit/6d2e35b54ce230026537b7b45474b75b6f6b829b))
+
 ## [157.0.0](https://github.com/mightyiam/eslint-config-love/compare/v156.0.0...v157.0.0) (2026-09-11)
 
 ### ⚠ BREAKING CHANGES
