@@ -74,7 +74,7 @@
     "@types/npm-package-arg": "6.1.4",
     "@types/semver": "7.8.0",
     "@types/signale": "1.4.7",
-    "ava": "8.0.1",
+    "ava": "8.0.2",
     "conventional-changelog-conventionalcommits": "9.3.1",
     "dedent": "1.7.2",
     "eslint": "10.13.0",
