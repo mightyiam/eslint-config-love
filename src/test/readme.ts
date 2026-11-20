@@ -8,6 +8,10 @@ test('worktree readme is up-to-date', async (t) => {
   const filePath = path.join(projectRoot, 'README.md')
 
   const expected = dedent`
+    > [!important]
+    > The author of this project has moved on to other things.
+    > If you are interested in taking over, please contact.
+
     <div align="center">
       <img src="./logo.svg" width="150"/>
       <h1>eslint-config-love</h1>
